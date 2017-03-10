@@ -1,52 +1,54 @@
 body {
-    background-image:url(background.png);
-    font:35px Tahoma;
+    background-image:url(imagesAndreyKostyuchenko/background.png);
+    font:210% Tahoma;
     color:#e7e7e7;
     text-shadow: #000 2px 0px 2px, #000 0px 2px 2px, #000 0px -2px 2px, #000 -2px 0px 2px;
 }
 
 .textQuestion {
-    font:35px Tahoma;
+    font:115% Tahoma;
     color:deepskyblue;
     text-shadow: #000 2px 0px 2px, #000 0px 2px 2px, #000 0px -2px 2px, #000 -2px 0px 2px;
 }
 
 .textForgot {
-    font:15px Tahoma;
+    margin-left: 62%;
+    font:55% Tahoma;
     color:deepskyblue;
     text-shadow: #000 2px 0px 2px, #000 0px 2px 2px, #000 0px -2px 2px, #000 -2px 0px 2px;
 }
 
 .button {
-    background-image: url(orangeButton.png);
+    background-image: url(imagesAndreyKostyuchenko/orangeButton.png);
+    margin-top: 4%;
     margin-left: 12%;
-    height:75px;
-    width:280px;
-    font:45px Tahoma;
+    width:75%;
+    border: solid #000;
+    font:130% Tahoma;
     color:whitesmoke;
     text-shadow: #000 2px 0px 2px, #000 0px 2px 2px, #000 0px -2px 2px, #000 -2px 0px 2px;
 }
 
-.imageDeal {
+/*.imageDeal {
     position:absolute;
-    left:500px;
+    left:;
     bottom:645px;
-}
+}*/
 
 .imageBlackLine {
     position:absolute;
     left:50%;
-    top:19%;
+    top:28%;
 }
 
 #h1 {
 	position:absolute;
-	top:33%;
-	right:28%;
+	top:36%;
+	right:31%;
 }
 
 #h2 {
     position:absolute;
-	top:15%;
-	left:15%;
+	top:25%;
+	left:25%;
 }
