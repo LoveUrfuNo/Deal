@@ -1,0 +1,45 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+body {
+    background-image: url(background_main.png);
+}
+
+.topBlock {
+    height: 200px;
+    background-color:#1EA2CD;
+    background-repeat: repeat-x, repeat-y;
+    border: 
+}
+
+.bottomBlock {
+    background-color: #DECABD;
+}
+
+.logo {
+    position: absolute;
+    left: 50px;
+    top: 40px;
+}
+
+.signup {
+    position: absolute;
+    left: 90%;
+    top: 30px;
+    font-size: 20px;
+    border: 0px;
+    background: #1EA2CD;
+    color: white;
+}
+
+.signin {
+    position: absolute;
+    left: 85%;
+    top: 30px;
+    font-size: 20px;
+    border: 0px;
+    background: #1EA2CD;
+    color: white;
+}

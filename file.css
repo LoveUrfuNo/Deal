@@ -1,0 +1,52 @@
+body {
+    background-image:url(background.png);
+    font:35px Tahoma;
+    color:#e7e7e7;
+    text-shadow: #000 2px 0px 2px, #000 0px 2px 2px, #000 0px -2px 2px, #000 -2px 0px 2px;
+}
+
+.textQuestion {
+    font:35px Tahoma;
+    color:deepskyblue;
+    text-shadow: #000 2px 0px 2px, #000 0px 2px 2px, #000 0px -2px 2px, #000 -2px 0px 2px;
+}
+
+.textForgot {
+    font:15px Tahoma;
+    color:deepskyblue;
+    text-shadow: #000 2px 0px 2px, #000 0px 2px 2px, #000 0px -2px 2px, #000 -2px 0px 2px;
+}
+
+.button {
+    background-image: url(orangeButton.png);
+    margin-left: 12%;
+    height:75px;
+    width:280px;
+    font:45px Tahoma;
+    color:whitesmoke;
+    text-shadow: #000 2px 0px 2px, #000 0px 2px 2px, #000 0px -2px 2px, #000 -2px 0px 2px;
+}
+
+.imageDeal {
+    position:absolute;
+    left:500px;
+    bottom:645px;
+}
+
+.imageBlackLine {
+    position:absolute;
+    left:50%;
+    top:19%;
+}
+
+#h1 {
+	position:absolute;
+	top:33%;
+	right:28%;
+}
+
+#h2 {
+    position:absolute;
+	top:15%;
+	left:15%;
+}
