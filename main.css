@@ -14,10 +14,6 @@ body {
     border: 
 }
 
-.bottomBlock {
-    background-color: #DECABD;
-}
-
 .logo {
     position: absolute;
     left: 50px;
@@ -42,4 +38,49 @@ body {
     border: 0px;
     background: #1EA2CD;
     color: white;
+}
+
+.search_text {
+    position: absolute;
+    left: 35%;
+    top: 9%;
+    font-size: 28px;
+    color: white;
+    
+}
+
+.search_line {
+    position: absolute;
+    left: 40%;
+    top: 10%;
+}
+
+.grey_background {
+    height: 700px;
+    background-image: url(imagesAndreyKostyuchenko/grey_background.png);
+    background-repeat: repeat-x;
+    margin-top: 2.6%;
+    
+}
+
+.left_arrow {
+    position: absolute;
+    top: 55%;
+    left: 2%;
+    opacity: 0.25;
+}
+
+a.left_arrow:hover {
+    opacity: 1;
+}
+
+.right_arrow {
+    position: absolute;
+    top: 55%;
+    left: 96%;
+    opacity: 0.25;
+}
+
+a.right_arrow:hover {
+    opacity: 1;
 }
