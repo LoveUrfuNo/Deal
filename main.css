@@ -4,7 +4,10 @@
 }
 
 body {
+    
     background-image: url(background_main.png);
+    min-width: 100%;
+    
 }
 
 .topBlock {
@@ -26,8 +29,16 @@ body {
     top: 30px;
     font-size: 20px;
     border: 0px;
+    padding: 5px 10px;
+    border-radius: 10px;
     background: #1EA2CD;
     color: white;
+    transition: all 0.4s;
+}
+
+button.signup:hover {
+    background: white;
+    color: #1EA2CD;
 }
 
 .signin {
@@ -36,8 +47,16 @@ body {
     top: 30px;
     font-size: 20px;
     border: 0px;
+    padding: 5px 10px;
+    border-radius: 10px;
     background: #1EA2CD;
     color: white;
+    transition: all 0.4s;
+}
+
+button.signin:hover {
+    background: white;
+    color: #1EA2CD;
 }
 
 .search_text {
@@ -68,6 +87,7 @@ body {
     top: 55%;
     left: 2%;
     opacity: 0.25;
+    transition: all 0.4s;
 }
 
 a.left_arrow:hover {
@@ -79,6 +99,7 @@ a.left_arrow:hover {
     top: 55%;
     left: 96%;
     opacity: 0.25;
+    transition: all 0.4s;
 }
 
 a.right_arrow:hover {
