@@ -1,22 +1,29 @@
-<!DOCTYPE html>
+
 <html>
     <head>
-        <link type = "text/css" rel = "stylesheet" href = "file.css">
+        <title>deal | log in</title>
+        <link href = "css/bootstrap.css" rel = "stylesheet" type = "text/css">
+        <link href = "input.css"  rel = "stylesheet" type = "text/css">
         <meta http-equiv = "Content-Type" content = "text/html; charset=UTF-8">
-        <title>Вход deal.ru.com</title>
     </head>
     <body>
-        <div id = "h2">
-            <img src = "imagesAndreyKostyuchenko/deal.png" alt = "logo">
-            <p>Логин:<br><input type = "text" size = "50"></p>
-            <p>Пароль:<br><input type = "text" size = "50"><p class = "textForgot"><i>Забыли пароль?</i></p>
-            <form>
-                <button class = "button">Войти</button>
-            </form>
-        </div>
-        <img class = "imageBlackLine" src = "imagesAndreyKostyuchenko/line.png" alt = "verctal line">
-        <div class = "textQuestion" id = "h1">
-            <p>Нет аккаунта?<br><br>Создай свой<br><br><b>deal</b> аккаунт</p>
+        <div class = "container">
+            <div class = "row"> <!-- разделение на колонки*/ -->
+            <div class = "forms col-md-6"> <!-- создание колонки -->
+                <img src = "images/deal.png">
+                <form method = "POST">
+                    <label id = "login" for = "login">Логин: </label><br> <!-- заголовок для формы -->
+                    <input id = "login" name = "login" type = "text"><br> <!-- ввод данных -->
+                    <label id = "password" for = "password">Пароль: </label><br>
+                    <input id = "password"  name = "password" type = "password"><br>
+                    <a href = "#">Забыли пароль</a><br>
+                    <input id = "submit" type = "submit" value = "Войти"> <!-- отсылка данных из форм на сервак -->
+                </form>
+            </div>
+            <div class = "text col-md-6">
+                <p id = "noAccount">Нет аккаунта?<br>Создай свой <a href = "register.html">deal</a> аккаунт</p>
+            </div>
+            </div>
         </div>
     </body>
 </html>

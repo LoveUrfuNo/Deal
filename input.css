@@ -1,0 +1,60 @@
+body {
+    background: url("images/background.png") no-repeat; /* задали фон без повторения (растягивается)*/
+}
+
+.container {
+    text-align: center; /* выравнивание текста по центру */
+    height: 100vh; /* vh - реальный размер экрана - занимает полную ширину экрана */
+    display: table; /* отображение как таблица */
+}
+
+.row {
+    display: table-cell;
+    vertical-align: middle; /* выравнивание посередине работает только в ячейке таблицы*/
+}
+
+.text {
+    padding-top: 10px;
+    text-align: left; /*выравнивание*/
+}
+
+.forms input { /* обращение ко всем инпутам в слое формс */
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.forms {
+    padding-top: 10px;
+    border-right: 3px solid black;
+    text-align: left;
+}
+
+.forms img {
+    margin-bottom: 10px;
+}
+
+#login {
+    font-family: cursive;
+}
+
+#password {
+    font-family: cursive;
+}
+
+#noAccount {
+    text-align: left;
+    font-family: cursive;
+}
+
+#submit {
+    margin-top: 20px;
+    color: white;
+    background-color: dodgerblue;
+/*    background: url("images/orangeButton.png") center no-repeat;*/
+    font-size: 25px;
+}
+
+#submit:hover {
+/*    background: url("blueButtonActive.png") center no-repeat;*/
+    background-color: deepskyblue;
+}
