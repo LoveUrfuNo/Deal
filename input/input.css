@@ -4,30 +4,35 @@ body {
     font-family: sans-serif Verdana ;
     font-size: 18px;
 }
+
 a {
     font-weight: 900;
     -webkit-transition: 0.5s;
     -moz-transition: 0.5s;
 }
+
 a:hover {
     color: darkred;
     -webkit-transition: 0.5s;
     -moz-transition: 0.5s;
     text-decoration: none;
 }
+
 .log-in {
     position: absolute;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     right: 0;
-    bottom:0;
+    bottom: 0;
     margin: auto;
     max-width: 500px;
     max-height: 500px;
 }
+
 .log-in p {
     margin-top: 20px;
 }
+
 .form-group {
     width: 80%;
     margin: auto;
@@ -48,6 +53,7 @@ a:hover {
     -webkit-transition: 0.2s;
     -moz-transition: 0.2s;
 }
+
 #submit:hover {
     background: url('../images/buttonActive.png');
     -webkit-transition: 0.2s;
