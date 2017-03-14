@@ -5,7 +5,7 @@
 
 body {
     
-    background-image: url(background_main.png);
+    background-image: url(images/background_main.png);
     min-width: 100%;
     
 }
@@ -76,7 +76,7 @@ button.signin:hover {
 
 .grey_background {
     height: 700px;
-    background-image: url(imagesAndreyKostyuchenko/grey_background.png);
+    background-image: url(images/grey_background.png);
     background-repeat: repeat-x;
     margin-top: 2.6%;
     
