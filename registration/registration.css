@@ -8,16 +8,16 @@ body {
 .registration {
     position: absolute;
     top: 0;
-    left: 51;
+    left: 0;
     right: 0;
-    bottom: 0;
+    bottom: 50;
     margin: auto;
     max-width: 500px;
     max-height: 500px;
 }
 
 .form-group {
-    width: 50%;
+    width: 80%;
     margin: auto;
     text-align: center;
     padding: 25px;
