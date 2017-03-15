@@ -1,5 +1,5 @@
 body {
-    background: url("/images/background.png") no-repeat;
+    background: url("../images/background.png") no-repeat;
     font-family: Verdana, sans-serif;
     font-size: 30px;
 }
