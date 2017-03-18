@@ -1,108 +1,119 @@
-*{
-    margin:0;
-    padding:0;
+*
+{
+    margin: 0;
+    padding: 0;
 }
 
-body {
-    
-    background-image: url(images/background_main.png);
+body
+{
     min-width: 100%;
     height: 200vh;
+    background-image: url(images/background_main.png);
 }
 
-.topBlock {
+.topBlock
+{
     height: 200px;
-    background-color:#1EA2CD;
+    background-color: #1ea2cd;
     background-repeat: repeat-x, repeat-y;
-    border: 
 }
 
-.logo {
+.logo
+{
     position: absolute;
-    left: 50px;
     top: 40px;
+    left: 50px;
 }
 
-.signup {
+.signup
+{
+    font-size: 20px;
     position: absolute;
+    top: 30px;
     left: 90%;
-    top: 30px;
-    font-size: 20px;
-    border: 0px;
     padding: 5px 10px;
+    transition: all .4s;
+    color: #fff;
+    border: 0;
     border-radius: 10px;
-    background: #1EA2CD;
-    color: white;
-    transition: all 0.4s;
+    background: #1ea2cd;
 }
 
-button.signup:hover {
-    background: white;
-    color: #1EA2CD;
+button.signup:hover
+{
+    color: #1ea2cd;
+    background: #fff;
 }
 
-.signin {
+.signin
+{
+    font-size: 20px;
     position: absolute;
+    top: 30px;
     left: 85%;
-    top: 30px;
-    font-size: 20px;
-    border: 0px;
     padding: 5px 10px;
+    transition: all .4s;
+    color: #fff;
+    border: 0;
     border-radius: 10px;
-    background: #1EA2CD;
-    color: white;
-    transition: all 0.4s;
+    background: #1ea2cd;
 }
 
-button.signin:hover {
-    background: white;
-    color: #1EA2CD;
+button.signin:hover
+{
+    color: #1ea2cd;
+    background: #fff;
 }
 
-.search_text {
-    position: absolute;
-    left: 35%;
-    top: 9%;
+.search_text
+{
     font-size: 28px;
-    color: white;
-    
-}
-
-.search_line {
     position: absolute;
-    left: 40%;
-    top: 10%;
+    top: 9%;
+    left: 35%;
+    color: #fff;
 }
 
-.grey_background {
+.search_line
+{
+    position: absolute;
+    top: 10%;
+    left: 40%;
+}
+
+.grey_background
+{
     position: fixed;
     height: 700px;
-    background-image: url("http://ebftour.ru/images/load/Image/ytka5.jpg");
-    background-size: cover;
     margin-top: 2.6%;
-    
+    background-image: url('http://ebftour.ru/images/load/Image/ytka5.jpg');
+    background-size: cover;
 }
 
-.left_arrow {
+.left_arrow
+{
     position: absolute;
     top: 55%;
     left: 2%;
-    opacity: 0.25;
-    transition: all 0.4s;
+    transition: all .4s;
+    opacity: .25;
 }
 
-a.left_arrow:hover {
+a.left_arrow:hover
+{
     opacity: 1;
 }
 
-.right_arrow {
+.right_arrow
+{
     position: absolute;
     top: 55%;
     left: 96%;
-    opacity: 0.25;
-    transition: all 0.4s;
+    transition: all .4s;
+    opacity: .25;
 }
 
-a.right_arrow:hover {
+a.right_arrow:hover
+{
     opacity: 1;
 }
