@@ -7,7 +7,7 @@ body {
     
     background-image: url(images/background_main.png);
     min-width: 100%;
-    
+    height: 200vh;
 }
 
 .topBlock {
@@ -75,9 +75,10 @@ button.signin:hover {
 }
 
 .grey_background {
+    position: fixed;
     height: 700px;
-    background-image: url(images/grey_background.png);
-    background-repeat: repeat-x;
+    background-image: url("http://ebftour.ru/images/load/Image/ytka5.jpg");
+    background-size: cover;
     margin-top: 2.6%;
     
 }

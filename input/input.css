@@ -1,7 +1,7 @@
 body {
     background: url("../images/background.png") no-repeat;
     text-align: center;
-    font-family: sans-serif Verdana ;
+    font-family: Verdana, sans-serif;
     font-size: 18px;
 }
 
@@ -29,7 +29,7 @@ a:hover {
     max-height: 500px;
 }
 
-.log-in p {
+.log-in p { /*все теги p в log-in*/
     margin-top: 20px;
 }
 
