@@ -1,32 +1,28 @@
-*
-{
+* {
     margin: 0;
     padding: 0;
 }
 
-body
-{
+body {
     min-width: 100%;
     height: 200vh;
     background-image:url(images/background_main.png);
+    background-size: cover;
 }
 
-.topBlock
-{
+.topBlock {
     height: 200px;
     background-color: #1ea2cd;
     background-repeat: repeat-x, repeat-y;
 }
 
-.logo
-{
+.logo {
     position: absolute;
     top: 40px;
     left: 50px;
 }
 
-.signup
-{
+.signup {
     font-size: 20px;
     position: absolute;
     top: 30px;
@@ -39,14 +35,12 @@ body
     background: #1ea2cd;
 }
 
-button.signup:hover
-{
+button.signup:hover {
     color: #1ea2cd;
     background: #fff;
 }
 
-.signin
-{
+.signin {
     font-size: 20px;
     position: absolute;
     top: 30px;
@@ -59,30 +53,32 @@ button.signup:hover
     background: #1ea2cd;
 }
 
-button.signin:hover
-{
+button.signin:hover {
     color: #1ea2cd;
     background: #fff;
 }
 
-.search_text
-{
+.search {
     font-size:28px;
     position:absolute;
+    left: 30%;
     top: 9%;
-    left: 35%;
-    color: #fff;
 }
 
-.search_line
-{
-    position: absolute;
-    top: 10%;
-    left: 40%;
+.search_text {
+    color: white;
 }
 
-.grey_background
-{
+.search_line {
+    text-align: left;
+    font-family: Verdana, sans-serif;
+    font-size: 20px;
+    color: grey;
+    border: 0;
+    border-radius: 10px;
+}
+
+.grey_background {
     position: fixed;
     height: 700px;
     margin-top: 2.6%;
@@ -90,8 +86,7 @@ button.signin:hover
     background-size: cover;
 }
 
-.left_arrow
-{
+.left_arrow {
     position: absolute;
     top: 55%;
     left: 2%;
@@ -99,13 +94,11 @@ button.signin:hover
     opacity: .25;
 }
 
-a.left_arrow:hover
-{
+a.left_arrow:hover {
     opacity: 1;
 }
 
-.right_arrow
-{
+.right_arrow {
     position: absolute;
     top: 55%;
     left: 96%;
@@ -113,7 +106,6 @@ a.left_arrow:hover
     opacity: .25;
 }
 
-a.right_arrow:hover
-{
+a.right_arrow:hover {
     opacity: 1;
 }

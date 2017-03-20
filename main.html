@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,9 +20,13 @@
   </head>
     <body>
         <div class = "topBlock">
-            <img class="logo" src= "images/logo_without_outline.png">
-            <p class = "search_text"> Поиск: </p>
-            <input class = "search_line" type = "text" size = "60">
+            <a href ="main.html"><img class="logo" src= "images/logo_without_outline.png"></a>
+            <div class = "search">
+                <form>
+                    <label for = "search"><span class = "search_text">Поиск: </span></label>
+                        <input class = "search_line" name= "search" placeholder = "Сделать сигну" type = "search" size = "50">
+                </form>
+            </div>
             <form>
                 <button class = "signin" formaction = "input/input.html">Вход</button>
             </form>
