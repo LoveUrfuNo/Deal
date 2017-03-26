@@ -34,7 +34,7 @@
     <label>
         <input class="search_line" type="text" size="60">
     </label>
-    <form >
+    <form>
         <input class="signin" id="signin" type="submit" formaction="/signin" value="Вход">
     </form>
     <form>

@@ -1,6 +1,7 @@
 package backend.controller;
 
 import backend.model.ServiceEntrance;
+import backend.model.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -47,7 +48,18 @@ public class UserController {
     public ModelAndView signIn() {
 
         ModelAndView modelAndView = new ModelAndView();
+        modelAndView.addObject("userData", new User());
         modelAndView.setViewName("input/sign_in");
+
+        return modelAndView;
+    }
+
+    @RequestMapping(value = "/welcome", method = RequestMethod.POST)
+    public ModelAndView signIn(@ModelAttribute("userData") User user) {
+
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.addObject("userData", user);
+        modelAndView.setViewName("input/welcome");
 
         return modelAndView;
     }

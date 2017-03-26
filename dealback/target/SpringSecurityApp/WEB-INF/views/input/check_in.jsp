@@ -21,12 +21,12 @@
         <input class="form-control" placeholder="example@email.com" id="email" name="email" type="text"><br>
         <label for="login">Логин: </label>
         <input class="form-control" placeholder="Введите логин" id="login" name="login" type="text"><br>
-        <label for="password">Пароль: </label>
+        <label for = "password">Пароль: </label>
         <input class="form-control" placeholder="Придумайте пароль" name="password" type="password"><br>
-        <label for="password-repeat">Повторите пароль: </label> <!-- учу java-script-->
+        <label for="password-repeat" >Повторите пароль: </label> <!-- учу java-script-->
         <input class="form-control" placeholder="Введите пароль снова" id="confirm_password" type="password"><br>
         <form>
-            <input class="btn btn-default" id="submit" type="submit" formaction="../main.html" value="Зарегистрироваться">
+            <input class="btn btn-default" id="submit" type="submit" formaction="" value="Зарегистрироваться">
         </form>
     </div>
 </div>
