@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Вход на deal</title>
+    <title>Добро пожаловать!</title>
     <link href="../../../resources/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href = "../../../resources/css/sign_in.css" type = "text/css" rel = "stylesheet"> <!-- нижний перекрывает верхний-->
     <meta http-equiv = "Content-Type" content = "text/html" charset="UTF-8">

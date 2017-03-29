@@ -11,6 +11,6 @@
     <title>Incorrect password!</title>
 </head>
 <body>
-<h1>DINAH</h1>
+<h1>Incorrect!</h1>
 </body>
 </html>
