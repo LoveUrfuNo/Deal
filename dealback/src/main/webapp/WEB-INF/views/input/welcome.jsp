@@ -8,11 +8,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>МАТЬ РОДИЛА ПРОГРАММИСТА</title>
+    <title>Welcome</title>
 </head>
 <body>
-<h1>МАТЕРЬЮ РОЖДЕН ПРОГРАММИСТ</h1>
-<a>Введенный логин: ${userData.login}</a>
+<h1>Приветствуем!</h1>
+<a>Введенный логин: ${userData.login}</a> <br>
 <a>Введенный пароль: ${userData.password}</a>
 </body>
 </html>

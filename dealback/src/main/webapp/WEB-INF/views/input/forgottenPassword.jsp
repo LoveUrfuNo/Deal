@@ -8,9 +8,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Забыл пароль</title>
+    <title>Восстановление пароля</title>
 </head>
 <body>
-<h1>Новый создавай, мудак</h1>
+<h1>Очень жаль!</h1>
 </body>
 </html>
