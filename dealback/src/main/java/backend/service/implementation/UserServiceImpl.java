@@ -1,6 +1,6 @@
 package backend.service.implementation;
 
-import backend.dao.UserRepository;
+import backend.dao.UserRepositoryImpl;
 import backend.model.User;
 import backend.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,34 +12,34 @@ import java.util.List;
  * Created by andrey on 29.03.17.
  */
 
-@Service
+@Service("userServiceImpl")
 public class UserServiceImpl implements UserService {
 
-   // @Autowired
-    private UserRepository userRepository;
-//
+    @Autowired
+    private UserRepositoryImpl userRepositoryImpl;
+
     @Override
     public User addUser(User user) {
-        return userRepository.saveAndFlush(user);
+        return userRepositoryImpl.saveAndFlush(user);
     }
 
     @Override
     public void delete(long id) {
-        userRepository.delete(id);
+        userRepositoryImpl.delete(id);
     }
 
     @Override
     public User getByName(String name) {
-        return userRepository.findByName(name);
+        return userRepositoryImpl.findByName(name);
     }
 
     @Override
     public User editUser(User user) {
-        return userRepository.saveAndFlush(user);
+        return userRepositoryImpl.saveAndFlush(user);
     }
 
     @Override
     public List<User> getAll() {
-        return userRepository.findAll();
+        return userRepositoryImpl.findAll();
     }
 }

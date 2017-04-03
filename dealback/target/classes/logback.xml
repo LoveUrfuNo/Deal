@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE logback>
 <configuration>
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
@@ -7,7 +6,7 @@
         </encoder>
     </appender>
 
-    <logger name="net.proselyte.springsecurityapp">
+    <logger name="backend">
         <level value="debug"/>
     </logger>
 
