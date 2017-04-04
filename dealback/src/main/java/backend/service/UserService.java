@@ -7,6 +7,7 @@ import java.util.List;
 /**
  * Created by andrey on 28.03.17.
  */
+
 public interface UserService {
 
     User addUser(User user);

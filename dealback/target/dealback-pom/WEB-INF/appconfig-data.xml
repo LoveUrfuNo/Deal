@@ -18,7 +18,7 @@
    </bean>
 
 
-    <!--<bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+    <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
             <property name="dataSource" ref="dataSource"/>
             <property name="packagesToScan" value="backend.model"/>
             <property name="jpaVendorAdapter">
@@ -30,15 +30,15 @@
                     <prop key="hibernate.show_sql">true</prop>
                 </props>
             </property>
-    </bean>-->
+    </bean>
 
-      <!-- <bean id="transactionManager"
+       <bean id="transactionManager"
              class="org.springframework.orm.jpa.JpaTransactionManager">
-           <property name="entityManagerFactory" ref="userRepository"/>
+           <property name="entityManagerFactory" ref="entityManagerFactory"/>
        </bean>
 
-       <tx:annotation-driven/>
+       <tx:annotation-driven transaction-manager="transactionManager"/>
 
-       <jpa:repositories base-package="backend.dao"/>-->
+       <jpa:repositories base-package="backend"/>
 
 </beans>
