@@ -5,12 +5,14 @@
   font-weight: normal;
   font-style: normal;
 }
-/* =======================================================
-*
-* 	Template Style 
-*	Edit this section
-*
-* ======================================================= */
+
+@media screen and (max-width: 768px) {
+    
+    header {
+        background-color: aliceblue;
+    }
+}
+
 body {
   font-family: "Roboto", Arial, serif;
   line-height: 1.8;
@@ -125,14 +127,17 @@ header {
     background-color: #1ea2cd;
 }
 header .fh5co-navbar-brand {
-  padding-bottom: 3em;
+  padding-bottom: 2em;
 }
 header .fh5co-navbar-brand .fh5co-logo {
+    width: 274px;
+    height: 91px;
+    float: left;
   position: absolute;
     top: 4%;
     bottom: 0;
-    left: 0;
-    right: 80%;
+    left: 3%;
+    right: 0;
 }
 
 header .search {
@@ -935,5 +940,3 @@ input[type="text"] {
 .js .animate-box {
   opacity: 0;
 }
-
-/*# sourceMappingURL=style.css.map */
