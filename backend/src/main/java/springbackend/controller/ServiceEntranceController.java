@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import springbackend.model.ServiceEntrance;
+import springbackend.model.User;
 
 /**
  * Controller for {@link springbackend.model.ServiceEntrance}'s pages.
@@ -20,5 +21,16 @@ public class ServiceEntranceController {
         model.addAttribute("userForm", new ServiceEntrance());
 
         return "serviceEntrance";
+    }
+
+    @RequestMapping(value = "/main", method = RequestMethod.POST)
+    public String serviceEntrance(@ModelAttribute("userForm") ServiceEntrance userForm, Model model) {
+        model.addAttribute("userForm", new User());
+
+        if(userForm.getEnteredPassword().equals(userForm.getCorrectPassword())) {
+            return "main";
+        } else {
+            return "forgotServicePassword";
+        }
     }
 }

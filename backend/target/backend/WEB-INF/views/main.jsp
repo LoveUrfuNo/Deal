@@ -1,7 +1,10 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <c:set var="contextPath" value="${pageContext.request.contextPath}"/>
+
 <!DOCTYPE html>
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -86,7 +89,8 @@
             </div>
         </nav>
 
-        <header id="gtco-header" class="gtco-cover" role="banner" style="background-image: url(http://bm.img.com.ua/berlin/storage/news/orig/2/5e/a24b6d1466884ba1325b88d12441a5e2.jpg)">
+        <header id="gtco-header" class="gtco-cover" role="banner"
+                style="background-image: url(http://bm.img.com.ua/berlin/storage/news/orig/2/5e/a24b6d1466884ba1325b88d12441a5e2.jpg)">
             <div class="overlay"></div>
             <div class="gtco-container">
                 <div class="row">
@@ -94,36 +98,54 @@
                         <div class="row row-mt-15em">
                             <div class="col-md-7 mt-text animate-box" data-animate-effect="fadeInUp">
                                 <span class="intro-text-small">Welcome to Deal</span>
-                                <h1>Помоги нам</h1>
+                                <h1>Помоги нам деньгами</h1>
                             </div>
                             <div class="col-md-4 col-md-push-1 animate-box" data-animate-effect="fadeInRight">
                                 <div class="form-wrap">
                                     <div class="tab">
                                         <ul class="tab-menu">
-                                            <li class="active gtco-first"><a href="#" data-tab="signup">Регистрация</a></li>
+                                            <li class="active gtco-first"><a href="#" data-tab="signup">Регистрация</a>
+                                            </li>
                                             <li class="gtco-second"><a href="#" data-tab="login">Вход</a></li>
                                         </ul>
                                         <div class="tab-content">
                                             <div class="tab-content-inner active" data-content="signup">
-                                                <form action="${pageContext.request.contextPath}/registration">
+
+                                                <form:form method="POST" modelAttribute="userForm"
+                                                           action="/registration"
+                                                           class="form-signin">
                                                     <div class="row form-group">
-                                                        <div class="col-md-12">
-                                                            <label for="username">Логин или e-mail</label>
-                                                            <input  type="text" path="username" class="form-control" placeholder="Username"
-                                                                    autofocus="true">
-                                                        </div>
+                                                        <spring:bind path="username">
+                                                            <div class="form-group ${status.error ? 'has-error' : ''}">
+                                                                <label for="username">Логин или e-mail</label>
+                                                                <form:input type="text" path="username"
+                                                                            class="form-control"
+                                                                            placeholder="ivanov@email.com"/>
+                                                                <form:errors path="username"/>
+                                                            </div>
+                                                        </spring:bind>
                                                     </div>
                                                     <div class="row form-group">
-                                                        <div class="col-md-12">
-                                                            <label for="password">Пароль</label>
-                                                            <input type="password" class="form-control" id="password">
-                                                        </div>
+                                                        <spring:bind path="password">
+                                                            <div class="form-group ${status.error ? 'has-error' : ''}">
+                                                                <label for="password">Пароль</label>
+                                                                <form:input type="password" path="password"
+                                                                            class="form-control"
+                                                                            placeholder="Password"/>
+                                                                <form:errors path="password"/>
+                                                            </div>
+                                                        </spring:bind>
                                                     </div>
                                                     <div class="row form-group">
-                                                        <div class="col-md-12">
-                                                            <label for="password2">Повторите пароль</label>
-                                                            <input type="password" class="form-control" id="password2">
-                                                        </div>
+                                                        <spring:bind path="confirmPassword">
+                                                            <div class="form-group ${status.error ? 'has-error' : ''}">
+                                                                <label for="confirmPassword">Пароль</label>
+                                                                <form:input type="password" path="confirmPassword"
+                                                                            class="form-control"
+                                                                            placeholder="Confirm your password"/>
+                                                                <form:errors path="confirmPassword"/>
+                                                            </div>
+                                                        </spring:bind>
                                                     </div>
 
                                                     <div class="row form-group">
@@ -132,32 +154,41 @@
                                                                    value="Зарегаца">
                                                         </div>
                                                     </div>
-                                                </form>
+                                                </form:form>
+
                                             </div>
 
                                             <div class="tab-content-inner" data-content="login">
-                                                <form action="#">
-                                                    <div class="row form-group">
-                                                        <div class="col-md-12">
-                                                            <label for="username">Логин или e-mail</label>
-                                                            <input type="text" class="form-control" id="username">
+                                                <form method="POST" action="${contextPath}/login" class="form-signin">
+                                                    <h2 class="form-heading">Log in</h2>
+                                                    <div class="form-group ${error != null ? 'has-error' : ''}">
+                                                        <div class="row form-group">
+                                                            <div class="col-md-12">
+                                                                <label for="username">Логин или e-mail</label>
+                                                                <span>${message}</span>
+                                                                <input name="username" type="text" class="form-control"
+                                                                       placeholder="Username"
+                                                                       autofocus="true"/>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="row form-group">
-                                                        <div class="col-md-12">
-                                                            <label for="password">Пароль</label>
-                                                            <input type="password" class="form-control" id="password">
+                                                        <div class="row form-group">
+                                                            <div class="col-md-12">
+                                                                <label for="password">Пароль</label>
+                                                                <input name="password" type="password"
+                                                                       class="form-control" placeholder="Password"/>
+                                                                <span>${error}</span>
+                                                            </div>
                                                         </div>
-                                                    </div>
-
-                                                    <div class="row form-group">
-                                                        <div class="col-md-12">
-                                                            <input type="submit" class="btn btn-primary" value="Войти">
+                                                        <input type="hidden" name="${_csrf.parameterName}"
+                                                               value="${_csrf.token}"/>
+                                                        <div class="row form-group">
+                                                            <div class="col-md-12">
+                                                                <input type="submit" class="btn btn-primary" value="Войти">
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </form>
                                             </div>
-
                                         </div>
                                     </div>
                                 </div>

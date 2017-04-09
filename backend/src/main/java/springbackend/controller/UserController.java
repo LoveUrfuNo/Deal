@@ -29,15 +29,6 @@ public class UserController {
     @Autowired
     private UserValidator userValidator;
 
-    @RequestMapping(value = "/main", method = RequestMethod.POST)
-    public String serviceEntrance(@ModelAttribute("userForm") ServiceEntrance userForm) {
-
-        if(userForm.getEnteredPassword().equals(userForm.getCorrectPassword())) {
-            return "main";
-        } else {
-            return "forgotServicePassword";
-        }
-    }
 
     @RequestMapping(value = "/main", method = RequestMethod.GET)
     public String main(Model model) {
@@ -45,17 +36,6 @@ public class UserController {
 
         return "main";
     }
-
-    /*@RequestMapping(value = "/mainPost", method = RequestMethod.POST)
-    public String main(@ModelAttribute("userForm") User userForm, BindingResult bindingResult, Model model) {
-        if (bindingResult.hasErrors()) {
-            return "registration";
-        }
-        userService.save(userForm);
-        securityService.autoLogin(userForm.getUsername(), userForm.getConfirmPassword());
-
-        return "redirect:/welcome";
-    }*/
 
     @RequestMapping(value = "/registration", method = RequestMethod.GET)
     public String registration(Model model) {
@@ -69,12 +49,17 @@ public class UserController {
         userValidator.validate(userForm, bindingResult);
 
         if (bindingResult.hasErrors()) {
-            return "registration";
+            return "main";
         }
         userService.save(userForm);
         securityService.autoLogin(userForm.getUsername(), userForm.getConfirmPassword());
 
-        return "redirect:/welcome";
+        return "redirect:/profile";
+    }
+
+    @RequestMapping(value = {"/profile"}, method = RequestMethod.GET)
+    public String profile(Model model) {
+        return "profile";
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
@@ -87,7 +72,7 @@ public class UserController {
             model.addAttribute("message", "Logged out successfully.");
         }
 
-        return "login";
+        return "redirect:/profile";
     }
 
     @RequestMapping(value = {"/welcome"}, method = RequestMethod.GET)
