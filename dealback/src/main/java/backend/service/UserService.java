@@ -2,16 +2,16 @@ package backend.service;
 
 import backend.model.User;
 
-import java.util.List;
-
 /**
- * Created by andrey on 28.03.17.
+ * Service class for {@link backend.model.User}
+ *
+ * @author Eugene Suleimanov
+ * @version 1.0
  */
+
 public interface UserService {
 
-    User addUser(User user);
-    void delete(long id);
-    User getByName(String name);
-    User editUser(User user);
-    List<User> getAll();
+    void save(User user);
+
+    User findByUsername(String username);
 }

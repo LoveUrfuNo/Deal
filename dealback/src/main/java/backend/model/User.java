@@ -1,7 +1,14 @@
 package backend.model;
 
-import org.springframework.data.annotation.Id;
 import javax.persistence.*;
+import java.util.Set;
+
+/**
+ * Simple JavaBean domain object that represents a User.
+ *
+ * @author Eugene Suleimanov
+ * @version 1.0
+ */
 
 @Entity
 @Table(name = "users")
@@ -9,17 +16,21 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id")
     private Long id;
 
-    @Column(name = "login")
-    private String login;
+    @Column(name = "username")
+    private String username;
 
     @Column(name = "password")
     private String password;
 
     @Transient
-    private String correctPassword;
+    private String confirmPassword;
+
+    @ManyToMany
+    @JoinTable(name = "user_roles", joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "role_id"))
+    private Set<Role> roles;
 
     public Long getId() {
         return id;
@@ -29,12 +40,12 @@ public class User {
         this.id = id;
     }
 
-    public String getLogin() {
-        return login;
+    public String getUsername() {
+        return username;
     }
 
-    public void setLogin(String login) {
-        this.login = login;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getPassword() {
@@ -45,11 +56,19 @@ public class User {
         this.password = password;
     }
 
-    public String getCorrectPassword() {
-        return correctPassword;
+    public String getConfirmPassword() {
+        return confirmPassword;
     }
 
-    public void setCorrectPassword(String correctPassword) {
-        this.correctPassword = correctPassword;
+    public void setConfirmPassword(String confirmPassword) {
+        this.confirmPassword = confirmPassword;
+    }
+
+    public Set<Role> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(Set<Role> roles) {
+        this.roles = roles;
     }
 }
