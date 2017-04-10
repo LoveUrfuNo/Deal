@@ -117,7 +117,7 @@
                                                     <div class="row form-group">
                                                         <spring:bind path="username">
                                                             <div class="form-group ${status.error ? 'has-error' : ''}">
-                                                                <label for="username">e-mail</label>
+                                                                <label for="username">E-mail</label>
                                                                 <form:input type="email" path="username"
                                                                             class="form-control"
                                                                             placeholder="ivanov@email.com"/>
