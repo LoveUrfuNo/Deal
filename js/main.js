@@ -208,10 +208,11 @@
 	$(function(){
 		fullHeight();
         formTab();
+        dropdown();
 		owlCrouselFeatureSlide();
 		contentWayPoint();
 		parallax();
-        dropdown();
+       
 	});
 
 

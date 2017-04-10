@@ -259,7 +259,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #gtco-header {
-  background: #fdd035;
+  background: white;
 }
 @media screen and (max-width: 768px) {
   #gtco-header.gtco-cover {
