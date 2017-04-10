@@ -90,7 +90,7 @@
         </nav>
 
         <header id="gtco-header" class="gtco-cover" role="banner"
-                style="background-image: url(http://bm.img.com.ua/berlin/storage/news/orig/2/5e/a24b6d1466884ba1325b88d12441a5e2.jpg)">
+                style="">
             <div class="overlay"></div>
             <div class="gtco-container">
                 <div class="row">
@@ -115,6 +115,7 @@
                                                            action="/registration"
                                                            class="form-signin">
                                                     <div class="row form-group">
+                                                        <div class = "col-md-12">
                                                         <spring:bind path="username">
                                                             <div class="form-group ${status.error ? 'has-error' : ''}">
                                                                 <label for="username">E-mail</label>
@@ -124,8 +125,10 @@
                                                                 <form:errors path="username"/>
                                                             </div>
                                                         </spring:bind>
+                                                        </div>
                                                     </div>
                                                     <div class="row form-group">
+                                                        <div class = "col-md-12">
                                                         <spring:bind path="password">
                                                             <div class="form-group ${status.error ? 'has-error' : ''}">
                                                                 <label for="password">Пароль</label>
@@ -135,8 +138,10 @@
                                                                 <form:errors path="password"/>
                                                             </div>
                                                         </spring:bind>
+                                                        </div>
                                                     </div>
                                                     <div class="row form-group">
+                                                        <div class = "col-md-12">
                                                         <spring:bind path="confirmPassword">
                                                             <div class="form-group ${status.error ? 'has-error' : ''}">
                                                                 <label for="confirmPassword">Пароль</label>
@@ -146,6 +151,7 @@
                                                                 <form:errors path="confirmPassword"/>
                                                             </div>
                                                         </spring:bind>
+                                                        </div>
                                                     </div>
 
                                                     <div class="row form-group">
@@ -160,7 +166,7 @@
 
                                             <div class="tab-content-inner" data-content="login">
                                                 <form method="POST" action="${contextPath}/login" class="form-signin">
-                                                    <h2 class="form-heading">Log in</h2>
+
                                                     <div class="form-group ${error != null ? 'has-error' : ''}">
                                                         <div class="row form-group">
                                                             <div class="col-md-12">
@@ -201,6 +207,17 @@
     </div>
 </div>
 
+<div id="fh5co-intro-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h2>Мы упрощаем сделки</h2>
+                <p>Попробуй сам <a href="#">предложить услугу</a></p>
+            </div>
+        </div>
+    </div>
+</div><!-- end fh5co-intro-section -->
+
 <div class="owl-carousel owl-carousel1 owl-carousel-fullwidth fh5co-light-arrow animate-box"
      data-animate-effect="fadeIn">
     <div class="item">
@@ -218,16 +235,7 @@
     </div>
 </div>
 
-<div id="fh5co-intro-section">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <h2>Мы упрощаем сделки</h2>
-                <p>Попробуй сам <a href="#">предложить услугу</a></p>
-            </div>
-        </div>
-    </div>
-</div><!-- end fh5co-intro-section -->
+
 <div id="fh5co-common-section">
     <div class="container">
         <div class="heading-section text-center">

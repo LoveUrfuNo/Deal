@@ -78,8 +78,9 @@ h1, h2, h3, h4, h5, h6 {
   overflow-x: hidden;
   width: 100%;
   height: 100%;
-    background-image: url(http://bm.img.com.ua/berlin/storage/news/orig/2/5e/a24b6d1466884ba1325b88d12441a5e2.jpg);
+    background-image: url(http://bs.ks.court.gov.ua/img/news/190595.jpg);
     background-size: cover;
+    margin-bottom: 15vh;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
@@ -1295,40 +1296,7 @@ header #fh5co-main-nav > ul li:first-child {
 .fh5co-grid-work .work-holder img {
   max-width: 100%;
 }
-.fh5co-grid-work .work-holder .inner-overlay {
-  display: block;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(240, 56, 97, 0.9);
-  opacity: 0;
-}
-.fh5co-grid-work .work-holder .inner-overlay i {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-left: -10px;
-  margin-top: -10px;
-  color: #fff;
-  font-size: 30px;
-}
-.fh5co-grid-work .work-holder .inner-overlay.inner-overlay-2 {
-  background: rgba(248, 125, 9, 0.9);
-}
-.fh5co-grid-work .work-holder .inner-overlay.inner-overlay-3 {
-  background: rgba(23, 231, 164, 0.9);
-}
-.fh5co-grid-work .work-holder .inner-overlay.inner-overlay-4 {
-  background: rgba(249, 197, 53, 0.9);
-}
-.fh5co-grid-work .work-holder .inner-overlay.inner-overlay-4 {
-  background: rgba(81, 218, 207, 0.9);
-}
-.fh5co-grid-work .work-holder .inner-overlay.inner-overlay-5 {
-  background: rgba(255, 118, 118, 0.9);
-}
+
 .fh5co-grid-work .desc h3 {
   font-size: 20px;
   margin-bottom: 10px;
