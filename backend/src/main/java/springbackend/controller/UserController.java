@@ -7,7 +7,6 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import springbackend.email.Sender;
 import springbackend.model.User;
 import springbackend.service.SecurityService;
 import springbackend.service.UserService;
@@ -53,7 +52,6 @@ public class UserController {
         }
         userService.save(userForm);
         securityService.autoLogin(userForm.getUsername(), userForm.getConfirmPassword());
-        //Sender.sendLetterRegistration(userForm.)
 
         return "redirect:/profile";
     }
