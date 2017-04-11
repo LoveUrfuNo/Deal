@@ -1,84 +1,78 @@
 package backend.controller;
 
-import backend.model.ServiceEntrance;
 import backend.model.User;
+import backend.service.SecurityService;
+import backend.service.UserService;
+import backend.validator.UserValidator;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.servlet.ModelAndView;
+
+/**
+ * Controller for {@link backend.model.User}'s pages.
+ *
+ * @author Eugene Suleimanov
+ * @version 1.0
+ */
 
 @Controller
 public class UserController {
 
-    @RequestMapping(value = "/", method = RequestMethod.GET)
-    public ModelAndView input() {
+    @Autowired
+    private UserService userService;
 
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.addObject("userJSP", new ServiceEntrance());
-        modelAndView.setViewName("input/index");
+    @Autowired
+    private SecurityService securityService;
 
-        return modelAndView;
+    @Autowired
+    private UserValidator userValidator;
+
+    @RequestMapping(value = "/registration", method = RequestMethod.GET)
+    public String registration(Model model) {
+        model.addAttribute("userForm", new User());
+
+        return "registration";
     }
 
-    @RequestMapping(value = "/input", method = RequestMethod.POST)
-    public ModelAndView inputInMain(@ModelAttribute("userJSP") ServiceEntrance user) {
+    @RequestMapping(value = "/registration", method = RequestMethod.POST)
+    public String registration(@ModelAttribute("userForm") User userForm, BindingResult bindingResult, Model model) {
+        userValidator.validate(userForm, bindingResult);
 
-        ModelAndView modelAndView = new ModelAndView();
-
-        if(user.getEnteredPassword().equals(user.getCorrectPassword())) {
-            modelAndView.setViewName("input/main");
-            return modelAndView;
-        } else {
-            modelAndView.setViewName("input/false");
-            return modelAndView;
+        if (bindingResult.hasErrors()) {
+            return "registration";
         }
+
+        userService.save(userForm);
+
+        securityService.autoLogin(userForm.getUsername(), userForm.getConfirmPassword());
+
+        return "redirect:/welcome";
     }
 
-    @RequestMapping(value = "/main", method = RequestMethod.GET)
-    public ModelAndView inputInMain() {
+    @RequestMapping(value = "/login", method = RequestMethod.GET)
+    public String login(Model model, String error, String logout) {
+        if (error != null) {
+            model.addAttribute("error", "Username or password is incorrect.");
+        }
 
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("input/main");
+        if (logout != null) {
+            model.addAttribute("message", "Logged out successfully.");
+        }
 
-        return modelAndView;
+        return "login";
     }
 
-    @RequestMapping(value = "/signin", method = RequestMethod.GET)
-    public ModelAndView signIn() {
-
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.addObject("userData", new User());
-        modelAndView.setViewName("input/sign_in");
-
-        return modelAndView;
+    @RequestMapping(value = {"/", "/welcome"}, method = RequestMethod.GET)
+    public String welcome(Model model) {
+        return "welcome";
     }
 
-    @RequestMapping(value = "/welcome", method = RequestMethod.POST)
-    public ModelAndView signIn(@ModelAttribute("userData") User user) {
-
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.addObject("userData", user);
-        modelAndView.setViewName("input/welcome");
-
-        return modelAndView;
-    }
-
-    @RequestMapping(value = "/checkin", method = RequestMethod.GET)
-    public ModelAndView checkIn() {
-
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("input/check_in");
-
-        return modelAndView;
-    }
-
-    @RequestMapping(value = "/forgot", method = RequestMethod.GET)
-    public ModelAndView forgottenPassword() {
-
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("input/forgottenPassword");
-
-        return modelAndView;
+    @RequestMapping(value = "/admin", method = RequestMethod.GET)
+    public String admin(Model model) {
+        return "admin";
     }
 }
