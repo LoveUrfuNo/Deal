@@ -7,6 +7,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import springbackend.email.Sender;
 import springbackend.model.User;
 import springbackend.service.SecurityService;
 import springbackend.service.UserService;
@@ -28,7 +29,6 @@ public class UserController {
     @Autowired
     private UserValidator userValidator;
 
-
     @RequestMapping(value = "/main", method = RequestMethod.GET)
     public String main(Model model) {
         model.addAttribute("userForm", new User());
@@ -40,7 +40,7 @@ public class UserController {
     public String registration(Model model) {
         model.addAttribute("userForm", new User());
 
-        return "registration";
+        return "main";
     }
 
     @RequestMapping(value = "/registration", method = RequestMethod.POST)
@@ -53,6 +53,12 @@ public class UserController {
         userService.save(userForm);
         securityService.autoLogin(userForm.getUsername(), userForm.getConfirmPassword());
 
+        new Sender("deal.agentservice@gmail.com", "-"). // TODO: add correct password
+                send("Добро пожаловать на Deal",
+                        "Здравствуйте, " + Sender.getNameFromEmailAddress(userForm.getUsername()) + "! Мы приветствуем вас на нашем сайте!",
+                        "deal.agentservice@gmail.com",
+                        userForm.getUsername());
+
         return "redirect:/profile";
     }
 
@@ -62,7 +68,7 @@ public class UserController {
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
-    public String login(BindingResult bindingResult, Model model, String error, String logout) {
+    public String login(Model model, String error, String logout) {
         if (error != null) {
             model.addAttribute("error", "Username or password is incorrect.");
         }
