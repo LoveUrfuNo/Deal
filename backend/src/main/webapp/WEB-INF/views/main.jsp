@@ -69,20 +69,11 @@
                     </div>
                     <div class="col-xs-8 text-right menu-1">
                         <ul>
-                            <li><a href="#">Features</a></li>
-                            <li><a href="#">Tour</a></li>
-                            <li class="has-dropdown">
-                                <a href="#">Dropdown</a>
-                                <ul class="dropdown">
-                                    <li><a href="#">Web Design</a></li>
-                                    <li><a href="#">eCommerce</a></li>
-                                    <li><a href="#">Branding</a></li>
-                                    <li><a href="#">API</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Pricing</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <li class="btn-cta"><a href="#"><span>Get started</span></a></li>
+                            <li><a href="#">Профиль</a></li>
+                            <li><a href="#">Найти услугу</a></li>
+                            <li><a href="#">Предложить услугу</a></li>
+                            <li><a href="#">Поддержка</a></li>
+                            <li class="btn-cta"><a href="#"><span>Начать</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -97,8 +88,8 @@
                     <div class="col-md-12 col-md-offset-0 text-left">
                         <div class="row row-mt-15em">
                             <div class="col-md-7 mt-text animate-box" data-animate-effect="fadeInUp">
-                                <span class="intro-text-small">Welcome to Deal</span>
-                                <h1>Помоги нам деньгами</h1>
+                                <span class="intro-text-small">Добро пожаловать в Deal</span>
+                                <h1>Покупай и продавай вместе с нами</h1>
                             </div>
                             <div class="col-md-4 col-md-push-1 animate-box" data-animate-effect="fadeInRight">
                                 <div class="form-wrap">
@@ -134,7 +125,7 @@
                                                                 <label for="password">Пароль</label>
                                                                 <form:input type="password" path="password"
                                                                             class="form-control"
-                                                                            placeholder="Password"/>
+                                                                            placeholder="Пароль"/>
                                                                 <form:errors path="password"/>
                                                             </div>
                                                         </spring:bind>
@@ -147,7 +138,7 @@
                                                                 <label for="confirmPassword">Пароль</label>
                                                                 <form:input type="password" path="confirmPassword"
                                                                             class="form-control"
-                                                                            placeholder="Confirm your password"/>
+                                                                            placeholder="Подтвердите пароль"/>
                                                                 <form:errors path="confirmPassword"/>
                                                             </div>
                                                         </spring:bind>
@@ -157,7 +148,7 @@
                                                     <div class="row form-group">
                                                         <div class="col-md-12">
                                                             <input type="submit" class="btn btn-primary"
-                                                                   value="Зарегаца">
+                                                                   value="Зарегистрироваться">
                                                         </div>
                                                     </div>
                                                 </form:form>
@@ -173,7 +164,7 @@
                                                                 <label for="username">Логин или e-mail</label>
                                                                 <span>${message}</span>
                                                                 <input name="username" type="text" class="form-control"
-                                                                       placeholder="Username"
+                                                                       placeholder="Имя пользователя"
                                                                        autofocus="true"/>
                                                             </div>
                                                         </div>
@@ -181,7 +172,7 @@
                                                             <div class="col-md-12">
                                                                 <label for="password">Пароль</label>
                                                                 <input name="password" type="password"
-                                                                       class="form-control" placeholder="Password"/>
+                                                                       class="form-control" placeholder="Пароль"/>
                                                                 <span>${error}</span>
                                                             </div>
                                                         </div>
