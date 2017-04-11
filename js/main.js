@@ -203,6 +203,33 @@
 
 	};
     
+    var vegasSlider = function(){
+        $("#page").vegas({
+            slides: [
+                { src: "http://www.2fons.ru/pic/201406/1920x1200/2fons.ru-21289.jpg" },
+                { src: "http://www.nastol.com.ua/pic/201203/1920x1080/nastol.com.ua-17840.jpg" }
+            ]
+        });
+	}
+    
+    var backgroundSlider = function(){
+		var counter = 0;
+		var image = $("#page");
+		var images = ["http://www.2fons.ru/pic/201406/1920x1200/2fons.ru-21289.jpg","http://www.nastol.com.ua/pic/201203/1920x1080/nastol.com.ua-17840.jpg","http://img1.joyreactor.cc/pics/post/full/красивые-картинки-Нью-Йорк-америка-ночь-1076757.jpeg"];
+
+		image.css("background-image", "url("+images[counter]+")");
+
+		setInterval(function(){
+			image.fadeOut(500, function(){
+                image.css("background-image", "url("+images[counter++]+")");
+                image.fadeIn(500);
+			});
+			if(counter == images.length)
+			{
+				counter = 0;
+			}
+		},5000);
+	};
     
 	// Document on load.
 	$(function(){
@@ -210,7 +237,9 @@
         formTab();
         dropdown();
 		owlCrouselFeatureSlide();
-		contentWayPoint();
+		//contentWayPoint();
+        backgroundSlider();
+        //vegasSlider();
 		parallax();
        
 	});

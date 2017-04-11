@@ -47,6 +47,7 @@
 
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css">
 
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/vegas/vegas.min.css">
 
     <!-- Modernizr JS -->
     <script src="${pageContext.request.contextPath}/resources/js/modernizr.min.js"></script>
@@ -60,6 +61,7 @@
 
 
 <div id="page">
+    <span class = "backgroundSlider"></span>
     <div class="page-inner">
         <nav class="gtco-nav" role="navigation">
             <div class="gtco-container">
@@ -197,6 +199,7 @@
         </header>
     </div>
 </div>
+
 
 <div id="fh5co-intro-section">
     <div class="container">
@@ -536,6 +539,9 @@
 <script src="${pageContext.request.contextPath}/resources/js/owl.carousel.min.js"></script>
 <!-- Stellar -->
 <script src="${pageContext.request.contextPath}/resources/js/jquery.stellar.min.js"></script>
+
+<!-- Vegas -->
+<script src="${pageContext.request.contextPath}/resources/vegas/vegas.min.js"></script>
 
 <!-- Main JS (Do not remove) -->
 <script src="${pageContext.request.contextPath}/resources/js/main.js"></script>

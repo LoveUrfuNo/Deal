@@ -129,22 +129,22 @@
 	};
 	
 	var backgroundSlider = function(){
-		var counter = 0;
-		var image = $("#page");
+		var counter = 1;
+		var image = $(".backgroundSlider");
 		var images = ["http://www.2fons.ru/pic/201406/1920x1200/2fons.ru-21289.jpg","http://www.nastol.com.ua/pic/201203/1920x1080/nastol.com.ua-17840.jpg","http://img1.joyreactor.cc/pics/post/full/красивые-картинки-Нью-Йорк-америка-ночь-1076757.jpeg"];
 
-		image.css("background-image", "url("+images[counter]+")");
+		//image.css("background-image", "url("+images[counter]+")");
 
 		setInterval(function(){
-			image.fadeOut(500, function(){
+			image.fadeOut(1000, function(){
                 image.css("background-image", "url("+images[counter++]+")");
-                image.fadeIn(500);
+                image.fadeIn(1000);
 			});
 			if(counter == images.length)
 			{
 				counter = 0;
 			}
-		},5000);
+		},10000);
 	};
 
     var formTab = function() {
@@ -221,17 +221,26 @@
 		});
 
 	};
-    
+
+	var vegasSlider = function(){
+        $("#page").vegas({
+            slides: [
+                { src: "http://www.2fons.ru/pic/201406/1920x1200/2fons.ru-21289.jpg" },
+                { src: "http://www.nastol.com.ua/pic/201203/1920x1080/nastol.com.ua-17840.jpg" }
+            ]
+        });
+	}
     
 	// Document on load.
 	$(function(){
 		fullHeight();
         formTab();
 		owlCrouselFeatureSlide();
-		contentWayPoint();
-		parallax();
+        contentWayPoint();
         backgroundSlider();
-        dropdown();
+		parallax();
+        //dropdown();
+        //vegasSlider();
 	});
 
 
