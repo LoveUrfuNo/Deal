@@ -53,7 +53,7 @@ public class UserController {
         userService.save(userForm);
         securityService.autoLogin(userForm.getUsername(), userForm.getConfirmPassword());
 
-        new Sender("deal.agentservice@gmail.com", "-"). // TODO: add correct password
+        new Sender("deal.agentservice@gmail.com", "deal160001"). //TODO: add correct password
                 send("Добро пожаловать на Deal",
                         "Здравствуйте, " + Sender.getNameFromEmailAddress(userForm.getUsername()) + "! Мы приветствуем вас на нашем сайте!",
                         "deal.agentservice@gmail.com",

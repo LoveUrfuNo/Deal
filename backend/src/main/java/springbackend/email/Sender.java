@@ -43,7 +43,6 @@ public class Sender {
             message.setSubject(subject);
             //текст
             message.setText(text);
-
             //отправляем сообщение
             Transport.send(message);
         } catch (MessagingException e) {

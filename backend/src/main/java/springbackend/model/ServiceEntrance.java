@@ -10,7 +10,7 @@ public class ServiceEntrance {
     private final String correctPassword = "deal";
 
     public ServiceEntrance() {
-}
+    }
 
     public String getCorrectPassword() {
         return correctPassword;
