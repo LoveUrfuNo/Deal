@@ -216,7 +216,7 @@
                                                     <div class="col-md-12">
                                                         <input type="submit" class="btn btn-primary"
                                                                onclick="document.forms['logoutForm'].submit()"
-                                                               value="Выйте">
+                                                               value="Выйти">
                                                     </div>
                                                 </div>
                                                 </p>
