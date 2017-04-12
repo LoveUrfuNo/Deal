@@ -22,6 +22,7 @@ a:hover {
   text-decoration: none;
   color: #F03861;
 }
+
 a:focus, a:active {
   outline: none;
 }
@@ -66,7 +67,9 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
-
+.profile a:hover {
+  color: #F03861 !important;
+}
 
 
 

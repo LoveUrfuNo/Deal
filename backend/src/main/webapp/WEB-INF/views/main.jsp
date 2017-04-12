@@ -201,12 +201,12 @@
                                 <!-- После Регистрации или входа-->
                                 <div class="form-wrap2">
                                     <div class="tab">
-                                        <div = class = "profile">
+                                        <div class = "profile">
                                     <a class = "profileicon"href="#">
                                         <img src="http://ic.pics.livejournal.com/v_kosmetikovna/64617808/63542/63542_900.jpg">
                                    </a>
                                         <p>Катя Клэп</p>
-                                       <p> <a href="#" >
+                                       <p> <a href="#">
                                             Расскажите о себе подробнее
                                        </a></p>
                                     </div>
