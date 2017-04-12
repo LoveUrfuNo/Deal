@@ -105,12 +105,15 @@ embed {
 
 }
 
-.profile a {
-
+.profile a:hover {
+  color: #449fdb!important;
 }
 
-
-
+.profile input {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 
 #page {

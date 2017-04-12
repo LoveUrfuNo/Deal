@@ -6,14 +6,25 @@
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
+<<<<<<< HEAD:backend/.idea/dataSources/c01ebc68-688b-4981-afc1-9d0f2ff4ce9c.xml
     <schema id="3" parent="1" name="animal"/>
     <schema id="4" parent="1" name="information_schema"/>
     <schema id="5" parent="1" name="mysql"/>
     <schema id="6" parent="1" name="performance_schema"/>
-    <schema id="7" parent="1" name="registration_02"/>
-    <schema id="8" parent="1" name="spring_security_app"/>
-    <schema id="9" parent="1" name="sys"/>
+    <schema id="7" parent="1" name="spring_security_app"/>
+    <schema id="8" parent="1" name="sys"/>
+    <schema id="9" parent="1" name="test"/>
+    <schema id="10" parent="1" name="registration_02"/>
+=======
+    <schema id="3" parent="1" name="information_schema"/>
+    <schema id="4" parent="1" name="mysql"/>
+    <schema id="5" parent="1" name="performance_schema"/>
+    <schema id="6" parent="1" name="sys"/>
+    <schema id="7" parent="1" name="animal"/>
+    <schema id="8" parent="1" name="registration_02"/>
+    <schema id="9" parent="1" name="spring_security_app"/>
     <schema id="10" parent="1" name="test"/>
+>>>>>>> Nikita:backend/.idea/dataSources/48ddaac8-e76d-4acd-8924-2c8acbfb9ecd.xml
     <table id="11" parent="2" name="roles"/>
     <table id="12" parent="2" name="user_roles"/>
     <table id="13" parent="2" name="users"/>

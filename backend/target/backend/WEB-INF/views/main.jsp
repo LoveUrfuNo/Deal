@@ -62,7 +62,7 @@
 
 
 <div id="page">
-    <span class = "backgroundSlider"></span>
+    <span class="backgroundSlider"></span>
     <div class="page-inner">
         <nav class="gtco-nav" role="navigation">
             <div class="gtco-container">
@@ -112,42 +112,42 @@
                                                            action="/registration"
                                                            class="form-signin">
                                                     <div class="row form-group">
-                                                        <div class = "col-md-12">
-                                                        <spring:bind path="username">
-                                                            <div class="form-group ${status.error ? 'has-error' : ''}">
-                                                                <label for="username">E-mail</label>
-                                                                <form:input type="email" path="username"
-                                                                            class="form-control"
-                                                                            placeholder="ivanov@email.com"/>
-                                                                <form:errors path="username"/>
-                                                            </div>
-                                                        </spring:bind>
+                                                        <div class="col-md-12">
+                                                            <spring:bind path="username">
+                                                                <div class="form-group ${status.error ? 'has-error' : ''}">
+                                                                    <label for="username">E-mail</label>
+                                                                    <form:input type="email" path="username"
+                                                                                class="form-control"
+                                                                                placeholder="ivanov@email.com"/>
+                                                                    <form:errors path="username"/>
+                                                                </div>
+                                                            </spring:bind>
                                                         </div>
                                                     </div>
                                                     <div class="row form-group">
-                                                        <div class = "col-md-12">
-                                                        <spring:bind path="password">
-                                                            <div class="form-group ${status.error ? 'has-error' : ''}">
-                                                                <label for="password">Пароль</label>
-                                                                <form:input type="password" path="password"
-                                                                            class="form-control"
-                                                                            placeholder="Пароль"/>
-                                                                <form:errors path="password"/>
-                                                            </div>
-                                                        </spring:bind>
+                                                        <div class="col-md-12">
+                                                            <spring:bind path="password">
+                                                                <div class="form-group ${status.error ? 'has-error' : ''}">
+                                                                    <label for="password">Пароль</label>
+                                                                    <form:input type="password" path="password"
+                                                                                class="form-control"
+                                                                                placeholder="Пароль"/>
+                                                                    <form:errors path="password"/>
+                                                                </div>
+                                                            </spring:bind>
                                                         </div>
                                                     </div>
                                                     <div class="row form-group">
-                                                        <div class = "col-md-12">
-                                                        <spring:bind path="confirmPassword">
-                                                            <div class="form-group ${status.error ? 'has-error' : ''}">
-                                                                <label for="confirmPassword">Пароль</label>
-                                                                <form:input type="password" path="confirmPassword"
-                                                                            class="form-control"
-                                                                            placeholder="Подтвердите пароль"/>
-                                                                <form:errors path="confirmPassword"/>
-                                                            </div>
-                                                        </spring:bind>
+                                                        <div class="col-md-12">
+                                                            <spring:bind path="confirmPassword">
+                                                                <div class="form-group ${status.error ? 'has-error' : ''}">
+                                                                    <label for="confirmPassword">Пароль</label>
+                                                                    <form:input type="password" path="confirmPassword"
+                                                                                class="form-control"
+                                                                                placeholder="Подтвердите пароль"/>
+                                                                    <form:errors path="confirmPassword"/>
+                                                                </div>
+                                                            </spring:bind>
                                                         </div>
                                                     </div>
 
@@ -186,7 +186,8 @@
                                                                value="${_csrf.token}"/>
                                                         <div class="row form-group">
                                                             <div class="col-md-12">
-                                                                <input type="submit" class="btn btn-primary" value="Войти">
+                                                                <input type="submit" class="btn btn-primary"
+                                                                       value="Войти">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -197,19 +198,32 @@
                                 </div>
 
 
-
                                 <!-- После Регистрации или входа-->
                                 <div class="form-wrap2">
                                     <div class="tab">
-                                        <div class = "profile">
-                                    <a class = "profileicon"href="#">
-                                        <img src="http://ic.pics.livejournal.com/v_kosmetikovna/64617808/63542/63542_900.jpg">
-                                   </a>
-                                        <p>Катя Клэп</p>
-                                       <p> <a href="#">
-                                            Расскажите о себе подробнее
-                                       </a></p>
+                                        <div class="profile">
+                                            <a class="profileicon" href="#">
+                                                <img src="http://ic.pics.livejournal.com/v_kosmetikovna/64617808/63542/63542_900.jpg">
+                                            </a>
+                                            <p>${pageContext.request.userPrincipal.name}</p>
+                                            <c:if test="${pageContext.request.userPrincipal.name != null}">
+                                                <form id="logoutForm" method="POST" action="${contextPath}/logout">
+                                                    <input type="hidden" name="${_csrf.parameterName}"
+                                                           value="${_csrf.token}"/>
+                                                </form>
+                                                <p>
+                                                <div class="row form-group">
+                                                    <div class="col-md-12">
+                                                        <input type="submit" class="btn btn-primary"
+                                                               onclick="document.forms['logoutForm'].submit()"
+                                                               value="Выйти">
+                                                    </div>
+                                                </div>
+                                                </p>
+                                            </c:if>
+                                        </div>
                                     </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -234,7 +248,8 @@
 <div class="owl-carousel owl-carousel1 owl-carousel-fullwidth fh5co-light-arrow animate-box"
      data-animate-effect="fadeIn">
     <div class="item">
-        <iframe width="1920" height="906" src="https://www.youtube.com/embed/yGDCd5LMEmw?rel=0&amp;controls=0" frameborder="0" allowfullscreen></iframe>
+        <iframe width="1920" height="906" src="https://www.youtube.com/embed/yGDCd5LMEmw?rel=0&amp;controls=0"
+                frameborder="0" allowfullscreen></iframe>
     </div>
     <div class="item">
         <img src="http://great-usa.ru/wp-content/uploads/2016/12/piano-1406526_1920.jpg" alt="image">
@@ -244,7 +259,8 @@
         <img src="http://svadbavm.ru/upload/iblock/62f/couple.jpg" alt="image">
     </div>
     <div class="item">
-    <img src="http://conceptartworld.com/wp-content/uploads/2013/11/Juan-Pablo-Roldan-morla_NeverEnding_Story.jpg" alt="image">
+        <img src="http://conceptartworld.com/wp-content/uploads/2013/11/Juan-Pablo-Roldan-morla_NeverEnding_Story.jpg"
+             alt="image">
     </div>
 
 </div>
@@ -534,8 +550,10 @@
                         соглашением.
                         Оплачивая услуги на сайте, вы принимаете оферту <a href="#">Deal</a>. Все права защищены. <br>Сделано
                         с <i class="icon-heart3 love"></i> by <a href="#" target="_blank">Deal</a><br> Создатели <a
-                                href="https://vk.com/id35713161" target="_blank">Никита</a> &amp; <a href="https://vk.com/yurok_e" target="_blank">Юрий</a> &amp; <a
-                                href="https://vk.com/id153656293" target="_blank">Максим</a> &amp; <a href="https://vk.com/id352078925" target="_blank">Андрей</a></p>
+                                href="https://vk.com/id35713161" target="_blank">Никита</a> &amp; <a
+                                href="https://vk.com/yurok_e" target="_blank">Юрий</a> &amp; <a
+                                href="https://vk.com/id153656293" target="_blank">Максим</a> &amp; <a
+                                href="https://vk.com/id352078925" target="_blank">Андрей</a></p>
                     <p class="fh5co-social-icons">
                         <a href="#"><i class="icon-twitter-with-circle"></i></a>
                         <a href="#"><i class="icon-facebook-with-circle"></i></a>
@@ -546,7 +564,6 @@
         </div>
     </div>
 </footer>
-
 
 
 <!-- jQuery -->

@@ -67,11 +67,6 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
-.profile a:hover {
-  color: #F03861 !important;
-}
-
-
 
 iframe {
   position: fixed;
@@ -110,12 +105,15 @@ embed {
 
 }
 
-.profile a {
-
+.profile a:hover {
+  color: #449fdb!important;
 }
 
-
-
+.profile input {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 
 #page {
