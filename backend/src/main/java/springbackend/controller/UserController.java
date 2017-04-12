@@ -7,7 +7,6 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import springbackend.email.Sender;
 import springbackend.model.User;
 import springbackend.service.SecurityService;
 import springbackend.service.UserService;
@@ -41,7 +40,7 @@ public class UserController {
     public String registration(Model model) {
         model.addAttribute("userForm", new User());
 
-        return "registration";
+        return "main";
     }
 
     @RequestMapping(value = "/registration", method = RequestMethod.POST)

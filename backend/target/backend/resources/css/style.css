@@ -68,11 +68,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
-video {
-  width: auto;
-  height: auto;
 
-}
 
 iframe {
   position: fixed;
@@ -83,6 +79,39 @@ embed {
   margin-left: auto;
   margin-right: auto;
 }
+
+.form-wrap2 {
+  display:none;
+}
+
+.profile .profileicon img {
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 15px;
+}
+
+.profile {
+  background-color: white;
+  border-radius: 10%;
+}
+
+.profile p {
+  text-align: center;
+  margin-top: 20px;
+  padding-bottom: 60px;
+  font-size: 25px;
+
+}
+
+.profile a {
+
+}
+
+
 
 
 
