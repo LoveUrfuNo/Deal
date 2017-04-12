@@ -81,6 +81,8 @@ public class UserController {
 
     @RequestMapping(value = {"/profile"}, method = RequestMethod.GET)
     public String profile(Model model) {
+        model.addAttribute("userForm", new User());
+
         return "redirect:/registration";
     }
 
