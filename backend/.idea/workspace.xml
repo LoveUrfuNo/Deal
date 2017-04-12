@@ -75,10 +75,10 @@
             <state relative-caret-position="6203">
               <caret line="1199" column="16" lean-forward="true" selection-start-line="1199" selection-start-column="16" selection-end-line="1199" selection-end-column="16" />
               <folding>
-                <marker date="1492016002173" expanded="true" signature="69982:70199" ph="..." />
-                <marker date="1492016002173" expanded="true" signature="69982:70212" ph="..." />
-                <marker date="1492016002173" expanded="true" signature="69982:70181" ph="..." />
-                <marker date="1492016002173" expanded="true" signature="69982:70164" ph="..." />
+                <marker date="1492016004238" expanded="true" signature="69982:70199" ph="..." />
+                <marker date="1492016004238" expanded="true" signature="69982:70212" ph="..." />
+                <marker date="1492016004238" expanded="true" signature="69982:70181" ph="..." />
+                <marker date="1492016004238" expanded="true" signature="69982:70164" ph="..." />
               </folding>
             </state>
           </provider>
@@ -981,12 +981,12 @@
       <updated>1490364414549</updated>
       <workItem from="1490364416744" duration="987000" />
       <workItem from="1490442848404" duration="33000" />
-      <workItem from="1491997540044" duration="14591000" />
+      <workItem from="1491997540044" duration="14690000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15611000" />
+    <option name="totallyTimeSpent" value="15710000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1234,10 +1234,10 @@
         <state relative-caret-position="6203">
           <caret line="1199" column="16" lean-forward="true" selection-start-line="1199" selection-start-column="16" selection-end-line="1199" selection-end-column="16" />
           <folding>
-            <marker date="1492016002173" expanded="true" signature="69982:70199" ph="..." />
-            <marker date="1492016002173" expanded="true" signature="69982:70212" ph="..." />
-            <marker date="1492016002173" expanded="true" signature="69982:70181" ph="..." />
-            <marker date="1492016002173" expanded="true" signature="69982:70164" ph="..." />
+            <marker date="1492016004238" expanded="true" signature="69982:70199" ph="..." />
+            <marker date="1492016004238" expanded="true" signature="69982:70212" ph="..." />
+            <marker date="1492016004238" expanded="true" signature="69982:70181" ph="..." />
+            <marker date="1492016004238" expanded="true" signature="69982:70164" ph="..." />
           </folding>
         </state>
       </provider>
