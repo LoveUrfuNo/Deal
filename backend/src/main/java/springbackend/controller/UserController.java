@@ -7,11 +7,16 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import springbackend.email.EmailService;
 import springbackend.email.Sender;
 import springbackend.model.User;
 import springbackend.service.SecurityService;
 import springbackend.service.UserService;
 import springbackend.validator.UserValidator;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Controller for {@link springbackend.model.User}'s pages.
@@ -19,6 +24,9 @@ import springbackend.validator.UserValidator;
 
 @Controller
 public class UserController {
+
+    @Autowired
+    private EmailService emailService;
 
     @Autowired
     private UserService userService;
@@ -53,11 +61,20 @@ public class UserController {
         userService.save(userForm);
         securityService.autoLogin(userForm.getUsername(), userForm.getConfirmPassword());
 
-        new Sender("deal.agentservice@gmail.com", "deal160001"). //TODO: add correct password
-                send("Добро пожаловать на Deal",
-                        "Здравствуйте, " + Sender.getNameFromEmailAddress(userForm.getUsername()) + "! Мы приветствуем вас на нашем сайте!",
-                        "deal.agentservice@gmail.com",
-                        userForm.getUsername());
+        Map map = new HashMap();
+        map.put("from", "DEAL");
+        map.put("subject", "Hello from " + Sender.getNameFromEmailAddress(userForm.getUsername()) + "!");
+        map.put("to", userForm.getUsername());    // email
+        map.put("ccList", new ArrayList<>());
+        map.put("bccList", new ArrayList<>());
+        map.put("userName", "javastudyUser");
+        map.put("urljavastudy", "javastudy.ru");
+        map.put("message", null);
+
+        if (emailService.sendEmail("message-registration-email.vm", map))
+            System.out.println("message was sent");
+        else
+            System.out.println("error: message wasn't sent");
 
         return "redirect:/profile";
     }
@@ -65,6 +82,11 @@ public class UserController {
     @RequestMapping(value = {"/profile"}, method = RequestMethod.GET)
     public String profile(Model model) {
         return "profile";
+    }
+
+    @RequestMapping(value = {"/confirmAcc"}, method = RequestMethod.GET)
+    public String confirmAcc(Model model) {
+        return "registration-confirm";
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
