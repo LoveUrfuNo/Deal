@@ -127,13 +127,12 @@
 
 		});
 	};
-	
+
+
 	var backgroundSlider = function(){
 		var counter = 1;
 		var image = $(".backgroundSlider");
 		var images = ["http://www.2fons.ru/pic/201406/1920x1200/2fons.ru-21289.jpg","http://www.nastol.com.ua/pic/201203/1920x1080/nastol.com.ua-17840.jpg","http://img1.joyreactor.cc/pics/post/full/красивые-картинки-Нью-Йорк-америка-ночь-1076757.jpeg"];
-
-		//image.css("background-image", "url("+images[counter]+")");
 
 		setInterval(function(){
 			image.fadeOut(1000, function(){
@@ -230,7 +229,21 @@
             ]
         });
 	}
-    
+
+
+	var profileLoader = function(){
+        var newForm = $('.form-wrap2').html();
+        var locationAddress = location.pathname;
+        var profileAddress = "/registration";
+        if(locationAddress == profileAddress)
+		{
+            $('.form-wrap').empty().append(newForm);
+            $('.form-wrap').attr('form-wrap','form-wrap2');
+		}
+
+	}
+
+
 	// Document on load.
 	$(function(){
 		fullHeight();
@@ -239,6 +252,7 @@
         contentWayPoint();
         backgroundSlider();
 		parallax();
+        profileLoader();
         //dropdown();
         //vegasSlider();
 	});

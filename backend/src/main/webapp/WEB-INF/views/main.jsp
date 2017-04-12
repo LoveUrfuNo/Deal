@@ -47,6 +47,7 @@
 
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css">
 
+    <!--Vegas Slider-->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/vegas/vegas.min.css">
 
     <!-- Modernizr JS -->
@@ -93,7 +94,10 @@
                                 <span class="intro-text-small">Добро пожаловать в Deal</span>
                                 <h1>Покупай и продавай вместе с нами</h1>
                             </div>
+
                             <div class="col-md-4 col-md-push-1 animate-box" data-animate-effect="fadeInRight">
+
+                                <!-- До регистрации -->
                                 <div class="form-wrap">
                                     <div class="tab">
                                         <ul class="tab-menu">
@@ -191,6 +195,21 @@
                                         </div>
                                     </div>
                                 </div>
+
+
+
+                                <!-- После Регистрации или входа-->
+                                <div class="form-wrap2">
+                                    <div class="tab">
+                                        <div = class = "profile">
+                                    <a class = "profileicon"href="#">
+                                        <img src="http://ic.pics.livejournal.com/v_kosmetikovna/64617808/63542/63542_900.jpg">
+                                   </a>
+                                        <p>Катя Клэп</p>
+                                       <p> <a href="#" >
+                                            Расскажите о себе подробнее
+                                       </a></p>
+                                    </div>
                             </div>
                         </div>
                     </div>
@@ -527,6 +546,8 @@
         </div>
     </div>
 </footer>
+
+
 
 <!-- jQuery -->
 <script src="${pageContext.request.contextPath}/resources/js/jquery.min.js"></script>

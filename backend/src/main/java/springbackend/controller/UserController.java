@@ -81,7 +81,7 @@ public class UserController {
 
     @RequestMapping(value = {"/profile"}, method = RequestMethod.GET)
     public String profile(Model model) {
-        return "profile";
+        return "redirect:/registration";
     }
 
     @RequestMapping(value = {"/confirmAcc"}, method = RequestMethod.GET)
