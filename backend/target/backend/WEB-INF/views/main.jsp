@@ -212,7 +212,13 @@
                                                            value="${_csrf.token}"/>
                                                 </form>
                                                 <p>
-                                                    <a onclick="document.forms['logoutForm'].submit()">Выйти</a>
+                                                <div class="row form-group">
+                                                    <div class="col-md-12">
+                                                        <input type="submit" class="btn btn-primary"
+                                                               onclick="document.forms['logoutForm'].submit()"
+                                                               value="Выйте">
+                                                    </div>
+                                                </div>
                                                 </p>
                                             </c:if>
                                         </div>
