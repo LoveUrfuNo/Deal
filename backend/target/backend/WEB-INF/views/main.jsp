@@ -215,18 +215,16 @@
 <div class="owl-carousel owl-carousel1 owl-carousel-fullwidth fh5co-light-arrow animate-box"
      data-animate-effect="fadeIn">
     <div class="item">
-        <a href="http://great-usa.ru/wp-content/uploads/2016/12/piano-1406526_1920.jpg" class="image-popup"><img
-                src="http://great-usa.ru/wp-content/uploads/2016/12/piano-1406526_1920.jpg" alt="image"></a>
+        <img src="http://great-usa.ru/wp-content/uploads/2016/12/piano-1406526_1920.jpg" alt="image">
     </div>
 
     <div class="item">
-        <a href="http://svadbavm.ru/upload/iblock/62f/couple.jpg" class="image-popup"><img
-                src="http://svadbavm.ru/upload/iblock/62f/couple.jpg" alt="image"></a>
+        <img src="http://svadbavm.ru/upload/iblock/62f/couple.jpg" alt="image">
     </div>
     <div class="item">
-        <a href="http://poehali.travel/upload/iblock/99f/bukhta.jpg" class="image-popup"><img
-                src="http://poehali.travel/upload/iblock/99f/bukhta.jpg" alt="image"></a>
+        <img src="http://conceptartworld.com/wp-content/uploads/2013/11/Juan-Pablo-Roldan-morla_NeverEnding_Story.jpg" alt="image">
     </div>
+
 </div>
 
 
@@ -514,8 +512,8 @@
                         соглашением.
                         Оплачивая услуги на сайте, вы принимаете оферту <a href="#">Deal</a>. Все права защищены. <br>Сделано
                         с <i class="icon-heart3 love"></i> by <a href="#" target="_blank">Deal</a><br> Создатели <a
-                                href="#" target="_blank">Никита</a> &amp; <a href="#" target="_blank">Юрий</a> &amp; <a
-                                href="#" target="_blank">Максим</a> &amp; <a href="#" target="_blank">Андрей</a></p>
+                                href="https://vk.com/id35713161" target="_blank">Никита</a> &amp; <a href="https://vk.com/yurok_e" target="_blank">Юрий</a> &amp; <a
+                                href="https://vk.com/id153656293" target="_blank">Максим</a> &amp; <a href="https://vk.com/id352078925" target="_blank">Андрей</a></p>
                     <p class="fh5co-social-icons">
                         <a href="#"><i class="icon-twitter-with-circle"></i></a>
                         <a href="#"><i class="icon-facebook-with-circle"></i></a>
