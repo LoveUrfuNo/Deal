@@ -47,6 +47,7 @@
 
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css">
 
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/vegas/vegas.min.css">
 
     <!-- Modernizr JS -->
     <script src="${pageContext.request.contextPath}/resources/js/modernizr.min.js"></script>
@@ -60,6 +61,7 @@
 
 
 <div id="page">
+    <span class = "backgroundSlider"></span>
     <div class="page-inner">
         <nav class="gtco-nav" role="navigation">
             <div class="gtco-container">
@@ -69,20 +71,11 @@
                     </div>
                     <div class="col-xs-8 text-right menu-1">
                         <ul>
-                            <li><a href="#">Features</a></li>
-                            <li><a href="#">Tour</a></li>
-                            <li class="has-dropdown">
-                                <a href="#">Dropdown</a>
-                                <ul class="dropdown">
-                                    <li><a href="#">Web Design</a></li>
-                                    <li><a href="#">eCommerce</a></li>
-                                    <li><a href="#">Branding</a></li>
-                                    <li><a href="#">API</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Pricing</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <li class="btn-cta"><a href="#"><span>Get started</span></a></li>
+                            <li><a href="#">Профиль</a></li>
+                            <li><a href="#">Найти услугу</a></li>
+                            <li><a href="#">Предложить услугу</a></li>
+                            <li><a href="#">Поддержка</a></li>
+                            <li class="btn-cta"><a href="#"><span>Начать</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -90,15 +83,15 @@
         </nav>
 
         <header id="gtco-header" class="gtco-cover" role="banner"
-                style="background-image: url(http://bm.img.com.ua/berlin/storage/news/orig/2/5e/a24b6d1466884ba1325b88d12441a5e2.jpg)">
+                style="">
             <div class="overlay"></div>
             <div class="gtco-container">
                 <div class="row">
                     <div class="col-md-12 col-md-offset-0 text-left">
                         <div class="row row-mt-15em">
                             <div class="col-md-7 mt-text animate-box" data-animate-effect="fadeInUp">
-                                <span class="intro-text-small">Welcome to Deal</span>
-                                <h1>Помоги нам деньгами</h1>
+                                <span class="intro-text-small">Добро пожаловать в Deal</span>
+                                <h1>Покупай и продавай вместе с нами</h1>
                             </div>
                             <div class="col-md-4 col-md-push-1 animate-box" data-animate-effect="fadeInRight">
                                 <div class="form-wrap">
@@ -115,6 +108,7 @@
                                                            action="/registration"
                                                            class="form-signin">
                                                     <div class="row form-group">
+                                                        <div class = "col-md-12">
                                                         <spring:bind path="username">
                                                             <div class="form-group ${status.error ? 'has-error' : ''}">
                                                                 <label for="username">E-mail</label>
@@ -124,34 +118,39 @@
                                                                 <form:errors path="username"/>
                                                             </div>
                                                         </spring:bind>
+                                                        </div>
                                                     </div>
                                                     <div class="row form-group">
+                                                        <div class = "col-md-12">
                                                         <spring:bind path="password">
                                                             <div class="form-group ${status.error ? 'has-error' : ''}">
                                                                 <label for="password">Пароль</label>
                                                                 <form:input type="password" path="password"
                                                                             class="form-control"
-                                                                            placeholder="Password"/>
+                                                                            placeholder="Пароль"/>
                                                                 <form:errors path="password"/>
                                                             </div>
                                                         </spring:bind>
+                                                        </div>
                                                     </div>
                                                     <div class="row form-group">
+                                                        <div class = "col-md-12">
                                                         <spring:bind path="confirmPassword">
                                                             <div class="form-group ${status.error ? 'has-error' : ''}">
                                                                 <label for="confirmPassword">Пароль</label>
                                                                 <form:input type="password" path="confirmPassword"
                                                                             class="form-control"
-                                                                            placeholder="Confirm your password"/>
+                                                                            placeholder="Подтвердите пароль"/>
                                                                 <form:errors path="confirmPassword"/>
                                                             </div>
                                                         </spring:bind>
+                                                        </div>
                                                     </div>
 
                                                     <div class="row form-group">
                                                         <div class="col-md-12">
                                                             <input type="submit" class="btn btn-primary"
-                                                                   value="Зарегаца">
+                                                                   value="Зарегистрироваться">
                                                         </div>
                                                     </div>
                                                 </form:form>
@@ -160,14 +159,14 @@
 
                                             <div class="tab-content-inner" data-content="login">
                                                 <form method="POST" action="${contextPath}/login" class="form-signin">
-                                                    <h2 class="form-heading">Log in</h2>
+
                                                     <div class="form-group ${error != null ? 'has-error' : ''}">
                                                         <div class="row form-group">
                                                             <div class="col-md-12">
                                                                 <label for="username">Логин или e-mail</label>
                                                                 <span>${message}</span>
                                                                 <input name="username" type="text" class="form-control"
-                                                                       placeholder="Username"
+                                                                       placeholder="Имя пользователя"
                                                                        autofocus="true"/>
                                                             </div>
                                                         </div>
@@ -175,7 +174,7 @@
                                                             <div class="col-md-12">
                                                                 <label for="password">Пароль</label>
                                                                 <input name="password" type="password"
-                                                                       class="form-control" placeholder="Password"/>
+                                                                       class="form-control" placeholder="Пароль"/>
                                                                 <span>${error}</span>
                                                             </div>
                                                         </div>
@@ -201,22 +200,6 @@
     </div>
 </div>
 
-<div class="owl-carousel owl-carousel1 owl-carousel-fullwidth fh5co-light-arrow animate-box"
-     data-animate-effect="fadeIn">
-    <div class="item">
-        <a href="http://great-usa.ru/wp-content/uploads/2016/12/piano-1406526_1920.jpg" class="image-popup"><img
-                src="http://great-usa.ru/wp-content/uploads/2016/12/piano-1406526_1920.jpg" alt="image"></a>
-    </div>
-
-    <div class="item">
-        <a href="http://svadbavm.ru/upload/iblock/62f/couple.jpg" class="image-popup"><img
-                src="http://svadbavm.ru/upload/iblock/62f/couple.jpg" alt="image"></a>
-    </div>
-    <div class="item">
-        <a href="http://poehali.travel/upload/iblock/99f/bukhta.jpg" class="image-popup"><img
-                src="http://poehali.travel/upload/iblock/99f/bukhta.jpg" alt="image"></a>
-    </div>
-</div>
 
 <div id="fh5co-intro-section">
     <div class="container">
@@ -228,6 +211,26 @@
         </div>
     </div>
 </div><!-- end fh5co-intro-section -->
+
+<div class="owl-carousel owl-carousel1 owl-carousel-fullwidth fh5co-light-arrow animate-box"
+     data-animate-effect="fadeIn">
+    <div class="item">
+        <iframe width="1920" height="906" src="https://www.youtube.com/embed/yGDCd5LMEmw?rel=0&amp;controls=0" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="item">
+        <img src="http://great-usa.ru/wp-content/uploads/2016/12/piano-1406526_1920.jpg" alt="image">
+    </div>
+
+    <div class="item">
+        <img src="http://svadbavm.ru/upload/iblock/62f/couple.jpg" alt="image">
+    </div>
+    <div class="item">
+    <img src="http://conceptartworld.com/wp-content/uploads/2013/11/Juan-Pablo-Roldan-morla_NeverEnding_Story.jpg" alt="image">
+    </div>
+
+</div>
+
+
 <div id="fh5co-common-section">
     <div class="container">
         <div class="heading-section text-center">
@@ -512,8 +515,8 @@
                         соглашением.
                         Оплачивая услуги на сайте, вы принимаете оферту <a href="#">Deal</a>. Все права защищены. <br>Сделано
                         с <i class="icon-heart3 love"></i> by <a href="#" target="_blank">Deal</a><br> Создатели <a
-                                href="#" target="_blank">Никита</a> &amp; <a href="#" target="_blank">Юрий</a> &amp; <a
-                                href="#" target="_blank">Максим</a> &amp; <a href="#" target="_blank">Андрей</a></p>
+                                href="https://vk.com/id35713161" target="_blank">Никита</a> &amp; <a href="https://vk.com/yurok_e" target="_blank">Юрий</a> &amp; <a
+                                href="https://vk.com/id153656293" target="_blank">Максим</a> &amp; <a href="https://vk.com/id352078925" target="_blank">Андрей</a></p>
                     <p class="fh5co-social-icons">
                         <a href="#"><i class="icon-twitter-with-circle"></i></a>
                         <a href="#"><i class="icon-facebook-with-circle"></i></a>
@@ -537,6 +540,9 @@
 <script src="${pageContext.request.contextPath}/resources/js/owl.carousel.min.js"></script>
 <!-- Stellar -->
 <script src="${pageContext.request.contextPath}/resources/js/jquery.stellar.min.js"></script>
+
+<!-- Vegas -->
+<script src="${pageContext.request.contextPath}/resources/vegas/vegas.min.js"></script>
 
 <!-- Main JS (Do not remove) -->
 <script src="${pageContext.request.contextPath}/resources/js/main.js"></script>
