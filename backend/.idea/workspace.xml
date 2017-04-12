@@ -64,8 +64,8 @@
       <file leaf-file-name="main.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/main.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="376">
-              <caret line="224" column="117" lean-forward="false" selection-start-line="224" selection-start-column="117" selection-end-line="224" selection-end-column="117" />
+            <state relative-caret-position="274">
+              <caret line="218" column="10" lean-forward="false" selection-start-line="218" selection-start-column="10" selection-end-line="218" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -856,15 +856,15 @@
       <workItem from="1491812616374" duration="3079000" />
       <workItem from="1491824274329" duration="8520000" />
       <workItem from="1491888216886" duration="8321000" />
-      <workItem from="1491981656662" duration="5748000" />
+      <workItem from="1491981656662" duration="6401000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78946000" />
+    <option name="totallyTimeSpent" value="79599000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1173,6 +1173,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="126" lean-forward="false" selection-start-line="0" selection-start-column="125" selection-end-line="0" selection-end-column="126" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1187,6 +1188,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="13" column="11" lean-forward="false" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1257,8 +1259,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/main.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="224" column="117" lean-forward="false" selection-start-line="224" selection-start-column="117" selection-end-line="224" selection-end-column="117" />
+        <state relative-caret-position="274">
+          <caret line="218" column="10" lean-forward="false" selection-start-line="218" selection-start-column="10" selection-end-line="218" selection-end-column="10" />
           <folding />
         </state>
       </provider>

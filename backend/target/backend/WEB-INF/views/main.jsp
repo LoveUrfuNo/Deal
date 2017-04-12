@@ -215,6 +215,9 @@
 <div class="owl-carousel owl-carousel1 owl-carousel-fullwidth fh5co-light-arrow animate-box"
      data-animate-effect="fadeIn">
     <div class="item">
+        <iframe width="1920" height="906" src="https://www.youtube.com/embed/yGDCd5LMEmw?rel=0&amp;controls=0" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="item">
         <img src="http://great-usa.ru/wp-content/uploads/2016/12/piano-1406526_1920.jpg" alt="image">
     </div>
 
@@ -222,7 +225,7 @@
         <img src="http://svadbavm.ru/upload/iblock/62f/couple.jpg" alt="image">
     </div>
     <div class="item">
-        <img src="http://conceptartworld.com/wp-content/uploads/2013/11/Juan-Pablo-Roldan-morla_NeverEnding_Story.jpg" alt="image">
+    <img src="http://conceptartworld.com/wp-content/uploads/2013/11/Juan-Pablo-Roldan-morla_NeverEnding_Story.jpg" alt="image">
     </div>
 
 </div>
