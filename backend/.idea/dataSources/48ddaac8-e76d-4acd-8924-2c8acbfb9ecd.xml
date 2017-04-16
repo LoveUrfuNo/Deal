@@ -84,10 +84,28 @@ role_id</ColNames>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="27" parent="13" name="PRIMARY">
+    <column id="27" parent="13" name="is_registration_confirmed">
+      <Position>4</Position>
+      <DataType>tinyint(1)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="28" parent="13" name="key_for_registration_confirm">
+      <Position>5</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <index id="29" parent="13" name="key_UNIQUE">
+      <ColNames>key_for_registration_confirm</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="30" parent="13" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
+    </key>
+    <key id="31" parent="13" name="key_UNIQUE">
+      <ColNames>key_for_registration_confirm</ColNames>
+      <UnderlyingIndexName>key_UNIQUE</UnderlyingIndexName>
     </key>
   </database-model>
 </dataSource>

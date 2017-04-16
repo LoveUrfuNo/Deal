@@ -197,7 +197,6 @@
                                     </div>
                                 </div>
 
-
                                 <!-- После Регистрации или входа-->
                                 <div class="form-wrap2">
                                     <div class="tab">

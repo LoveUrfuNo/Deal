@@ -1,3 +1,4 @@
+
 <%--
   Created by IntelliJ IDEA.
   User: kosty
@@ -8,9 +9,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>asdadsada</title>
+    <title>Подтверждение регистрации</title>
 </head>
 <body>
-<h1>Подтверждение аккаунта</h1>
+<%--<form method="POST" action="${pageContext.request.contextPath}/registration-confirm">--%>
+    <h1>Аккаунт подтвержден!</h1>
+<%--</form>--%>
 </body>
 </html>

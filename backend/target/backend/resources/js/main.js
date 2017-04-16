@@ -230,19 +230,16 @@
         });
 	}
 
-
 	var profileLoader = function(){
         var newForm = $('.form-wrap2').html();
         var locationAddress = location.pathname;
-        var profileAddress = "/registration";
+        var profileAddress = "/profile";
         if(locationAddress == profileAddress)
-		{
+        {
             $('.form-wrap').empty().append(newForm);
             $('.form-wrap').attr('form-wrap','form-wrap2');
 		}
-
 	}
-
 
 	// Document on load.
 	$(function(){
