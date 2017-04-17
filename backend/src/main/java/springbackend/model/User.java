@@ -30,7 +30,7 @@ public class User {
     private String confirmPassword;
 
     @ManyToMany
-    @JoinTable(name = "user_roles", joinColumns = @JoinColumn(name = "user_id"),                              //TODO: add toString
+    @JoinTable(name = "user_roles", joinColumns = @JoinColumn(name = "user_id"),    //TODO: add toString
             inverseJoinColumns = @JoinColumn(name = "role_id"))
     private Set<Role> roles;
 

@@ -16,6 +16,7 @@ import springbackend.dao.UserDao;
 import springbackend.service.EmailService;
 import springbackend.model.User;
 import springbackend.service.SecurityService;
+import springbackend.service.UserDetailsServiceImpl;
 import springbackend.service.UserService;
 import springbackend.validator.UserValidator;
 
@@ -72,6 +73,7 @@ public class UserController {
             return "main";
         }
 
+        UserDetailsServiceImpl.field = "registration";
         user.setKeyForRegistrationConfirmUrl(EmailService.generateString(24));
         user.setRegistrationConfirmed(false);    //user didn't confirm acc by email message yet
         userService.save(user);
