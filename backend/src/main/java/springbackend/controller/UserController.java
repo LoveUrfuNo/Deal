@@ -34,9 +34,6 @@ public class UserController {
 
     private static final String MESSAGE = "message-registration-email.vm";
 
-    /*@Autowired
-    private UserDao userDao;*/
-
     @Autowired
     private EmailService emailService;
 
@@ -74,7 +71,7 @@ public class UserController {
         }
 
         UserDetailsServiceImpl.operation = "registration";
-        user.setKeyForRegistrationConfirmUrl(EmailService.generateString(24));
+        user.setKeyForRegistrationConfirmUrl(EmailService.generateString(32));
         user.setRegistrationConfirmed(false);    //user didn't confirm acc by email message yet
         userService.save(user);
         securityService.autoLogin(user.getUsername(), user.getConfirmPassword());
@@ -104,14 +101,6 @@ public class UserController {
 
     @RequestMapping(value = {"/confirm-acc/{token}/{id}"}, method = RequestMethod.GET)
     public String confirmAcc(@PathVariable("token") String token, @PathVariable("id") String idString, Model model) {
-        /*String endOfEmail;
-        if (name.substring(name.indexOf('@'), name.length() - 1).equals("gmail"))
-            endOfEmail = ".com";
-        else
-            endOfEmail = ".ru";
-
-        User user = userService.findByUsername(name + endOfEmail);*/
-
         Long id = Long.parseLong(idString);
         User user = userService.findBuId(id);
 
@@ -121,6 +110,10 @@ public class UserController {
 
         return "registration-confirm";
     }
+
+
+
+
 
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)

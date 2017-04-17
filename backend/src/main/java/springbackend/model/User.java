@@ -89,4 +89,17 @@ public class User {
     public void setRoles(Set<Role> roles) {
         this.roles = roles;
     }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", isRegistrationConfirmed=" + isRegistrationConfirmed +
+                ", keyForRegistrationConfirmUrl='" + keyForRegistrationConfirmUrl + '\'' +
+                ", confirmPassword='" + confirmPassword + '\'' +
+                ", roles=" + roles +
+                '}';
+    }
 }
