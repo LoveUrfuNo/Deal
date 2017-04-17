@@ -93,28 +93,57 @@ embed {
 }
 
 .profile {
-  background-color: white;
-  border-radius: 10%;
+ background-color: white;
+  position: relative;
+  clear: both;
 }
 
 .profile p {
   text-align: center;
   margin-top: 20px;
-  padding-bottom: 60px;
+  padding-bottom: 20px;
   font-size: 25px;
+  color: black;
+  font-weight: bold;
+}
 
+.profile a {
+  color: #393e46 !important;
 }
 
 .profile a:hover {
-  color: #449fdb!important;
+  color: #F03760!important;
+}
+
+.profile .btn.btn-primary {
+  margin-top: 20px;
+}
+
+.profile ul {
+
+}
+
+.profile i{
+  display: inline;
+}
+
+.profile .form-group {
+  padding-right: 0;
 }
 
 .profile input {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 20px;
 }
 
+@media screen and (max-width: 480px) {
+  .profile .form-group {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
 
 #page {
   position: relative;
@@ -176,7 +205,7 @@ embed {
   padding: 20px 0;
   z-index: 1001;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 991px) {
   .gtco-nav {
     padding: 20px 0;
   }
@@ -195,7 +224,7 @@ embed {
   padding: 5px 10px;
   color: #fff;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 991px) {
   .gtco-nav .menu-1, .gtco-nav .menu-2 {
     display: none;
   }
@@ -221,68 +250,7 @@ embed {
 .gtco-nav ul li a:hover, .gtco-nav ul li a:focus, .gtco-nav ul li a:active {
   color: white;
 }
-.gtco-nav ul li.has-dropdown {
-  position: relative;
-}
-.gtco-nav ul li.has-dropdown .dropdown {
-  width: 130px;
-  -webkit-box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.15);
-  box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.15);
-  z-index: 1002;
-  visibility: hidden;
-  opacity: 0;
-  position: absolute;
-  top: 40px;
-  left: 0;
-  text-align: left;
-  background: #fff;
-  padding: 20px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  border-radius: 4px;
-  -webkit-transition: 0s;
-  -o-transition: 0s;
-  transition: 0s;
-}
-.gtco-nav ul li.has-dropdown .dropdown:before {
-  bottom: 100%;
-  left: 40px;
-  border: solid transparent;
-  content: " ";
-  height: 0;
-  width: 0;
-  position: absolute;
-  pointer-events: none;
-  border-bottom-color: #fff;
-  border-width: 8px;
-  margin-left: -8px;
-}
-.gtco-nav ul li.has-dropdown .dropdown li {
-  display: block;
-  margin-bottom: 7px;
-}
-.gtco-nav ul li.has-dropdown .dropdown li:last-child {
-  margin-bottom: 0;
-}
-.gtco-nav ul li.has-dropdown .dropdown li a {
-  padding: 2px 0;
-  display: block;
-  color: #999999;
-  line-height: 1.2;
-  text-transform: none;
-  font-size: 15px;
-}
-.gtco-nav ul li.has-dropdown .dropdown li a:hover {
-  color: #f54c53;
-}
-.gtco-nav ul li.has-dropdown .dropdown li.active > a {
-  color: #000 !important;
-}
-.gtco-nav ul li.has-dropdown:hover a, .gtco-nav ul li.has-dropdown:focus a {
-  color: #fff;
-}
+
 .gtco-nav ul li.btn-cta a {
   color: #f54c53;
 }
@@ -313,7 +281,7 @@ embed {
 #gtco-header {
   background-color: rgba(83,134,139, 0.5);
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 991px) {
   #gtco-header.gtco-cover {
     height: inherit !important;
     padding: 3em 0 !important;
@@ -334,7 +302,7 @@ embed {
   margin-top: 7em;
   margin-bottom: 3em;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 991px) {
   #gtco-header .mt-text {
     margin-top: 0;
   }
@@ -358,7 +326,7 @@ embed {
   line-height: 1;
   font-weight: 300;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 991px) {
   #gtco-header h1 {
     font-size: 34px;
     line-height: 1.2;
@@ -374,9 +342,6 @@ embed {
 #gtco-header .form-wrap {
   position: relative;
   width: 100%;
-  -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.15);
-  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.15);
 }
 #gtco-header .form-wrap .tab-menu {
   padding: 0 !important;
@@ -444,7 +409,7 @@ embed {
 }
 
 .gtco-cover {
-  height: 900px;
+  height: 950px;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -472,7 +437,7 @@ embed {
   position: relative;
   z-index: 10;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 991px) {
   .gtco-cover {
     height: 600px;
   }
@@ -483,7 +448,7 @@ embed {
   display: table;
   width: 100%;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 991px) {
   .gtco-cover .display-t,
   .gtco-cover .display-tc {
     height: 600px;
@@ -492,7 +457,7 @@ embed {
 .gtco-cover.gtco-cover-sm {
   height: 600px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 991px) {
   .gtco-cover.gtco-cover-sm {
     height: 400px;
   }
@@ -503,7 +468,7 @@ embed {
   display: table;
   width: 100%;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 991px) {
   .gtco-cover.gtco-cover-sm .display-t,
   .gtco-cover.gtco-cover-sm .display-tc {
     height: 400px;
@@ -512,7 +477,7 @@ embed {
 .gtco-cover.gtco-cover-xs {
   height: 500px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 991px) {
   .gtco-cover.gtco-cover-xs {
     height: inherit !important;
     padding: 3em 0;
@@ -524,7 +489,7 @@ embed {
   display: table;
   width: 100%;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 991px) {
   .gtco-cover.gtco-cover-xs .display-t,
   .gtco-cover.gtco-cover-xs .display-tc {
     padding: 3em 0;
@@ -565,7 +530,7 @@ embed {
   line-height: 1;
   font-weight: 300;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 991px) {
   #gtco-header .display-tc h1,
   #gtco-counter .display-tc h1,
   .gtco-cover .display-tc h1 {
@@ -604,7 +569,7 @@ embed {
   -o-transition: 0.5s;
   transition: 0.5s;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 991px) {
   #gtco-offcanvas {
     display: block;
   }
@@ -629,7 +594,7 @@ embed {
 .row-mt-15em {
   margin-top: 10em;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 991px) {
   .row-mt-15em {
     margin-top: 7em;
   }
@@ -638,7 +603,7 @@ embed {
 .mt-sm {
   margin-top: 6em;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 991px) {
   .mt-sm {
     margin-top: 3em;
   }
@@ -744,7 +709,7 @@ header #fh5co-main-nav > ul li {
   margin-left: 40px;
   font-size: 18px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 991px) {
   header #fh5co-main-nav > ul li {
     display: block;
     margin-left: 0;
@@ -838,7 +803,7 @@ header #fh5co-main-nav > ul li:first-child {
 .owl-carousel-posts .owl-controls .owl-nav .owl-next {
   right: -50px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 991px) {
   .owl-carousel-posts .owl-controls .owl-nav .owl-next {
     right: 0px;
   }
@@ -847,7 +812,7 @@ header #fh5co-main-nav > ul li:first-child {
 .owl-carousel-posts .owl-controls .owl-nav .owl-prev {
   left: -50px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 991px) {
   .owl-carousel-posts .owl-controls .owl-nav .owl-prev {
     left: 0px;
   }
@@ -903,7 +868,7 @@ header #fh5co-main-nav > ul li:first-child {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 991px) {
   .owl-theme .owl-controls .owl-nav {
     display: none;
   }
@@ -1030,7 +995,7 @@ header #fh5co-main-nav > ul li:first-child {
   padding-left: 0;
   padding-right: 140px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 991px) {
   .services-num.services-num-text-right {
     text-align: left;
   }
@@ -1081,7 +1046,7 @@ header #fh5co-main-nav > ul li:first-child {
   opacity: .2;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 991px) {
   .fh5co-hero, .fh5co-parallax {
     height: inherit;
     padding: 4em 0;
@@ -1093,7 +1058,7 @@ header #fh5co-main-nav > ul li:first-child {
   font-weight: 300;
   margin-bottom: 10px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 991px) {
   .fh5co-hero .fh5co-intro h1, .fh5co-parallax .fh5co-intro h1 {
     font-size: 30px;
   }
@@ -1210,7 +1175,7 @@ header #fh5co-main-nav > ul li:first-child {
   color: #fff;
   font-size: 32px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 991px) {
   .fh5co-services-right {
     margin-bottom: 0;
     text-align: left;
@@ -1389,6 +1354,13 @@ input[type="text"] {
 .form-group {
   margin-bottom: 15px;
   padding-right: 15px;
+}
+
+.form-group .checkbox input {
+  margin-top: 12px;
+  width:15px;
+  height:15px;
+  border-radius: 50%;
 }
 
 #footer p {

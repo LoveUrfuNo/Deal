@@ -44,6 +44,13 @@ public class UserController {
         return "main";
     }
 
+    @RequestMapping(value = "/options", method = RequestMethod.GET)
+    public String options(Model model) {
+        model.addAttribute("userForm", new User());
+
+        return "advanced-options";
+    }
+
     @RequestMapping(value = "/registration", method = RequestMethod.GET)
     public String registration(Model model) {
         model.addAttribute("userForm", new User());

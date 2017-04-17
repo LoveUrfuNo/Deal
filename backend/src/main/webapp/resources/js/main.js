@@ -26,23 +26,6 @@
 
 	};
 
-	var burgerMenu = function() {
-
-		$('.js-fh5co-nav-toggle').on('click', function(event) {
-			event.preventDefault();
-			var $this = $(this);
-			if( $('body').hasClass('menu-show') ) {
-				$('body').removeClass('menu-show');
-				$('#fh5co-main-nav > .js-fh5co-nav-toggle').removeClass('show');
-			} else {
-				$('body').addClass('menu-show');
-				setTimeout(function(){
-					$('#fh5co-main-nav > .js-fh5co-nav-toggle').addClass('show');
-				}, 900);
-			}
-		})
-	};
-
 	// Owl Carousel
 	var owlCrouselFeatureSlide = function() {
 		var owl = $('.owl-carousel1');
@@ -221,16 +204,6 @@
 
 	};
 
-	var vegasSlider = function(){
-        $("#page").vegas({
-            slides: [
-                { src: "http://www.2fons.ru/pic/201406/1920x1200/2fons.ru-21289.jpg" },
-                { src: "http://www.nastol.com.ua/pic/201203/1920x1080/nastol.com.ua-17840.jpg" }
-            ]
-        });
-	}
-
-
 	var profileLoader = function(){
         var newForm = $('.form-wrap2').html();
         var locationAddress = location.pathname;
@@ -238,9 +211,7 @@
         if(locationAddress == profileAddress)
 		{
             $('.form-wrap').empty().append(newForm);
-            $('.form-wrap').attr('form-wrap','form-wrap2');
 		}
-
 	}
 
 
@@ -253,8 +224,6 @@
         backgroundSlider();
 		parallax();
         profileLoader();
-        //dropdown();
-        //vegasSlider();
 	});
 
 
