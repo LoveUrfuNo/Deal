@@ -111,6 +111,9 @@ public class UserController {
         Long id = Long.parseLong(idString);
         User user = userService.findBuId(id);
 
+        if (!user.getKeyForRegistrationConfirmUrl().equals(token))
+            return "redirect:/main?error";
+
         user.setRegistrationConfirmed(true);
         user.setKeyForRegistrationConfirmUrl(null);
         userService.saveAndFlush(user);        //TODO: add output in logger
