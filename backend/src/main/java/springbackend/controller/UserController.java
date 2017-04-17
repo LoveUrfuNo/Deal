@@ -63,6 +63,13 @@ public class UserController {
         return "main";
     }
 
+    @RequestMapping(value = "/options", method = RequestMethod.GET)
+    public String options(Model model) {
+        model.addAttribute("userForm", new User());
+
+        return "advanced-options";
+    }
+
     @RequestMapping(value = "/registration", method = RequestMethod.POST)
     public String registration(@ModelAttribute("userForm") User user, BindingResult bindingResult, Model model) {
         userValidator.validate(user, bindingResult);
@@ -110,6 +117,8 @@ public class UserController {
 
         return "registration-confirm";
     }
+
+
 
 
 

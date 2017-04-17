@@ -37,15 +37,22 @@
 
     <!-- Animate.css -->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/animate.css">
+
     <!-- Icomoon Icon Fonts-->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/icomoon.css">
+
     <!-- Bootstrap  -->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootstrap.css">
+
     <!-- Owl Carousel -->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/owl.carousel.min.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/owl.theme.default.min.css">
 
+    <!-- Main styles-->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css">
+
+    <!-- Awesome Icons -->
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/font-awesome.min.css">
 
     <!--Vegas Slider-->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/vegas/vegas.min.css">
@@ -68,7 +75,7 @@
             <div class="gtco-container">
                 <div class="row">
                     <div class="col-sm-4 col-xs-12">
-                        <div id="gtco-logo"><a href="#">Deal <em>.</em></a></div>
+                        <div id="gtco-logo"><a href="#">Deal <em></em></a></div>
                     </div>
                     <div class="col-xs-8 text-right menu-1">
                         <ul>
@@ -124,6 +131,19 @@
                                                             </spring:bind>
                                                         </div>
                                                     </div>
+                                              <%--      <div class="row form-group">
+                                                        <div class="col-md-12">
+                                                            <spring:bind path="username">
+                                                                <div class="form-group ${status.error ? 'has-error' : ''}">
+                                                                    <label for="username">Логин</label>
+                                                                    <form:input type="text" path="username"
+                                                                                class="form-control"
+                                                                                placeholder="PussySlayer"/>
+                                                                    <form:errors path="username"/>
+                                                                </div>
+                                                            </spring:bind>
+                                                        </div>
+                                                    </div>--%>
                                                     <div class="row form-group">
                                                         <div class="col-md-12">
                                                             <spring:bind path="password">
@@ -141,7 +161,8 @@
                                                         <div class="col-md-12">
                                                             <spring:bind path="confirmPassword">
                                                                 <div class="form-group ${status.error ? 'has-error' : ''}">
-                                                                    <label for="confirmPassword">Пароль</label>
+                                                                    <label for="confirmPassword">Повторите
+                                                                        пароль</label>
                                                                     <form:input type="password" path="confirmPassword"
                                                                                 class="form-control"
                                                                                 placeholder="Подтвердите пароль"/>
@@ -182,6 +203,13 @@
                                                                 <span>${error}</span>
                                                             </div>
                                                         </div>
+
+                                                        <div class="checkbox">
+                                                            <label>
+                                                                <input type="checkbox"> Запомнить меня
+                                                            </label>
+
+                                                        </div>
                                                         <input type="hidden" name="${_csrf.parameterName}"
                                                                value="${_csrf.token}"/>
                                                         <div class="row form-group">
@@ -200,17 +228,34 @@
                                 <!-- После Регистрации или входа-->
                                 <div class="form-wrap2">
                                     <div class="tab">
+                                        <ul class="tab-menu">
+                                            <li class="active gtco-first"><a href="#" data-tab="signup">Профиль</a>
+                                            </li>
+                                            <li class="gtco-second"><a href="#" data-tab="login">Настройки</a></li>
+                                        </ul>
                                         <div class="profile">
                                             <a class="profileicon" href="#">
                                                 <img src="http://ic.pics.livejournal.com/v_kosmetikovna/64617808/63542/63542_900.jpg">
                                             </a>
                                             <p>${pageContext.request.userPrincipal.name}</p>
+                                            <p>Баланс: </p>
                                             <c:if test="${pageContext.request.userPrincipal.name != null}">
                                                 <form id="logoutForm" method="POST" action="${contextPath}/logout">
                                                     <input type="hidden" name="${_csrf.parameterName}"
                                                            value="${_csrf.token}"/>
                                                 </form>
-                                                <p>
+
+                                                <ul>
+                                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                                        <a class="col-xs-6 col-sm-6 col-md-6 col-lg-3 col-lg-push-0"
+                                                           href="#"><i class="fa fa-envelope-open-o fa-3x"
+                                                                       aria-hidden="true"></i></a>
+                                                        <a class="col-xs-2 col-xs-push-4 col-sm-2 col-sm-push-4 col-md-6 col-md-push-0 col-lg-3 col-lg-push-3"
+                                                           href="#"><i class="fa fa-user-o fa-3x"
+                                                                       aria-hidden="true"></i></a>
+                                                    </div>
+                                                </ul>
+
                                                 <div class="row form-group">
                                                     <div class="col-md-12">
                                                         <input type="submit" class="btn btn-primary"
@@ -218,7 +263,7 @@
                                                                value="Выйти">
                                                     </div>
                                                 </div>
-                                                </p>
+
                                             </c:if>
                                         </div>
                                     </div>
@@ -577,9 +622,6 @@
 <script src="${pageContext.request.contextPath}/resources/js/owl.carousel.min.js"></script>
 <!-- Stellar -->
 <script src="${pageContext.request.contextPath}/resources/js/jquery.stellar.min.js"></script>
-
-<!-- Vegas -->
-<script src="${pageContext.request.contextPath}/resources/vegas/vegas.min.js"></script>
 
 <!-- Main JS (Do not remove) -->
 <script src="${pageContext.request.contextPath}/resources/js/main.js"></script>

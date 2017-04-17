@@ -90,7 +90,7 @@ public class User {
         this.roles = roles;
     }
 
-    @Override
+    /*@Override
     public String toString() {
         return "User{" +
                 "id=" + id +
@@ -101,5 +101,5 @@ public class User {
                 ", confirmPassword='" + confirmPassword + '\'' +
                 ", roles=" + roles +
                 '}';
-    }
+    }*/
 }
