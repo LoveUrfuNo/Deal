@@ -73,11 +73,12 @@ public class UserController {
             return "main";
         }
 
-        UserDetailsServiceImpl.field = "registration";
+        UserDetailsServiceImpl.operation = "registration";
         user.setKeyForRegistrationConfirmUrl(EmailService.generateString(24));
         user.setRegistrationConfirmed(false);    //user didn't confirm acc by email message yet
         userService.save(user);
         securityService.autoLogin(user.getUsername(), user.getConfirmPassword());
+        UserDetailsServiceImpl.operation = null;
 
         Map map = new HashMap();
         map.put("from", "DEAL");
