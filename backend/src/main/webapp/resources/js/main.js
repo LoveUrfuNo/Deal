@@ -87,35 +87,36 @@
 	// Animations
 
 	var contentWayPoint = function() {
-		var i = 0;
-		$('.animate-box').waypoint( function( direction ) {
+        var i = 0;
 
-			if( direction === 'down' && !$(this.element).hasClass('animated') ) {
-				
-				i++;
+            $('.animate-box').waypoint(function (direction) {
 
-				$(this.element).addClass('item-animate');
-				setTimeout(function(){
+                if (direction === 'down' && !$(this.element).hasClass('animated')) {
 
-					$('body .animate-box.item-animate').each(function(k){
-						var el = $(this);
-						setTimeout( function () {
-							var effect = el.data('animate-effect');
-							if ( effect === 'fadeIn') {
-								el.addClass('fadeIn animated');
-							} else {
-								el.addClass('fadeInUp animated');
-							}
+                    i++;
 
-							el.removeClass('item-animate');
-						},  k * 200, 'easeInOutExpo' );
-					});
-					
-				}, 100);
-				
-			}
+                    $(this.element).addClass('item-animate');
+                    setTimeout(function () {
 
-		} , { offset: '85%' } );
+                        $('body .animate-box.item-animate').each(function (k) {
+                            var el = $(this);
+                            setTimeout(function () {
+                                var effect = el.data('animate-effect');
+                                if (effect === 'fadeIn') {
+                                    el.addClass('fadeIn animated');
+                                } else {
+                                    el.addClass('fadeInUp animated');
+                                }
+
+                                el.removeClass('item-animate');
+                            }, k * 200, 'easeInOutExpo');
+                        });
+
+                    }, 100);
+
+                }
+
+            }, {offset: '85%'});
 	};
 
 	var parallax = function() {
@@ -126,7 +127,24 @@
 
 		});
 	};
-	
+
+
+	var backgroundSlider = function(){
+		var counter = 1;
+		var image = $(".backgroundSlider");
+		var images = ["http://www.2fons.ru/pic/201406/1920x1200/2fons.ru-21289.jpg","http://www.nastol.com.ua/pic/201203/1920x1080/nastol.com.ua-17840.jpg","http://img1.joyreactor.cc/pics/post/full/красивые-картинки-Нью-Йорк-америка-ночь-1076757.jpeg"];
+
+		setInterval(function(){
+			image.fadeOut(1000, function(){
+                image.css("background-image", "url("+images[counter++]+")");
+                image.fadeIn(1000);
+			});
+			if(counter == images.length)
+			{
+				counter = 0;
+			}
+		},10000);
+	};
 
     var formTab = function() {
 
@@ -202,16 +220,38 @@
 		});
 
 	};
-    
-    
+
+	var vegasSlider = function(){
+        $("#page").vegas({
+            slides: [
+                { src: "http://www.2fons.ru/pic/201406/1920x1200/2fons.ru-21289.jpg" },
+                { src: "http://www.nastol.com.ua/pic/201203/1920x1080/nastol.com.ua-17840.jpg" }
+            ]
+        });
+	}
+
+	var profileLoader = function(){
+        var newForm = $('.form-wrap2').html();
+        var locationAddress = location.pathname;
+        var profileAddress = "/profile";
+        if(locationAddress == profileAddress)
+        {
+            $('.form-wrap').empty().append(newForm);
+            $('.form-wrap').attr('form-wrap','form-wrap2');
+		}
+	}
+
 	// Document on load.
 	$(function(){
 		fullHeight();
         formTab();
 		owlCrouselFeatureSlide();
-		contentWayPoint();
+        contentWayPoint();
+        backgroundSlider();
 		parallax();
-        dropdown();
+        profileLoader();
+        //dropdown();
+        //vegasSlider();
 	});
 
 

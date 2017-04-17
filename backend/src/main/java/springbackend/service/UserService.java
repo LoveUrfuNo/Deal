@@ -13,5 +13,11 @@ public interface UserService {
 
     void save(User user);
 
+    void saveAndFlush(User user);
+
+    void delete(User user);
+
     User findByUsername(String username);
+
+    User findBuId(Long id);
 }

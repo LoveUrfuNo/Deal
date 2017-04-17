@@ -10,7 +10,6 @@ import java.util.Set;
 @Entity
 @Table(name = "users")
 public class User {
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
@@ -21,11 +20,17 @@ public class User {
     @Column(name = "password")
     private String password;
 
+    @Column(name = "is_registration_confirmed")
+    private Boolean isRegistrationConfirmed;
+
+    @Column(name = "key_for_registration_confirm")
+    private String keyForRegistrationConfirmUrl;
+
     @Transient
     private String confirmPassword;
 
     @ManyToMany
-    @JoinTable(name = "user_roles", joinColumns = @JoinColumn(name = "user_id"),
+    @JoinTable(name = "user_roles", joinColumns = @JoinColumn(name = "user_id"),                              //TODO: add toString
             inverseJoinColumns = @JoinColumn(name = "role_id"))
     private Set<Role> roles;
 
@@ -51,6 +56,22 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public Boolean getRegistrationConfirmed() {
+        return isRegistrationConfirmed;
+    }
+
+    public void setRegistrationConfirmed(Boolean registrationConfirmed) {
+        isRegistrationConfirmed = registrationConfirmed;
+    }
+
+    public String getKeyForRegistrationConfirmUrl() {
+        return keyForRegistrationConfirmUrl;
+    }
+
+    public void setKeyForRegistrationConfirmUrl(String keyForRegistrationConfirmUrl) {
+        this.keyForRegistrationConfirmUrl = keyForRegistrationConfirmUrl;
     }
 
     public String getConfirmPassword() {

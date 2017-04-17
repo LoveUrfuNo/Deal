@@ -7,10 +7,8 @@ import org.springframework.stereotype.Component;
 public class ServiceEntrance {
 
     private String enteredPassword;
-    private final String correctPassword = "deal";
 
-    public ServiceEntrance() {
-}
+    private final String correctPassword = "deal";
 
     public String getCorrectPassword() {
         return correctPassword;

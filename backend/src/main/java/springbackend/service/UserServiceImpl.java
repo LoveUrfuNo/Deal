@@ -40,7 +40,22 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public void saveAndFlush(User user) {
+        userDao.saveAndFlush(user);
+    }
+
+    @Override
+    public void delete(User user) {
+        userDao.delete(user);
+    }
+
+    @Override
     public User findByUsername(String username) {
         return userDao.findByUsername(username);
+    }
+
+    @Override
+    public User findBuId(Long id) {
+        return userDao.findById(id);
     }
 }
