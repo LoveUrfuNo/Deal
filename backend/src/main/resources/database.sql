@@ -1,3 +1,9 @@
+CREATE DATABASE  IF NOT EXISTS `deal_users`;
+USE `deal_users`;
+--
+-- Table structure for table `role`
+--
+
 -- Table: users
 CREATE TABLE users (
   id       INT          NOT NULL AUTO_INCREMENT PRIMARY KEY,
