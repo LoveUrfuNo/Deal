@@ -108,7 +108,7 @@
                                 <div class="form-wrap">
                                     <div class="tab">
                                         <ul class="tab-menu">
-                                            <li class="active gtco-first"><a href="#" data-tab="signup">Регистрация</a>
+                                            <li class="active gtco-first"><a data-tab="signup">Регистрация</a>
                                             </li>
                                             <li class="gtco-second"><a href="#" data-tab="login">Вход</a></li>
                                         </ul>
@@ -179,7 +179,6 @@
                                                         </div>
                                                     </div>
                                                 </form:form>
-
                                             </div>
 
                                             <div class="tab-content-inner" data-content="login">
@@ -244,7 +243,6 @@
                                                     <input type="hidden" name="${_csrf.parameterName}"
                                                            value="${_csrf.token}"/>
                                                 </form>
-
                                                 <ul>
                                                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                                         <a class="col-xs-6 col-sm-6 col-md-6 col-lg-3 col-lg-push-0"
@@ -255,7 +253,7 @@
                                                                        aria-hidden="true"></i></a>
                                                     </div>
                                                 </ul>
-
+                                               <a href="${pageContext.request.contextPath}/options">опачки</a>
                                                 <div class="row form-group">
                                                     <div class="col-md-12">
                                                         <input type="submit" class="btn btn-primary"
