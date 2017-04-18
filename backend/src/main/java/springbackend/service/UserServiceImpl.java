@@ -8,8 +8,7 @@ import springbackend.dao.UserDao;
 import springbackend.model.Role;
 import springbackend.model.User;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 /**
  * Implementation of {@link UserService} interface.
@@ -52,6 +51,13 @@ public class UserServiceImpl implements UserService {
     @Override
     public User findByUsername(String username) {
         return userDao.findByUsername(username);
+    }
+
+    @Override
+    public User findByLogin(String login) {
+        ArrayList<User> list = (ArrayList<User>) userDao.findAll();
+        User result = list.stream().filter(search -> login.equals(search.getLogin())).findAny().orElse(null);
+        return result;
     }
 
     @Override

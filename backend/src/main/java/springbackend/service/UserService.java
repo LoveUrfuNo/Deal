@@ -20,4 +20,6 @@ public interface UserService {
     User findByUsername(String username);
 
     User findBuId(Long id);
+
+    User findByLogin(String login);
 }

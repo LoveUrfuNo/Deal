@@ -131,19 +131,19 @@
                                                             </spring:bind>
                                                         </div>
                                                     </div>
-                                              <%--      <div class="row form-group">
+                                                    <div class="row form-group">
                                                         <div class="col-md-12">
                                                             <spring:bind path="username">
                                                                 <div class="form-group ${status.error ? 'has-error' : ''}">
                                                                     <label for="username">Логин</label>
-                                                                    <form:input type="text" path="username"
+                                                                    <form:input type="text" path="login"
                                                                                 class="form-control"
                                                                                 placeholder="PussySlayer"/>
-                                                                    <form:errors path="username"/>
+                                                                    <form:errors path="login"/>
                                                                 </div>
                                                             </spring:bind>
                                                         </div>
-                                                    </div>--%>
+                                                    </div>
                                                     <div class="row form-group">
                                                         <div class="col-md-12">
                                                             <spring:bind path="password">
@@ -263,7 +263,6 @@
                                                                value="Выйти">
                                                     </div>
                                                 </div>
-
                                             </c:if>
                                         </div>
                                     </div>

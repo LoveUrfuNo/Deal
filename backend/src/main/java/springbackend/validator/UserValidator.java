@@ -29,21 +29,38 @@ public class UserValidator implements Validator {
         User user = (User) o;
 
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "username", "Required");
-        if (user.getUsername().length() < 8 || user.getUsername().length() > 64) {
-            errors.rejectValue("username", "Size.userForm.username");
+        if (!errors.getAllErrors().contains(errors.getFieldError("username"))) {
+            if (!errors.hasErrors()) {
+                if (user.getUsername().length() < 8 || user.getUsername().length() > 64) {
+                    errors.rejectValue("username", "Size.userForm.username");
+                }
+
+                if (userService.findByUsername(user.getUsername()) != null) {
+                    errors.rejectValue("username", "Duplicate.userForm.username");
+                }
+            }
         }
 
-        if (userService.findByUsername(user.getUsername()) != null) {
-            errors.rejectValue("username", "Duplicate.userForm.username");
+        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "login", "Required");
+        if (!errors.getAllErrors().contains(errors.getFieldError("login"))) {
+            if (user.getLogin().length() < 8 || user.getLogin().length() > 32) {
+                errors.rejectValue("login", "Size.userForm.login");
+            }
+
+            if (userService.findByLogin(user.getLogin()) != null) {
+                errors.rejectValue("login", "Duplicate.userForm.login");
+            }
         }
 
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "password", "Required");
-        if (user.getPassword().length() < 8 || user.getPassword().length() > 32) {
-            errors.rejectValue("password", "Size.userForm.password");
-        }
+        if (!errors.getAllErrors().contains(errors.getFieldError("password"))) {
+            if (user.getPassword().length() < 8 || user.getPassword().length() > 32) {
+                errors.rejectValue("password", "Size.userForm.password");
+            }
 
-        if (!user.getConfirmPassword().equals(user.getPassword())) {
-            errors.rejectValue("confirmPassword", "Different.userForm.password");
+            if (!user.getConfirmPassword().equals(user.getPassword())) {
+                errors.rejectValue("confirmPassword", "Different.userForm.password");
+            }
         }
     }
 }

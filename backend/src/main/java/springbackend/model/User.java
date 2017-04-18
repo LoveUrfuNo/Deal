@@ -26,6 +26,9 @@ public class User {
     @Column(name = "key_for_registration_confirm")
     private String keyForRegistrationConfirmUrl;
 
+    @Column(name = "login")
+    private String login;
+
     @Transient
     private String confirmPassword;
 
@@ -74,6 +77,14 @@ public class User {
         this.keyForRegistrationConfirmUrl = keyForRegistrationConfirmUrl;
     }
 
+    public String getLogin() {
+        return login;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
     public String getConfirmPassword() {
         return confirmPassword;
     }
@@ -90,8 +101,7 @@ public class User {
         this.roles = roles;
     }
 
-    /*@Override
-    public String toString() {
+    /*public String toString() {
         return "User{" +
                 "id=" + id +
                 ", username='" + username + '\'' +
