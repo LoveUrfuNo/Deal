@@ -369,6 +369,7 @@
 <script src="${pageContext.request.contextPath}/resources/js/jquery.easing.1.3.js"></script>
 <!-- Bootstrap -->
 <script src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js"></script>
+
 <!--Semantic UI-->
 <script src="${pageContext.request.contextPath}/resources/Semantic-UI-CSS-master/semantic.min.js"></script>
 
