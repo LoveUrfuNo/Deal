@@ -36,32 +36,6 @@
         <property name="entityManagerFactory" ref="entityManagerFactory"/>
     </bean>
 
-
-
-
-    <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
-        <property name="username" value="${java.mail.username}"/>
-        <property name="password" value="${java.mail.password}"/>
-        <property name="port" value="465"/>
-        <property name="javaMailProperties">
-            <props>
-                <prop key="mail.smtp.auth">true</prop>
-                <prop key="mail.smtp.starttls.enable">true</prop>
-                <prop key="mail.smtp.starttls.required">true</prop>
-                <prop key="mail.smtp.socketFactory.class">javax.net.ssl.SSLSocketFactory</prop>
-                <prop key="mail.smtp.host">${java.mail.host}</prop>
-            </props>
-        </property>
-    </bean>
-
-    <bean id="velocityEngine" class="org.springframework.ui.velocity.VelocityEngineFactoryBean">
-        <property name="resourceLoaderPath" value="/WEB-INF/views/email-templates/"/>
-    </bean>
-
-
-
-
-
     <tx:annotation-driven/>
 
     <jpa:repositories base-package="springbackend.dao"/>

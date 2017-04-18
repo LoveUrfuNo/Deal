@@ -202,14 +202,15 @@
 
     };
 
+
     var profileLoader = function () {
         var newForm = $('.form-wrap2').html();
         var locationAddress = location.pathname;
-        var profileAddress = "/registration";
-        if (locationAddress == profileAddress) {
+        var profileAddress = "/profile";
+        if (locationAddress === profileAddress) {
             $('.form-wrap').empty().append(newForm);
         }
-    }
+    };
 
 
     // Document on load.

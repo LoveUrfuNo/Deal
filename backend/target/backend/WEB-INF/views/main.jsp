@@ -129,19 +129,19 @@
                                                             </spring:bind>
                                                         </div>
                                                     </div>
-                                                    <div class="row form-group">
-                                                    <div class="col-md-12">
-                                                        <spring:bind path="username">
-                                                            <div class="form-group ${status.error ? 'has-error' : ''}">
-                                                                <label for="username">Логин</label>
-                                                                <form:input type="text" path="username"
-                                                                            class="form-control"
-                                                                            placeholder="PussySlayer"/>
-                                                                <form:errors path="username"/>
-                                                            </div>
-                                                        </spring:bind>
-                                                    </div>
-                                            </div>
+                                              <%--      <div class="row form-group">
+                                                        <div class="col-md-12">
+                                                            <spring:bind path="username">
+                                                                <div class="form-group ${status.error ? 'has-error' : ''}">
+                                                                    <label for="username">Логин</label>
+                                                                    <form:input type="text" path="username"
+                                                                                class="form-control"
+                                                                                placeholder="PussySlayer"/>
+                                                                    <form:errors path="username"/>
+                                                                </div>
+                                                            </spring:bind>
+                                                        </div>
+                                                    </div>--%>
                                                     <div class="row form-group">
                                                         <div class="col-md-12">
                                                             <spring:bind path="password">
@@ -159,7 +159,8 @@
                                                         <div class="col-md-12">
                                                             <spring:bind path="confirmPassword">
                                                                 <div class="form-group ${status.error ? 'has-error' : ''}">
-                                                                    <label for="confirmPassword">Повторите пароль</label>
+                                                                    <label for="confirmPassword">Повторите
+                                                                        пароль</label>
                                                                     <form:input type="password" path="confirmPassword"
                                                                                 class="form-control"
                                                                                 placeholder="Подтвердите пароль"/>
@@ -202,9 +203,9 @@
                                                         </div>
 
                                                         <div class="checkbox">
-                                                        <label>
-                                                            <input type="checkbox"> Запомнить меня
-                                                        </label>
+                                                            <label>
+                                                                <input type="checkbox"> Запомнить меня
+                                                            </label>
 
                                                         </div>
                                                         <input type="hidden" name="${_csrf.parameterName}"
@@ -221,7 +222,6 @@
                                         </div>
                                     </div>
                                 </div>
-
 
                                 <!-- После Регистрации или входа-->
                                 <div class="form-wrap2">
@@ -266,7 +266,7 @@
                                                     <a href="#" class="ui inverted pink button">Pink</a>
                                                 </div>
                                                 <div class="col-md-4 text-center">
-                                                    <a href="#" class="ui inverted pink disabled button">Pink</a>
+                                                    <a href="#" class="ui inverted pink button">Pink</a>
                                                 </div>
                                             </div>
 

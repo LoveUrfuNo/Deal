@@ -10,7 +10,6 @@ import java.util.Set;
 @Entity
 @Table(name = "users")
 public class User {
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
@@ -20,6 +19,12 @@ public class User {
 
     @Column(name = "password")
     private String password;
+
+    @Column(name = "is_registration_confirmed")
+    private Boolean isRegistrationConfirmed;
+
+    @Column(name = "key_for_registration_confirm")
+    private String keyForRegistrationConfirmUrl;
 
     @Transient
     private String confirmPassword;
@@ -53,6 +58,22 @@ public class User {
         this.password = password;
     }
 
+    public Boolean getRegistrationConfirmed() {
+        return isRegistrationConfirmed;
+    }
+
+    public void setRegistrationConfirmed(Boolean registrationConfirmed) {
+        isRegistrationConfirmed = registrationConfirmed;
+    }
+
+    public String getKeyForRegistrationConfirmUrl() {
+        return keyForRegistrationConfirmUrl;
+    }
+
+    public void setKeyForRegistrationConfirmUrl(String keyForRegistrationConfirmUrl) {
+        this.keyForRegistrationConfirmUrl = keyForRegistrationConfirmUrl;
+    }
+
     public String getConfirmPassword() {
         return confirmPassword;
     }
@@ -68,4 +89,17 @@ public class User {
     public void setRoles(Set<Role> roles) {
         this.roles = roles;
     }
+
+    /*@Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", isRegistrationConfirmed=" + isRegistrationConfirmed +
+                ", keyForRegistrationConfirmUrl='" + keyForRegistrationConfirmUrl + '\'' +
+                ", confirmPassword='" + confirmPassword + '\'' +
+                ", roles=" + roles +
+                '}';
+    }*/
 }

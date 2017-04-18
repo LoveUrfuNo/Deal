@@ -5,4 +5,6 @@ import springbackend.model.User;
 
 public interface UserDao extends JpaRepository<User, Long> {
     User findByUsername(String username);
+
+    User findById(Long id);
 }
