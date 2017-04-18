@@ -19,7 +19,17 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="database.properties" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/main.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-633">
+              <caret line="224" column="75" lean-forward="false" selection-start-line="224" selection-start-column="75" selection-end-line="224" selection-end-column="75" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="database.properties" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/database.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
@@ -45,6 +55,7 @@
         <option value="$PROJECT_DIR$/src/main/resources/database.properties" />
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
         <option value="$PROJECT_DIR$/.idea/dataSources/6ea628d6-538b-44e1-b2ad-3ff29ae25d55.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/main.jsp" />
       </list>
     </option>
   </component>
@@ -580,12 +591,12 @@
       <updated>1490364414549</updated>
       <workItem from="1490364416744" duration="987000" />
       <workItem from="1490442848404" duration="33000" />
-      <workItem from="1492528444586" duration="519000" />
+      <workItem from="1492528444586" duration="681000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1539000" />
+    <option name="totallyTimeSpent" value="1701000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -718,10 +729,10 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1492528750580" expanded="true" signature="49822:49910" ph="..." />
-            <marker date="1492528750580" expanded="true" signature="49822:49895" ph="..." />
-            <marker date="1492528750580" expanded="true" signature="49822:49882" ph="..." />
-            <marker date="1492528750580" expanded="true" signature="49822:49864" ph="..." />
+            <marker date="1492529090499" expanded="true" signature="43936:44024" ph="..." />
+            <marker date="1492529090499" expanded="true" signature="43936:44009" ph="..." />
+            <marker date="1492529090499" expanded="true" signature="43936:43996" ph="..." />
+            <marker date="1492529090499" expanded="true" signature="43936:43978" ph="..." />
           </folding>
         </state>
       </provider>
@@ -754,6 +765,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="29" lean-forward="true" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/main.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-633">
+          <caret line="224" column="75" lean-forward="false" selection-start-line="224" selection-start-column="75" selection-end-line="224" selection-end-column="75" />
           <folding />
         </state>
       </provider>
