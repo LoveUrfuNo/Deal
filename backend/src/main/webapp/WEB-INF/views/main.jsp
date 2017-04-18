@@ -33,8 +33,6 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <link rel="shortcut icon" href="${pageContext.request.contextPath}/resources/favicon.ico">
 
-    <!-- <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'> -->
-
     <!-- Animate.css -->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/animate.css">
 
@@ -48,14 +46,14 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/owl.carousel.min.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/owl.theme.default.min.css">
 
+    <!-- Semantic UI -->
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/Semantic-UI-CSS-master/semantic.min.css">
+
     <!-- Main styles-->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css">
 
     <!-- Awesome Icons -->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/font-awesome.min.css">
-
-    <!--Vegas Slider-->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/vegas/vegas.min.css">
 
     <!-- Modernizr JS -->
     <script src="${pageContext.request.contextPath}/resources/js/modernizr.min.js"></script>
@@ -102,7 +100,7 @@
                                 <h1>Покупай и продавай вместе с нами</h1>
                             </div>
 
-                            <div class="col-md-4 col-md-push-1 animate-box" data-animate-effect="fadeInRight">
+                            <div class="col-md-5 animate-box" data-animate-effect="fadeInRight">
 
                                 <!-- До регистрации -->
                                 <div class="form-wrap">
@@ -226,36 +224,61 @@
 
                                 <!-- После Регистрации или входа-->
                                 <div class="form-wrap2">
-                                    <div class="tab">
-                                        <ul class="tab-menu">
-                                            <li class="active gtco-first"><a href="#" data-tab="signup">Профиль</a>
-                                            </li>
-                                            <li class="gtco-second"><a href="#" data-tab="login">Настройки</a></li>
-                                        </ul>
-                                        <div class="profile">
-                                            <a class="profileicon" href="#">
-                                                <img src="http://ic.pics.livejournal.com/v_kosmetikovna/64617808/63542/63542_900.jpg">
-                                            </a>
-                                            <p>${pageContext.request.userPrincipal.name}</p>
-                                            <p>Баланс: </p>
+                                    <div class="profile">
+                                        <div class="row">
+                                            <div class="col-md-3 vertical-centering">
+                                                <div class="navigation">
+                                                    <a class="col-md-12" href="#"><i class="mail circular icon"></i></a>
+                                                    <a class="col-md-12" href="#"><i class="mail circular icon"></i></a>
+                                                    <a class="col-md-12" href="#"><i class="mail circular icon"></i></a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <img class="profile-icon"
+                                                     src="http://ic.pics.livejournal.com/v_kosmetikovna/64617808/63542/63542_900.jpg">
+                                            </div>
+                                            <div class="col-md-3 vertical-centering">
+                                                <div class="navigation">
+                                                    <a class="col-md-12" href="#"><i class="mail circular icon"></i></a>
+                                                    <a class="col-md-12" href="#"><i class="mail circular icon"></i></a>
+                                                    <a class="col-md-12" href="#"><i class="mail circular icon"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="content text-center">
+                                                    <a class="header text-center">Kristy</a>
+                                                    <div class="meta">
+                                                        <span class="date">С нами с 2013</span>
+                                                    </div>
+                                                    <div class="description">Lorem mi sae na kruz akellam</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ui white divider"></div>
+                                        <div class="row">
+                                            <div class="col-md-4 text-center">
+                                                <a href="#" class="ui inverted pink button">Pink</a>
+                                            </div>
+                                            <div class="col-md-4 text-center">
+                                                <a href="#" class="ui inverted pink button">Pink</a>
+                                            </div>
+                                            <div class="col-md-4 text-center">
+                                                <a href="#" class="ui inverted pink button">Pink</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="ui white divider"></div>
+                                        <div class="logout-form">
+
                                             <c:if test="${pageContext.request.userPrincipal.name != null}">
                                                 <form id="logoutForm" method="POST" action="${contextPath}/logout">
                                                     <input type="hidden" name="${_csrf.parameterName}"
                                                            value="${_csrf.token}"/>
                                                 </form>
-                                                <ul>
-                                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                                        <a class="col-xs-6 col-sm-6 col-md-6 col-lg-3 col-lg-push-0"
-                                                           href="#"><i class="fa fa-envelope-open-o fa-3x"
-                                                                       aria-hidden="true"></i></a>
-                                                        <a class="col-xs-2 col-xs-push-4 col-sm-2 col-sm-push-4 col-md-6 col-md-push-0 col-lg-3 col-lg-push-3"
-                                                           href="#"><i class="fa fa-user-o fa-3x"
-                                                                       aria-hidden="true"></i></a>
-                                                    </div>
-                                                </ul>
-                                               <a href="${pageContext.request.contextPath}/options">опачки</a>
                                                 <div class="row form-group">
-                                                    <div class="col-md-12">
+                                                    <div class="col-md-12 text-center">
                                                         <input type="submit" class="btn btn-primary"
                                                                onclick="document.forms['logoutForm'].submit()"
                                                                value="Выйти">
@@ -613,6 +636,10 @@
 <script src="${pageContext.request.contextPath}/resources/js/jquery.easing.1.3.js"></script>
 <!-- Bootstrap -->
 <script src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js"></script>
+
+<!--Semantic UI-->
+<script src="${pageContext.request.contextPath}/resources/Semantic-UI-CSS-master/semantic.min.js"></script>
+
 <!-- Waypoints -->
 <script src="${pageContext.request.contextPath}/resources/js/jquery.waypoints.min.js"></script>
 <!-- Owl carousel -->

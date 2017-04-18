@@ -82,20 +82,13 @@ embed {
   display:none;
 }
 
-.profile .profileicon img {
-  max-width: 200px;
-  max-height: 200px;
-  border-radius: 50%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 15px;
-}
-
 .profile {
+  padding: 10% 5% 5% 5%;
  background-color: white;
+  background-size: cover;
   position: relative;
   clear: both;
+  border-radius: 7px;
 }
 
 .profile p {
@@ -104,52 +97,44 @@ embed {
   padding-bottom: 20px;
   font-size: 25px;
   color: black;
-  font-weight: bold; 
+  font-weight: bold;
 }
 
-.profile a {
-  color: #393e46 !important;
+.profile .ui a:hover {
+  color:white!important;
 }
 
-.profile a:hover {
-  color: #F03760!important;
+.vertical-centering {
+  margin-top: 5%;
 }
 
-.profile .btn.btn-primary {
-  margin-top: 20px;
+.profile .profile-icon {
+  border-width: 4px;
+  border-style: solid;
+  border-color: #F54C53;
+  border-radius: 50%;
+  max-height: 180px;
+  max-width: 180px;
 }
 
-.profile ul {
-
+.profile .navigation a{
+  padding-bottom: 15px;
 }
 
-.profile i{
-  display: inline;
+.profile .navigation i {
+  color: #F54C53!important;
+  background-color: white !important;
 }
 
-.profile .form-group {
-  padding-right: 0;
-}
-
-.profile input {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 20px;
-}
-
-@media screen and (max-width: 480px) {
-  .profile .form-group {
-    padding-right: 15px;
-    padding-left: 15px;
-  }
+.profile .navigation i:hover {
+  color: white !important;
+  background-color: #F54C53 !important;
 }
 
 #page {
   position: relative;
   overflow-x: hidden;
   width: 100%;
-  height: 100%;
     margin-bottom: 15vh;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
