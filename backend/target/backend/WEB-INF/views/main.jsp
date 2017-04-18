@@ -129,7 +129,7 @@
                                                             </spring:bind>
                                                         </div>
                                                     </div>
-                                              <%--      <div class="row form-group">
+                                                   <div class="row form-group">
                                                         <div class="col-md-12">
                                                             <spring:bind path="username">
                                                                 <div class="form-group ${status.error ? 'has-error' : ''}">
@@ -141,7 +141,7 @@
                                                                 </div>
                                                             </spring:bind>
                                                         </div>
-                                                    </div>--%>
+                                                    </div>
                                                     <div class="row form-group">
                                                         <div class="col-md-12">
                                                             <spring:bind path="password">
