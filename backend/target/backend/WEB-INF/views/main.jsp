@@ -106,7 +106,7 @@
                                 <div class="form-wrap">
                                     <div class="tab">
                                         <ul class="tab-menu">
-                                            <li class="active gtco-first"><a href="#" data-tab="signup">Регистрация</a>
+                                            <li class="active gtco-first"><a data-tab="signup">Регистрация</a>
                                             </li>
                                             <li class="gtco-second"><a href="#" data-tab="login">Вход</a></li>
                                         </ul>
@@ -129,15 +129,15 @@
                                                             </spring:bind>
                                                         </div>
                                                     </div>
-                                                   <div class="row form-group">
+                                                    <div class="row form-group">
                                                         <div class="col-md-12">
                                                             <spring:bind path="username">
                                                                 <div class="form-group ${status.error ? 'has-error' : ''}">
                                                                     <label for="username">Логин</label>
-                                                                    <form:input type="text" path="username"
+                                                                    <form:input type="text" path="login"
                                                                                 class="form-control"
                                                                                 placeholder="PussySlayer"/>
-                                                                    <form:errors path="username"/>
+                                                                    <form:errors path="login"/>
                                                                 </div>
                                                             </spring:bind>
                                                         </div>
@@ -177,7 +177,6 @@
                                                         </div>
                                                     </div>
                                                 </form:form>
-
                                             </div>
 
                                             <div class="tab-content-inner" data-content="login">
@@ -187,7 +186,7 @@
                                                         <div class="row form-group">
                                                             <div class="col-md-12">
                                                                 <label for="username">Логин или e-mail</label>
-                                                                <span>${message}</span>
+                                                                <span class="errors">${message}</span>
                                                                 <input name="username" type="text" class="form-control"
                                                                        placeholder="Имя пользователя"
                                                                        autofocus="true"/>
@@ -198,7 +197,7 @@
                                                                 <label for="password">Пароль</label>
                                                                 <input name="password" type="password"
                                                                        class="form-control" placeholder="Пароль"/>
-                                                                <span>${error}</span>
+                                                                <span class="errors">${error}</span>
                                                             </div>
                                                         </div>
 
@@ -223,38 +222,39 @@
                                     </div>
                                 </div>
 
-                                <!-- После Регистрации или входа-->
+                                <!-- После Регистрации или входа (никитачмо) -->
                                 <div class="form-wrap2">
-
+                                    <c:if test="${pageContext.request.userPrincipal.name != null}">
                                         <div class="profile">
-                                                <div class="row">
-                                                    <div class="col-md-3 vertical-centering">
-                                                        <div class="navigation">
-                                                            <a class="col-md-12" href="#"><i class="mail circular icon"></i></a>
-                                                            <a class="col-md-12" href="#"><i class="mail circular icon"></i></a>
-                                                            <a class="col-md-12" href="#"><i class="mail circular icon"></i></a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <img class="profile-icon" src="http://ic.pics.livejournal.com/v_kosmetikovna/64617808/63542/63542_900.jpg">
-                                                    </div>
-                                                    <div class="col-md-3 vertical-centering">
-                                                        <div class="navigation">
-                                                            <a class="col-md-12" href="#"><i class="mail circular icon"></i></a>
-                                                            <a class="col-md-12" href="#"><i class="mail circular icon"></i></a>
-                                                            <a class="col-md-12" href="#"><i class="mail circular icon"></i></a>
-                                                        </div>
+                                            <div class="row">
+                                                <div class="col-md-3 vertical-centering">
+                                                    <div class="navigation">
+                                                        <a class="col-md-12" href="#"><i class="mail circular icon"></i></a>
+                                                        <a class="col-md-12" href="#"><i class="mail circular icon"></i></a>
+                                                        <a class="col-md-12" href="#"><i class="mail circular icon"></i></a>
                                                     </div>
                                                 </div>
+                                                <div class="col-md-6">
+                                                    <img class="profile-icon"
+                                                         src="http://ic.pics.livejournal.com/v_kosmetikovna/64617808/63542/63542_900.jpg">
+                                                </div>
+                                                <div class="col-md-3 vertical-centering">
+                                                    <div class="navigation">
+                                                        <a class="col-md-12" href="#"><i class="mail circular icon"></i></a>
+                                                        <a class="col-md-12" href="#"><i class="mail circular icon"></i></a>
+                                                        <a class="col-md-12" href="#"><i class="mail circular icon"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
                                             <div class="row">
                                                 <div class="col-md-12">
-                                                <div class="content text-center">
-                                                    <a class="header text-center">Kristy</a>
-                                                    <div class="meta">
-                                                        <span class="date">С нами с 2013</span>
+                                                    <div class="content text-center">
+                                                        <a class="header text-center">Kristy</a>
+                                                        <div class="meta">
+                                                            <span class="date">С нами с 2013</span>
+                                                        </div>
+                                                        <div class="description">Lorem mi sae na kruz akellam</div>
                                                     </div>
-                                                    <div class="description">Lorem mi sae na kruz akellam</div>
-                                                </div>
                                                 </div>
                                             </div>
                                             <div class="ui white divider"></div>
@@ -269,34 +269,26 @@
                                                     <a href="#" class="ui inverted pink button">Pink</a>
                                                 </div>
                                             </div>
-
                                             <div class="ui white divider"></div>
                                             <div class="logout-form">
-
-                                                <c:if test="${pageContext.request.userPrincipal.name != null}">
-                                                    <form id="logoutForm" method="POST" action="${contextPath}/logout">
-                                                        <input type="hidden" name="${_csrf.parameterName}"
-                                                               value="${_csrf.token}"/>
-                                                    </form>
-                                                    <div class="row form-group">
-                                                        <div class="col-md-12 text-center">
-                                                            <input type="submit" class="btn btn-primary"
-                                                                   onclick="document.forms['logoutForm'].submit()"
-                                                                   value="Выйти">
-                                                        </div>
+                                                <form id="logoutForm" method="POST" action="${contextPath}/logout">
+                                                    <input type="hidden" name="${_csrf.parameterName}"
+                                                           value="${_csrf.token}"/>
+                                                </form>
+                                                <div class="row form-group">
+                                                    <div class="col-md-12 text-center">
+                                                        <input type="submit" class="btn btn-primary"
+                                                               onclick="document.forms['logoutForm'].submit()"
+                                                               value="Выйти">
                                                     </div>
-
-                                                </c:if>
-
-
+                                                </div>
                                             </div>
-                                            </div>
-
-
+                                        </div>
+                                    </c:if>
+                                </div>
                             </div>
                         </div>
                     </div>
-                  </div>
                 </div>
             </div>
         </header>

@@ -36,6 +36,11 @@
         <property name="entityManagerFactory" ref="entityManagerFactory"/>
     </bean>
 
+    <bean id="savedRequestAwareAuthenticationSuccessHandler"
+          class="org.springframework.security.web.authentication.SavedRequestAwareAuthenticationSuccessHandler">
+        <property name="targetUrlParameter" value="targetUrl" />
+    </bean>
+
     <tx:annotation-driven/>
 
     <jpa:repositories base-package="springbackend.dao"/>

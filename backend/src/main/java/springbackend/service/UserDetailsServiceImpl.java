@@ -23,14 +23,18 @@ import java.util.Set;
 public class UserDetailsServiceImpl implements UserDetailsService {
 
     @Autowired
-    private UserDao userDao;
+    private UserService userService;
 
     public static String operation;
 
     @Override
     @Transactional(readOnly = true)
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        User user = userDao.findByUsername(username);
+        User user = userService.findByUsername(username);
+        if (user == null) {
+            user = userService.findByLogin(username);
+        }
+
         if (!user.getRegistrationConfirmed() && !operation.equals("registration")) {
             return null;
         }

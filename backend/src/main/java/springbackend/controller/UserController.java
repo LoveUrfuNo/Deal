@@ -1,7 +1,5 @@
 package springbackend.controller;
 
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +10,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import springbackend.dao.UserDao;
 import springbackend.service.EmailService;
 import springbackend.model.User;
 import springbackend.service.SecurityService;
@@ -20,6 +17,11 @@ import springbackend.service.UserDetailsServiceImpl;
 import springbackend.service.UserService;
 import springbackend.validator.UserValidator;
 
+import javax.jws.soap.SOAPBinding;
+import java.io.BufferedInputStream;
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -107,9 +109,10 @@ public class UserController {
     }
 
     @RequestMapping(value = {"/confirm-acc/{token}/{id}"}, method = RequestMethod.GET)
-    public String confirmAcc(@PathVariable("token") String token, @PathVariable("id") String idString, Model model) {
-        Long id = Long.parseLong(idString);
+    public String confirmAcc(@PathVariable("token") String token, @PathVariable("id") Long id, Model model) {
         User user = userService.findBuId(id);
+        if (!user.getKeyForRegistrationConfirmUrl().equals(token))
+            return "redirect:/main?error";
 
         user.setRegistrationConfirmed(true);
         user.setKeyForRegistrationConfirmUrl(null);

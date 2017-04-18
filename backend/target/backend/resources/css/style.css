@@ -131,6 +131,14 @@ embed {
   background-color: #F54C53 !important;
 }
 
+.tab-content span {
+  font-size: 15px;
+}
+
+.form-signin .form-group {
+  margin-bottom: 5px;
+}
+
 #page {
   position: relative;
   overflow-x: hidden;
@@ -368,6 +376,9 @@ embed {
 #gtco-header .form-wrap .tab-menu li.gtco-second a {
   border-top-right-radius: 7px;
 }
+
+
+
 #gtco-header .form-wrap .tab-content {
   z-index: 10;
   position: relative;
@@ -415,8 +426,6 @@ embed {
   top: 0;
   left: 0;
   right: 0;
-
-
 }
 .gtco-cover > .gtco-container {
   position: relative;
