@@ -30,16 +30,20 @@ public class UserServiceImpl implements UserService {
     private BCryptPasswordEncoder bCryptPasswordEncoder;
 
     @Override
-    public void save(User user) {
+    public void save(User user, Long roleId) {
         user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
         Set<Role> roles = new HashSet<>();
-        roles.add(roleDao.getOne(1L));
+        roles.add(roleDao.getOne(roleId));
         user.setRoles(roles);
         userDao.save(user);
     }
 
     @Override
-    public void saveAndFlush(User user) {
+    public void saveAndFlush(User user, Long roleId) {
+
+        Set<Role> roles = new HashSet<>();
+        roles.add(roleDao.getOne(roleId));
+        user.setRoles(roles);
         userDao.saveAndFlush(user);
     }
 
@@ -56,8 +60,9 @@ public class UserServiceImpl implements UserService {
     @Override
     public User findByLogin(String login) {
         ArrayList<User> list = (ArrayList<User>) userDao.findAll();
-        User result = list.stream().filter(search -> login.equals(search.getLogin())).findAny().orElse(null);
-        return result;
+
+        return list.stream()
+                .filter(temp -> login.equals(temp.getLogin())).findAny().orElse(null);
     }
 
     @Override

@@ -1,3 +1,7 @@
+<%@ page import="org.springframework.security.core.context.SecurityContextHolder" %>
+<%@ page import="org.springframework.security.core.Authentication" %>
+<%@ page import="springbackend.model.User" %>
+<%@ page import="springbackend.service.UserService" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
@@ -268,24 +272,42 @@
                                                 <a href="#" class="ui inverted pink button">Pink</a>
                                             </div>
                                         </div>
-
-                                        <div class="ui white divider"></div>
                                         <div class="logout-form">
-
-                                            <c:if test="${pageContext.request.userPrincipal.name != null}">
-                                                <form id="logoutForm" method="POST" action="${contextPath}/logout">
-                                                    <input type="hidden" name="${_csrf.parameterName}"
-                                                           value="${_csrf.token}"/>
-                                                </form>
-                                                <div class="row form-group">
-                                                    <div class="col-md-12 text-center">
-                                                        <input type="submit" class="btn btn-primary"
-                                                               onclick="document.forms['logoutForm'].submit()"
-                                                               value="Выйти">
+                                            <%--<c:if test="${pageContext.request.userPrincipal.name != null}">--%>
+                                            <c:set var="registration" value="registration"/>
+                                            <c:set var="login" value="login"/>
+                                            <c:choose>
+                                                <c:when test="${status == registration}">
+                                                    <form id="logoutForm" method="POST" action="${contextPath}/logout">
+                                                        <input type="hidden" name="${_csrf.parameterName}"
+                                                               value="${_csrf.token}"/>
+                                                    </form>
+                                                    <a href="${pageContext.request.contextPath}/options">регистрация</a>
+                                                    <div class="row form-group">
+                                                        <div class="col-md-12 text-center">
+                                                            <input type="submit" class="btn btn-primary"
+                                                                   onclick="document.forms['logoutForm'].submit()"
+                                                                   value="Выйти">
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            </c:if>
+                                                </c:when>
+                                                <c:when test="${status == login}">
+                                                    <form id="logoutForm" method="POST" action="${contextPath}/logout">
+                                                        <input type="hidden" name="${_csrf.parameterName}"
+                                                               value="${_csrf.token}"/>
+                                                    </form>
+                                                    <a href="${pageContext.request.contextPath}/options">логин</a>
+                                                    <div class="row form-group">
+                                                        <div class="col-md-12 text-center">
+                                                            <input type="submit" class="btn btn-primary"
+                                                                   onclick="document.forms['logoutForm'].submit()"
+                                                                   value="Выйти">
+                                                        </div>
+                                                    </div>
+                                                </c:when>
+                                            </c:choose>
                                         </div>
+                                        <div class="ui white divider"></div>
                                     </div>
                                 </div>
                             </div>

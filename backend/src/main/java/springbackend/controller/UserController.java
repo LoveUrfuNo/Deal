@@ -3,6 +3,7 @@ package springbackend.controller;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.method.P;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -10,6 +11,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import springbackend.dao.RoleDao;
+import springbackend.model.Role;
 import springbackend.service.EmailService;
 import springbackend.model.User;
 import springbackend.service.SecurityService;
@@ -17,13 +20,7 @@ import springbackend.service.UserDetailsServiceImpl;
 import springbackend.service.UserService;
 import springbackend.validator.UserValidator;
 
-import javax.jws.soap.SOAPBinding;
-import java.io.BufferedInputStream;
-import java.io.BufferedReader;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Controller for {@link springbackend.model.User}'s pages.
@@ -35,6 +32,9 @@ public class UserController {
     private static final Logger logger = LoggerFactory.getLogger(UserController.class);
 
     private static final String MESSAGE = "message-registration-email.vm";
+
+    @Autowired
+    private RoleDao roleDao;
 
     @Autowired
     private EmailService emailService;
@@ -60,8 +60,16 @@ public class UserController {
 
     @RequestMapping(value = "/profile", method = RequestMethod.GET)
     public String profile(Model model) {
-        User user = new User();
-        model.addAttribute("userForm", user);
+        model.addAttribute("userForm", new User());
+        model.addAttribute("status", "login");
+
+        return "main";
+    }
+
+    @RequestMapping(value = "/profile/{status}", method = RequestMethod.GET)
+    public String profile(@PathVariable("status") String status, Model model) {
+        model.addAttribute("userForm", new User());
+        model.addAttribute("status", status);
 
         return "main";
     }
@@ -70,7 +78,35 @@ public class UserController {
     public String options(Model model) {
         model.addAttribute("userForm", new User());
 
+        List<String> months = new ArrayList<>();
+        months.add("Январь");
+        months.add("Февраль");
+        months.add("Март");
+        months.add("Апрель");
+        months.add("Май");
+        months.add("Июнь");
+        months.add("Июль");
+        months.add("Август");
+        months.add("Сентябрь");
+        months.add("Октябрь");
+        months.add("Ноябрь");
+        months.add("Декабрь");
+
+        model.addAttribute("months", months);
+
+        List<String> numbers = new ArrayList<>();    // TODO: make with streams
+        for (Integer i = 1; i <= 31; i++)
+            numbers.add(Integer.toString(i));
+
+        model.addAttribute("numbers", numbers);
+
         return "advanced-options";
+    }
+
+    @RequestMapping(value = "/options", method = RequestMethod.POST)
+    public String options(@ModelAttribute("userForm") User user) {
+
+        return "redirect:/profile";
     }
 
     @RequestMapping(value = "/registration", method = RequestMethod.POST)
@@ -80,10 +116,12 @@ public class UserController {
             return "main";
         }
 
+        model.addAttribute("status", "registration");
+
         UserDetailsServiceImpl.operation = "registration";
         user.setKeyForRegistrationConfirmUrl(EmailService.generateString(32));
         user.setRegistrationConfirmed(false);    //user didn't confirm acc by email message yet
-        userService.save(user);
+        userService.save(user, 3L);
         securityService.autoLogin(user.getUsername(), user.getConfirmPassword());
         UserDetailsServiceImpl.operation = null;
 
@@ -99,7 +137,7 @@ public class UserController {
         else
             System.out.println("Error: message wasn't sent");
 
-        return "redirect:/profile";
+        return "redirect:/profile/registration";
     }
 
     @RequestMapping(value = {"/authentication"}, method = RequestMethod.GET)
@@ -117,7 +155,8 @@ public class UserController {
 
         user.setRegistrationConfirmed(true);
         user.setKeyForRegistrationConfirmUrl(null);
-        userService.saveAndFlush(user);        //TODO: add output in logger
+
+        userService.saveAndFlush(user, 1L);        //TODO: add output in logger
 
         return "registration-confirm";
     }

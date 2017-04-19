@@ -2,7 +2,6 @@
 
     'use strict';
 
-
     // iPad and iPod detection
     var isiPad = function () {
         return (navigator.platform.indexOf("iPad") != -1);
@@ -14,7 +13,6 @@
             (navigator.platform.indexOf("iPod") != -1)
         );
     };
-
 
     var fullHeight = function () {
 
@@ -65,9 +63,7 @@
         })
     };
 
-
     // Animations
-
     var contentWayPoint = function () {
         var i = 0;
 
@@ -110,7 +106,6 @@
         });
     };
 
-
     var backgroundSlider = function () {
         var counter = 1;
         var image = $(".backgroundSlider");
@@ -144,7 +139,6 @@
         });
 
     };
-
 
     var burgerMenu = function () {
 
@@ -202,16 +196,15 @@
 
     };
 
-
     var profileLoader = function () {
         var newForm = $('.form-wrap2').html();
         var locationAddress = location.pathname;
-        var profileAddress = "/profile";
-        if (locationAddress === profileAddress) {
+        var profileAddress1 = "/profile";
+        var profileAddress2 = "/profile/registration";
+        if (locationAddress === profileAddress1 || locationAddress === profileAddress2) {
             $('.form-wrap').empty().append(newForm);
         }
     };
-
 
     // Document on load.
     $(function () {
@@ -223,6 +216,5 @@
         parallax();
         profileLoader();
     });
-
 
 }());

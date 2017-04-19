@@ -7,6 +7,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.validation.Errors;
 import springbackend.dao.UserDao;
 import springbackend.model.Role;
 import springbackend.model.User;
@@ -31,13 +32,11 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     @Transactional(readOnly = true)
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         User user = userService.findByUsername(username);
-        if (user == null) {
+        if (user == null)
             user = userService.findByLogin(username);
-        }
 
-        if (!user.getRegistrationConfirmed() && !operation.equals("registration")) {
+        if (!user.getRegistrationConfirmed() && !operation.equals("registration"))
             return null;
-        }
 
         Set<GrantedAuthority> grantedAuthorities = new HashSet<>();
         for (Role role : user.getRoles()) {

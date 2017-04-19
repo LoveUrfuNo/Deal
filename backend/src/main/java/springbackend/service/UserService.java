@@ -11,9 +11,9 @@ import springbackend.model.User;
 
 public interface UserService {
 
-    void save(User user);
+    void save(User user, Long roleId);
 
-    void saveAndFlush(User user);
+    void saveAndFlush(User user, Long roleId);
 
     void delete(User user);
 

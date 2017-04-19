@@ -25,9 +25,6 @@ public class Role {
     @ManyToMany(mappedBy = "roles")
     private Set<User> users;
 
-    public Role() {
-    }
-
     public Long getId() {
         return id;
     }
