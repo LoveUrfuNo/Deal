@@ -29,12 +29,13 @@ import java.util.*;
 @Controller
 public class UserController {
 
+    private static final Long ROLE_USER = 1L;
+
+    private static final Long ROLE_ANONYMOUS = 3L;
+
     private static final Logger logger = LoggerFactory.getLogger(UserController.class);
 
     private static final String MESSAGE = "message-registration-email.vm";
-
-    @Autowired
-    private RoleDao roleDao;
 
     @Autowired
     private EmailService emailService;
@@ -121,7 +122,7 @@ public class UserController {
         UserDetailsServiceImpl.operation = "registration";
         user.setKeyForRegistrationConfirmUrl(EmailService.generateString(32));
         user.setRegistrationConfirmed(false);    //user didn't confirm acc by email message yet
-        userService.save(user, 3L);
+        userService.save(user, ROLE_ANONYMOUS);
         securityService.autoLogin(user.getUsername(), user.getConfirmPassword());
         UserDetailsServiceImpl.operation = null;
 
@@ -156,7 +157,7 @@ public class UserController {
         user.setRegistrationConfirmed(true);
         user.setKeyForRegistrationConfirmUrl(null);
 
-        userService.saveAndFlush(user, 1L);        //TODO: add output in logger
+        userService.saveAndFlush(user, ROLE_USER);        //TODO: add output in logger
 
         return "registration-confirm";
     }
