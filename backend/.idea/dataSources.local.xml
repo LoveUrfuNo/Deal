@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="dataSourceStorageLocal">
-    <data-source name="deal_users@localhost [2]" uuid="6ea628d6-538b-44e1-b2ad-3ff29ae25d55">
-      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
-      <introspection-schemas>*:deal_users</introspection-schemas>
-    </data-source>
-  </component>
-</project>
