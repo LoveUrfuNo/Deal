@@ -23,10 +23,10 @@ import java.util.Set;
 
 public class UserDetailsServiceImpl implements UserDetailsService {
 
+    private static final Long ROLE_NOT_ACTIVATED_USER = 3L;
+
     @Autowired
     private UserService userService;
-
-    public static String operation;
 
     @Override
     @Transactional(readOnly = true)
@@ -35,7 +35,8 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         if (user == null)
             user = userService.findByLogin(username);
 
-        if (!user.getRegistrationConfirmed() && !operation.equals("registration"))
+        if (!user.getRegistrationConfirmed() && !user.getRoles().stream()
+                .findFirst().orElse(null).getId().equals(ROLE_NOT_ACTIVATED_USER))
             return null;
 
         Set<GrantedAuthority> grantedAuthorities = new HashSet<>();

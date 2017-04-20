@@ -31,7 +31,7 @@ public class UserController {
 
     private static final Long ROLE_USER = 1L;
 
-    private static final Long ROLE_ANONYMOUS = 3L;
+    private static final Long ROLE_NOT_ACTIVATED_USER = 3L;
 
     private static final Logger logger = LoggerFactory.getLogger(UserController.class);
 
@@ -119,12 +119,10 @@ public class UserController {
 
         model.addAttribute("status", "registration");
 
-        UserDetailsServiceImpl.operation = "registration";
         user.setKeyForRegistrationConfirmUrl(EmailService.generateString(32));
         user.setRegistrationConfirmed(false);    //user didn't confirm acc by email message yet
-        userService.save(user, ROLE_ANONYMOUS);
+        userService.save(user, ROLE_NOT_ACTIVATED_USER);
         securityService.autoLogin(user.getUsername(), user.getConfirmPassword());
-        UserDetailsServiceImpl.operation = null;
 
         Map map = new HashMap();
         map.put("from", "DEAL");

@@ -25,7 +25,8 @@ public class ServiceEntranceController {
 
     @RequestMapping(value = "/main", method = RequestMethod.POST)
     public String serviceEntrance(@ModelAttribute("userForm") ServiceEntrance userForm, Model model) {
-        model.addAttribute("userForm", new User());
+        User user = new User();
+        model.addAttribute("userForm", user);
 
         if(userForm.getEnteredPassword().equals(userForm.getCorrectPassword())) {
             return "main";

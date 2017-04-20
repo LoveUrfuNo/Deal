@@ -8,16 +8,13 @@
 		http://www.springframework.org/schema/security/spring-security.xsd">
 
     <http auto-config="true">
-        <!--<intercept-url pattern="/" access="hasAnyRole('ROLE_USER', 'ROLE_ADMIN')"/>-->
-        <!--<intercept-url pattern="/welcome" access="hasAnyRole('ROLE_USER', 'ROLE_ADMIN')"/>-->
-        <!--<intercept-url pattern="/main" access="hasRole('ROLE_ADMIN')"/>-->
-        <intercept-url pattern="/profile" access="hasRole('ROLE_USER')"/>
-        <intercept-url pattern="/profile/registration" access="hasRole('ROLE_ANONYMOUS')"/>
+        <intercept-url pattern="/profile" access="hasAnyRole('ROLE_USER', 'ROLE_ADMIN')"/>
+        <intercept-url pattern="/profile/registration" access="hasAnyRole('ROLE_NOT_ACTIVATED_USER', 'ROLE_ADMIN')"/>
         <intercept-url pattern="/admin" access="hasRole('ROLE_ADMIN')"/>
 
         <form-login login-page="/main" default-target-url="/profile" authentication-failure-url="/main?error"
                     username-parameter="username" password-parameter="password" />
-
+        <anonymous username="guest" granted-authority="ROLE_ANONYMOUS"/>
         <logout logout-success-url="/main?logout"/>
     </http>
 
