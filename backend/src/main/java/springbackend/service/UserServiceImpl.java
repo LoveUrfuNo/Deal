@@ -40,7 +40,6 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void saveAndFlush(User user, Long roleId) {
-
         Set<Role> roles = new HashSet<>();
         roles.add(roleDao.getOne(roleId));
         user.setRoles(roles);

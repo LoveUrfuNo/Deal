@@ -6,6 +6,7 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.core.userdetails.jdbc.JdbcDaoImpl;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.validation.Errors;
 import springbackend.dao.UserDao;
@@ -21,7 +22,7 @@ import java.util.Set;
  */
 
 
-public class UserDetailsServiceImpl implements UserDetailsService {
+public class UserDetailsServiceImpl extends JdbcDaoImpl {
 
     private static final Long ROLE_NOT_ACTIVATED_USER = 3L;
 

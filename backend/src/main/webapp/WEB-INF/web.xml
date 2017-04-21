@@ -44,4 +44,8 @@
         <error-code>404</error-code>
         <location>/WEB-INF/view/error/errorstatus.jsp</location>
     </error-page>-->
+
+    <welcome-file-list>
+        <welcome-file>serviceEntrance.jsp</welcome-file>
+    </welcome-file-list>
 </web-app>

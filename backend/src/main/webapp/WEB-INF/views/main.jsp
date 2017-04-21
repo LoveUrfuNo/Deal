@@ -204,12 +204,10 @@
                                                                 <span>${error}</span>
                                                             </div>
                                                         </div>
-
                                                         <div class="checkbox">
                                                             <label>
-                                                                <input type="checkbox"> Запомнить меня
+                                                                <input type="checkbox" name="remember-me-parameter"> Запомнить меня
                                                             </label>
-
                                                         </div>
                                                         <input type="hidden" name="${_csrf.parameterName}"
                                                                value="${_csrf.token}"/>
@@ -252,7 +250,14 @@
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="content text-center">
-                                                    <a class="header text-center">Kristy</a>
+                                                    <a class="header text-center">Имя: </a>
+                                                    <%
+                                                        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+                                                        if (auth != null) { %>
+
+                                                    <%= auth.getName() %>
+
+                                                    <% } %>
                                                     <div class="meta">
                                                         <span class="date">С нами с 2013</span>
                                                     </div>
