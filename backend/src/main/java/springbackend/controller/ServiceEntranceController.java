@@ -18,22 +18,10 @@ import springbackend.model.User;
 
 @Controller
 public class ServiceEntranceController {
-    @Autowired
-    private PersistentUserDao persistentUserDao;
-
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String serviceEntrance(Model model) {
-        PersistentUser persistentUser = null;
-        if (persistentUserDao.count() > 1)
-            persistentUser = persistentUserDao.findAll().get(
-                    Integer.parseInt(((Long) persistentUserDao.count()).toString()) - 1);
-
-        if (persistentUser != null) {
-            model.addAttribute("userForm", new User());
-            return "redirect:/profile";
-        }
-
         model.addAttribute("userForm", new ServiceEntrance());
+
         return "serviceEntrance";
     }
 

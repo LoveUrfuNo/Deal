@@ -17,8 +17,9 @@
 
         <form-login login-page="/main" default-target-url="/profile" authentication-failure-url="/main?error"
                     username-parameter="username" password-parameter="password"/>
-        <!--<anonymous username="guest" granted-authority="ROLE_ANONYMOUS"/>-->
-        <!--<access-denied-handler error-page="/main?error"/>-->
+        <anonymous username="guest" granted-authority="ROLE_ANONYMOUS"/>
+        <access-denied-handler error-page="/accessDenied"/>
+        <http-basic/>
         <logout logout-success-url="/main?logout"/>
         <remember-me
                 key="myAppKey"

@@ -35,7 +35,6 @@ import java.util.*;
 
 @Controller
 public class UserController {
-
     private static final Long ROLE_USER = 1L;
 
     private static final Long ROLE_NOT_ACTIVATED_USER = 3L;
@@ -55,6 +54,11 @@ public class UserController {
 
     @Autowired
     private UserValidator userValidator;
+
+    @RequestMapping(value = "/accessDenied", method = RequestMethod.GET)
+    public String errorPage() {
+        return "accessDenied";
+    }
 
     @RequestMapping(value = "/main", method = RequestMethod.GET)
     public String main(Model model, String error) {
