@@ -2,9 +2,692 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="924102dd-8a01-418e-b781-33e17d5b2f61" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/.versions" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/.versions" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/target/classes/springbackend/controller/ServiceEntranceController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/target/classes/springbackend/controller/UserController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/target/classes/springbackend/dao/RoleDao.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/target/classes/springbackend/dao/UserDao.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/target/classes/springbackend/model/Role.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/target/classes/springbackend/model/ServiceEntrance.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/target/classes/springbackend/model/User.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/target/classes/springbackend/service/SecurityService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/target/classes/springbackend/service/SecurityServiceImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/target/classes/springbackend/service/UserDetailsServiceImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/target/classes/springbackend/service/UserService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/target/classes/springbackend/service/UserServiceImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/target/classes/springbackend/validator/UserValidator.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Deal.iml" afterPath="$PROJECT_DIR$/.idea/Deal.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/.idea/artifacts/backend_war.xml" afterPath="$PROJECT_DIR$/backend/.idea/artifacts/backend_war.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/.idea/artifacts/backend_war_exploded.xml" afterPath="$PROJECT_DIR$/backend/.idea/artifacts/backend_war_exploded.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/.idea/compiler.xml" afterPath="$PROJECT_DIR$/backend/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/backend/.idea/dataSources.local.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/backend/.idea/dataSources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/.idea/dataSources/48ddaac8-e76d-4acd-8924-2c8acbfb9ecd.corrupted.20170412-041441.xml" afterPath="$PROJECT_DIR$/backend/.idea/dataSources/48ddaac8-e76d-4acd-8924-2c8acbfb9ecd.corrupted.20170412-041441.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/.idea/dataSources/6ea628d6-538b-44e1-b2ad-3ff29ae25d55.corrupted.20170418-081402.xml" afterPath="$PROJECT_DIR$/backend/.idea/dataSources/6ea628d6-538b-44e1-b2ad-3ff29ae25d55.corrupted.20170418-081402.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/.idea/dataSources/6ea628d6-538b-44e1-b2ad-3ff29ae25d55.xml" afterPath="$PROJECT_DIR$/backend/.idea/dataSources/6ea628d6-538b-44e1-b2ad-3ff29ae25d55.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/backend/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/.idea/kotlinc.xml" afterPath="$PROJECT_DIR$/backend/.idea/kotlinc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" afterPath="$PROJECT_DIR$/backend/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" afterPath="$PROJECT_DIR$/backend/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_1_3.xml" afterPath="$PROJECT_DIR$/backend/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_1_3.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/.idea/libraries/Maven__ch_qos_logback_logback_core_1_1_3.xml" afterPath="$PROJECT_DIR$/backend/.idea/libraries/Maven__ch_qos_logback_logback_core_1_1_3.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/.idea/libraries/Maven__com_fasterxml_classmate_1_1_0.xml" afterPath="$PROJECT_DIR$/backend/.idea/libraries/Maven__com_fasterxml_classmate_1_1_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/.idea/libraries/Maven__commons_collections_commons_collections_3_2_1.xml" afterPath="$PROJECT_DIR$/backend/.idea/libraries/Maven__commons_collections_commons_collections_3_2_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/.idea/libraries/Maven__commons_dbcp_commons_dbcp_1_4.xml" afterPath="$PROJECT_DIR$/backend/.idea/libraries/Maven__commons_dbcp_commons_dbcp_1_4.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_3_1.xml" afterPath="$PROJECT_DIR$/backend/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_3_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/.idea/libraries/Maven__commons_io_commons_io_2_2.xml" afterPath="$PROJECT_DIR$/backend/.idea/libraries/Maven__commons_io_commons_io_2_2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/.idea/libraries/Maven__commons_lang_commons_lang_2_4.xml" afterPath="$PROJECT_DIR$/backend/.idea/libraries/Maven__commons_lang_commons_lang_2_4.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" afterPath="$PROJECT_DIR$/backend/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/.idea/libraries/Maven__commons_pool_commons_pool_1_5_4.xml" afterPath="$PROJECT_DIR$/backend/.idea/libraries/Maven__commons_pool_commons_pool_1_5_4.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" afterPath="$PROJECT_DIR$/backend/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/.idea/libraries/Maven__javax_activation_activation_1_1.xml" afterPath="$PROJECT_DIR$/backend/.idea/libraries/Maven__javax_activation_activation_1_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/.idea/libraries/Maven__javax_mail_mail_1_4_7.xml" afterPath="$PROJECT_DIR$/backend/.idea/libraries/Maven__javax_mail_mail_1_4_7.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/.idea/libraries/Maven__javax_servlet_jstl_1_2.xml" afterPath="$PROJECT_DIR$/backend/.idea/libraries/Maven__javax_servlet_jstl_1_2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/.idea/libraries/Maven__javax_validation_validation_api_1_1_0_Final.xml" afterPath="$PROJECT_DIR$/backend/.idea/libraries/Maven__javax_validation_validation_api_1_1_0_Final.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/.idea/libraries/Maven__junit_junit_3_8_1.xml" afterPath="$PROJECT_DIR$/backend/.idea/libraries/Maven__junit_junit_3_8_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_36.xml" afterPath="$PROJECT_DIR$/backend/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_36.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/.idea/libraries/Maven__org_apache_velocity_velocity_1_7.xml" afterPath="$PROJECT_DIR$/backend/.idea/libraries/Maven__org_apache_velocity_velocity_1_7.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/.idea/libraries/Maven__org_aspectj_aspectjrt_1_8_6.xml" afterPath="$PROJECT_DIR$/backend/.idea/libraries/Maven__org_aspectj_aspectjrt_1_8_6.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_4_0_5_Final.xml" afterPath="$PROJECT_DIR$/backend/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_4_0_5_Final.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/.idea/libraries/Maven__org_hibernate_hibernate_core_4_3_11_Final.xml" afterPath="$PROJECT_DIR$/backend/.idea/libraries/Maven__org_hibernate_hibernate_core_4_3_11_Final.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/.idea/libraries/Maven__org_hibernate_hibernate_entitymanager_4_3_11_Final.xml" afterPath="$PROJECT_DIR$/backend/.idea/libraries/Maven__org_hibernate_hibernate_entitymanager_4_3_11_Final.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/.idea/libraries/Maven__org_hibernate_hibernate_validator_5_2_1_Final.xml" afterPath="$PROJECT_DIR$/backend/.idea/libraries/Maven__org_hibernate_hibernate_validator_5_2_1_Final.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/.idea/libraries/Maven__org_hibernate_javax_persistence_hibernate_jpa_2_1_api_1_0_0_Final.xml" afterPath="$PROJECT_DIR$/backend/.idea/libraries/Maven__org_hibernate_javax_persistence_hibernate_jpa_2_1_api_1_0_0_Final.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/.idea/libraries/Maven__org_javassist_javassist_3_18_1_GA.xml" afterPath="$PROJECT_DIR$/backend/.idea/libraries/Maven__org_javassist_javassist_3_18_1_GA.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/.idea/libraries/Maven__org_jboss_jandex_1_1_0_Final.xml" afterPath="$PROJECT_DIR$/backend/.idea/libraries/Maven__org_jboss_jandex_1_1_0_Final.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_2_1_Final.xml" afterPath="$PROJECT_DIR$/backend/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_2_1_Final.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/.idea/libraries/Maven__org_jboss_logging_jboss_logging_annotations_1_2_0_Beta1.xml" afterPath="$PROJECT_DIR$/backend/.idea/libraries/Maven__org_jboss_logging_jboss_logging_annotations_1_2_0_Beta1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/.idea/libraries/Maven__org_jboss_spec_javax_transaction_jboss_transaction_api_1_2_spec_1_0_0_Final.xml" afterPath="$PROJECT_DIR$/backend/.idea/libraries/Maven__org_jboss_spec_javax_transaction_jboss_transaction_api_1_2_spec_1_0_0_Final.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/.idea/libraries/Maven__org_slf4j_jcl_over_slf4j_1_7_12.xml" afterPath="$PROJECT_DIR$/backend/.idea/libraries/Maven__org_slf4j_jcl_over_slf4j_1_7_12.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_12.xml" afterPath="$PROJECT_DIR$/backend/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_12.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/.idea/libraries/Maven__org_springframework_data_spring_data_commons_1_10_2_RELEASE.xml" afterPath="$PROJECT_DIR$/backend/.idea/libraries/Maven__org_springframework_data_spring_data_commons_1_10_2_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_1_8_2_RELEASE.xml" afterPath="$PROJECT_DIR$/backend/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_1_8_2_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/.idea/libraries/Maven__org_springframework_security_spring_security_config_4_0_2_RELEASE.xml" afterPath="$PROJECT_DIR$/backend/.idea/libraries/Maven__org_springframework_security_spring_security_config_4_0_2_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/.idea/libraries/Maven__org_springframework_security_spring_security_core_4_0_2_RELEASE.xml" afterPath="$PROJECT_DIR$/backend/.idea/libraries/Maven__org_springframework_security_spring_security_core_4_0_2_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/.idea/libraries/Maven__org_springframework_security_spring_security_web_4_0_2_RELEASE.xml" afterPath="$PROJECT_DIR$/backend/.idea/libraries/Maven__org_springframework_security_spring_security_web_4_0_2_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/.idea/libraries/Maven__org_springframework_spring_aop_4_2_0_RELEASE.xml" afterPath="$PROJECT_DIR$/backend/.idea/libraries/Maven__org_springframework_spring_aop_4_2_0_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/.idea/libraries/Maven__org_springframework_spring_beans_4_3_7_RELEASE.xml" afterPath="$PROJECT_DIR$/backend/.idea/libraries/Maven__org_springframework_spring_beans_4_3_7_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/.idea/libraries/Maven__org_springframework_spring_context_4_3_7_RELEASE.xml" afterPath="$PROJECT_DIR$/backend/.idea/libraries/Maven__org_springframework_spring_context_4_3_7_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/.idea/libraries/Maven__org_springframework_spring_context_support_4_3_7_RELEASE.xml" afterPath="$PROJECT_DIR$/backend/.idea/libraries/Maven__org_springframework_spring_context_support_4_3_7_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/.idea/libraries/Maven__org_springframework_spring_core_4_3_7_RELEASE.xml" afterPath="$PROJECT_DIR$/backend/.idea/libraries/Maven__org_springframework_spring_core_4_3_7_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/.idea/libraries/Maven__org_springframework_spring_expression_4_2_0_RELEASE.xml" afterPath="$PROJECT_DIR$/backend/.idea/libraries/Maven__org_springframework_spring_expression_4_2_0_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/.idea/libraries/Maven__org_springframework_spring_jdbc_4_0_9_RELEASE.xml" afterPath="$PROJECT_DIR$/backend/.idea/libraries/Maven__org_springframework_spring_jdbc_4_0_9_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/.idea/libraries/Maven__org_springframework_spring_orm_4_0_9_RELEASE.xml" afterPath="$PROJECT_DIR$/backend/.idea/libraries/Maven__org_springframework_spring_orm_4_0_9_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/.idea/libraries/Maven__org_springframework_spring_tx_4_0_9_RELEASE.xml" afterPath="$PROJECT_DIR$/backend/.idea/libraries/Maven__org_springframework_spring_tx_4_0_9_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/.idea/libraries/Maven__org_springframework_spring_web_4_2_0_RELEASE.xml" afterPath="$PROJECT_DIR$/backend/.idea/libraries/Maven__org_springframework_spring_web_4_2_0_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/.idea/libraries/Maven__org_springframework_spring_webmvc_4_2_0_RELEASE.xml" afterPath="$PROJECT_DIR$/backend/.idea/libraries/Maven__org_springframework_spring_webmvc_4_2_0_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/.idea/libraries/Maven__xml_apis_xml_apis_1_0_b2.xml" afterPath="$PROJECT_DIR$/backend/.idea/libraries/Maven__xml_apis_xml_apis_1_0_b2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/.idea/misc.xml" afterPath="$PROJECT_DIR$/backend/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/.idea/modules.xml" afterPath="$PROJECT_DIR$/backend/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/.idea/sqldialects.xml" afterPath="$PROJECT_DIR$/backend/.idea/sqldialects.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/.idea/uiDesigner.xml" afterPath="$PROJECT_DIR$/backend/.idea/uiDesigner.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/.idea/webContexts.xml" afterPath="$PROJECT_DIR$/backend/.idea/webContexts.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/.idea/workspace.xml" afterPath="$PROJECT_DIR$/backend/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/backend.iml" afterPath="$PROJECT_DIR$/backend/backend.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/pom.xml" afterPath="$PROJECT_DIR$/backend/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/java/springbackend/controller/FileController.java" afterPath="$PROJECT_DIR$/backend/src/main/java/springbackend/controller/FileController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/java/springbackend/controller/ServiceEntranceController.java" afterPath="$PROJECT_DIR$/backend/src/main/java/springbackend/controller/ServiceEntranceController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/java/springbackend/controller/UserController.java" afterPath="$PROJECT_DIR$/backend/src/main/java/springbackend/controller/UserController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/java/springbackend/dao/RoleDao.java" afterPath="$PROJECT_DIR$/backend/src/main/java/springbackend/dao/RoleDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/java/springbackend/dao/UserDao.java" afterPath="$PROJECT_DIR$/backend/src/main/java/springbackend/dao/UserDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/java/springbackend/model/Role.java" afterPath="$PROJECT_DIR$/backend/src/main/java/springbackend/model/Role.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/java/springbackend/model/ServiceEntrance.java" afterPath="$PROJECT_DIR$/backend/src/main/java/springbackend/model/ServiceEntrance.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/java/springbackend/model/User.java" afterPath="$PROJECT_DIR$/backend/src/main/java/springbackend/model/User.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/java/springbackend/service/EmailService.java" afterPath="$PROJECT_DIR$/backend/src/main/java/springbackend/service/EmailService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/java/springbackend/service/SecurityService.java" afterPath="$PROJECT_DIR$/backend/src/main/java/springbackend/service/SecurityService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/java/springbackend/service/SecurityServiceImpl.java" afterPath="$PROJECT_DIR$/backend/src/main/java/springbackend/service/SecurityServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/java/springbackend/service/UserDetailsServiceImpl.java" afterPath="$PROJECT_DIR$/backend/src/main/java/springbackend/service/UserDetailsServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/java/springbackend/service/UserService.java" afterPath="$PROJECT_DIR$/backend/src/main/java/springbackend/service/UserService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/java/springbackend/service/UserServiceImpl.java" afterPath="$PROJECT_DIR$/backend/src/main/java/springbackend/service/UserServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/java/springbackend/validator/UserValidator.java" afterPath="$PROJECT_DIR$/backend/src/main/java/springbackend/validator/UserValidator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/resources/database.properties" afterPath="$PROJECT_DIR$/backend/src/main/resources/database.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/resources/database.sql" afterPath="$PROJECT_DIR$/backend/src/main/resources/database.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/resources/gmail.properties" afterPath="$PROJECT_DIR$/backend/src/main/resources/gmail.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/resources/logback.xml" afterPath="$PROJECT_DIR$/backend/src/main/resources/logback.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/resources/validation.properties" afterPath="$PROJECT_DIR$/backend/src/main/resources/validation.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/WEB-INF/appconfig-data.xml" afterPath="$PROJECT_DIR$/backend/src/main/webapp/WEB-INF/appconfig-data.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/WEB-INF/appconfig-mail.xml" afterPath="$PROJECT_DIR$/backend/src/main/webapp/WEB-INF/appconfig-mail.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/WEB-INF/appconfig-mvc.xml" afterPath="$PROJECT_DIR$/backend/src/main/webapp/WEB-INF/appconfig-mvc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/WEB-INF/appconfig-root.xml" afterPath="$PROJECT_DIR$/backend/src/main/webapp/WEB-INF/appconfig-root.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/WEB-INF/appconfig-security.xml" afterPath="$PROJECT_DIR$/backend/src/main/webapp/WEB-INF/appconfig-security.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/WEB-INF/views/admin.jsp" afterPath="$PROJECT_DIR$/backend/src/main/webapp/WEB-INF/views/admin.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/WEB-INF/views/advanced-options.jsp" afterPath="$PROJECT_DIR$/backend/src/main/webapp/WEB-INF/views/advanced-options.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/WEB-INF/views/email-templates/message-registration-email.vm" afterPath="$PROJECT_DIR$/backend/src/main/webapp/WEB-INF/views/email-templates/message-registration-email.vm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/WEB-INF/views/forgotServicePassword.jsp" afterPath="$PROJECT_DIR$/backend/src/main/webapp/WEB-INF/views/forgotServicePassword.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/WEB-INF/views/login.jsp" afterPath="$PROJECT_DIR$/backend/src/main/webapp/WEB-INF/views/login.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/WEB-INF/views/main.jsp" afterPath="$PROJECT_DIR$/backend/src/main/webapp/WEB-INF/views/main.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/WEB-INF/views/profile.jsp" afterPath="$PROJECT_DIR$/backend/src/main/webapp/WEB-INF/views/profile.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/WEB-INF/views/registration-confirm.jsp" afterPath="$PROJECT_DIR$/backend/src/main/webapp/WEB-INF/views/registration-confirm.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/WEB-INF/views/registration.jsp" afterPath="$PROJECT_DIR$/backend/src/main/webapp/WEB-INF/views/registration.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/WEB-INF/views/serviceEntrance.jsp" afterPath="$PROJECT_DIR$/backend/src/main/webapp/WEB-INF/views/serviceEntrance.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/WEB-INF/views/welcome.jsp" afterPath="$PROJECT_DIR$/backend/src/main/webapp/WEB-INF/views/welcome.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/backend/src/main/webapp/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/LICENSE" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/README.md" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/accordion.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/accordion.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/accordion.js" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/accordion.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/accordion.min.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/accordion.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/accordion.min.js" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/accordion.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/ad.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/ad.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/ad.min.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/ad.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/api.js" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/api.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/api.min.js" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/api.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/breadcrumb.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/breadcrumb.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/breadcrumb.min.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/breadcrumb.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/button.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/button.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/button.min.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/button.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/card.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/card.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/card.min.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/card.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/checkbox.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/checkbox.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/checkbox.js" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/checkbox.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/checkbox.min.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/checkbox.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/checkbox.min.js" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/checkbox.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/colorize.js" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/colorize.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/colorize.min.js" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/colorize.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/comment.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/comment.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/comment.min.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/comment.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/container.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/container.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/container.min.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/container.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/dimmer.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/dimmer.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/dimmer.js" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/dimmer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/dimmer.min.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/dimmer.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/dimmer.min.js" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/dimmer.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/divider.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/divider.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/divider.min.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/divider.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/dropdown.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/dropdown.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/dropdown.js" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/dropdown.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/dropdown.min.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/dropdown.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/dropdown.min.js" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/dropdown.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/embed.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/embed.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/embed.js" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/embed.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/embed.min.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/embed.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/embed.min.js" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/embed.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/feed.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/feed.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/feed.min.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/feed.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/flag.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/flag.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/flag.min.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/flag.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/form.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/form.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/form.js" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/form.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/form.min.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/form.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/form.min.js" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/form.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/grid.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/grid.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/grid.min.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/grid.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/header.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/header.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/header.min.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/header.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/icon.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/icon.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/icon.min.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/icon.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/image.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/image.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/image.min.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/image.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/input.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/input.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/input.min.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/input.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/item.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/item.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/item.min.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/item.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/label.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/label.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/label.min.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/label.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/list.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/list.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/list.min.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/list.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/loader.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/loader.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/loader.min.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/loader.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/menu.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/menu.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/message.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/message.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/message.min.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/message.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/modal.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/modal.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/modal.js" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/modal.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/modal.min.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/modal.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/modal.min.js" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/modal.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/nag.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/nag.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/nag.js" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/nag.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/nag.min.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/nag.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/nag.min.js" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/nag.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/popup.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/popup.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/popup.js" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/popup.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/popup.min.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/popup.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/popup.min.js" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/popup.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/progress.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/progress.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/progress.js" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/progress.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/progress.min.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/progress.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/progress.min.js" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/progress.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/rail.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/rail.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/rail.min.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/rail.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/rating.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/rating.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/rating.js" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/rating.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/rating.min.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/rating.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/rating.min.js" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/rating.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/reset.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/reset.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/reset.min.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/reset.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/reveal.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/reveal.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/reveal.min.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/reveal.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/search.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/search.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/search.js" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/search.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/search.min.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/search.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/search.min.js" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/search.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/segment.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/segment.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/segment.min.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/segment.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/shape.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/shape.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/shape.js" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/shape.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/shape.min.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/shape.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/shape.min.js" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/shape.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/sidebar.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/sidebar.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/sidebar.js" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/sidebar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/sidebar.min.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/sidebar.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/sidebar.min.js" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/sidebar.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/site.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/site.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/site.js" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/site.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/site.min.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/site.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/site.min.js" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/site.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/state.js" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/state.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/state.min.js" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/state.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/statistic.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/statistic.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/statistic.min.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/statistic.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/step.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/step.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/step.min.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/step.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/sticky.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/sticky.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/sticky.js" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/sticky.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/sticky.min.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/sticky.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/sticky.min.js" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/sticky.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/tab.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/tab.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/tab.js" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/tab.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/tab.min.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/tab.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/tab.min.js" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/tab.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/table.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/table.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/table.min.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/table.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/transition.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/transition.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/transition.js" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/transition.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/transition.min.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/transition.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/transition.min.js" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/transition.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/video.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/video.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/video.js" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/video.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/video.min.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/video.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/video.min.js" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/video.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/visibility.js" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/visibility.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/visibility.min.js" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/visibility.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/visit.js" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/visit.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/visit.min.js" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/components/visit.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/package.js" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/package.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/package.json" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/semantic.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/semantic.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/semantic.js" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/semantic.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/semantic.min.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/semantic.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/semantic.min.js" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/semantic.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/themes/default/assets/fonts/icons.svg" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/Semantic-UI-CSS-master/themes/default/assets/fonts/icons.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/css/advanced-options.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/css/advanced-options.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/css/animate.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/css/animate.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/css/bootstrap-theme.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/css/bootstrap-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/css/bootstrap-theme.min.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/css/bootstrap-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/css/bootstrap.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/css/bootstrap.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/css/bootstrap.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/css/common.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/css/common.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/css/font-awesome.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/css/font-awesome.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/css/font-awesome.min.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/css/font-awesome.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/css/icomoon.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/css/icomoon.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/css/index.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/css/index.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/css/owl.carousel.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/css/owl.carousel.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/css/owl.theme.default.min.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/css/owl.theme.default.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/css/profile.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/css/profile.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/css/style.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/fonts/bootstrap/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/fonts/bootstrap/glyphicons-halflings-regular.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/fonts/fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/fonts/fontawesome-webfont.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/fonts/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/fonts/glyphicons-halflings-regular.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/fonts/icomoon/icomoon.svg" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/fonts/icomoon/icomoon.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/fonts/icomoon/icomoon/Read Me.txt" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/fonts/icomoon/icomoon/Read Me.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/fonts/icomoon/icomoon/demo-files/demo.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/fonts/icomoon/icomoon/demo-files/demo.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/fonts/icomoon/icomoon/demo-files/demo.js" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/fonts/icomoon/icomoon/demo-files/demo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/fonts/icomoon/icomoon/demo.html" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/fonts/icomoon/icomoon/demo.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/fonts/icomoon/icomoon/fonts/icomoon.svg" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/fonts/icomoon/icomoon/fonts/icomoon.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/fonts/icomoon/icomoon/selection.json" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/fonts/icomoon/icomoon/selection.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/fonts/icomoon/icomoon/style.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/fonts/icomoon/icomoon/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/js/advanced-options.js" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/js/advanced-options.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/js/bootstrap.js" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/js/bootstrap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/js/bootstrap.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/js/jquery.easing.1.3.js" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/js/jquery.easing.1.3.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/js/jquery.min.js" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/js/jquery.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/js/jquery.stellar.min.js" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/js/jquery.stellar.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/js/jquery.waypoints.min.js" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/js/jquery.waypoints.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/js/main.js" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/js/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/js/modernizr.js" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/js/modernizr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/js/modernizr.min.js" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/js/modernizr.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/js/npm.js" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/js/npm.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/js/owl.carousel.min.js" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/js/owl.carousel.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/js/package.js" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/js/package.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/js/respond.min.js" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/js/respond.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/vegas/vegas.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/vegas/vegas.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/vegas/vegas.js" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/vegas/vegas.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/vegas/vegas.min.css" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/vegas/vegas.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/src/main/webapp/resources/vegas/vegas.min.js" afterPath="$PROJECT_DIR$/backend/src/main/webapp/resources/vegas/vegas.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/WEB-INF/appconfig-data.xml" afterPath="$PROJECT_DIR$/backend/target/backend/WEB-INF/appconfig-data.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/WEB-INF/appconfig-mail.xml" afterPath="$PROJECT_DIR$/backend/target/backend/WEB-INF/appconfig-mail.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/WEB-INF/appconfig-mvc.xml" afterPath="$PROJECT_DIR$/backend/target/backend/WEB-INF/appconfig-mvc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/WEB-INF/appconfig-root.xml" afterPath="$PROJECT_DIR$/backend/target/backend/WEB-INF/appconfig-root.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/WEB-INF/appconfig-security.xml" afterPath="$PROJECT_DIR$/backend/target/backend/WEB-INF/appconfig-security.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/WEB-INF/classes/database.properties" afterPath="$PROJECT_DIR$/backend/target/backend/WEB-INF/classes/database.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/WEB-INF/classes/database.sql" afterPath="$PROJECT_DIR$/backend/target/backend/WEB-INF/classes/database.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/WEB-INF/classes/gmail.properties" afterPath="$PROJECT_DIR$/backend/target/backend/WEB-INF/classes/gmail.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/WEB-INF/classes/logback.xml" afterPath="$PROJECT_DIR$/backend/target/backend/WEB-INF/classes/logback.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/WEB-INF/classes/validation.properties" afterPath="$PROJECT_DIR$/backend/target/backend/WEB-INF/classes/validation.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/WEB-INF/views/admin.jsp" afterPath="$PROJECT_DIR$/backend/target/backend/WEB-INF/views/admin.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/WEB-INF/views/advanced-options.jsp" afterPath="$PROJECT_DIR$/backend/target/backend/WEB-INF/views/advanced-options.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/WEB-INF/views/email-templates/message-registration-email.vm" afterPath="$PROJECT_DIR$/backend/target/backend/WEB-INF/views/email-templates/message-registration-email.vm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/WEB-INF/views/forgotServicePassword.jsp" afterPath="$PROJECT_DIR$/backend/target/backend/WEB-INF/views/forgotServicePassword.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/WEB-INF/views/login.jsp" afterPath="$PROJECT_DIR$/backend/target/backend/WEB-INF/views/login.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/WEB-INF/views/main.jsp" afterPath="$PROJECT_DIR$/backend/target/backend/WEB-INF/views/main.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/WEB-INF/views/profile.jsp" afterPath="$PROJECT_DIR$/backend/target/backend/WEB-INF/views/profile.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/WEB-INF/views/registration-confirm.jsp" afterPath="$PROJECT_DIR$/backend/target/backend/WEB-INF/views/registration-confirm.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/WEB-INF/views/registration.jsp" afterPath="$PROJECT_DIR$/backend/target/backend/WEB-INF/views/registration.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/WEB-INF/views/serviceEntrance.jsp" afterPath="$PROJECT_DIR$/backend/target/backend/WEB-INF/views/serviceEntrance.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/WEB-INF/views/welcome.jsp" afterPath="$PROJECT_DIR$/backend/target/backend/WEB-INF/views/welcome.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/backend/target/backend/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/LICENSE" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/README.md" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/accordion.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/accordion.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/accordion.js" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/accordion.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/accordion.min.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/accordion.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/accordion.min.js" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/accordion.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/ad.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/ad.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/ad.min.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/ad.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/api.js" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/api.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/api.min.js" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/api.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/breadcrumb.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/breadcrumb.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/breadcrumb.min.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/breadcrumb.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/button.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/button.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/button.min.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/button.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/card.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/card.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/card.min.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/card.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/checkbox.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/checkbox.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/checkbox.js" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/checkbox.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/checkbox.min.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/checkbox.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/checkbox.min.js" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/checkbox.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/colorize.js" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/colorize.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/colorize.min.js" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/colorize.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/comment.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/comment.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/comment.min.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/comment.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/container.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/container.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/container.min.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/container.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/dimmer.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/dimmer.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/dimmer.js" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/dimmer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/dimmer.min.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/dimmer.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/dimmer.min.js" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/dimmer.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/divider.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/divider.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/divider.min.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/divider.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/dropdown.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/dropdown.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/dropdown.js" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/dropdown.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/dropdown.min.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/dropdown.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/dropdown.min.js" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/dropdown.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/embed.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/embed.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/embed.js" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/embed.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/embed.min.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/embed.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/embed.min.js" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/embed.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/feed.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/feed.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/feed.min.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/feed.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/flag.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/flag.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/flag.min.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/flag.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/form.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/form.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/form.js" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/form.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/form.min.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/form.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/form.min.js" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/form.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/grid.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/grid.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/grid.min.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/grid.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/header.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/header.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/header.min.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/header.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/icon.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/icon.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/icon.min.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/icon.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/image.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/image.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/image.min.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/image.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/input.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/input.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/input.min.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/input.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/item.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/item.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/item.min.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/item.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/label.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/label.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/label.min.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/label.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/list.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/list.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/list.min.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/list.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/loader.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/loader.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/loader.min.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/loader.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/menu.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/menu.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/message.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/message.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/message.min.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/message.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/modal.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/modal.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/modal.js" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/modal.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/modal.min.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/modal.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/modal.min.js" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/modal.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/nag.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/nag.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/nag.js" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/nag.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/nag.min.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/nag.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/nag.min.js" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/nag.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/popup.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/popup.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/popup.js" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/popup.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/popup.min.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/popup.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/popup.min.js" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/popup.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/progress.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/progress.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/progress.js" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/progress.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/progress.min.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/progress.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/progress.min.js" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/progress.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/rail.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/rail.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/rail.min.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/rail.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/rating.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/rating.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/rating.js" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/rating.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/rating.min.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/rating.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/rating.min.js" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/rating.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/reset.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/reset.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/reset.min.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/reset.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/reveal.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/reveal.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/reveal.min.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/reveal.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/search.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/search.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/search.js" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/search.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/search.min.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/search.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/search.min.js" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/search.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/segment.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/segment.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/segment.min.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/segment.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/shape.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/shape.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/shape.js" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/shape.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/shape.min.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/shape.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/shape.min.js" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/shape.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/sidebar.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/sidebar.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/sidebar.js" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/sidebar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/sidebar.min.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/sidebar.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/sidebar.min.js" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/sidebar.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/site.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/site.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/site.js" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/site.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/site.min.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/site.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/site.min.js" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/site.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/state.js" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/state.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/state.min.js" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/state.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/statistic.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/statistic.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/statistic.min.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/statistic.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/step.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/step.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/step.min.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/step.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/sticky.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/sticky.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/sticky.js" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/sticky.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/sticky.min.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/sticky.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/sticky.min.js" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/sticky.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/tab.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/tab.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/tab.js" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/tab.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/tab.min.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/tab.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/tab.min.js" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/tab.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/table.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/table.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/table.min.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/table.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/transition.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/transition.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/transition.js" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/transition.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/transition.min.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/transition.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/transition.min.js" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/transition.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/video.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/video.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/video.js" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/video.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/video.min.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/video.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/video.min.js" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/video.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/visibility.js" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/visibility.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/visibility.min.js" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/visibility.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/visit.js" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/visit.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/visit.min.js" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/components/visit.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/package.js" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/package.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/package.json" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/semantic.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/semantic.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/semantic.js" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/semantic.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/semantic.min.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/semantic.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/semantic.min.js" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/semantic.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/themes/default/assets/fonts/icons.svg" afterPath="$PROJECT_DIR$/backend/target/backend/resources/Semantic-UI-CSS-master/themes/default/assets/fonts/icons.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/css/advanced-options.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/css/advanced-options.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/css/animate.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/css/animate.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/css/bootstrap-theme.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/css/bootstrap-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/css/bootstrap-theme.min.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/css/bootstrap-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/css/bootstrap.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/css/bootstrap.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/css/bootstrap.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/css/common.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/css/common.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/css/font-awesome.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/css/font-awesome.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/css/font-awesome.min.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/css/font-awesome.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/css/icomoon.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/css/icomoon.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/css/index.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/css/index.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/css/owl.carousel.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/css/owl.carousel.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/css/owl.theme.default.min.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/css/owl.theme.default.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/css/profile.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/css/profile.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/css/style.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/fonts/bootstrap/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/backend/target/backend/resources/fonts/bootstrap/glyphicons-halflings-regular.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/fonts/fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/backend/target/backend/resources/fonts/fontawesome-webfont.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/fonts/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/backend/target/backend/resources/fonts/glyphicons-halflings-regular.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/fonts/icomoon/icomoon.svg" afterPath="$PROJECT_DIR$/backend/target/backend/resources/fonts/icomoon/icomoon.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/fonts/icomoon/icomoon/Read Me.txt" afterPath="$PROJECT_DIR$/backend/target/backend/resources/fonts/icomoon/icomoon/Read Me.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/fonts/icomoon/icomoon/demo-files/demo.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/fonts/icomoon/icomoon/demo-files/demo.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/fonts/icomoon/icomoon/demo-files/demo.js" afterPath="$PROJECT_DIR$/backend/target/backend/resources/fonts/icomoon/icomoon/demo-files/demo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/fonts/icomoon/icomoon/demo.html" afterPath="$PROJECT_DIR$/backend/target/backend/resources/fonts/icomoon/icomoon/demo.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/fonts/icomoon/icomoon/fonts/icomoon.svg" afterPath="$PROJECT_DIR$/backend/target/backend/resources/fonts/icomoon/icomoon/fonts/icomoon.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/fonts/icomoon/icomoon/selection.json" afterPath="$PROJECT_DIR$/backend/target/backend/resources/fonts/icomoon/icomoon/selection.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/fonts/icomoon/icomoon/style.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/fonts/icomoon/icomoon/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/js/advanced-options.js" afterPath="$PROJECT_DIR$/backend/target/backend/resources/js/advanced-options.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/js/bootstrap.js" afterPath="$PROJECT_DIR$/backend/target/backend/resources/js/bootstrap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/backend/target/backend/resources/js/bootstrap.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/js/jquery.easing.1.3.js" afterPath="$PROJECT_DIR$/backend/target/backend/resources/js/jquery.easing.1.3.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/js/jquery.min.js" afterPath="$PROJECT_DIR$/backend/target/backend/resources/js/jquery.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/js/jquery.stellar.min.js" afterPath="$PROJECT_DIR$/backend/target/backend/resources/js/jquery.stellar.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/js/jquery.waypoints.min.js" afterPath="$PROJECT_DIR$/backend/target/backend/resources/js/jquery.waypoints.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/js/main.js" afterPath="$PROJECT_DIR$/backend/target/backend/resources/js/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/js/modernizr.js" afterPath="$PROJECT_DIR$/backend/target/backend/resources/js/modernizr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/js/modernizr.min.js" afterPath="$PROJECT_DIR$/backend/target/backend/resources/js/modernizr.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/js/npm.js" afterPath="$PROJECT_DIR$/backend/target/backend/resources/js/npm.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/js/owl.carousel.min.js" afterPath="$PROJECT_DIR$/backend/target/backend/resources/js/owl.carousel.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/js/package.js" afterPath="$PROJECT_DIR$/backend/target/backend/resources/js/package.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/js/respond.min.js" afterPath="$PROJECT_DIR$/backend/target/backend/resources/js/respond.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/vegas/vegas.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/vegas/vegas.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/vegas/vegas.js" afterPath="$PROJECT_DIR$/backend/target/backend/resources/vegas/vegas.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/vegas/vegas.min.css" afterPath="$PROJECT_DIR$/backend/target/backend/resources/vegas/vegas.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/backend/resources/vegas/vegas.min.js" afterPath="$PROJECT_DIR$/backend/target/backend/resources/vegas/vegas.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/classes/database.properties" afterPath="$PROJECT_DIR$/backend/target/classes/database.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/classes/database.sql" afterPath="$PROJECT_DIR$/backend/target/classes/database.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/classes/gmail.properties" afterPath="$PROJECT_DIR$/backend/target/classes/gmail.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/classes/logback.xml" afterPath="$PROJECT_DIR$/backend/target/classes/logback.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/classes/validation.properties" afterPath="$PROJECT_DIR$/backend/target/classes/validation.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/backend/target/maven-archiver/pom.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/backend/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/animate.css" afterPath="$PROJECT_DIR$/css/animate.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/bootstrap-theme.css" afterPath="$PROJECT_DIR$/css/bootstrap-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/bootstrap-theme.min.css" afterPath="$PROJECT_DIR$/css/bootstrap-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/bootstrap.css" afterPath="$PROJECT_DIR$/css/bootstrap.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/css/bootstrap.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/icomoon.css" afterPath="$PROJECT_DIR$/css/icomoon.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/owl.carousel.css" afterPath="$PROJECT_DIR$/css/owl.carousel.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/owl.theme.default.min.css" afterPath="$PROJECT_DIR$/css/owl.theme.default.min.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/.idea/artifacts/dealback_war.xml" afterPath="$PROJECT_DIR$/dealback/.idea/artifacts/dealback_war.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/.idea/artifacts/dealback_war_exploded.xml" afterPath="$PROJECT_DIR$/dealback/.idea/artifacts/dealback_war_exploded.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/.idea/compiler.xml" afterPath="$PROJECT_DIR$/dealback/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/dealback/.idea/dataSources.local.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/dealback/.idea/dataSources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/dealback/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/dealback/.idea/jsLibraryMappings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/.idea/kotlinc.xml" afterPath="$PROJECT_DIR$/dealback/.idea/kotlinc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" afterPath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" afterPath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_1_3.xml" afterPath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_1_3.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__ch_qos_logback_logback_core_1_1_3.xml" afterPath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__ch_qos_logback_logback_core_1_1_3.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__com_fasterxml_classmate_1_1_0.xml" afterPath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__com_fasterxml_classmate_1_1_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__commons_dbcp_commons_dbcp_1_4.xml" afterPath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__commons_dbcp_commons_dbcp_1_4.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" afterPath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__commons_pool_commons_pool_1_5_4.xml" afterPath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__commons_pool_commons_pool_1_5_4.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" afterPath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__javax_servlet_jstl_1_2.xml" afterPath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__javax_servlet_jstl_1_2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__javax_validation_validation_api_1_1_0_Final.xml" afterPath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__javax_validation_validation_api_1_1_0_Final.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__junit_junit_3_8_1.xml" afterPath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__junit_junit_3_8_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_36.xml" afterPath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_36.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__org_aspectj_aspectjrt_1_8_6.xml" afterPath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__org_aspectj_aspectjrt_1_8_6.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_4_0_5_Final.xml" afterPath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_4_0_5_Final.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__org_hibernate_hibernate_core_4_3_11_Final.xml" afterPath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__org_hibernate_hibernate_core_4_3_11_Final.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__org_hibernate_hibernate_entitymanager_4_3_11_Final.xml" afterPath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__org_hibernate_hibernate_entitymanager_4_3_11_Final.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__org_hibernate_hibernate_validator_5_2_1_Final.xml" afterPath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__org_hibernate_hibernate_validator_5_2_1_Final.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__org_hibernate_javax_persistence_hibernate_jpa_2_1_api_1_0_0_Final.xml" afterPath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__org_hibernate_javax_persistence_hibernate_jpa_2_1_api_1_0_0_Final.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__org_javassist_javassist_3_18_1_GA.xml" afterPath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__org_javassist_javassist_3_18_1_GA.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__org_jboss_jandex_1_1_0_Final.xml" afterPath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__org_jboss_jandex_1_1_0_Final.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_2_1_Final.xml" afterPath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_2_1_Final.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__org_jboss_logging_jboss_logging_annotations_1_2_0_Beta1.xml" afterPath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__org_jboss_logging_jboss_logging_annotations_1_2_0_Beta1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__org_jboss_spec_javax_transaction_jboss_transaction_api_1_2_spec_1_0_0_Final.xml" afterPath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__org_jboss_spec_javax_transaction_jboss_transaction_api_1_2_spec_1_0_0_Final.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__org_slf4j_jcl_over_slf4j_1_7_12.xml" afterPath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__org_slf4j_jcl_over_slf4j_1_7_12.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_12.xml" afterPath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_12.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__org_springframework_data_spring_data_commons_1_10_2_RELEASE.xml" afterPath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__org_springframework_data_spring_data_commons_1_10_2_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_1_8_2_RELEASE.xml" afterPath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_1_8_2_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__org_springframework_security_spring_security_config_4_0_2_RELEASE.xml" afterPath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__org_springframework_security_spring_security_config_4_0_2_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__org_springframework_security_spring_security_core_4_0_2_RELEASE.xml" afterPath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__org_springframework_security_spring_security_core_4_0_2_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__org_springframework_security_spring_security_web_4_0_2_RELEASE.xml" afterPath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__org_springframework_security_spring_security_web_4_0_2_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__org_springframework_spring_aop_4_2_0_RELEASE.xml" afterPath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__org_springframework_spring_aop_4_2_0_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__org_springframework_spring_beans_4_2_0_RELEASE.xml" afterPath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__org_springframework_spring_beans_4_2_0_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__org_springframework_spring_context_4_2_0_RELEASE.xml" afterPath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__org_springframework_spring_context_4_2_0_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__org_springframework_spring_core_4_2_0_RELEASE.xml" afterPath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__org_springframework_spring_core_4_2_0_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__org_springframework_spring_expression_4_2_0_RELEASE.xml" afterPath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__org_springframework_spring_expression_4_2_0_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__org_springframework_spring_jdbc_4_0_9_RELEASE.xml" afterPath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__org_springframework_spring_jdbc_4_0_9_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__org_springframework_spring_orm_4_0_9_RELEASE.xml" afterPath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__org_springframework_spring_orm_4_0_9_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__org_springframework_spring_tx_4_0_9_RELEASE.xml" afterPath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__org_springframework_spring_tx_4_0_9_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__org_springframework_spring_web_4_2_0_RELEASE.xml" afterPath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__org_springframework_spring_web_4_2_0_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__org_springframework_spring_webmvc_4_2_0_RELEASE.xml" afterPath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__org_springframework_spring_webmvc_4_2_0_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__xml_apis_xml_apis_1_0_b2.xml" afterPath="$PROJECT_DIR$/dealback/.idea/libraries/Maven__xml_apis_xml_apis_1_0_b2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/.idea/misc.xml" afterPath="$PROJECT_DIR$/dealback/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/.idea/modules.xml" afterPath="$PROJECT_DIR$/dealback/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/.idea/sqldialects.xml" afterPath="$PROJECT_DIR$/dealback/.idea/sqldialects.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/.idea/uiDesigner.xml" afterPath="$PROJECT_DIR$/dealback/.idea/uiDesigner.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/.idea/workspace.xml" afterPath="$PROJECT_DIR$/dealback/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/dealback.iml" afterPath="$PROJECT_DIR$/dealback/dealback.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/pom.xml" afterPath="$PROJECT_DIR$/dealback/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/src/main/java/backend/controller/UserController.java" afterPath="$PROJECT_DIR$/dealback/src/main/java/backend/controller/UserController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/src/main/java/backend/dao/RoleDao.java" afterPath="$PROJECT_DIR$/dealback/src/main/java/backend/dao/RoleDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/src/main/java/backend/dao/UserDao.java" afterPath="$PROJECT_DIR$/dealback/src/main/java/backend/dao/UserDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/src/main/java/backend/model/Role.java" afterPath="$PROJECT_DIR$/dealback/src/main/java/backend/model/Role.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/src/main/java/backend/model/User.java" afterPath="$PROJECT_DIR$/dealback/src/main/java/backend/model/User.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/src/main/java/backend/service/SecurityService.java" afterPath="$PROJECT_DIR$/dealback/src/main/java/backend/service/SecurityService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/src/main/java/backend/service/SecurityServiceImpl.java" afterPath="$PROJECT_DIR$/dealback/src/main/java/backend/service/SecurityServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/src/main/java/backend/service/UserDetailsServiceImpl.java" afterPath="$PROJECT_DIR$/dealback/src/main/java/backend/service/UserDetailsServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/src/main/java/backend/service/UserService.java" afterPath="$PROJECT_DIR$/dealback/src/main/java/backend/service/UserService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/src/main/java/backend/service/UserServiceImpl.java" afterPath="$PROJECT_DIR$/dealback/src/main/java/backend/service/UserServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/src/main/java/backend/validator/UserValidator.java" afterPath="$PROJECT_DIR$/dealback/src/main/java/backend/validator/UserValidator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/src/main/resources/database.properties" afterPath="$PROJECT_DIR$/dealback/src/main/resources/database.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/src/main/resources/database.sql" afterPath="$PROJECT_DIR$/dealback/src/main/resources/database.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/src/main/resources/logback.xml" afterPath="$PROJECT_DIR$/dealback/src/main/resources/logback.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/src/main/resources/validation.properties" afterPath="$PROJECT_DIR$/dealback/src/main/resources/validation.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/src/main/webapp/WEB-INF/appconfig-data.xml" afterPath="$PROJECT_DIR$/dealback/src/main/webapp/WEB-INF/appconfig-data.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/src/main/webapp/WEB-INF/appconfig-mvc.xml" afterPath="$PROJECT_DIR$/dealback/src/main/webapp/WEB-INF/appconfig-mvc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/src/main/webapp/WEB-INF/appconfig-root.xml" afterPath="$PROJECT_DIR$/dealback/src/main/webapp/WEB-INF/appconfig-root.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/src/main/webapp/WEB-INF/appconfig-security.xml" afterPath="$PROJECT_DIR$/dealback/src/main/webapp/WEB-INF/appconfig-security.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/src/main/webapp/WEB-INF/views/admin.jsp" afterPath="$PROJECT_DIR$/dealback/src/main/webapp/WEB-INF/views/admin.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/src/main/webapp/WEB-INF/views/login.jsp" afterPath="$PROJECT_DIR$/dealback/src/main/webapp/WEB-INF/views/login.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/src/main/webapp/WEB-INF/views/registration.jsp" afterPath="$PROJECT_DIR$/dealback/src/main/webapp/WEB-INF/views/registration.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/src/main/webapp/WEB-INF/views/welcome.jsp" afterPath="$PROJECT_DIR$/dealback/src/main/webapp/WEB-INF/views/welcome.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/dealback/src/main/webapp/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/src/main/webapp/resources/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/dealback/src/main/webapp/resources/css/bootstrap.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/src/main/webapp/resources/css/common.css" afterPath="$PROJECT_DIR$/dealback/src/main/webapp/resources/css/common.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/src/main/webapp/resources/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/dealback/src/main/webapp/resources/js/bootstrap.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/target/backend/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/dealback/target/backend/META-INF/MANIFEST.MF" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/target/backend/WEB-INF/appconfig-data.xml" afterPath="$PROJECT_DIR$/dealback/target/backend/WEB-INF/appconfig-data.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/target/backend/WEB-INF/appconfig-mvc.xml" afterPath="$PROJECT_DIR$/dealback/target/backend/WEB-INF/appconfig-mvc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/target/backend/WEB-INF/appconfig-root.xml" afterPath="$PROJECT_DIR$/dealback/target/backend/WEB-INF/appconfig-root.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/target/backend/WEB-INF/appconfig-security.xml" afterPath="$PROJECT_DIR$/dealback/target/backend/WEB-INF/appconfig-security.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/target/backend/WEB-INF/classes/database.properties" afterPath="$PROJECT_DIR$/dealback/target/backend/WEB-INF/classes/database.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/target/backend/WEB-INF/classes/database.sql" afterPath="$PROJECT_DIR$/dealback/target/backend/WEB-INF/classes/database.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/target/backend/WEB-INF/classes/logback.xml" afterPath="$PROJECT_DIR$/dealback/target/backend/WEB-INF/classes/logback.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/target/backend/WEB-INF/classes/validation.properties" afterPath="$PROJECT_DIR$/dealback/target/backend/WEB-INF/classes/validation.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/target/backend/WEB-INF/views/admin.jsp" afterPath="$PROJECT_DIR$/dealback/target/backend/WEB-INF/views/admin.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/target/backend/WEB-INF/views/login.jsp" afterPath="$PROJECT_DIR$/dealback/target/backend/WEB-INF/views/login.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/target/backend/WEB-INF/views/registration.jsp" afterPath="$PROJECT_DIR$/dealback/target/backend/WEB-INF/views/registration.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/target/backend/WEB-INF/views/welcome.jsp" afterPath="$PROJECT_DIR$/dealback/target/backend/WEB-INF/views/welcome.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/target/backend/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/dealback/target/backend/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/target/backend/resources/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/dealback/target/backend/resources/css/bootstrap.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/target/backend/resources/css/common.css" afterPath="$PROJECT_DIR$/dealback/target/backend/resources/css/common.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/target/backend/resources/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/dealback/target/backend/resources/js/bootstrap.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/target/classes/database.properties" afterPath="$PROJECT_DIR$/dealback/target/classes/database.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/target/classes/database.sql" afterPath="$PROJECT_DIR$/dealback/target/classes/database.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/target/classes/logback.xml" afterPath="$PROJECT_DIR$/dealback/target/classes/logback.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dealback/target/classes/validation.properties" afterPath="$PROJECT_DIR$/dealback/target/classes/validation.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fonts/bootstrap/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/fonts/bootstrap/glyphicons-halflings-regular.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fonts/icomoon/icomoon.svg" afterPath="$PROJECT_DIR$/fonts/icomoon/icomoon.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fonts/icomoon/icomoon/Read Me.txt" afterPath="$PROJECT_DIR$/fonts/icomoon/icomoon/Read Me.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fonts/icomoon/icomoon/demo-files/demo.css" afterPath="$PROJECT_DIR$/fonts/icomoon/icomoon/demo-files/demo.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fonts/icomoon/icomoon/demo-files/demo.js" afterPath="$PROJECT_DIR$/fonts/icomoon/icomoon/demo-files/demo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fonts/icomoon/icomoon/demo.html" afterPath="$PROJECT_DIR$/fonts/icomoon/icomoon/demo.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fonts/icomoon/icomoon/fonts/icomoon.svg" afterPath="$PROJECT_DIR$/fonts/icomoon/icomoon/fonts/icomoon.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fonts/icomoon/icomoon/selection.json" afterPath="$PROJECT_DIR$/fonts/icomoon/icomoon/selection.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fonts/icomoon/icomoon/style.css" afterPath="$PROJECT_DIR$/fonts/icomoon/icomoon/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forgottenPassword/forgottenPassword.css" afterPath="$PROJECT_DIR$/forgottenPassword/forgottenPassword.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forgottenPassword/forgottenPassword.html" afterPath="$PROJECT_DIR$/forgottenPassword/forgottenPassword.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/input.css" afterPath="$PROJECT_DIR$/input/input.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input/input.html" afterPath="$PROJECT_DIR$/input/input.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/bootstrap.js" afterPath="$PROJECT_DIR$/js/bootstrap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/js/bootstrap.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/jquery.easing.1.3.js" afterPath="$PROJECT_DIR$/js/jquery.easing.1.3.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/jquery.magnific-popup.min.js" afterPath="$PROJECT_DIR$/js/jquery.magnific-popup.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/jquery.min.js" afterPath="$PROJECT_DIR$/js/jquery.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/jquery.stellar.min.js" afterPath="$PROJECT_DIR$/js/jquery.stellar.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/jquery.waypoints.min.js" afterPath="$PROJECT_DIR$/js/jquery.waypoints.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/magnific-popup-options.js" afterPath="$PROJECT_DIR$/js/magnific-popup-options.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/npm.js" afterPath="$PROJECT_DIR$/js/npm.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/owl.carousel.min.js" afterPath="$PROJECT_DIR$/js/owl.carousel.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/profile/profile.css" afterPath="$PROJECT_DIR$/profile/profile.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/profile/profile.html" afterPath="$PROJECT_DIR$/profile/profile.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/registration/registration.css" afterPath="$PROJECT_DIR$/registration/registration.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/registration/registration.html" afterPath="$PROJECT_DIR$/registration/registration.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vegas/vegas.css" afterPath="$PROJECT_DIR$/vegas/vegas.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vegas/vegas.js" afterPath="$PROJECT_DIR$/vegas/vegas.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vegas/vegas.min.css" afterPath="$PROJECT_DIR$/vegas/vegas.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vegas/vegas.min.js" afterPath="$PROJECT_DIR$/vegas/vegas.min.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,7 +701,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/src/main/webapp/resources/css/index.css">
           <provider selected="true" editor-type-id="text-editor">
@@ -32,7 +715,7 @@
       <file leaf-file-name="main.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/backend/src/main/webapp/WEB-INF/views/main.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-153">
+            <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -56,10 +739,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="y" value="-1" />
+    <option name="width" value="1366" />
+    <option name="height" value="741" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -77,8 +759,8 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -160,12 +842,26 @@
               <option name="myItemId" value="webapp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemId" value="Deal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Deal" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
+              <option name="myItemId" value="backend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -191,7 +887,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="springbackend" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -214,6 +914,52 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="springbackend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Deal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Deal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="backend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="springbackend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -225,7 +971,7 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/backend" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -457,22 +1203,22 @@
       <updated>1490364414549</updated>
       <workItem from="1490364416744" duration="987000" />
       <workItem from="1490442848404" duration="33000" />
+      <workItem from="1492870068384" duration="58000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1020000" />
+    <option name="totallyTimeSpent" value="1078000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <frame x="0" y="-1" width="1366" height="741" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10782241" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -482,7 +1228,9 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25260416" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25681818" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -493,7 +1241,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10782241" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -513,6 +1261,22 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/backend/src/main/webapp/resources/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/webapp/WEB-INF/views/main.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/backend/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -525,7 +1289,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-995">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -533,7 +1296,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-476">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -541,7 +1303,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-408">
           <caret line="54" column="4" lean-forward="true" selection-start-line="54" selection-start-column="4" selection-end-line="54" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -555,7 +1316,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/src/main/webapp/WEB-INF/views/main.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-153">
+        <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
