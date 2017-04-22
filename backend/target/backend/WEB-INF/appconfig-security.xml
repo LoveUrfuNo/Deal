@@ -9,7 +9,7 @@
 
     <http auto-config="true">
         <intercept-url pattern="/" access="hasRole('ROLE_ANONYMOUS')"/>
-        <intercept-url pattern="/main" access="hasAnyRole('ROLE_ANONYMOUS', 'ROLE_NOT_ACTIVATED_USER', 'ROLE_ADMIN')"/>
+        <intercept-url pattern="/main" access="hasAnyRole('ROLE_ANONYMOUS', 'ROLE_ADMIN')"/>
         <intercept-url pattern="/options" access="hasAnyRole('ROLE_USER', 'ROLE_ADMIN')"/>
         <intercept-url pattern="/profile" access="hasAnyRole('ROLE_USER', 'ROLE_ADMIN')"/>
         <intercept-url pattern="/profile/registration" access="hasAnyRole('ROLE_NOT_ACTIVATED_USER', 'ROLE_ADMIN')"/>
