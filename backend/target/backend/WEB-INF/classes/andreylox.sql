@@ -1,1 +1,0 @@
-INSERT INTO users VALUES (4, 'andreylox', '$2a$11$f4ARFGzNlKBAux2SC5T7.u.E6p2jKdXrfezbMsfyvQuCZMYjOzGzu', '1', 'abc', 'andrey');

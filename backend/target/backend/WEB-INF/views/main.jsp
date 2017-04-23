@@ -189,7 +189,7 @@
                                                         <div class="row form-group">
                                                             <div class="col-md-12">
                                                                 <label for="username">Логин или e-mail</label>
-                                                                <span>${message}</span>
+                                                                <span class="errors">${message}</span>
                                                                 <input name="username" type="text" class="form-control"
                                                                        placeholder="Имя пользователя"
                                                                        autofocus="true"/>
@@ -200,7 +200,7 @@
                                                                 <label for="password">Пароль</label>
                                                                 <input name="password" type="password"
                                                                        class="form-control" placeholder="Пароль"/>
-                                                                <span>${error}</span>
+                                                                <span class="errors">${error}</span>
                                                             </div>
                                                         </div>
                                                         <div class="checkbox">
@@ -226,68 +226,146 @@
 
                                 <!-- После Регистрации или входа (никитачмо) -->
                                 <div class="form-wrap2">
-                                    <div class="profile">
-                                        <div class="row">
-                                            <div class="col-md-3 vertical-centering">
-                                                <div class="navigation">
-                                                    <a class="col-md-12" href="#"><i class="mail circular icon"></i></a>
-                                                    <a class="col-md-12" href="#"><i class="mail circular icon"></i></a>
-                                                    <a class="col-md-12" href="#"><i class="mail circular icon"></i></a>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <img class="profile-icon"
-                                                     src="http://ic.pics.livejournal.com/v_kosmetikovna/64617808/63542/63542_900.jpg">
-                                            </div>
-                                            <div class="col-md-3 vertical-centering">
-                                                <div class="navigation">
-                                                    <a class="col-md-12" href="#"><i class="mail circular icon"></i></a>
-                                                    <a class="col-md-12" href="#"><i class="mail circular icon"></i></a>
-                                                    <a class="col-md-12" href="#"><i class="mail circular icon"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="content text-center">
-                                                    <a class="header text-center">Имя: </a>
-                                                    <%
-                                                        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-                                                        if (auth != null) { %>
-
-                                                    <%= auth.getName() %>
-
-                                                    <% } %>
-                                                    <div class="meta">
-                                                        <span class="date">С нами с 2013</span>
+                                    <c:set var="registration" value="registration"/>
+                                    <c:set var="login" value="login"/>
+                                    <c:choose>
+                                        <c:when test="${status == registration}">
+                                            <div class="profile">
+                                                <div class="is-not-activated">
+                                                    <div class="row">
+                                                        <div class="col-md-3 vertical-centering">
+                                                            <div class="navigation">
+                                                                <a class="col-md-12" href="#"><i
+                                                                        class="mail disabled circular icon"></i></a>
+                                                                <a class="col-md-12" href="#"><i
+                                                                        class="mail disabled circular icon"></i></a>
+                                                                <a class="col-md-12" href="#"><i
+                                                                        class="mail disabled circular icon"></i></a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <img class="profile-icon"
+                                                                 src="http://ic.pics.livejournal.com/v_kosmetikovna/64617808/63542/63542_900.jpg">
+                                                        </div>
+                                                        <div class="col-md-3 vertical-centering">
+                                                            <div class="navigation">
+                                                                <a class="col-md-12" href="#"><i
+                                                                        class="mail disabled circular icon"></i></a>
+                                                                <a class="col-md-12" href="#"><i
+                                                                        class="mail disabled circular icon"></i></a>
+                                                                <a class="col-md-12" href="#"><i
+                                                                        class="mail disabled circular icon"></i></a>
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                    <div class="description">Lorem mi sae na kruz akellam</div>
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="content text-center">
+                                                                <a class="header text-center">САНЁК</a>
+                                                                <div class="col-md-12">
+                                                                    <form action="http://mail.google.com/">
+                                                                        <button type="submit" class="btn btn-info">
+                                                                            Активируйте аккаунт
+                                                                        </button>
+                                                                    </form>
+                                                                </div>
+                                                                <div class="description">Lorem mi sae na kruz akellam
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ui white divider"></div>
+                                                    <div class="row">
+                                                        <div class="col-md-4 text-center">
+                                                            <a href="#"
+                                                               class="ui inverted disabled pink button">Pink</a>
+                                                        </div>
+                                                        <div class="col-md-4 text-center">
+                                                            <a href="#"
+                                                               class="ui inverted disabled pink button">Pink</a>
+                                                        </div>
+                                                        <div class="col-md-4 text-center">
+                                                            <a href="#"
+                                                               class="ui inverted disabled pink button">Pink</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ui white divider"></div>
+                                                    <div class="logout-form">
+                                                        <form id="logoutForm" method="POST"
+                                                              action="${contextPath}/logout">
+                                                            <input type="hidden" name="${_csrf.parameterName}"
+                                                                   value="${_csrf.token}"/>
+                                                        </form>
+                                                        <div class="row form-group">
+                                                            <div class="col-md-12 text-center">
+                                                                <input type="submit" class="btn btn-primary"
+                                                                       onclick="document.forms['logoutForm'].submit()"
+                                                                       value="Выйти">
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="ui white divider"></div>
-                                        <div class="row">
-                                            <div class="col-md-4 text-center">
-                                                <a href="#" class="ui inverted pink button">Pink</a>
-                                            </div>
-                                            <div class="col-md-4 text-center">
-                                                <a href="#" class="ui inverted pink button">Pink</a>
-                                            </div>
-                                            <div class="col-md-4 text-center">
-                                                <a href="#" class="ui inverted pink button">Pink</a>
-                                            </div>
-                                        </div>
-                                        <div class="logout-form">
-                                            <%--<c:if test="${pageContext.request.userPrincipal.name != null}">--%>
-                                            <c:set var="registration" value="registration"/>
-                                            <c:set var="login" value="login"/>
-                                            <c:choose>
-                                                <c:when test="${status == registration}">
-                                                    <form id="logoutForm" method="POST" action="${contextPath}/logout">
+                                        </c:when>
+                                        <c:when test="${status == login}">
+                                            <div class="profile">
+                                                <div class="is-activated">
+                                                    <div class="row">
+                                                        <div class="col-md-3 vertical-centering">
+                                                            <div class="navigation">
+                                                                <a class="col-md-12" href="#"><i
+                                                                        class="mail circular icon"></i></a>
+                                                                <a class="col-md-12" href="#"><i
+                                                                        class="mail circular icon"></i></a>
+                                                                <a class="col-md-12" href="#"><i
+                                                                        class="mail circular icon"></i></a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <img class="profile-icon"
+                                                                 src="http://ic.pics.livejournal.com/v_kosmetikovna/64617808/63542/63542_900.jpg">
+                                                        </div>
+                                                        <div class="col-md-3 vertical-centering">
+                                                            <div class="navigation">
+                                                                <a class="col-md-12" href="#"><i
+                                                                        class="mail circular icon"></i></a>
+                                                                <a class="col-md-12" href="#"><i
+                                                                        class="mail circular icon"></i></a>
+                                                                <a class="col-md-12" href="#"><i
+                                                                        class="mail circular icon"></i></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="content text-center">
+                                                                <a class="header text-center">САНЁК</a>
+                                                                <div class="description">Lorem mi sae na kruz akellam
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ui white divider"></div>
+                                                    <div class="row">
+                                                        <div class="col-md-4 text-center">
+                                                            <a href="#"
+                                                               class="ui inverted pink button">Pink</a>
+                                                        </div>
+                                                        <div class="col-md-4 text-center">
+                                                            <a href="${pageContext.request.contextPath}/options"
+                                                               class="ui inverted pink button">ОПТИОНС</a>
+                                                        </div>
+                                                        <div class="col-md-4 text-center">
+                                                            <a href="#"
+                                                               class="ui inverted pink button">Pink</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ui white divider"></div>
+                                                    <form id="logoutForm" method="POST"
+                                                          action="${contextPath}/logout">
                                                         <input type="hidden" name="${_csrf.parameterName}"
                                                                value="${_csrf.token}"/>
                                                     </form>
-                                                    <a href="${pageContext.request.contextPath}/options">регистрация</a>
                                                     <div class="row form-group">
                                                         <div class="col-md-12 text-center">
                                                             <input type="submit" class="btn btn-primary"
@@ -295,25 +373,10 @@
                                                                    value="Выйти">
                                                         </div>
                                                     </div>
-                                                </c:when>
-                                                <c:when test="${status == login}">
-                                                    <form id="logoutForm" method="POST" action="${contextPath}/logout">
-                                                        <input type="hidden" name="${_csrf.parameterName}"
-                                                               value="${_csrf.token}"/>
-                                                    </form>
-                                                    <a href="${pageContext.request.contextPath}/options">логин</a>
-                                                    <div class="row form-group">
-                                                        <div class="col-md-12 text-center">
-                                                            <input type="submit" class="btn btn-primary"
-                                                                   onclick="document.forms['logoutForm'].submit()"
-                                                                   value="Выйти">
-                                                        </div>
-                                                    </div>
-                                                </c:when>
-                                            </c:choose>
-                                        </div>
-                                        <div class="ui white divider"></div>
-                                    </div>
+                                                </div>
+                                            </div>
+                                        </c:when>
+                                    </c:choose>
                                 </div>
                             </div>
                         </div>

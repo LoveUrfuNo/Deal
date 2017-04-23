@@ -24,14 +24,13 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-
 /**
  * Controller for {@link springbackend.model.User}'s pages.
  */
 
 @Controller
 public class UserController {
-    private static final Integer SIZE_OF_GENERATED_STRING = 32;
+    public static final Integer SIZE_OF_GENERATED_STRING = 32;
 
     private static final Long ROLE_USER = 1L;
 
@@ -143,7 +142,7 @@ public class UserController {
             resultUser.setCountry(user.getCountry());
 
             userService.saveAndFlush(resultUser, ROLE_USER);
-        } catch (ParseException e){
+        } catch (ParseException e) {
             logger.debug(String.format("Error set dateOfBirth for %s", resultUser.getUsername()));
             e.printStackTrace();
         }
@@ -198,6 +197,7 @@ public class UserController {
 
         return "registration-confirm";
     }
+
 
 
 

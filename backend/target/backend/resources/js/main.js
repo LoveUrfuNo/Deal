@@ -1,7 +1,5 @@
 ;(function () {
-
     'use strict';
-
     // iPad and iPod detection
     var isiPad = function () {
         return (navigator.platform.indexOf("iPad") != -1);
@@ -22,7 +20,6 @@
         });
 
     };
-
     // Owl Carousel
     var owlCrouselFeatureSlide = function () {
         var owl = $('.owl-carousel1');
@@ -62,7 +59,6 @@
             ]
         })
     };
-
     // Animations
     var contentWayPoint = function () {
         var i = 0;
@@ -104,22 +100,6 @@
             responsive: true
 
         });
-    };
-
-    var backgroundSlider = function () {
-        var counter = 1;
-        var image = $(".backgroundSlider");
-        var images = ["http://www.2fons.ru/pic/201406/1920x1200/2fons.ru-21289.jpg", "http://www.nastol.com.ua/pic/201203/1920x1080/nastol.com.ua-17840.jpg", "http://img1.joyreactor.cc/pics/post/full/красивые-картинки-Нью-Йорк-америка-ночь-1076757.jpeg"];
-
-        setInterval(function () {
-            image.fadeOut(1000, function () {
-                image.css("background-image", "url(" + images[counter++] + ")");
-                image.fadeIn(1000);
-            });
-            if (counter == images.length) {
-                counter = 0;
-            }
-        }, 10000);
     };
 
     var formTab = function () {
@@ -183,29 +163,50 @@
         $('.tab-menu a').on('click', function (event) {
             var $this = $(this),
                 data = $this.data('tab');
-
             $('.tab-menu li').removeClass('active');
             $this.closest('li').addClass('active');
-
             $('.tab .tab-content-inner').removeClass('active');
             $this.closest('.tab').find('.tab-content-inner[data-content="' + data + '"]').addClass('active');
-
             event.preventDefault();
-
         });
+    };
 
+    var backgroundSlider = function () {
+        var counter = 1;
+        var image = $(".backgroundSlider");
+        var images = ["http://www.2fons.ru/pic/201406/1920x1200/2fons.ru-21289.jpg", "http://www.nastol.com.ua/pic/201203/1920x1080/nastol.com.ua-17840.jpg", "http://img1.joyreactor.cc/pics/post/full/красивые-картинки-Нью-Йорк-америка-ночь-1076757.jpeg"];
+
+        setInterval(function () {
+            image.fadeOut(1000, function () {
+                image.css("background-image", "url(" + images[counter++] + ")");
+                image.fadeIn(1000);
+            });
+            if (counter == images.length) {
+                counter = 0;
+            }
+        }, 10000);
     };
 
     var profileLoader = function () {
         var newForm = $('.form-wrap2').html();
         var locationAddress = location.pathname;
-        var profileAddress1 = "/profile";
-        var profileAddress2 = "/profile/registration";
-        if (locationAddress === profileAddress1 || locationAddress === profileAddress2) {
+        var profileAddressNotActivated = "/profile";
+        var profileAddressActivated = "/profile/registration";
+        if (locationAddress === profileAddressNotActivated || locationAddress === profileAddressActivated) {
             $('.form-wrap').empty().append(newForm);
         }
     };
 
+    var activateString = function () {
+        var activateButton = $(".profile button");
+
+        setInterval(function () {
+            activateButton.removeClass("btn-info").addClass("btn-warning");
+            setTimeout(function () {
+                activateButton.removeClass("btn-warning").addClass("btn-info");
+            },2000)
+        },4000);
+    };
     // Document on load.
     $(function () {
         fullHeight();
@@ -215,6 +216,6 @@
         backgroundSlider();
         parallax();
         profileLoader();
+        activateString();
     });
-
 }());
