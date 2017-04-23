@@ -1,7 +1,3 @@
-<%@ page import="org.springframework.security.core.context.SecurityContextHolder" %>
-<%@ page import="org.springframework.security.core.Authentication" %>
-<%@ page import="springbackend.model.User" %>
-<%@ page import="springbackend.service.UserService" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
@@ -20,7 +16,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Deal</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <!-- Facebook and Twitter integration -->
     <meta property="og:title" content=""/>
     <meta property="og:image" content=""/>
@@ -36,29 +31,21 @@
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <link rel="shortcut icon" href="${pageContext.request.contextPath}/resources/favicon.ico">
-
     <!-- Animate.css -->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/animate.css">
-
     <!-- Icomoon Icon Fonts-->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/icomoon.css">
-
     <!-- Bootstrap  -->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootstrap.css">
-
     <!-- Owl Carousel -->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/owl.carousel.min.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/owl.theme.default.min.css">
-
     <!-- Semantic UI -->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/Semantic-UI-CSS-master/semantic.min.css">
-
     <!-- Main styles-->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css">
-
     <!-- Awesome Icons -->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/font-awesome.min.css">
-
     <!-- Modernizr JS -->
     <script src="${pageContext.request.contextPath}/resources/js/modernizr.min.js"></script>
     <!-- FOR IE9 below -->
@@ -261,9 +248,9 @@
                                                     <div class="row">
                                                         <div class="col-md-12">
                                                             <div class="content text-center">
-                                                                <a class="header text-center">САНЁК</a>
+                                                                <a class="header text-center">${name}</a>
                                                                 <div class="col-md-12">
-                                                                    <form action="http://mail.google.com/">
+                                                                    <form action="http://${email_url}">
                                                                         <button type="submit" class="btn btn-info">
                                                                             Активируйте аккаунт
                                                                         </button>
@@ -322,8 +309,18 @@
                                                             </div>
                                                         </div>
                                                         <div class="col-md-6">
-                                                            <img class="profile-icon"
-                                                                 src="http://ic.pics.livejournal.com/v_kosmetikovna/64617808/63542/63542_900.jpg">
+                                                            <form:form method="POST" action="uploadFile?${_csrf.parameterName}=${_csrf.token}"
+                                                                       enctype="multipart/form-data">
+                                                                File to upload:
+                                                                <input type="file" name="file">
+                                                                <br/><input type="submit" value="Upload">
+                                                                Press here to upload the file!
+                                                                <input type="hidden" name="${_csrf.parameterName}"
+                                                                       value="${_csrf.token}"/>
+                                                            </form:form>
+
+                                                                <%--<img class="profile-icon"
+                                                                     src="http://ic.pics.livejournal.com/v_kosmetikovna/64617808/63542/63542_900.jpg">--%>
                                                         </div>
                                                         <div class="col-md-3 vertical-centering">
                                                             <div class="navigation">
@@ -339,8 +336,9 @@
                                                     <div class="row">
                                                         <div class="col-md-12">
                                                             <div class="content text-center">
-                                                                <a class="header text-center">САНЁК</a>
-                                                                <div class="description">Lorem mi sae na kruz akellam
+                                                                <a class="header text-center">${name}</a>
+                                                                <div class="description">
+                                                                    Lorem mi sae na kruz akellam
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -408,7 +406,6 @@
     <div class="item">
         <img src="http://great-usa.ru/wp-content/uploads/2016/12/piano-1406526_1920.jpg" alt="image">
     </div>
-
     <div class="item">
         <img src="http://svadbavm.ru/upload/iblock/62f/couple.jpg" alt="image">
     </div>
@@ -416,9 +413,7 @@
         <img src="http://conceptartworld.com/wp-content/uploads/2013/11/Juan-Pablo-Roldan-morla_NeverEnding_Story.jpg"
              alt="image">
     </div>
-
 </div>
-
 
 <div id="fh5co-common-section">
     <div class="container">
@@ -445,6 +440,7 @@
         </div>
     </div>
 </div><!-- end fh5co-common-section -->
+
 <div class="fh5co-parallax"
      style="background-image: url(http://www.publicdomainpictures.net/pictures/180000/velka/hand-with-thumb-up.jpg);"
      data-stellar-background-ratio="0.5">
@@ -460,6 +456,7 @@
         </div>
     </div>
 </div><!-- end: fh5co-parallax -->
+
 <div id="fh5co-services-section">
     <div class="container">
         <div class="heading-section text-center">
@@ -547,6 +544,7 @@
         </div>
     </div>
 </div><!-- end: fh5co-services-section -->
+
 <div id="fh5co-featured-work-section">
     <div class="container-fluid">
         <div class="heading-section text-center">
@@ -653,6 +651,7 @@
         </div>
     </div>
 </div><!-- end fh5co-featured-work-section -->
+
 <div id="fh5co-blog-section">
     <div class="container">
         <div class="heading-section text-center">

@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.multipart.MultipartFile;
 import springbackend.service.implementation.EmailServiceImpl;
 import springbackend.model.User;
 import springbackend.service.SecurityService;
@@ -72,6 +73,13 @@ public class UserController {
 
     @RequestMapping(value = "/profile", method = RequestMethod.GET)
     public String profile(Model model) {
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        User user = userService.findByUsername(auth.getName());
+        if (user.getFirstName() != null)
+            model.addAttribute("name", user.getFirstName());
+        else
+            model.addAttribute("name", user.getLogin());
+
         model.addAttribute("userForm", new User());
         model.addAttribute("status", "login");
 
@@ -80,9 +88,35 @@ public class UserController {
 
     @RequestMapping(value = "/profile/{status}", method = RequestMethod.GET)
     public String profile(@PathVariable("status") String status, Model model) {
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        User user = userService.findByUsername(auth.getName());
+
+        model.addAttribute("name", user.getLogin());
         model.addAttribute("userForm", new User());
         model.addAttribute("status", status);
 
+        String email = user.getUsername(), resultEmailService;
+        switch (email.substring(email.indexOf('@') + 1, email.length())) {       //TODO: add more services
+            case "gmail.com":
+                resultEmailService = "mail.google.com";
+                break;
+            case "ya.ru":
+                resultEmailService = "mail.yandex.ru";
+                break;
+            case "mail.ru":
+                resultEmailService = "e.mail.ru";
+                break;
+            case "icloud.com":
+                resultEmailService = "icloud.com";
+                break;
+            case "mail.com":
+                resultEmailService = "mail.com";
+                break;
+            default:
+                resultEmailService = "dealmarketplace.ru";
+        }
+
+        model.addAttribute("email_url", resultEmailService);
         return "main";
     }
 
@@ -197,8 +231,6 @@ public class UserController {
 
         return "registration-confirm";
     }
-
-
 
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)

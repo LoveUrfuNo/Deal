@@ -19,13 +19,12 @@ import java.io.FileOutputStream;
 
 @Controller
 public class FileController {
-
     private static final Logger logger = LoggerFactory.getLogger(FileController.class);
 
     @RequestMapping(value = "/uploadFile", method = RequestMethod.POST)
+    @ResponseBody
     public String uploadFile(@RequestParam("file") MultipartFile file) {// имена параметров (тут - "file") - из формы JSP.
         String name = null;
-
         if (!file.isEmpty()) {
             try {
                 byte[] bytes = file.getBytes();
@@ -34,7 +33,6 @@ public class FileController {
 
                 String rootPath = "C:\\path\\";  //try also "C:\path\"
                 File dir = new File(rootPath + File.separator + "loadFiles");
-
                 if (!dir.exists()) {
                     dir.mkdirs();
                 }
