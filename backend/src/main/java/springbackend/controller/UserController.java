@@ -22,7 +22,9 @@ import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -61,6 +63,15 @@ public class UserController {
     @RequestMapping(value = "/profile", method = RequestMethod.GET)
     public String profile(Model model) {
         model.addAttribute("userForm", new User());
+        model.addAttribute("status", "login");
+
+        return "main";
+    }
+
+    @RequestMapping(value = "/profile/{status}", method = RequestMethod.GET)
+    public String profile(@PathVariable("status") String status, Model model) {
+        model.addAttribute("userForm", new User());
+        model.addAttribute("status", status);
 
         return "main";
     }
@@ -69,7 +80,35 @@ public class UserController {
     public String options(Model model) {
         model.addAttribute("userForm", new User());
 
+        List<String> months = new ArrayList<>();
+        months.add("Январь");
+        months.add("Февраль");
+        months.add("Март");
+        months.add("Апрель");
+        months.add("Май");
+        months.add("Июнь");
+        months.add("Июль");
+        months.add("Август");
+        months.add("Сентябрь");
+        months.add("Октябрь");
+        months.add("Ноябрь");
+        months.add("Декабрь");
+
+        model.addAttribute("months", months);
+
+        List<String> numbers = new ArrayList<>(); // TODO: make with streams
+        for (Integer i = 1; i <= 31; i++)
+            numbers.add(Integer.toString(i));
+
+        model.addAttribute("numbers", numbers);
+
         return "advanced-options";
+    }
+
+    @RequestMapping(value = "/options", method = RequestMethod.POST)
+    public String options(@ModelAttribute("userForm") User user) {
+
+        return "redirect:/profile";
     }
 
     @RequestMapping(value = "/registration", method = RequestMethod.POST)
@@ -79,9 +118,11 @@ public class UserController {
             return "main";
         }
 
+        model.addAttribute("status", "registration");
+
         UserDetailsServiceImpl.operation = "registration";
         user.setKeyForRegistrationConfirmUrl(EmailService.generateString(32));
-        user.setRegistrationConfirmed(false);    //user didn't confirm acc by email message yet
+        user.setRegistrationConfirmed(false); //user didn't confirm acc by email message yet
         userService.save(user);
         securityService.autoLogin(user.getUsername(), user.getConfirmPassword());
         UserDetailsServiceImpl.operation = null;
@@ -89,16 +130,16 @@ public class UserController {
         Map map = new HashMap();
         map.put("from", "DEAL");
         map.put("subject", "Hello from " + EmailService.getNameFromEmailAddress(user.getUsername()) + "!");
-        map.put("to", user.getUsername());      //TODO: rename field "username" to "email"
+        map.put("to", user.getUsername()); //TODO: rename field "username" to "email"
         map.put("key_for_registration_confirm_url", user.getKeyForRegistrationConfirmUrl());
         map.put("id", user.getId());
 
-        if (emailService.sendEmail(MESSAGE, map))      //TODO: add output in logger
+        if (emailService.sendEmail(MESSAGE, map)) //TODO: add output in logger
             System.out.println("Message was sent");
         else
             System.out.println("Error: message wasn't sent");
 
-        return "redirect:/profile";
+        return "redirect:/profile/registration";
     }
 
     @RequestMapping(value = {"/authentication"}, method = RequestMethod.GET)
@@ -116,16 +157,10 @@ public class UserController {
 
         user.setRegistrationConfirmed(true);
         user.setKeyForRegistrationConfirmUrl(null);
-        userService.saveAndFlush(user);        //TODO: add output in logger
+        userService.saveAndFlush(user); //TODO: add output in logger
 
         return "registration-confirm";
     }
-
-
-
-
-
-
 
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
@@ -144,6 +179,12 @@ public class UserController {
     @RequestMapping(value = {"/welcome"}, method = RequestMethod.GET)
     public String welcome(Model model) {
         return "welcome";
+    }
+
+    //Добавлено быдлом
+    @RequestMapping(value = {"/error"}, method = RequestMethod.GET)
+    public String error(Model model) {
+        return "error-page";
     }
 
     @RequestMapping(value = "/admin", method = RequestMethod.GET)

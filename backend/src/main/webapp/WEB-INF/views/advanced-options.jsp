@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: Никита
@@ -44,37 +45,9 @@
             <i class="dropdown icon"></i>
             <div class="default text">Число</div>
             <div class="menu">
-                <div class="item" data-value="1">1</div>
-                <div class="item" data-value="0">2</div>
-                <div class="item" data-value="1">3</div>
-                <div class="item" data-value="0">4</div>
-                <div class="item" data-value="1">5</div>
-                <div class="item" data-value="0">6</div>
-                <div class="item" data-value="1">7</div>
-                <div class="item" data-value="0">8</div>
-                <div class="item" data-value="1">9</div>
-                <div class="item" data-value="0">10</div>
-                <div class="item" data-value="1">11</div>
-                <div class="item" data-value="0">12</div>
-                <div class="item" data-value="1">13</div>
-                <div class="item" data-value="0">14</div>
-                <div class="item" data-value="1">15</div>
-                <div class="item" data-value="0">16</div>
-                <div class="item" data-value="1">17</div>
-                <div class="item" data-value="0">18</div>
-                <div class="item" data-value="1">19</div>
-                <div class="item" data-value="0">20</div>
-                <div class="item" data-value="1">21</div>
-                <div class="item" data-value="0">22</div>
-                <div class="item" data-value="1">23</div>
-                <div class="item" data-value="0">24</div>
-                <div class="item" data-value="1">25</div>
-                <div class="item" data-value="0">26</div>
-                <div class="item" data-value="1">27</div>
-                <div class="item" data-value="0">28</div>
-                <div class="item" data-value="1">29</div>
-                <div class="item" data-value="0">30</div>
-                <div class="item" data-value="1">31</div>
+                <c:forEach items="${numbers}" var="item">
+                    <div class="item" data-value="${item}">${item}</div>
+                </c:forEach>
             </div>
         </div>
     </div>
@@ -85,18 +58,9 @@
             <i class="dropdown icon"></i>
             <div class="default text">Месяц</div>
             <div class="menu">
-                <div class="item" data-value="1">Январь</div>
-                <div class="item" data-value="0">Февраль</div>
-                <div class="item" data-value="1">Март</div>
-                <div class="item" data-value="0">Апрель</div>
-                <div class="item" data-value="1">Май</div>
-                <div class="item" data-value="0">Июнь</div>
-                <div class="item" data-value="1">Июль</div>
-                <div class="item" data-value="0">Август</div>
-                <div class="item" data-value="1">Сентябрь</div>
-                <div class="item" data-value="0">Октябрь</div>
-                <div class="item" data-value="1">Ноябрь</div>
-                <div class="item" data-value="0">Декабрь</div>
+                <c:forEach items="${months}" var="item">
+                    <div class="item" data-value="${months.indexOf(item)}">${item}</div>
+                </c:forEach>
             </div>
         </div>
     </div>

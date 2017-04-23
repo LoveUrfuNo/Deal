@@ -100,10 +100,6 @@ embed {
   font-weight: bold;
 }
 
-.profile .ui a:hover {
-  color:white!important;
-}
-
 .vertical-centering {
   margin-top: 5%;
 }
@@ -126,9 +122,14 @@ embed {
   background-color: white !important;
 }
 
-.profile .navigation i:hover {
+.profile .navigation .profile-is-activated i:hover {
   color: white !important;
   background-color: #F54C53 !important;
+}
+
+.profile .navigation .profile-is-not-activated i:hover {
+  color: #F54C53 !important;
+  background-color: white !important;
 }
 
 .tab-content span {
@@ -416,9 +417,9 @@ embed {
 .gtco-cover a {
   color: #f54c53;
 }
-.gtco-cover a:hover {
+/*.gtco-cover a:hover {
   color: white;
-}
+}*/
 .gtco-cover .overlay {
   z-index: 1;
   position: absolute;
