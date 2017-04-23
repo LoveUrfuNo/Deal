@@ -23,7 +23,7 @@
 <div class="row centering">
 <h1 class="col-sm-12 text-center">404</h1>
 <h2 class="col-sm-12 text-center"><i class="fa fa-exclamation-circle fa-lg" aria-hidden="true"></i>  Oops! The Page you requested was not found!</h2>
-    <h3 class="col-sm-12 text-center"> You can go <a href="#">home</a> any time!</h3>
+    <h3 class="col-sm-12 text-center"> You can go <a href="#">home</a> anytime!</h3>
 </div>
 
 
