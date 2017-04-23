@@ -1,4 +1,4 @@
-package springbackend.service;
+package springbackend.service.implementation;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
@@ -12,6 +12,7 @@ import org.springframework.validation.Errors;
 import springbackend.dao.UserDao;
 import springbackend.model.Role;
 import springbackend.model.User;
+import springbackend.service.UserService;
 
 import java.util.HashSet;
 import java.util.Optional;

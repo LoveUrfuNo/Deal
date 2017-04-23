@@ -44,7 +44,7 @@
     </beans:bean>
 
     <beans:bean id="userDetailsServiceImpl"
-                class="springbackend.service.UserDetailsServiceImpl">
+                class="springbackend.service.implementation.UserDetailsServiceImpl">
         <beans:property name="enableGroups" value="true"/>
         <beans:property name="enableAuthorities" value="false"/>
         <beans:property name="dataSource" ref="dataSource"/>

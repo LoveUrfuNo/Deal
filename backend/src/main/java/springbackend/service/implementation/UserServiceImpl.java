@@ -1,4 +1,4 @@
-package springbackend.service;
+package springbackend.service.implementation;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -7,6 +7,7 @@ import springbackend.dao.RoleDao;
 import springbackend.dao.UserDao;
 import springbackend.model.Role;
 import springbackend.model.User;
+import springbackend.service.UserService;
 
 import java.util.*;
 

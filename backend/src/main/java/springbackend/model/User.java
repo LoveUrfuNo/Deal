@@ -1,5 +1,7 @@
 package springbackend.model;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
+
 import javax.persistence.*;
 import java.util.Date;
 import java.util.Set;
@@ -30,6 +32,9 @@ public class User {
     @Column(name = "login")
     private String login;
 
+    @Column(name = "date_of_registration")
+    private Date dateOfRegistration;
+
     @Transient
     private String confirmPassword;
 
@@ -42,7 +47,7 @@ public class User {
     private String firstName;
 
     @Column(name = "gender")
-    private Boolean gender;            // 0 - female, 1 - male
+    private Boolean gender;     // 0 - female, 1 - male
 
     @Column(name = "date_of_birth")
     private Date dateOfBirth;
@@ -98,11 +103,19 @@ public class User {
         this.login = login;
     }
 
+    public Date getDateOfRegistration() {
+        return dateOfRegistration;
+    }
+
+    public void setDateOfRegistration(Date dateOfRegistration) {
+        this.dateOfRegistration = dateOfRegistration;
+    }
+
     public String getConfirmPassword() {
         return confirmPassword;
     }
 
-    private void setConfirmPassword(String confirmPassword) {
+    public void setConfirmPassword(String confirmPassword) {
         this.confirmPassword = confirmPassword;
     }
 

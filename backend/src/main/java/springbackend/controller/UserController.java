@@ -12,8 +12,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import springbackend.dao.UserDao;
-import springbackend.service.EmailService;
+import springbackend.service.implementation.EmailServiceImpl;
 import springbackend.model.User;
 import springbackend.service.SecurityService;
 import springbackend.service.UserService;
@@ -43,7 +42,7 @@ public class UserController {
     private static final String MESSAGE = "message-registration-email.vm";
 
     @Autowired
-    private EmailService emailService;
+    private EmailServiceImpl emailServiceImpl;
 
     @Autowired
     private UserService userService;
@@ -58,8 +57,8 @@ public class UserController {
     private UserOptionsValidator optionsValidator;
 
     @RequestMapping(value = "/accessDenied", method = RequestMethod.GET)
-    public String errorPage() {
-        return "accessDenied";
+    public String redirect() {
+        return "access-denied";
     }
 
     @RequestMapping(value = "/main", method = RequestMethod.GET)
@@ -117,24 +116,22 @@ public class UserController {
         return "advanced-options";
     }
 
-
     @RequestMapping(value = "/options", method = RequestMethod.POST)
     public String options(@ModelAttribute("userOptionForm") User user, BindingResult bindingResult) throws UnsupportedEncodingException {
         optionsValidator.validate(user, bindingResult);
         if (bindingResult.hasErrors())
             return "advanced-options";
 
-        User resultUser = new User();
-
+        User resultUser;
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         if (auth.getAuthorities().stream().findFirst().orElse(null).getAuthority().equals("ROLE_USER")) {
             resultUser = userService.findByUsername(auth.getName());
-        } else if(auth.getAuthorities().stream().findFirst().orElse(null).getAuthority().equals("ROLE_NOT_ACTIVATED_USER")) {
+        } else if (auth.getAuthorities().stream().findFirst().orElse(null).getAuthority().equals("ROLE_NOT_ACTIVATED_USER")) {
             return "redirect:/profile/registration";
-        } else if(auth.getAuthorities().stream().findFirst().orElse(null).getAuthority().equals("ROLE_ANONYMOUS")) {
+        } else if (auth.getAuthorities().stream().findFirst().orElse(null).getAuthority().equals("ROLE_ANONYMOUS")) {
             return "main";
         } else {
-            return "serviceEntrance";
+            return "service-entrance";
         }
 
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.US);
@@ -146,11 +143,10 @@ public class UserController {
             resultUser.setCountry(user.getCountry());
 
             userService.saveAndFlush(resultUser, ROLE_USER);
-        } catch (ParseException e) {
+        } catch (ParseException e){
             logger.debug(String.format("Error set dateOfBirth for %s", resultUser.getUsername()));
             e.printStackTrace();
         }
-
         return "redirect:/profile";
     }
 
@@ -162,19 +158,19 @@ public class UserController {
 
         model.addAttribute("status", "registration");
 
-        user.setKeyForRegistrationConfirmUrl(EmailService.generateString(SIZE_OF_GENERATED_STRING));
+        user.setKeyForRegistrationConfirmUrl(EmailServiceImpl.generateString(SIZE_OF_GENERATED_STRING));
         user.setRegistrationConfirmed(false);    //user didn't confirm acc by email message yet
         userService.save(user, ROLE_NOT_ACTIVATED_USER);
         securityService.autoLogin(user.getUsername(), user.getConfirmPassword());
 
         Map map = new HashMap();
         map.put("from", "DEAL");
-        map.put("subject", "Hello from " + EmailService.getNameFromEmailAddress(user.getUsername()) + "!");
+        map.put("subject", "Hello from " + EmailServiceImpl.getNameFromEmailAddress(user.getUsername()) + "!");
         map.put("to", user.getUsername());      //TODO: rename field "username" to "email"
         map.put("key_for_registration_confirm_url", user.getKeyForRegistrationConfirmUrl());
         map.put("id", user.getId());
 
-        if (emailService.sendEmail(MESSAGE, map))      //TODO: add output in logger
+        if (emailServiceImpl.sendEmail(MESSAGE, map))      //TODO: add output in logger
             System.out.println("Message was sent");
         else
             System.out.println("Error: message wasn't sent");
