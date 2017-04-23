@@ -229,7 +229,7 @@
                                     <c:choose>
                                         <c:when test="${status == registration}">
                                             <div class="profile">
-                                                <div class="profile-is-not-activated">
+                                                <div class="is-not-activated">
                                                     <div class="row">
                                                         <div class="col-md-3 vertical-centering">
                                                             <div class="navigation">
@@ -305,7 +305,7 @@
                                         </c:when>
                                         <c:when test="${status == login}">
                                             <div class="profile">
-                                                <div class="profile-is-not-activated">
+                                                <div class="is-activated">
                                                     <div class="row">
                                                         <div class="col-md-3 vertical-centering">
                                                             <div class="navigation">

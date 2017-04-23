@@ -113,21 +113,21 @@ embed {
   max-width: 180px;
 }
 
-.profile .navigation a{
+.profile .navigation a {
   padding-bottom: 15px;
 }
 
-.profile .navigation i {
+.is-not-activated i, .is-activated i {
   color: #F54C53!important;
   background-color: white !important;
 }
 
-.profile .navigation .profile-is-activated i:hover {
+.is-activated i:hover {
   color: white !important;
   background-color: #F54C53 !important;
 }
 
-.profile .navigation .profile-is-not-activated i:hover {
+.is-not-activated i:hover {
   color: #F54C53 !important;
   background-color: white !important;
 }

@@ -22,8 +22,8 @@
 <body>
 <div class="row centering">
 <h1 class="col-sm-12 text-center">404</h1>
-<h2 class="col-sm-12 text-center"><i class="fa fa-exclamation-circle fa-lg" aria-hidden="true"></i>  Oops! The Page you requested was not found!</h2>
-    <h3 class="col-sm-12 text-center"> You can go <a href="#">home</a> anytime!</h3>
+<h2 class="col-sm-12 text-center"><i class="fa fa-exclamation-circle fa-lg" aria-hidden="true"></i>  Упс! Запрашиваемая страница не найдена!</h2>
+    <h3 class="col-sm-12 text-center"> Вы можете вернуться <a href="#">на главную страницу</a> в любое время!</h3>
 </div>
 
 
