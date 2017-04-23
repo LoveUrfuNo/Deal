@@ -1,5 +1,7 @@
 package springbackend.controller;
 
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -18,7 +20,12 @@ public class ServiceEntranceController {
     public String serviceEntrance(Model model) {
         model.addAttribute("userForm", new ServiceEntrance());
 
-        return "serviceEntrance";
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+
+        if (auth.getAuthorities().stream().findFirst().orElse(null).getAuthority().equals("ROLE_USER"))
+            return "accessDenied";
+        else
+            return "serviceEntrance";
     }
 
     @RequestMapping(value = "/main", method = RequestMethod.POST)

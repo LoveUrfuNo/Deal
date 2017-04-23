@@ -3,7 +3,6 @@ package springbackend.controller;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.access.method.P;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
@@ -13,21 +12,19 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import springbackend.dao.RoleDao;
-import springbackend.model.Role;
+import springbackend.dao.UserDao;
 import springbackend.service.EmailService;
 import springbackend.model.User;
 import springbackend.service.SecurityService;
-import springbackend.service.UserDetailsServiceImpl;
 import springbackend.service.UserService;
+import springbackend.validator.UserOptionsValidator;
 import springbackend.validator.UserValidator;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
-import java.nio.file.Paths;
+import java.io.*;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.*;
+
 
 /**
  * Controller for {@link springbackend.model.User}'s pages.
@@ -35,6 +32,8 @@ import java.util.*;
 
 @Controller
 public class UserController {
+    public static final Integer SIZE_OF_GENERATED_STRING = 32;
+
     private static final Long ROLE_USER = 1L;
 
     private static final Long ROLE_NOT_ACTIVATED_USER = 3L;
@@ -54,6 +53,9 @@ public class UserController {
 
     @Autowired
     private UserValidator userValidator;
+
+    @Autowired
+    private UserOptionsValidator optionsValidator;
 
     @RequestMapping(value = "/accessDenied", method = RequestMethod.GET)
     public String errorPage() {
@@ -88,7 +90,7 @@ public class UserController {
 
     @RequestMapping(value = "/options", method = RequestMethod.GET)
     public String options(Model model) {
-        model.addAttribute("userForm", new User());
+        model.addAttribute("userOptionForm", new User());
 
         List<String> months = new ArrayList<>();
         months.add("Январь");
@@ -115,8 +117,39 @@ public class UserController {
         return "advanced-options";
     }
 
+
     @RequestMapping(value = "/options", method = RequestMethod.POST)
-    public String options(@ModelAttribute("userForm") User user) {
+    public String options(@ModelAttribute("userOptionForm") User user, BindingResult bindingResult) throws UnsupportedEncodingException {
+        optionsValidator.validate(user, bindingResult);
+        if (bindingResult.hasErrors())
+            return "advanced-options";
+
+        User resultUser = new User();
+
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        if (auth.getAuthorities().stream().findFirst().orElse(null).getAuthority().equals("ROLE_USER")) {
+            resultUser = userService.findByUsername(auth.getName());
+        } else if(auth.getAuthorities().stream().findFirst().orElse(null).getAuthority().equals("ROLE_NOT_ACTIVATED_USER")) {
+            return "redirect:/profile/registration";
+        } else if(auth.getAuthorities().stream().findFirst().orElse(null).getAuthority().equals("ROLE_ANONYMOUS")) {
+            return "main";
+        } else {
+            return "serviceEntrance";
+        }
+
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.US);
+        try {
+            resultUser.setDateOfBirth(simpleDateFormat.parse("1997-03-12"));
+            resultUser.setFirstName(new String(new String(user.getFirstName().getBytes("ISO-8859-1"), "Cp1251")
+                    .getBytes("windows-1251"), "UTF-8"));
+            resultUser.setGender(user.getGender());
+            resultUser.setCountry(user.getCountry());
+
+            userService.saveAndFlush(resultUser, ROLE_USER);
+        } catch (ParseException e) {
+            logger.debug(String.format("Error set dateOfBirth for %s", resultUser.getUsername()));
+            e.printStackTrace();
+        }
 
         return "redirect:/profile";
     }
@@ -124,13 +157,12 @@ public class UserController {
     @RequestMapping(value = "/registration", method = RequestMethod.POST)
     public String registration(@ModelAttribute("userForm") User user, BindingResult bindingResult, Model model) {
         userValidator.validate(user, bindingResult);
-        if (bindingResult.hasErrors()) {
+        if (bindingResult.hasErrors())
             return "main";
-        }
 
         model.addAttribute("status", "registration");
 
-        user.setKeyForRegistrationConfirmUrl(EmailService.generateString(32));
+        user.setKeyForRegistrationConfirmUrl(EmailService.generateString(SIZE_OF_GENERATED_STRING));
         user.setRegistrationConfirmed(false);    //user didn't confirm acc by email message yet
         userService.save(user, ROLE_NOT_ACTIVATED_USER);
         securityService.autoLogin(user.getUsername(), user.getConfirmPassword());
@@ -171,13 +203,6 @@ public class UserController {
         return "registration-confirm";
     }
 
-
-
-
-
-
-
-
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String login(Model model, String error, String logout) {
         if (error != null) {
@@ -192,12 +217,12 @@ public class UserController {
     }
 
     @RequestMapping(value = {"/welcome"}, method = RequestMethod.GET)
-    public String welcome(Model model) {
+    public String welcome() {
         return "welcome";
     }
 
     @RequestMapping(value = "/admin", method = RequestMethod.GET)
-    public String admin(Model model) {
+    public String admin() {
         return "admin";
     }
 }

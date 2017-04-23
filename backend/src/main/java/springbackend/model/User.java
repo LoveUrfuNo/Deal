@@ -1,6 +1,7 @@
 package springbackend.model;
 
 import javax.persistence.*;
+import java.util.Date;
 import java.util.Set;
 
 /**
@@ -36,6 +37,18 @@ public class User {
     @JoinTable(name = "user_roles", joinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumn(name = "role_id"))
     private Set<Role> roles;
+
+    @Column(name = "first_name")
+    private String firstName;
+
+    @Column(name = "gender")
+    private Boolean gender;            // 0 - female, 1 - male
+
+    @Column(name = "date_of_birth")
+    private Date dateOfBirth;
+
+    @Column(name = "country")
+    private String country;
 
     public Long getId() {
         return id;
@@ -89,7 +102,7 @@ public class User {
         return confirmPassword;
     }
 
-    public void setConfirmPassword(String confirmPassword) {
+    private void setConfirmPassword(String confirmPassword) {
         this.confirmPassword = confirmPassword;
     }
 
@@ -99,6 +112,38 @@ public class User {
 
     public void setRoles(Set<Role> roles) {
         this.roles = roles;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public Boolean getGender() {
+        return gender;
+    }
+
+    public void setGender(Boolean gender) {
+        this.gender = gender;
+    }
+
+    public Date getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public void setDateOfBirth(Date dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
     }
 
     /*public String toString() {

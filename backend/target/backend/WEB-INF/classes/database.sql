@@ -49,3 +49,9 @@ INSERT INTO user_roles VALUES (1, 2);
 ALTER TABLE `deal_users`.`users`
   ADD COLUMN `key_for_registration_confirm` VARCHAR(45) NULL AFTER `is_registration_confirmed`,
   ADD UNIQUE INDEX `key_UNIQUE` (`key_for_registration_confirm` ASC);
+
+ALTER TABLE `deal_users`.`users`
+ADD COLUMN `first_name` VARCHAR(65) NULL AFTER `login`,
+ADD COLUMN `gender` ENUM('male', 'female') NULL AFTER `first_name`,
+ADD COLUMN `date_of_birth` DATE NULL AFTER `gender`,
+ADD COLUMN `country` VARCHAR(65) NULL DEFAULT NULL AFTER `date_of_birth`;

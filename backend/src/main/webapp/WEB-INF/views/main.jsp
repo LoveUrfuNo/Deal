@@ -65,7 +65,6 @@
     <!--[if lt IE 9]>
     <script src="/resources/js/respond.min.js"></script>
     <![endif]-->
-
 </head>
 <body>
 
@@ -206,7 +205,8 @@
                                                         </div>
                                                         <div class="checkbox">
                                                             <label>
-                                                                <input type="checkbox" name="remember-me-parameter"> Запомнить меня
+                                                                <input type="checkbox" name="remember-me-parameter">
+                                                                Запомнить меня
                                                             </label>
                                                         </div>
                                                         <input type="hidden" name="${_csrf.parameterName}"

@@ -8,7 +8,6 @@
 </head>
 
 <body>
-<h1>Sorry, access is denied</h1>
 <table>
     <%
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
@@ -18,7 +17,7 @@
 
     <% } else if (auth.getAuthorities().stream().findFirst().orElse(null).getAuthority().equals("ROLE_ANONYMOUS")) { %>
 
-    <c:redirect url="/main"/>
+    <c:redirect url="/"/>
 
     <% } else if (auth.getAuthorities().stream().findFirst().orElse(null).getAuthority().equals("ROLE_NOT_ACTIVATED_USER")) { %>
 
