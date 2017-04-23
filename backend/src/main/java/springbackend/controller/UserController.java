@@ -31,7 +31,7 @@ import java.util.*;
 
 @Controller
 public class UserController {
-    public static final Integer SIZE_OF_GENERATED_STRING = 32;
+    private static final Integer SIZE_OF_GENERATED_STRING = 32;
 
     private static final Long ROLE_USER = 1L;
 
@@ -198,6 +198,8 @@ public class UserController {
 
         return "registration-confirm";
     }
+
+
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String login(Model model, String error, String logout) {

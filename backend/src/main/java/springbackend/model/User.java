@@ -47,7 +47,7 @@ public class User {
     private String firstName;
 
     @Column(name = "gender")
-    private Boolean gender;     // 0 - female, 1 - male
+    private String gender;
 
     @Column(name = "date_of_birth")
     private Date dateOfBirth;
@@ -135,11 +135,11 @@ public class User {
         this.firstName = firstName;
     }
 
-    public Boolean getGender() {
+    public String getGender() {
         return gender;
     }
 
-    public void setGender(Boolean gender) {
+    public void setGender(String gender) {
         this.gender = gender;
     }
 
