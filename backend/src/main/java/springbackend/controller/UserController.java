@@ -181,12 +181,6 @@ public class UserController {
         return "welcome";
     }
 
-    //Добавлено быдлом
-    @RequestMapping(value = {"/error"}, method = RequestMethod.GET)
-    public String error(Model model) {
-        return "error-page";
-    }
-
     @RequestMapping(value = "/admin", method = RequestMethod.GET)
     public String admin(Model model) {
         return "admin";
