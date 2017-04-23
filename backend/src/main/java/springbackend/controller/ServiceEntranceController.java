@@ -23,9 +23,9 @@ public class ServiceEntranceController {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 
         if (auth.getAuthorities().stream().findFirst().orElse(null).getAuthority().equals("ROLE_USER"))
-            return "accessDenied";
+            return "access-denied";
         else
-            return "serviceEntrance";
+            return "service-entrance";
     }
 
     @RequestMapping(value = "/main", method = RequestMethod.POST)
@@ -36,7 +36,7 @@ public class ServiceEntranceController {
         if (userForm.getEnteredPassword().equals(userForm.getCorrectPassword())) {
             return "main";
         } else {
-            return "forgotServicePassword";
+            return "forgot-service-password";
         }
     }
 }

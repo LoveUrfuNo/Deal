@@ -1,4 +1,4 @@
-package springbackend.service;
+package springbackend.service.implementation;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -9,6 +9,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Service;
+import springbackend.service.SecurityService;
 
 /**
  * Implementation of {@link SecurityService} interface.
