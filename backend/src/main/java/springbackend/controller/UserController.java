@@ -113,6 +113,9 @@ public class UserController {
             case "icloud.com":
                 resultEmailService = "icloud.com";
                 break;
+            case "yandex.ru":
+                resultEmailService = "yandex.ru";
+                break;
             case "mail.com":
                 resultEmailService = "mail.com";
                 break;
