@@ -50,7 +50,7 @@ public class User {
     private String gender;
 
     @Column(name = "date_of_birth")
-    private Date dateOfBirth;
+    private String dateOfBirth;
 
     @Column(name = "country")
     private String country;
@@ -146,11 +146,11 @@ public class User {
         this.gender = gender;
     }
 
-    public Date getDateOfBirth() {
+    public String getDateOfBirth() {
         return dateOfBirth;
     }
 
-    public void setDateOfBirth(Date dateOfBirth) {
+    public void setDateOfBirth(String dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
 
