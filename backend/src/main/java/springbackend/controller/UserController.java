@@ -1,5 +1,7 @@
 package springbackend.controller;
 
+import javassist.bytecode.ByteArray;
+import org.apache.taglibs.standard.lang.jstl.test.PageContextImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +23,7 @@ import springbackend.validator.UserOptionsValidator;
 import springbackend.validator.UserValidator;
 
 import java.io.*;
+import java.sql.Connection;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -80,6 +83,7 @@ public class UserController {
         else
             model.addAttribute("name", user.getLogin());
 
+        model.addAttribute("username", user.getUsername());
         model.addAttribute("userForm", new User());
         model.addAttribute("status", "login");
 
@@ -231,6 +235,7 @@ public class UserController {
 
         return "registration-confirm";
     }
+
 
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)

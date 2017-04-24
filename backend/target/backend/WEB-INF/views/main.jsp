@@ -1,6 +1,10 @@
+<%@ page import="org.springframework.security.core.Authentication" %>
+<%@ page import="org.springframework.security.core.context.SecurityContextHolder" %>
+<%@ page import="java.io.OutputStream" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%@ taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <c:set var="contextPath" value="${pageContext.request.contextPath}"/>
@@ -309,7 +313,8 @@
                                                             </div>
                                                         </div>
                                                         <div class="col-md-6">
-                                                            <form:form method="POST" action="uploadFile?${_csrf.parameterName}=${_csrf.token}"
+                                                            <form:form method="POST"
+                                                                       action="uploadFile?${_csrf.parameterName}=${_csrf.token}"
                                                                        enctype="multipart/form-data">
                                                                 File to upload:
                                                                 <input type="file" name="file">
@@ -319,10 +324,19 @@
                                                                        value="${_csrf.token}"/>
                                                             </form:form>
 
-                                                                <%--<img class="profile-icon"
-                                                                     src="http://ic.pics.livejournal.com/v_kosmetikovna/64617808/63542/63542_900.jpg">--%>
+                                                            <sql:setDataSource var="dataSourse"
+                                                                               driver="com.mysql.jdbc.Driver"
+                                                                               url="jdbc:mysql://localhost:3306/deal_users"
+                                                                               user="Andrey"
+                                                                               password="0309Kost"/>
+                                                            <sql:query dataSource="${dataSourse}" var="result">
+                                                                SELECT * FROM deal_users.users where username='${username}';
+                                                            </sql:query>
+                                                            <c:forEach var="row" items="${result.rows}">
+
+                                                            </c:forEach>
                                                         </div>
-                                                        <div class="col-md-3 vertical-centering">
+                                                        <div class=" col-md-3 vertical-centering">
                                                             <div class="navigation">
                                                                 <a class="col-md-12" href="#"><i
                                                                         class="mail circular icon"></i></a>

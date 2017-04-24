@@ -181,7 +181,7 @@
                 image.css("background-image", "url(" + images[counter++] + ")");
                 image.fadeIn(1000);
             });
-            if (counter == images.length) {
+            if (counter === images.length) {
                 counter = 0;
             }
         }, 10000);
