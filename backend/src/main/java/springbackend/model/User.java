@@ -55,6 +55,9 @@ public class User {
     @Column(name = "country")
     private String country;
 
+    @Column(name = "avatar")
+    private byte[] avatar;
+
     public Long getId() {
         return id;
     }
@@ -157,6 +160,14 @@ public class User {
 
     public void setCountry(String country) {
         this.country = country;
+    }
+
+    public byte[] getAvatar() {
+        return avatar;
+    }
+
+    public void setAvatar(byte[] avatar) {
+        this.avatar = avatar;
     }
 
     /*public String toString() {

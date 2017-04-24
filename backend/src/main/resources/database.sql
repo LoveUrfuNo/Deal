@@ -49,9 +49,7 @@ INSERT INTO user_roles VALUES (1, 2);
 ALTER TABLE `deal_users`.`users`
   ADD COLUMN `key_for_registration_confirm` VARCHAR(45) NULL
   AFTER `is_registration_confirmed`,
-  ADD UNIQUE INDEX `key_UNIQUE` (`key_for_registration_confirm` ASC);
-
-ALTER TABLE `deal_users`.`users`
+  ADD UNIQUE INDEX `key_UNIQUE` (`key_for_registration_confirm` ASC),
   ADD COLUMN `first_name` VARCHAR(65) NULL
   AFTER `login`,
   ADD COLUMN `gender` ENUM ('male', 'female') NULL
@@ -61,4 +59,7 @@ ALTER TABLE `deal_users`.`users`
   ADD COLUMN `country` VARCHAR(65) NULL DEFAULT NULL
   AFTER `date_of_birth`,
   ADD COLUMN `date_of_registration` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-  AFTER `login`;
+  AFTER `login`,
+  ADD COLUMN `avatar` MEDIUMBLOB NULL DEFAULT NULL
+  AFTER `country`;
+

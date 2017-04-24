@@ -149,16 +149,20 @@ role_id</ColNames>
       <NotNull>1</NotNull>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
     </column>
-    <index id="42" parent="15" name="key_UNIQUE">
+    <column id="42" parent="15" name="avatar">
+      <Position>12</Position>
+      <DataType>mediumblob|0</DataType>
+    </column>
+    <index id="43" parent="15" name="key_UNIQUE">
       <ColNames>key_for_registration_confirm</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="43" parent="15" name="PRIMARY">
+    <key id="44" parent="15" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="44" parent="15" name="key_UNIQUE">
+    <key id="45" parent="15" name="key_UNIQUE">
       <ColNames>key_for_registration_confirm</ColNames>
       <UnderlyingIndexName>key_UNIQUE</UnderlyingIndexName>
     </key>
