@@ -1,7 +1,5 @@
 package springbackend.controller;
 
-import javassist.bytecode.ByteArray;
-import org.apache.taglibs.standard.lang.jstl.test.PageContextImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +12,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.multipart.MultipartFile;
 import springbackend.service.implementation.EmailServiceImpl;
 import springbackend.model.User;
 import springbackend.service.SecurityService;
@@ -23,9 +20,6 @@ import springbackend.validator.UserOptionsValidator;
 import springbackend.validator.UserValidator;
 
 import java.io.*;
-import java.sql.Connection;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.*;
 
 /**
@@ -232,6 +226,8 @@ public class UserController {
 
         return "registration-confirm";
     }
+
+
 
 
 
