@@ -34,7 +34,7 @@ import java.util.*;
 
 @Controller
 public class UserController {
-    public static final Integer SIZE_OF_GENERATED_STRING = 32;
+    private static final Integer SIZE_OF_GENERATED_STRING = 32;
 
     private static final Long ROLE_USER = 1L;
 
@@ -174,19 +174,13 @@ public class UserController {
             return "service-entrance";
         }
 
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.US);
-        try {
-            resultUser.setDateOfBirth(simpleDateFormat.parse("1997-03-12"));
-            resultUser.setFirstName(new String(new String(user.getFirstName().getBytes("ISO-8859-1"), "Cp1251")
-                    .getBytes("windows-1251"), "UTF-8"));
-            resultUser.setGender(user.getGender());
-            resultUser.setCountry(user.getCountry());
+        resultUser.setDateOfBirth(user.getDateOfBirth());
+        resultUser.setFirstName(new String(new String(user.getFirstName().getBytes("ISO-8859-1"), "Cp1251")
+                .getBytes("windows-1251"), "UTF-8"));
+        resultUser.setGender(user.getGender());
+        resultUser.setCountry(user.getCountry());
 
-            userService.saveAndFlush(resultUser, ROLE_USER);
-        } catch (ParseException e) {
-            logger.debug(String.format("Error set dateOfBirth for %s", resultUser.getUsername()));
-            e.printStackTrace();
-        }
+        userService.saveAndFlush(resultUser, ROLE_USER);
         return "redirect:/profile";
     }
 

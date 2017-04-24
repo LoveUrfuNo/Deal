@@ -313,6 +313,7 @@
                                                             </div>
                                                         </div>
                                                         <div class="col-md-6">
+<%--<<<<<<< HEAD
                                                             <form:form method="POST"
                                                                        action="uploadFile?${_csrf.parameterName}=${_csrf.token}"
                                                                        enctype="multipart/form-data">
@@ -324,17 +325,10 @@
                                                                        value="${_csrf.token}"/>
                                                             </form:form>
 
-                                                            <sql:setDataSource var="dataSourse"
-                                                                               driver="com.mysql.jdbc.Driver"
-                                                                               url="jdbc:mysql://localhost:3306/deal_users"
-                                                                               user="Andrey"
-                                                                               password="0309Kost"/>
-                                                            <sql:query dataSource="${dataSourse}" var="result">
-                                                                SELECT * FROM deal_users.users where username='${username}';
-                                                            </sql:query>
-                                                            <c:forEach var="row" items="${result.rows}">
+=======--%>
+                                                            <img class="profile-icon"
+                                                                 src="http://ic.pics.livejournal.com/v_kosmetikovna/64617808/63542/63542_900.jpg">
 
-                                                            </c:forEach>
                                                         </div>
                                                         <div class=" col-md-3 vertical-centering">
                                                             <div class="navigation">
@@ -346,6 +340,22 @@
                                                                         class="mail circular icon"></i></a>
                                                             </div>
                                                         </div>
+
+                                                        <form:form method="POST"
+                                                                   action="uploadFile?${_csrf.parameterName}=${_csrf.token}"
+                                                                   enctype="multipart/form-data">
+                                                            <div class="col-md-12 text-center">
+                                                                <input id="upload" class="hide" type="file" name="file">
+                                                                <label class="btn btn-info"
+                                                                       for="upload">Загрузить</label>
+                                                            </div>
+                                                            <div class="col-md-12 text-center">
+                                                                <input class="btn btn-warning" type="submit" value="Upload">
+                                                            </div>
+                                                            <input type="hidden" name="${_csrf.parameterName}"
+                                                                   value="${_csrf.token}"/>
+                                                        </form:form>
+
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-md-12">
