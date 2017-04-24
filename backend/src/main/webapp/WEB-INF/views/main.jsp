@@ -16,7 +16,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Deal</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <!-- Facebook and Twitter integration -->
     <meta property="og:title" content=""/>
     <meta property="og:image" content=""/>
@@ -32,36 +31,27 @@
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <link rel="shortcut icon" href="${pageContext.request.contextPath}/resources/favicon.ico">
-
     <!-- Animate.css -->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/animate.css">
-
     <!-- Icomoon Icon Fonts-->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/icomoon.css">
-
     <!-- Bootstrap  -->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootstrap.css">
-
     <!-- Owl Carousel -->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/owl.carousel.min.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/owl.theme.default.min.css">
-
     <!-- Semantic UI -->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/Semantic-UI-CSS-master/semantic.min.css">
-
     <!-- Main styles-->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css">
-
     <!-- Awesome Icons -->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/font-awesome.min.css">
-
     <!-- Modernizr JS -->
     <script src="${pageContext.request.contextPath}/resources/js/modernizr.min.js"></script>
     <!-- FOR IE9 below -->
     <!--[if lt IE 9]>
     <script src="/resources/js/respond.min.js"></script>
     <![endif]-->
-
 </head>
 <body>
 
@@ -200,12 +190,11 @@
                                                                 <span class="errors">${error}</span>
                                                             </div>
                                                         </div>
-
                                                         <div class="checkbox">
                                                             <label>
-                                                                <input type="checkbox"> Запомнить меня
+                                                                <input type="checkbox" name="remember-me-parameter">
+                                                                Запомнить меня
                                                             </label>
-
                                                         </div>
                                                         <input type="hidden" name="${_csrf.parameterName}"
                                                                value="${_csrf.token}"/>
@@ -259,10 +248,12 @@
                                                     <div class="row">
                                                         <div class="col-md-12">
                                                             <div class="content text-center">
-                                                                <a class="header text-center">Kristy</a>
+                                                                <a class="header text-center">${name}</a>
                                                                 <div class="col-md-12">
-                                                                    <form action = "https://yandex.ru/">
-                                                                    <button type="submit" class="btn btn-info">Активируйте аккаунт</button>
+                                                                    <form action="http://${email_url}">
+                                                                        <button type="submit" class="btn btn-info">
+                                                                            Активируйте аккаунт
+                                                                        </button>
                                                                     </form>
                                                                 </div>
                                                                 <div class="description">Lorem mi sae na kruz akellam
@@ -331,13 +322,29 @@
                                                                         class="mail circular icon"></i></a>
                                                             </div>
                                                         </div>
+
+                                                        <form:form method="POST"
+                                                                   action="uploadFile?${_csrf.parameterName}=${_csrf.token}"
+                                                                   enctype="multipart/form-data">
+                                                            <div class="col-md-12 text-center">
+                                                                <input id="upload" class="hide" type="file" name="file">
+                                                                <label class="btn btn-info"
+                                                                       for="upload">Загрузить</label>
+                                                            </div>
+                                                            <div class="col-md-12 text-center">
+                                                                <input class="btn btn-warning" type="submit" value="Upload">
+                                                            </div>
+                                                            <input type="hidden" name="${_csrf.parameterName}"
+                                                                   value="${_csrf.token}"/>
+                                                        </form:form>
+
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-md-12">
                                                             <div class="content text-center">
-                                                                <a class="header text-center">Kristy</a>
-
-                                                                <div class="description">Lorem mi sae na kruz akellam
+                                                                <a class="header text-center">${name}</a>
+                                                                <div class="description">
+                                                                    Lorem mi sae na kruz akellam
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -349,8 +356,8 @@
                                                                class="ui inverted pink button">Pink</a>
                                                         </div>
                                                         <div class="col-md-4 text-center">
-                                                            <a href="#"
-                                                               class="ui inverted pink button">Pink</a>
+                                                            <a href="${pageContext.request.contextPath}/options"
+                                                               class="ui inverted pink button">ОПТИОНС</a>
                                                         </div>
                                                         <div class="col-md-4 text-center">
                                                             <a href="#"
@@ -358,21 +365,21 @@
                                                         </div>
                                                     </div>
                                                     <div class="ui white divider"></div>
-                                                        <form id="logoutForm" method="POST"
-                                                              action="${contextPath}/logout">
-                                                            <input type="hidden" name="${_csrf.parameterName}"
-                                                                   value="${_csrf.token}"/>
-                                                        </form>
-                                                        <div class="row form-group">
-                                                            <div class="col-md-12 text-center">
-                                                                <input type="submit" class="btn btn-primary"
-                                                                       onclick="document.forms['logoutForm'].submit()"
-                                                                       value="Выйти">
-                                                            </div>
+                                                    <form id="logoutForm" method="POST"
+                                                          action="${contextPath}/logout">
+                                                        <input type="hidden" name="${_csrf.parameterName}"
+                                                               value="${_csrf.token}"/>
+                                                    </form>
+                                                    <div class="row form-group">
+                                                        <div class="col-md-12 text-center">
+                                                            <input type="submit" class="btn btn-primary"
+                                                                   onclick="document.forms['logoutForm'].submit()"
+                                                                   value="Выйти">
                                                         </div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </c:when >
+                                        </c:when>
                                     </c:choose>
                                 </div>
                             </div>
@@ -405,7 +412,6 @@
     <div class="item">
         <img src="http://great-usa.ru/wp-content/uploads/2016/12/piano-1406526_1920.jpg" alt="image">
     </div>
-
     <div class="item">
         <img src="http://svadbavm.ru/upload/iblock/62f/couple.jpg" alt="image">
     </div>
@@ -413,9 +419,7 @@
         <img src="http://conceptartworld.com/wp-content/uploads/2013/11/Juan-Pablo-Roldan-morla_NeverEnding_Story.jpg"
              alt="image">
     </div>
-
 </div>
-
 
 <div id="fh5co-common-section">
     <div class="container">
@@ -442,6 +446,7 @@
         </div>
     </div>
 </div><!-- end fh5co-common-section -->
+
 <div class="fh5co-parallax"
      style="background-image: url(http://www.publicdomainpictures.net/pictures/180000/velka/hand-with-thumb-up.jpg);"
      data-stellar-background-ratio="0.5">
@@ -457,6 +462,7 @@
         </div>
     </div>
 </div><!-- end: fh5co-parallax -->
+
 <div id="fh5co-services-section">
     <div class="container">
         <div class="heading-section text-center">
@@ -544,6 +550,7 @@
         </div>
     </div>
 </div><!-- end: fh5co-services-section -->
+
 <div id="fh5co-featured-work-section">
     <div class="container-fluid">
         <div class="heading-section text-center">
@@ -650,6 +657,7 @@
         </div>
     </div>
 </div><!-- end fh5co-featured-work-section -->
+
 <div id="fh5co-blog-section">
     <div class="container">
         <div class="heading-section text-center">

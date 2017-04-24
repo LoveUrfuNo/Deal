@@ -1,4 +1,4 @@
-package springbackend.service;
+package springbackend.service.implementation;
 
 import org.apache.velocity.app.VelocityEngine;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,9 +18,7 @@ import java.util.Random;
  * Created for JavaStudy.ru on 28.02.2016.
  */
 @Service
-public class EmailService {
-
-    private static final String KEY = "key_for_registration_confirm_url";
+public class EmailServiceImpl {
 
     private static final String FROM = "from";
 

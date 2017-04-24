@@ -1,6 +1,9 @@
 package springbackend.model;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
+
 import javax.persistence.*;
+import java.util.Date;
 import java.util.Set;
 
 /**
@@ -29,6 +32,9 @@ public class User {
     @Column(name = "login")
     private String login;
 
+    @Column(name = "date_of_registration")
+    private Date dateOfRegistration;
+
     @Transient
     private String confirmPassword;
 
@@ -36,6 +42,21 @@ public class User {
     @JoinTable(name = "user_roles", joinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumn(name = "role_id"))
     private Set<Role> roles;
+
+    @Column(name = "first_name")
+    private String firstName;
+
+    @Column(name = "gender")
+    private String gender;
+
+    @Column(name = "date_of_birth")
+    private Date dateOfBirth;
+
+    @Column(name = "country")
+    private String country;
+
+    @Column(name = "avatar")
+    private byte[] avatar;
 
     public Long getId() {
         return id;
@@ -85,6 +106,14 @@ public class User {
         this.login = login;
     }
 
+    public Date getDateOfRegistration() {
+        return dateOfRegistration;
+    }
+
+    public void setDateOfRegistration(Date dateOfRegistration) {
+        this.dateOfRegistration = dateOfRegistration;
+    }
+
     public String getConfirmPassword() {
         return confirmPassword;
     }
@@ -99,6 +128,46 @@ public class User {
 
     public void setRoles(Set<Role> roles) {
         this.roles = roles;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public Date getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public void setDateOfBirth(Date dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public byte[] getAvatar() {
+        return avatar;
+    }
+
+    public void setAvatar(byte[] avatar) {
+        this.avatar = avatar;
     }
 
     /*public String toString() {

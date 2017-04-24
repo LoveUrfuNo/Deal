@@ -9,13 +9,10 @@
 <html>
 <head>
     <title>Oops!</title>
-
     <!-- Bootstrap  -->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootstrap.css">
-
     <!-- Awesome Icons -->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/font-awesome.min.css">
-
     <!-- Main styles-->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/error-page.css">
 </head>
@@ -23,10 +20,8 @@
 <div class="row centering">
 <h1 class="col-sm-12 text-center">404</h1>
 <h2 class="col-sm-12 text-center"><i class="fa fa-exclamation-circle fa-lg" aria-hidden="true"></i>  Упс! Запрашиваемая страница не найдена!</h2>
-    <h3 class="col-sm-12 text-center"> Вы можете вернуться <a href="#">на главную страницу</a> в любое время!</h3>
+    <h3 class="col-sm-12 text-center"> Вы можете <a href="${pageContext.request.contextPath}/accessDenied">вернуться</a> в любое время!</h3>
 </div>
-
-
 <!-- jQuery -->
 <script src="${pageContext.request.contextPath}/resources/js/jquery.min.js"></script>
 <!-- jQuery Easing -->

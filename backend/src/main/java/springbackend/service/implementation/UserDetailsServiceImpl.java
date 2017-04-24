@@ -1,4 +1,4 @@
-package springbackend.service;
+package springbackend.service.implementation;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
@@ -6,10 +6,13 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.core.userdetails.jdbc.JdbcDaoImpl;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.validation.Errors;
 import springbackend.dao.UserDao;
 import springbackend.model.Role;
 import springbackend.model.User;
+import springbackend.service.UserService;
 
 import java.util.HashSet;
 import java.util.Optional;
@@ -20,24 +23,23 @@ import java.util.Set;
  */
 
 
-public class UserDetailsServiceImpl implements UserDetailsService {
+public class UserDetailsServiceImpl extends JdbcDaoImpl {
+
+    private static final Long ROLE_NOT_ACTIVATED_USER = 3L;
 
     @Autowired
     private UserService userService;
-
-    public static String operation;
 
     @Override
     @Transactional(readOnly = true)
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         User user = userService.findByUsername(username);
-        if (user == null) {
+        if (user == null)
             user = userService.findByLogin(username);
-        }
 
-        if (!user.getRegistrationConfirmed() && !operation.equals("registration")) {
+        if (!user.getRegistrationConfirmed() && !user.getRoles().stream()
+                .findFirst().orElse(null).getId().equals(ROLE_NOT_ACTIVATED_USER))
             return null;
-        }
 
         Set<GrantedAuthority> grantedAuthorities = new HashSet<>();
         for (Role role : user.getRoles()) {
