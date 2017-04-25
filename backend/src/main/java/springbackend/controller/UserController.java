@@ -251,6 +251,12 @@ public class UserController {
         return "welcome";
     }
 
+    // Добавлено быдлом
+    @RequestMapping(value = {"/service"}, method = RequestMethod.GET)
+    public String service() {
+        return "add-service";
+    }
+
     @RequestMapping(value = "/admin", method = RequestMethod.GET)
     public String admin() {
         return "admin";
