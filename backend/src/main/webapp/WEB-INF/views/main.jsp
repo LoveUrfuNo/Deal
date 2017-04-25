@@ -175,7 +175,6 @@
 
                                             <div class="tab-content-inner" data-content="login">
                                                 <form method="POST" action="${contextPath}/login" class="form-signin">
-
                                                     <div class="form-group ${error != null ? 'has-error' : ''}">
                                                         <div class="row form-group">
                                                             <div class="col-md-12">
@@ -312,22 +311,15 @@
                                                                         class="mail circular icon"></i></a>
                                                             </div>
                                                         </div>
-                                                        <div class="col-md-6">
-<%--<<<<<<< HEAD
-                                                            <form:form method="POST"
-                                                                       action="uploadFile?${_csrf.parameterName}=${_csrf.token}"
-                                                                       enctype="multipart/form-data">
-                                                                File to upload:
-                                                                <input type="file" name="file">
-                                                                <br/><input type="submit" value="Upload">
-                                                                Press here to upload the file!
-                                                                <input type="hidden" name="${_csrf.parameterName}"
-                                                                       value="${_csrf.token}"/>
-                                                            </form:form>
 
-=======--%>
+                                                        <div class="col-md-6">
+                                                                <%--<c:if var="row" test="${row.avatar != null}">
+                                                                    <img class="profile-icon"
+                                                                         src="${row.avatar}">
+                                                                </c:if>
+                                                                <c:if test="${row.avatar == null}">--%>
                                                             <img class="profile-icon"
-                                                                 src="http://ic.pics.livejournal.com/v_kosmetikovna/64617808/63542/63542_900.jpg">
+                                                                 src="${pageContext.request.contextPath}/resources/images/avatar.l.png">
 
                                                         </div>
                                                         <div class=" col-md-3 vertical-centering">
@@ -340,7 +332,6 @@
                                                                         class="mail circular icon"></i></a>
                                                             </div>
                                                         </div>
-
                                                         <form:form method="POST"
                                                                    action="uploadFile?${_csrf.parameterName}=${_csrf.token}"
                                                                    enctype="multipart/form-data">
@@ -350,12 +341,12 @@
                                                                        for="upload">Загрузить</label>
                                                             </div>
                                                             <div class="col-md-12 text-center">
-                                                                <input class="btn btn-warning" type="submit" value="Upload">
+                                                                <input class="btn btn-warning" type="submit"
+                                                                       value="Upload">
                                                             </div>
                                                             <input type="hidden" name="${_csrf.parameterName}"
                                                                    value="${_csrf.token}"/>
                                                         </form:form>
-
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-md-12">

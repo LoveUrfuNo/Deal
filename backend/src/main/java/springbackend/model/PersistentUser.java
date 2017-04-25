@@ -5,7 +5,7 @@ import javax.persistence.Entity;
 import java.util.Date;
 
 /**
- * Created by kosty on 21.04.2017.
+ * Simple JavaBean domain object that represents a user who click on "remember me".
  */
 
 @Entity

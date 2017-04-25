@@ -19,6 +19,9 @@ import springbackend.service.UserService;
 import springbackend.validator.UserOptionsValidator;
 import springbackend.validator.UserValidator;
 
+import javax.imageio.ImageIO;
+import javax.swing.*;
+import java.awt.image.BufferedImage;
 import java.io.*;
 import java.util.*;
 
@@ -227,7 +230,12 @@ public class UserController {
         return "registration-confirm";
     }
 
+    @RequestMapping(value = {"/image"}, method = RequestMethod.GET)
+    public String image() throws IOException {
 
+        BufferedImage image = ImageIO.read(new ByteArrayInputStream(userService.findByUsername(SecurityContextHolder.getContext().getAuthentication().getName()).getAvatar()));
+        return null;
+    }
 
 
 
