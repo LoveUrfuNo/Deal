@@ -26,7 +26,8 @@
         owl.owlCarousel({
             items: 3,
             loop: true,
-            margin: 0,
+            margin: 40,
+            stagePadding: 10,
             responsiveClass: true,
             nav: true,
             dots: true,

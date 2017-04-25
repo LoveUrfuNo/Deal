@@ -921,6 +921,11 @@ header #fh5co-main-nav > ul li:first-child {
 .item {
   position: relative;
 }
+
+.item .item {
+  margin-bottom: 20px;
+}
+
 .item .pop-up-overlay {
   position: absolute;
   top: 0;
@@ -961,6 +966,8 @@ header #fh5co-main-nav > ul li:first-child {
 }
 .item .pop-up-overlay:hover, .item .pop-up-overlay:focus {
   text-decoration: none;
+}
+.item .pop-up-overlay:hover, .item .pop-up-overlay:focus {
   opacity: 1;
 }
 
