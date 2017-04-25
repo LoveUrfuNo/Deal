@@ -12,8 +12,10 @@ import javax.persistence.Entity;
 @Table(name = "services")
 public class Service {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+
+    @Column(name = "service_name")
+    private String nameOfService;
 
     @Column(name = "username")
     private String usernameOfSeller;
@@ -24,8 +26,8 @@ public class Service {
     @Column(name = "category")
     private String category;
 
-    @Column(name = "discription")
-    private String discription;
+    @Column(name = "description")
+    private String description;
 
     @Column(name = "country")
     private String country;
@@ -42,6 +44,14 @@ public class Service {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getNameOfService() {
+        return nameOfService;
+    }
+
+    public void setNameOfService(String nameOfService) {
+        this.nameOfService = nameOfService;
     }
 
     public String getUsernameOfSeller() {
@@ -68,12 +78,12 @@ public class Service {
         this.category = category;
     }
 
-    public String getDiscription() {
-        return discription;
+    public String getDescription() {
+        return description;
     }
 
-    public void setDiscription(String discription) {
-        this.discription = discription;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public String getCountry() {

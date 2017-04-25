@@ -21,7 +21,6 @@ public class ServiceEntranceController {
         model.addAttribute("userForm", new ServiceEntrance());
 
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-
         if (auth.getAuthorities().stream().findFirst().orElse(null).getAuthority().equals("ROLE_USER"))
             return "access-denied";
         else
@@ -30,9 +29,7 @@ public class ServiceEntranceController {
 
     @RequestMapping(value = "/main", method = RequestMethod.POST)
     public String main(@ModelAttribute("userForm") ServiceEntrance userForm, Model model) {
-        User user = new User();
-        model.addAttribute("userForm", user);
-
+        model.addAttribute("userForm", new User());
         if (userForm.getEnteredPassword().equals(userForm.getCorrectPassword())) {
             return "main";
         } else {

@@ -125,7 +125,7 @@
                                                     </div>
                                                     <div class="row form-group">
                                                         <div class="col-md-12">
-                                                            <spring:bind path="username">
+                                                            <spring:bind path="login">
                                                                 <div class="form-group ${status.error ? 'has-error' : ''}">
                                                                     <label for="username">Логин</label>
                                                                     <form:input type="text" path="login"
@@ -415,33 +415,84 @@
 <div class="owl-carousel owl-carousel1 owl-carousel-fullwidth fh5co-light-arrow animate-box"
      data-animate-effect="fadeIn">
     <div class="item">
-        <img src="http://great-usa.ru/wp-content/uploads/2016/12/piano-1406526_1920.jpg" alt="image">
-        <img src="http://great-usa.ru/wp-content/uploads/2016/12/piano-1406526_1920.jpg" alt="image">
-        <img src="http://great-usa.ru/wp-content/uploads/2016/12/piano-1406526_1920.jpg" alt="image">
-    </div>
-    <div class="item">
-        <img src="http://great-usa.ru/wp-content/uploads/2016/12/piano-1406526_1920.jpg" alt="image">
-        <img src="http://great-usa.ru/wp-content/uploads/2016/12/piano-1406526_1920.jpg" alt="image">
-        <img src="http://great-usa.ru/wp-content/uploads/2016/12/piano-1406526_1920.jpg" alt="image">
-    </div>
-    <div class="item">
-        <div class="item-inner">
-        <img src="http://svadbavm.ru/upload/iblock/62f/couple.jpg" alt="image">
-            <a class="pop-up-overlay">
+        <div class="item">
+            <img src="http://great-usa.ru/wp-content/uploads/2016/12/piano-1406526_1920.jpg" alt="image">
+            <a href="#" class="pop-up-overlay text-center">
                 <div class="desc">
-                    <h3>Искусство</h3>
-                    <span>Живопись</span>
+                    <h3>Перевозки</h3>
+                    <span>Переезд</span>
                 </div>
             </a>
         </div>
-        <img src="http://great-usa.ru/wp-content/uploads/2016/12/piano-1406526_1920.jpg" alt="image">
-        <img src="http://great-usa.ru/wp-content/uploads/2016/12/piano-1406526_1920.jpg" alt="image">
+        <div class="item">
+            <img src="http://great-usa.ru/wp-content/uploads/2016/12/piano-1406526_1920.jpg" alt="image">
+            <a href="#" class="pop-up-overlay text-center">
+                <div class="desc">
+                    <h3>Перевозки</h3>
+                    <span>Переезд</span>
+                </div>
+            </a>
+        </div>
     </div>
     <div class="item">
-        <img src="http://conceptartworld.com/wp-content/uploads/2013/11/Juan-Pablo-Roldan-morla_NeverEnding_Story.jpg"
-             alt="image">
-        <img src="http://great-usa.ru/wp-content/uploads/2016/12/piano-1406526_1920.jpg" alt="image">
-        <img src="http://great-usa.ru/wp-content/uploads/2016/12/piano-1406526_1920.jpg" alt="image">
+        <div class="item">
+            <img src="http://great-usa.ru/wp-content/uploads/2016/12/piano-1406526_1920.jpg" alt="image">
+            <a href="#" class="pop-up-overlay text-center">
+                <div class="desc">
+                    <h3>Перевозки</h3>
+                    <span>Переезд</span>
+                </div>
+            </a>
+        </div>
+        <div class="item">
+            <img src="http://great-usa.ru/wp-content/uploads/2016/12/piano-1406526_1920.jpg" alt="image">
+            <a href="#" class="pop-up-overlay text-center">
+                <div class="desc">
+                    <h3>Перевозки</h3>
+                    <span>Переезд</span>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="item">
+        <div class="item">
+            <img src="http://svadbavm.ru/upload/iblock/62f/couple.jpg" alt="image">
+            <a href="#" class="pop-up-overlay text-center">
+                <div class="desc">
+                    <h3>Перевозки</h3>
+                    <span>Переезд</span>
+                </div>
+            </a>
+        </div>
+        <div class="item">
+            <img src="http://great-usa.ru/wp-content/uploads/2016/12/piano-1406526_1920.jpg" alt="image">
+            <a href="#" class="pop-up-overlay text-center">
+                <div class="desc">
+                    <h3>Перевозки</h3>
+                    <span>Переезд</span>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="item">
+        <div class="item">
+            <img src="http://great-usa.ru/wp-content/uploads/2016/12/piano-1406526_1920.jpg" alt="image">
+            <a href="#" class="pop-up-overlay text-center">
+                <div class="desc">
+                    <h3>Перевозки</h3>
+                    <span>Переезд</span>
+                </div>
+            </a>
+        </div>
+        <div class="item">
+            <img src="http://great-usa.ru/wp-content/uploads/2016/12/piano-1406526_1920.jpg" alt="image">
+            <a href="#" class="pop-up-overlay text-center">
+                <div class="desc">
+                    <h3>Перевозки</h3>
+                    <span>Переезд</span>
+                </div>
+            </a>
+        </div>
     </div>
 </div>
 

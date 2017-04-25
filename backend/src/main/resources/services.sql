@@ -1,5 +1,6 @@
 CREATE TABLE `deal_users`.`services` (
   `id` INT(11) NOT NULL,
+  `service_name` VARCHAR(65) NOT NULL,
   `username` VARCHAR(45) NOT NULL DEFAULT 'name',
   `cost` INT(10) NOT NULL,
   `category` VARCHAR(45) NOT NULL,

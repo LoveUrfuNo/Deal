@@ -230,16 +230,11 @@ public class UserController {
         return "registration-confirm";
     }
 
-    @RequestMapping(value = {"/add_service"}, method = RequestMethod.GET)
-    public String addService() {
-        return "add-service";
-    }
 
 
 
 
-
-    @RequestMapping(value = "/login", method = RequestMethod.GET)
+    /*@RequestMapping(value = "/login", method = RequestMethod.GET)
     public String login(Model model, String error, String logout) {
         if (error != null) {
             model.addAttribute("error", "Username or password is incorrect.");
@@ -260,5 +255,5 @@ public class UserController {
     @RequestMapping(value = "/admin", method = RequestMethod.GET)
     public String admin() {
         return "admin";
-    }
+    }*/
 }
