@@ -230,12 +230,12 @@ public class UserController {
         return "registration-confirm";
     }
 
-    @RequestMapping(value = {"/image"}, method = RequestMethod.GET)
-    public String image() throws IOException {
-
-        BufferedImage image = ImageIO.read(new ByteArrayInputStream(userService.findByUsername(SecurityContextHolder.getContext().getAuthentication().getName()).getAvatar()));
-        return null;
+    @RequestMapping(value = {"/add_service"}, method = RequestMethod.GET)
+    public String addService() {
+        return "add-service";
     }
+
+
 
 
 

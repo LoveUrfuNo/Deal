@@ -24,7 +24,7 @@
     var owlCrouselFeatureSlide = function () {
         var owl = $('.owl-carousel1');
         owl.owlCarousel({
-            items: 1,
+            items: 3,
             loop: true,
             margin: 0,
             responsiveClass: true,

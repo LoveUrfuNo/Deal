@@ -17,7 +17,7 @@
 
     <% } else if (auth.getAuthorities().stream().findFirst().orElse(null).getAuthority().equals("ROLE_ANONYMOUS")) { %>
 
-    <c:redirect url="/"/>
+    <c:redirect url="/main"/>
 
     <% } else if (auth.getAuthorities().stream().findFirst().orElse(null).getAuthority().equals("ROLE_NOT_ACTIVATED_USER")) { %>
 

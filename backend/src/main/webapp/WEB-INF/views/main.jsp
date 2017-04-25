@@ -73,7 +73,7 @@
                         <ul>
                             <li><a href="#">Профиль</a></li>
                             <li><a href="#">Найти услугу</a></li>
-                            <li><a href="#">Предложить услугу</a></li>
+                            <li><a href="${pageContext.request.contextPath}/add_service">Предложить услугу</a></li>
                             <li><a href="#">Поддержка</a></li>
                             <li class="btn-cta"><a href="#"><span>Начать</span></a></li>
                         </ul>
@@ -415,18 +415,33 @@
 <div class="owl-carousel owl-carousel1 owl-carousel-fullwidth fh5co-light-arrow animate-box"
      data-animate-effect="fadeIn">
     <div class="item">
-        <iframe width="1920" height="906" src="https://www.youtube.com/embed/yGDCd5LMEmw?rel=0&amp;controls=0"
-                frameborder="0" allowfullscreen></iframe>
-    </div>
-    <div class="item">
+        <img src="http://great-usa.ru/wp-content/uploads/2016/12/piano-1406526_1920.jpg" alt="image">
+        <img src="http://great-usa.ru/wp-content/uploads/2016/12/piano-1406526_1920.jpg" alt="image">
         <img src="http://great-usa.ru/wp-content/uploads/2016/12/piano-1406526_1920.jpg" alt="image">
     </div>
     <div class="item">
+        <img src="http://great-usa.ru/wp-content/uploads/2016/12/piano-1406526_1920.jpg" alt="image">
+        <img src="http://great-usa.ru/wp-content/uploads/2016/12/piano-1406526_1920.jpg" alt="image">
+        <img src="http://great-usa.ru/wp-content/uploads/2016/12/piano-1406526_1920.jpg" alt="image">
+    </div>
+    <div class="item">
+        <div class="item-inner">
         <img src="http://svadbavm.ru/upload/iblock/62f/couple.jpg" alt="image">
+            <a class="pop-up-overlay">
+                <div class="desc">
+                    <h3>Искусство</h3>
+                    <span>Живопись</span>
+                </div>
+            </a>
+        </div>
+        <img src="http://great-usa.ru/wp-content/uploads/2016/12/piano-1406526_1920.jpg" alt="image">
+        <img src="http://great-usa.ru/wp-content/uploads/2016/12/piano-1406526_1920.jpg" alt="image">
     </div>
     <div class="item">
         <img src="http://conceptartworld.com/wp-content/uploads/2013/11/Juan-Pablo-Roldan-morla_NeverEnding_Story.jpg"
              alt="image">
+        <img src="http://great-usa.ru/wp-content/uploads/2016/12/piano-1406526_1920.jpg" alt="image">
+        <img src="http://great-usa.ru/wp-content/uploads/2016/12/piano-1406526_1920.jpg" alt="image">
     </div>
 </div>
 
