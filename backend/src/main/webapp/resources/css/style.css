@@ -961,8 +961,6 @@ header #fh5co-main-nav > ul li:first-child {
 }
 .item .pop-up-overlay:hover, .item .pop-up-overlay:focus {
   text-decoration: none;
-}
-.item:hover .pop-up-overlay, .item:focus .pop-up-overlay {
   opacity: 1;
 }
 
