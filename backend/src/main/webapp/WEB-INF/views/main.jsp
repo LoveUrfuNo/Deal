@@ -106,7 +106,6 @@
                                         </ul>
                                         <div class="tab-content">
                                             <div class="tab-content-inner active" data-content="signup">
-
                                                 <form:form method="POST" modelAttribute="userForm"
                                                            action="/registration"
                                                            class="form-signin">
@@ -417,18 +416,18 @@
     <div class="item">
         <div class="item">
             <img src="http://great-usa.ru/wp-content/uploads/2016/12/piano-1406526_1920.jpg" alt="image">
-            <a href="#" class="pop-up-overlay text-center">
+            <a href="${pageContext.request.contextPath}/show_all_services/1category" class="pop-up-overlay text-center">
                 <div class="desc">
-                    <h3>Перевозки</h3>
+                    <h3>Категория 1</h3>
                     <span>Переезд</span>
                 </div>
             </a>
         </div>
         <div class="item">
             <img src="http://great-usa.ru/wp-content/uploads/2016/12/piano-1406526_1920.jpg" alt="image">
-            <a href="#" class="pop-up-overlay text-center">
+            <a href="${pageContext.request.contextPath}/show_all_services/2category" class="pop-up-overlay text-center">
                 <div class="desc">
-                    <h3>Перевозки</h3>
+                    <h3>Категория 2</h3>
                     <span>Переезд</span>
                 </div>
             </a>
@@ -437,9 +436,9 @@
     <div class="item">
         <div class="item">
             <img src="http://great-usa.ru/wp-content/uploads/2016/12/piano-1406526_1920.jpg" alt="image">
-            <a href="#" class="pop-up-overlay text-center">
+            <a href="${pageContext.request.contextPath}/show_all_services/3category" class="pop-up-overlay text-center">
                 <div class="desc">
-                    <h3>Перевозки</h3>
+                    <h3>Категория 3</h3>
                     <span>Переезд</span>
                 </div>
             </a>
@@ -760,6 +759,7 @@
         </div>
     </div>
 </div><!-- end: fh5co-blog-section -->
+
 <div class="fh5co-parallax"
      style="background-image: url(https://cdn2.professor-falken.com/wp-content/uploads/2017/01/hombre-cuello-camisa-corbata-barba-mano-Fondos-de-Pantalla-HD-professor-falken.com_.jpg);"
      data-stellar-background-ratio="0.5">
@@ -775,6 +775,7 @@
         </div>
     </div>
 </div><!-- end: fh5co-parallax -->
+
 <footer>
     <div id="footer" class="fh5co-border-line">
         <div class="container">
@@ -798,7 +799,6 @@
         </div>
     </div>
 </footer>
-
 
 <!-- jQuery -->
 <script src="${pageContext.request.contextPath}/resources/js/jquery.min.js"></script>

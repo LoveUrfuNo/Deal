@@ -19,7 +19,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 
 /**
- * Created by kosty on 14.04.2017.
+ * Controller for operations with download files
  */
 
 @Controller

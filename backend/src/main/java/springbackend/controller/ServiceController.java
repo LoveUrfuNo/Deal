@@ -11,7 +11,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import springbackend.model.Service;
 import springbackend.model.User;
+import springbackend.service.ServiceForService;
 import springbackend.service.UserService;
+
+import javax.validation.constraints.Null;
+import java.io.UnsupportedEncodingException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Controller for {@link springbackend.model.Service}'s pages.
@@ -20,22 +26,46 @@ import springbackend.service.UserService;
 @Controller
 public class ServiceController {
     @Autowired
+    private ServiceForService serviceForService;
+
+    @Autowired
     private UserService userService;
 
-    @RequestMapping(value = {"/add_service"}, method = RequestMethod.GET)
+    @RequestMapping(value = "/add_service", method = RequestMethod.GET)
     public String addService(Model model) {
         model.addAttribute("serviceForm", new Service());
 
         return "add-service";
     }
 
-    @RequestMapping(value = {"/add_service"}, method = RequestMethod.POST)
-    public String addService(@ModelAttribute(value = "serviceForm") Service service, Model model) {
+    @RequestMapping(value = "/add_service", method = RequestMethod.POST)
+    public String addService(@ModelAttribute(value = "serviceForm") Service service, Model model) throws UnsupportedEncodingException {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         User user = userService.findByUsername(auth.getName());
-        service.setId(user.getId());
 
-        String string = service.getNameOfService();
-        return "add-service";
+        service.setUserId(user.getId());
+
+        if (user.getFirstName() == null)
+            service.setUsernameOfSeller(user.getLogin());
+        else
+            service.setUsernameOfSeller(user.getFirstName());
+
+        service.setNameOfService(new String(service.getNameOfService().getBytes("ISO8859-1"), "UTF-8"));
+        service.setDescription(new String(service.getDescription().getBytes("ISO8859-1"), "UTF-8"));
+        service.setCity(user.getLogin() + "'s" + " city");
+
+        serviceForService.save(service);
+
+        return "redirect:/profile";
+    }
+
+    @RequestMapping(value = "/show_all_services/{category}", method = RequestMethod.GET)
+    public String showAllServicesInGivenCategory(@PathVariable(value = "category") String category, Model model) {
+        List<Service> services = serviceForService.findAllByCategory(category);
+
+        model.addAttribute("services", services);
+        model.addAttribute("category", category);
+
+        return "show-given-services";
     }
 }

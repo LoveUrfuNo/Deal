@@ -12,7 +12,11 @@ import javax.persistence.Entity;
 @Table(name = "services")
 public class Service {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+
+    @Column(name = "userid")
+    private Long userId;
 
     @Column(name = "service_name")
     private String nameOfService;
@@ -44,6 +48,14 @@ public class Service {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public Long getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Long userId) {
+        this.userId = userId;
     }
 
     public String getNameOfService() {

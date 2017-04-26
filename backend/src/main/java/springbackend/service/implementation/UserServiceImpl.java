@@ -13,9 +13,6 @@ import java.util.*;
 
 /**
  * Implementation of {@link UserService} interface.
- *
- * @author Eugene Suleimanov
- * @version 1.0
  */
 
 @Service

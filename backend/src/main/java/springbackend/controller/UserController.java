@@ -172,8 +172,7 @@ public class UserController {
         }
 
         resultUser.setDateOfBirth(user.getDateOfBirth());
-        resultUser.setFirstName(new String(new String(user.getFirstName().getBytes("ISO-8859-1"), "Cp1251")
-                .getBytes("windows-1251"), "UTF-8"));
+        resultUser.setFirstName(new String(user.getFirstName().getBytes("ISO8859-1"),"UTF-8"));
         resultUser.setGender(user.getGender());
         resultUser.setCountry(user.getCountry());
 
@@ -209,17 +208,17 @@ public class UserController {
         return "redirect:/profile/registration";
     }
 
-    @RequestMapping(value = {"/authentication"}, method = RequestMethod.GET)
+    @RequestMapping(value = "/authentication", method = RequestMethod.GET)
     public String authentication(Model model) {
         model.addAttribute("userForm", new User());
 
         return "redirect:/profile";
     }
 
-    @RequestMapping(value = {"/confirm-acc/{token}/{id}"}, method = RequestMethod.GET)
-    public String confirmAcc(@PathVariable("token") String token, @PathVariable("id") Long id, Model model) {
+    @RequestMapping(value = "/confirm-acc/{key}/{id}", method = RequestMethod.GET)
+    public String confirmAcc(@PathVariable("key") String key, @PathVariable("id") Long id, Model model) {
         User user = userService.findBuId(id);
-        if (!user.getKeyForRegistrationConfirmUrl().equals(token))
+        if (!user.getKeyForRegistrationConfirmUrl().equals(key))
             return "redirect:/main?error";
 
         user.setRegistrationConfirmed(true);
@@ -229,31 +228,4 @@ public class UserController {
 
         return "registration-confirm";
     }
-
-
-
-
-
-    /*@RequestMapping(value = "/login", method = RequestMethod.GET)
-    public String login(Model model, String error, String logout) {
-        if (error != null) {
-            model.addAttribute("error", "Username or password is incorrect.");
-        }
-
-        if (logout != null) {
-            model.addAttribute("message", "Logged out successfully.");
-        }
-
-        return "redirect:/profile";
-    }
-
-    @RequestMapping(value = {"/welcome"}, method = RequestMethod.GET)
-    public String welcome() {
-        return "welcome";
-    }
-
-    @RequestMapping(value = "/admin", method = RequestMethod.GET)
-    public String admin() {
-        return "admin";
-    }*/
 }
