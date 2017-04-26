@@ -14,9 +14,7 @@ import springbackend.model.User;
 import springbackend.service.ServiceForService;
 import springbackend.service.UserService;
 
-import javax.validation.constraints.Null;
 import java.io.UnsupportedEncodingException;
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -41,7 +39,7 @@ public class ServiceController {
     @RequestMapping(value = "/add_service", method = RequestMethod.POST)
     public String addService(@ModelAttribute(value = "serviceForm") Service service, Model model) throws UnsupportedEncodingException {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        User user = userService.findByUsername(auth.getName());
+        User user = this.userService.findByUsername(auth.getName());
 
         service.setUserId(user.getId());
 
@@ -54,18 +52,40 @@ public class ServiceController {
         service.setDescription(new String(service.getDescription().getBytes("ISO8859-1"), "UTF-8"));
         service.setCity(user.getLogin() + "'s" + " city");
 
-        serviceForService.save(service);
+        this.serviceForService.save(service);
 
         return "redirect:/profile";
     }
 
     @RequestMapping(value = "/show_all_services/{category}", method = RequestMethod.GET)
     public String showAllServicesInGivenCategory(@PathVariable(value = "category") String category, Model model) {
-        List<Service> services = serviceForService.findAllByCategory(category);
+        List<Service> services = this.serviceForService.findAllByCategory(category);
 
         model.addAttribute("services", services);
         model.addAttribute("category", category);
 
         return "show-given-services";
+    }
+
+    @RequestMapping(value = "/show_your_services", method = RequestMethod.GET)
+    public String showUsersServices(Model model) {
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        User user = this.userService.findByUsername(auth.getName());
+        List<Service> services = this.serviceForService.findAllByUserId(user.getId());
+
+        model.addAttribute("usersServices", services);
+
+        return "user's-services";
+    }
+
+    @RequestMapping(value = "/delete", method = RequestMethod.GET)
+    public String deleteService() {
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        User user = this.userService.findByUsername(auth.getName());
+
+        Service service = this.serviceForService.findByUserId(user.getId());
+        this.serviceForService.delete(service);
+
+        return "redirect:/show_your_services";
     }
 }

@@ -346,6 +346,7 @@
                                                             <input type="hidden" name="${_csrf.parameterName}"
                                                                    value="${_csrf.token}"/>
                                                         </form:form>
+                                                        <a href="${pageContext.request.contextPath}/show_your_services">Ваши услуги</a>
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-md-12">

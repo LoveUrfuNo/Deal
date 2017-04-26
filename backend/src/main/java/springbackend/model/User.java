@@ -2,6 +2,7 @@ package springbackend.model;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -36,11 +37,6 @@ public class User {
     @Transient
     private String confirmPassword;
 
-    @ManyToMany
-    @JoinTable(name = "user_roles", joinColumns = @JoinColumn(name = "user_id"),
-            inverseJoinColumns = @JoinColumn(name = "role_id"))
-    private Set<Role> roles;
-
     @Column(name = "first_name")
     private String firstName;
 
@@ -55,6 +51,14 @@ public class User {
 
     @Column(name = "avatar")
     private byte[] avatar;
+
+    @ManyToMany
+    @JoinTable(name = "user_roles", joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "role_id"))
+    private Set<Role> roles;
+
+    /*@OneToMany(mappedBy = "user", fetch = FetchType.LAZY, orphanRemoval = true)   //TODO: finish
+    private Set<Service> services;*/
 
     public Long getId() {
         return id;

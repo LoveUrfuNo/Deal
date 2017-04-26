@@ -10,9 +10,15 @@ import java.util.List;
  */
 
 public interface ServiceForService {
+    void delete(Service service);
+
     void save(Service service);
 
     void saveAndFlush(Service service);
 
+    Service findByUserId(Long userId);
+
     List<Service> findAllByCategory(String category);
+
+    List<Service> findAllByUserId(Long userId);
 }

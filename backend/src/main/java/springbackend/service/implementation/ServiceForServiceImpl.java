@@ -19,18 +19,33 @@ public class ServiceForServiceImpl implements ServiceForService {
     private ServiceDao serviceDao;
 
     @Override
+    public void delete(Service service) {
+        this.serviceDao.delete(service);
+    }
+
+    @Override
     public void save(Service service) {
-        serviceDao.save(service);
+        this.serviceDao.save(service);
     }
 
     @Override
     public void saveAndFlush(Service service) {
-        serviceDao.saveAndFlush(service);
+        this.serviceDao.saveAndFlush(service);
+    }
+
+    @Override
+    public Service findByUserId(Long userId) {
+        return this.serviceDao.findAll().stream()
+                .filter(temp -> temp.getUserId().equals(userId)).findFirst().orElse(null);
     }
 
     @Override
     public List<Service> findAllByCategory(String category) {
-        return serviceDao.findAll().stream()
-                .filter(temp -> temp.getCategory().equals(category)).collect(Collectors.toList());
+        return this.serviceDao.findAllByCategory(category);
+    }
+
+    @Override
+    public List<Service> findAllByUserId(Long userId) {
+        return this.serviceDao.findAllByUserId(userId);
     }
 }

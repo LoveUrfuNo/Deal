@@ -74,7 +74,7 @@ public class UserController {
     @RequestMapping(value = "/profile", method = RequestMethod.GET)
     public String profile(Model model) {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        User user = userService.findByUsername(auth.getName());
+        User user = this.userService.findByUsername(auth.getName());
         if (user.getFirstName() != null)
             model.addAttribute("name", user.getFirstName());
         else
@@ -90,7 +90,7 @@ public class UserController {
     @RequestMapping(value = "/profile/{status}", method = RequestMethod.GET)
     public String profile(@PathVariable("status") String status, Model model) {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        User user = userService.findByUsername(auth.getName());
+        User user = this.userService.findByUsername(auth.getName());
 
         model.addAttribute("name", user.getLogin());
         model.addAttribute("userForm", new User());
@@ -155,14 +155,14 @@ public class UserController {
 
     @RequestMapping(value = "/options", method = RequestMethod.POST)
     public String options(@ModelAttribute("userOptionForm") User user, BindingResult bindingResult) throws UnsupportedEncodingException {
-        optionsValidator.validate(user, bindingResult);
+        this.optionsValidator.validate(user, bindingResult);
         if (bindingResult.hasErrors())
             return "advanced-options";
 
         User resultUser;
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         if (auth.getAuthorities().stream().findFirst().orElse(null).getAuthority().equals("ROLE_USER")) {
-            resultUser = userService.findByUsername(auth.getName());
+            resultUser = this.userService.findByUsername(auth.getName());
         } else if (auth.getAuthorities().stream().findFirst().orElse(null).getAuthority().equals("ROLE_NOT_ACTIVATED_USER")) {
             return "redirect:/profile/registration";
         } else if (auth.getAuthorities().stream().findFirst().orElse(null).getAuthority().equals("ROLE_ANONYMOUS")) {
@@ -176,13 +176,13 @@ public class UserController {
         resultUser.setGender(user.getGender());
         resultUser.setCountry(user.getCountry());
 
-        userService.saveAndFlush(resultUser, ROLE_USER);
+        this.userService.saveAndFlush(resultUser, ROLE_USER);
         return "redirect:/profile";
     }
 
     @RequestMapping(value = "/registration", method = RequestMethod.POST)
     public String registration(@ModelAttribute("userForm") User user, BindingResult bindingResult, Model model) {
-        userValidator.validate(user, bindingResult);
+        this.userValidator.validate(user, bindingResult);
         if (bindingResult.hasErrors())
             return "main";
 
@@ -190,8 +190,8 @@ public class UserController {
 
         user.setKeyForRegistrationConfirmUrl(EmailServiceImpl.generateString(SIZE_OF_GENERATED_STRING));
         user.setRegistrationConfirmed(false);    //user didn't confirm acc by email message yet
-        userService.save(user, ROLE_NOT_ACTIVATED_USER);
-        securityService.autoLogin(user.getUsername(), user.getConfirmPassword());
+        this.userService.save(user, ROLE_NOT_ACTIVATED_USER);
+        this.securityService.autoLogin(user.getUsername(), user.getConfirmPassword());
 
         Map map = new HashMap();
         map.put("from", "DEAL");
@@ -200,7 +200,7 @@ public class UserController {
         map.put("key_for_registration_confirm_url", user.getKeyForRegistrationConfirmUrl());
         map.put("id", user.getId());
 
-        if (emailServiceImpl.sendEmail(MESSAGE, map))      //TODO: add output in logger
+        if (this.emailServiceImpl.sendEmail(MESSAGE, map))      //TODO: add output in logger
             System.out.println("Message was sent");
         else
             System.out.println("Error: message wasn't sent");
@@ -217,14 +217,14 @@ public class UserController {
 
     @RequestMapping(value = "/confirm-acc/{key}/{id}", method = RequestMethod.GET)
     public String confirmAcc(@PathVariable("key") String key, @PathVariable("id") Long id, Model model) {
-        User user = userService.findBuId(id);
+        User user = this.userService.findBuId(id);
         if (!user.getKeyForRegistrationConfirmUrl().equals(key))
             return "redirect:/main?error";
 
         user.setRegistrationConfirmed(true);
         user.setKeyForRegistrationConfirmUrl(null);
 
-        userService.saveAndFlush(user, ROLE_USER);        //TODO: add output in logger
+        this.userService.saveAndFlush(user, ROLE_USER);        //TODO: add output in logger
 
         return "registration-confirm";
     }

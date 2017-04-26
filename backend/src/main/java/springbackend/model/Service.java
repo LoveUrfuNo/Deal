@@ -42,6 +42,10 @@ public class Service {
     @Column(name = "type_of_service")
     private String typeOfService;
 
+/*    @ManyToOne
+    @JoinColumn(name = )*/         //TODO:finish
+
+
     public Long getId() {
         return id;
     }
