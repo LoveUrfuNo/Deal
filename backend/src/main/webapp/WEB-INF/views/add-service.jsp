@@ -39,13 +39,26 @@
     </div>
     <div class="field">
         <label>Стоимость услуги</label>
-        <input type="text" name="last-name" placeholder="100">
+        <div class="ui right labeled input">
+            <input type="text" name="cost" placeholder="100" maxlength="10">
+            <div class="ui dropdown label">
+                <div class="text">₽</div>
+                <i class="dropdown icon"></i>
+                <div class="menu">
+                    <div class="item">₽</div>
+                    <div class="item">$</div>
+                    <div class="item">£</div>
+                </div>
+            </div>
+        </div>
+
+
     </div>
     <div class="field">
     <div class="ui fluid search selection dropdown">
         <input type="hidden" name="country">
         <i class="dropdown icon"></i>
-        <div class="default text">Select Country</div>
+        <div class="default text">Выберите страну</div>
         <div class="menu">
             <div class="item" data-value="af"><i class="af flag"></i>Afghanistan</div>
             <div class="item" data-value="ax"><i class="ax flag"></i>Aland Islands</div>
@@ -309,8 +322,9 @@
         </div>
     </div>
     </div>
-    <button class="ui button" type="submit">Submit</button>
+    <button class="ui button" type="submit">Добавить</button>
 </form>
+<a href = "#" class = "col-sm-12 btn btn-primary">Кнопка назад</a>
 
 
 

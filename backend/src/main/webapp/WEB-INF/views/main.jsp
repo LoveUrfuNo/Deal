@@ -315,7 +315,7 @@
                                                         <div class="col-md-3 vertical-centering">
                                                             <div class="navigation">
                                                                 <a class="col-md-12" href="#"><i
-                                                                        class="mail circular icon"></i></a>
+                                                                        class="shop circular icon"></i></a>
                                                                 <a class="col-md-12" href="#"><i
                                                                         class="mail circular icon"></i></a>
                                                                 <a class="col-md-12" href="#"><i
@@ -352,17 +352,13 @@
                                                     </div>
                                                     <div class="ui white divider"></div>
                                                     <div class="row">
-                                                        <div class="col-md-4 text-center">
+                                                        <div class="col-md-6 text-center">
                                                             <a href="#"
                                                                class="ui inverted pink button">Pink</a>
                                                         </div>
-                                                        <div class="col-md-4 text-center">
+                                                        <div class="col-md-6 text-center">
                                                             <a href="${pageContext.request.contextPath}/options"
-                                                               class="ui inverted pink button">ОПТИОНС</a>
-                                                        </div>
-                                                        <div class="col-md-4 text-center">
-                                                            <a href="#"
-                                                               class="ui inverted pink button">Pink</a>
+                                                               class="ui inverted pink button">Настройки</a>
                                                         </div>
                                                     </div>
                                                     <div class="ui white divider"></div>

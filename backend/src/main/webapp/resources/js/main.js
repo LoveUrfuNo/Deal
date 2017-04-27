@@ -208,6 +208,9 @@
             },2000)
         },4000);
     };
+
+
+
     // Document on load.
     $(function () {
         fullHeight();
@@ -218,5 +221,6 @@
         parallax();
         profileLoader();
         activateString();
+        checkInput();
     });
 }());
