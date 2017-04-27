@@ -126,7 +126,7 @@
                                                         <div class="col-md-12">
                                                             <spring:bind path="login">
                                                                 <div class="form-group ${status.error ? 'has-error' : ''}">
-                                                                    <label for="username">Логин</label>
+                                                                    <label for="login">Логин</label>
                                                                     <form:input type="text" path="login"
                                                                                 class="form-control"
                                                                                 placeholder="PussySlayer"/>
@@ -234,7 +234,7 @@
                                                         </div>
                                                         <div class="col-md-6">
                                                             <img class="profile-icon"
-                                                                 src="http://ic.pics.livejournal.com/v_kosmetikovna/64617808/63542/63542_900.jpg">
+                                                                 src="${pageContext.request.contextPath}/resources/images/unknownAvatar.png">
                                                         </div>
                                                         <div class="col-md-3 vertical-centering">
                                                             <div class="navigation">
@@ -312,14 +312,14 @@
                                                         </div>
 
                                                         <div class="col-md-6">
-                                                                <%--<c:if var="row" test="${row.avatar != null}">
-                                                                    <img class="profile-icon"
-                                                                         src="${row.avatar}">
-                                                                </c:if>
-                                                                <c:if test="${row.avatar == null}">--%>
-                                                            <img class="profile-icon"
-                                                                 src="${pageContext.request.contextPath}/resources/images/avatar.l.png">
-
+                                                            <c:if test="${currentUser.avatar != null}">
+                                                                <img class="profile-icon"
+                                                                     src="${pageContext.request.contextPath}${currentUser.avatar}">
+                                                            </c:if>
+                                                            <c:if test="${currentUser.avatar == null}">
+                                                                <img class="profile-icon"
+                                                                     src="${pageContext.request.contextPath}/resources/images/unknownAvatar.png">
+                                                            </c:if>
                                                         </div>
                                                         <div class=" col-md-3 vertical-centering">
                                                             <div class="navigation">
@@ -332,7 +332,7 @@
                                                             </div>
                                                         </div>
                                                         <form:form method="POST"
-                                                                   action="uploadFile?${_csrf.parameterName}=${_csrf.token}"
+                                                                   action="uploadFile/loadAvatar?${_csrf.parameterName}=${_csrf.token}"
                                                                    enctype="multipart/form-data">
                                                             <div class="col-md-12 text-center">
                                                                 <input id="upload" class="hide" type="file" name="file">

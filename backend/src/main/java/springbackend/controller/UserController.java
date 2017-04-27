@@ -83,6 +83,7 @@ public class UserController {
         model.addAttribute("username", user.getUsername());
         model.addAttribute("userForm", new User());
         model.addAttribute("status", "login");
+        model.addAttribute("currentUser", user);
 
         return "main";
     }

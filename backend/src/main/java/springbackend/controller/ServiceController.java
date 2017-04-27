@@ -69,10 +69,11 @@ public class ServiceController {
 
     @RequestMapping(value = "/show_your_services", method = RequestMethod.GET)
     public String showUsersServices(Model model) {
+
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         User user = this.userService.findByUsername(auth.getName());
-        List<Service> services = this.serviceForService.findAllByUserId(user.getId());
 
+        List<Service> services = this.serviceForService.findAllByUserId(user.getId());
         model.addAttribute("usersServices", services);
 
         return "user's-services";

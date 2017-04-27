@@ -42,9 +42,10 @@ public class Service {
     @Column(name = "type_of_service")
     private String typeOfService;
 
-/*    @ManyToOne
-    @JoinColumn(name = )*/         //TODO:finish
-
+   /* @ManyToOne(fetch = FetchType.LAZY)
+//    @JoinTable(name = "service", joinColumns = @JoinColumn(name = "userid"), inverseJoinColumns = @JoinColumn(name = "id"))
+    @JoinColumn(name = "user_id")
+    private User user;*/
 
     public Long getId() {
         return id;

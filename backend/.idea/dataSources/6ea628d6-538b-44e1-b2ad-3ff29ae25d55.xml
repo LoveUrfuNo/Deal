@@ -214,7 +214,7 @@ role_id</ColNames>
     </column>
     <column id="55" parent="16" name="avatar">
       <Position>12</Position>
-      <DataType>mediumblob|0</DataType>
+      <DataType>varchar(255)|0</DataType>
     </column>
     <index id="56" parent="16" name="key_UNIQUE">
       <ColNames>key_for_registration_confirm</ColNames>

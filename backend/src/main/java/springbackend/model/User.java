@@ -2,7 +2,6 @@ package springbackend.model;
 
 import javax.persistence.*;
 import java.util.Date;
-import java.util.List;
 import java.util.Set;
 
 /**
@@ -50,16 +49,16 @@ public class User {
     private String country;
 
     @Column(name = "avatar")
-    private byte[] avatar;
+    private String avatar;
 
     @ManyToMany
     @JoinTable(name = "user_roles", joinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumn(name = "role_id"))
     private Set<Role> roles;
 
-    /*@OneToMany(mappedBy = "user", fetch = FetchType.LAZY, orphanRemoval = true)   //TODO: finish
-    private Set<Service> services;*/
-
+    /*@OneToMany(mappedBy = "user", fetch = FetchType.LAZY, orphanRemoval = true)
+    private Set<Service> services;
+*/
     public Long getId() {
         return id;
     }
@@ -124,14 +123,6 @@ public class User {
         this.confirmPassword = confirmPassword;
     }
 
-    public Set<Role> getRoles() {
-        return roles;
-    }
-
-    public void setRoles(Set<Role> roles) {
-        this.roles = roles;
-    }
-
     public String getFirstName() {
         return firstName;
     }
@@ -164,15 +155,23 @@ public class User {
         this.country = country;
     }
 
-    public byte[] getAvatar() {
+    public String getAvatar() {
         return avatar;
     }
 
-    public void setAvatar(byte[] avatar) {
+    public void setAvatar(String avatar) {
         this.avatar = avatar;
     }
 
-    /*public String toString() {
+    public Set<Role> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(Set<Role> roles) {
+        this.roles = roles;
+    }
+
+/*public String toString() {
         return "User{" +
                 "id=" + id +
                 ", username='" + username + '\'' +
