@@ -124,12 +124,12 @@ embed {
   padding-bottom: 15px;
 }
 
-.is-not-activated i, .is-activated i {
+.is-not-activated .navigation i, .is-activated .navigation i {
   color: #F54C53!important;
   background-color: white !important;
 }
 
-.is-activated i:hover {
+.is-activated .navigation i:hover {
   color: white !important;
   background-color: #F54C53 !important;
 }
