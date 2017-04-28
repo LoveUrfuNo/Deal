@@ -72,6 +72,6 @@ public class FileController {
             userService.saveAndFlush(currentUser, ROLE_USER);
         }
 
-        return "access-denied";
+        return "redirect";
     }
 }

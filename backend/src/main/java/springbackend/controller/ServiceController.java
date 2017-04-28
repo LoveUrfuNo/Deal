@@ -69,7 +69,6 @@ public class ServiceController {
 
     @RequestMapping(value = "/show_your_services", method = RequestMethod.GET)
     public String showUsersServices(Model model) {
-
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         User user = this.userService.findByUsername(auth.getName());
 

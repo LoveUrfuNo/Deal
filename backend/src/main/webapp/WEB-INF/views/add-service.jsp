@@ -3,18 +3,10 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
-<%--
-  Created by IntelliJ IDEA.
-  User: Никита
-  Date: 25.04.2017
-  Time: 18:09
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
-
+    <title>Предлагайте!</title>
     <!-- Bootstrap  -->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootstrap.css">
     <!-- Semantic UI -->
@@ -24,33 +16,28 @@
 
 </head>
 <body>
+
 <form:form method="POST" modelAttribute="serviceForm"
            action="/add_service"
            class="ui form">
     <spring:bind path="nameOfService">
         <div class="field ${status.error ? 'has-error' : ''}">
             <label>Название услуги</label>
-            <form:input type="text" path="nameOfService"
-                        name="first-name"
-                        placeholder="Сигна"/>
+            <form:input path="nameOfService" type="text" name="first-name" placeholder="Сигна"/>
             <form:errors path="nameOfService"/>
         </div>
     </spring:bind>
-
     <spring:bind path="category">
         <div class="field ${status.error ? 'has-error' : ''}">
-            <label>
-                <form:select path="category" class="ui fluid search dropdown" name="">
-                    <option value="">Категория</option>
-                    <option value="1category">1 категория</option>
-                    <option value="2category">2 категория</option>
-                    <option value="3category">3 категория</option>
-                </form:select>
-                <form:errors path="category"/>
-            </label>
+            <form:select path="category" class="ui fluid search dropdown" name="">
+                <option value="">Категория</option>
+                <option value="1category">1 категория</option>
+                <option value="2category">2 категория</option>
+                <option value="3category">3 категория</option>
+            </form:select>
+            <form:errors path="category"/>
         </div>
     </spring:bind>
-
     <spring:bind path="description">
         <div class="field ${status.error ? 'has-error' : ''}">
             <label>Описание услуги</label>
@@ -58,21 +45,30 @@
             <form:errors path="description"/>
         </div>
     </spring:bind>
-
     <spring:bind path="serviceCost">
         <div class="field ${status.error ? 'has-error' : ''}">
             <label>Стоимость услуги</label>
-            <form:input path="serviceCost" type="text" name="last-name" placeholder="100"/>
-            <form:errors path="serviceCost"/>
+            <div class="ui right labeled input">
+                <form:input path="serviceCost" type="text" name="cost" placeholder="100" maxlength="10"/>
+                <div class="ui dropdown label">
+                    <div class="text">₽</div>
+                    <i class="dropdown icon"></i>
+                    <div class="menu">
+                        <div class="item">₽</div>
+                        <div class="item">$</div>
+                        <div class="item">£</div>
+                    </div>
+                </div>
+                <form:errors path="serviceCost"/>
+            </div>
         </div>
     </spring:bind>
-
     <spring:bind path="country">
-        <div class="field  ${status.error ? 'has-error' : ''}">
+        <div class="field">
             <div class="ui fluid search selection dropdown">
                 <input type="hidden" name="country">
                 <i class="dropdown icon"></i>
-                <div class="default text">ВЫБРАТЬ СТРАНУ</div>
+                <div class="default text">Выберите страну</div>
                 <div class="menu">
                     <div class="item" data-value="af"><i class="af flag"></i>Afghanistan</div>
                     <div class="item" data-value="ax"><i class="ax flag"></i>Aland Islands</div>
@@ -341,9 +337,10 @@
             </div>
         </div>
     </spring:bind>
-    <input type="submit" class="btn btn-primary"
-           value="ОТПРАВИТЬ А НЕ САБМИТ">
+    <button class="ui button" type="submit">Добавить</button>
 </form:form>
+
+<a href="${pageContext.request.contextPath}/redirect" class="col-sm-12 btn btn-primary">Кнопка назад</a>
 
 <!-- jQuery -->
 <script src="${pageContext.request.contextPath}/resources/js/jquery.min.js"></script>

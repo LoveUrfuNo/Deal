@@ -53,9 +53,9 @@ public class UserController {
     @Autowired
     private UserOptionsValidator optionsValidator;
 
-    @RequestMapping(value = "/accessDenied", method = RequestMethod.GET)
+    @RequestMapping(value = "/redirect", method = RequestMethod.GET)
     public String redirect() {
-        return "access-denied";
+        return "redirect";
     }
 
     @RequestMapping(value = "/main", method = RequestMethod.GET)

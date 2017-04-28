@@ -22,7 +22,7 @@ public class ServiceEntranceController {
 
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         if (auth.getAuthorities().stream().findFirst().orElse(null).getAuthority().equals("ROLE_USER"))
-            return "access-denied";
+            return "redirect";
         else
             return "service-entrance";
     }
