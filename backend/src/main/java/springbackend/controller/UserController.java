@@ -19,9 +19,6 @@ import springbackend.service.UserService;
 import springbackend.validator.UserOptionsValidator;
 import springbackend.validator.UserValidator;
 
-import javax.imageio.ImageIO;
-import javax.swing.*;
-import java.awt.image.BufferedImage;
 import java.io.*;
 import java.util.*;
 
