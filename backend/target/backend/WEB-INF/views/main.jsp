@@ -234,7 +234,7 @@
                                                         </div>
                                                         <div class="col-md-6">
                                                             <img class="profile-icon"
-                                                                 src="http://ic.pics.livejournal.com/v_kosmetikovna/64617808/63542/63542_900.jpg">
+                                                                 src="${pageContext.request.contextPath}/resources/images/unknownAvatar.png">
                                                         </div>
                                                         <div class="col-md-3 vertical-centering">
                                                             <div class="navigation">
@@ -314,7 +314,7 @@
                                                         <div class="col-md-6">
                                                             <c:if test="${currentUser.avatar != null}">
                                                                 <img class="profile-icon"
-                                                                     src="${pageContext.request.contextPath}${imageurl}">
+                                                                     src="${currentUser.avatar}">
                                                             </c:if>
                                                             <c:if test="${currentUser.avatar == null}">
                                                                 <img class="profile-icon"

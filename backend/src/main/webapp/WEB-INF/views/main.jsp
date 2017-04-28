@@ -314,7 +314,7 @@
                                                         <div class="col-md-6">
                                                             <c:if test="${currentUser.avatar != null}">
                                                                 <img class="profile-icon"
-                                                                     src="${pageContext.request.contextPath}${currentUser.avatar}">
+                                                                     src="${currentUser.avatar}">
                                                             </c:if>
                                                             <c:if test="${currentUser.avatar == null}">
                                                                 <img class="profile-icon"
