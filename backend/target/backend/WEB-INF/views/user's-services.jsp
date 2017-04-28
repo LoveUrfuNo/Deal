@@ -9,5 +9,7 @@
     <c:forEach var="service" items="${usersServices}">
         <h4>${service.nameOfService}</h4><a href="${pageContext.request.contextPath}/delete">Удалить</a>
     </c:forEach>
+    <br><br>
+    <a href="${pageContext.request.contextPath}/redirect" class="col-sm-12 btn btn-primary">Кнопка назад</a>
 </body>
 </html>

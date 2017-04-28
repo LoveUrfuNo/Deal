@@ -42,6 +42,9 @@ public class Service {
     @Column(name = "type_of_service")
     private String typeOfService;
 
+    @Column(name = "currency")
+    private String currency;
+
    /* @ManyToOne(fetch = FetchType.LAZY)
 //    @JoinTable(name = "service", joinColumns = @JoinColumn(name = "userid"), inverseJoinColumns = @JoinColumn(name = "id"))
     @JoinColumn(name = "user_id")
@@ -125,5 +128,13 @@ public class Service {
 
     public void setTypeOfService(String typeOfService) {
         this.typeOfService = typeOfService;
+    }
+
+    public String getCurrency() {
+        return currency;
+    }
+
+    public void setCurrency(String currency) {
+        this.currency = currency;
     }
 }

@@ -78,6 +78,13 @@ public class ServiceController {
         return "user's-services";
     }
 
+    @RequestMapping(value = "/search_services", method = RequestMethod.POST)
+    public String searchServices(Model model) {
+        model.addAttribute("results", null);
+
+        return "searching-results";
+    }
+
     @RequestMapping(value = "/delete", method = RequestMethod.GET)
     public String deleteService() {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();

@@ -69,6 +69,14 @@
                     <div class="col-sm-4 col-xs-12">
                         <div id="gtco-logo"><a href="#">Deal <em></em></a></div>
                     </div>
+                    <body>
+                    <form method="post" action="${pageContext.request.contextPath}/search_services">
+                        <p>
+                            <input type="search" name="q"
+                                   placeholder="Поиск услуг"> <%--ВОТ ОН ЕБАНЫЙ ПОИСК!!!!!!!!!!!!!!!!!!!!!--%>
+                            <input type="submit" value="Найти">
+                        </p>
+                    </form>
                     <div class="col-xs-8 text-right menu-1">
                         <ul>
                             <li><a href="#">Профиль</a></li>
@@ -93,9 +101,7 @@
                                 <span class="intro-text-small">Добро пожаловать в Deal</span>
                                 <h1>Покупай и продавай вместе с нами</h1>
                             </div>
-
                             <div class="col-md-5 animate-box" data-animate-effect="fadeInRight">
-
                                 <!-- До регистрации -->
                                 <div class="form-wrap">
                                     <div class="tab">
@@ -346,7 +352,8 @@
                                                             <input type="hidden" name="${_csrf.parameterName}"
                                                                    value="${_csrf.token}"/>
                                                         </form:form>
-                                                        <a href="${pageContext.request.contextPath}/show_your_services">Ваши услуги</a>
+                                                        <a href="${pageContext.request.contextPath}/show_your_services">Ваши
+                                                            услуги</a>
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-md-12">
