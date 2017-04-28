@@ -93,9 +93,7 @@
                                 <span class="intro-text-small">Добро пожаловать в Deal</span>
                                 <h1>Покупай и продавай вместе с нами</h1>
                             </div>
-
                             <div class="col-md-5 animate-box" data-animate-effect="fadeInRight">
-
                                 <!-- До регистрации -->
                                 <div class="form-wrap">
                                     <div class="tab">
