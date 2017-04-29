@@ -55,7 +55,7 @@
 </head>
 <body>
 
-
+<div id = "full">
 <div id="page">
     <span class="backgroundSlider"></span>
     <div class="page-inner">
@@ -786,7 +786,7 @@
         </div>
     </div>
 </footer>
-
+</div>
 
 <!-- jQuery -->
 <script src="${pageContext.request.contextPath}/resources/js/jquery.min.js"></script>

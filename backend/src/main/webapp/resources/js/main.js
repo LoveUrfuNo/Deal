@@ -121,6 +121,49 @@
 
     };
 
+    var offcanvasMenu = function() {
+
+        $('#full').prepend('<div id="gtco-offcanvas" />');
+        $('#full').prepend('<a href="#" class="js-gtco-nav-toggle gtco-nav-toggle gtco-nav-white"><i></i></a>');
+        var clone1 = $('.menu-1 > ul').clone();
+        $('#gtco-offcanvas').append(clone1);
+        var clone2 = $('.menu-2 > ul').clone();
+        $('#gtco-offcanvas').append(clone2);
+
+        $('#gtco-offcanvas .has-dropdown').addClass('offcanvas-has-dropdown');
+        $('#gtco-offcanvas')
+            .find('li')
+            .removeClass('has-dropdown');
+
+        // Hover dropdown menu on mobile
+        $('.offcanvas-has-dropdown').mouseenter(function(){
+            var $this = $(this);
+
+            $this
+                .addClass('active')
+                .find('ul')
+                .slideDown(500, 'easeOutExpo');
+        }).mouseleave(function(){
+
+            var $this = $(this);
+            $this
+                .removeClass('active')
+                .find('ul')
+                .slideUp(500, 'easeOutExpo');
+        });
+
+
+        $(window).resize(function(){
+
+            if ( $('body').hasClass('offcanvas') ) {
+
+                $('body').removeClass('offcanvas');
+                $('.js-gtco-nav-toggle').removeClass('active');
+
+            }
+        });
+    };
+
     var burgerMenu = function () {
 
         $('body').on('click', '.js-gtco-nav-toggle', function (event) {
@@ -129,8 +172,10 @@
 
             if ($('body').hasClass('overflow offcanvas')) {
                 $('body').removeClass('overflow offcanvas');
+                $('body').css('overflow-y', 'visible');
             } else {
                 $('body').addClass('overflow offcanvas');
+                $('body').css('overflow', 'hidden');
             }
             $this.toggleClass('active');
             event.preventDefault();
@@ -217,6 +262,8 @@
         formTab();
         owlCrouselFeatureSlide();
         contentWayPoint();
+        offcanvasMenu();
+        burgerMenu();
         backgroundSlider();
         parallax();
         profileLoader();

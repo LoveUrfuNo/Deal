@@ -9,7 +9,7 @@
 <html>
 <head>
 
-    <title>Title</title>
+    <title>Deal | Support</title>
     <!-- Facebook and Twitter integration -->
     <meta property="og:title" content=""/>
     <meta property="og:image" content=""/>
@@ -73,26 +73,25 @@
     </div>
 </nav>
 <header>
-<div class="head">
-    <div class="row">
-        <div class="col-xs-12 text-center vertical-centering-support">
+    <div class="head">
+        <div class="row">
+            <div class="col-xs-12 text-center vertical-centering-support">
 
-            <h1 class="col-xs-12">Остались вопросы?</h1>
-            <h1 class="col-xs-12">Мы поможем!</h1>
+                <h1 class="col-xs-12">Остались вопросы?</h1>
+                <h1 class="col-xs-12">Мы поможем!</h1>
+            </div>
+
         </div>
 
     </div>
-
-</div>
 </header>
 <div class="row vertical-centering">
-
     <div class="col-xs-5 col-xs-push-1">
         <p class="col-xs-12 text-center">Напишите нам</p>
         <div class="form-group ${error != null ? 'has-error' : ''}">
             <div class="row form-group">
                 <div class="col-md-12">
-                    <label for="username">Ваше Имя</label>
+                    <label>Ваше Имя</label>
                     <input name="name" type="text" class="form-control"
                            placeholder="Иван"
                            autofocus="true"/>
@@ -100,7 +99,7 @@
             </div>
             <div class="row form-group">
                 <div class="col-md-12">
-                    <label for="username">E-mail</label>
+                    <label for="email">E-mail</label>
                     <input name="E-mail" type="email" class="form-control"
                            placeholder="ivan.ivanov@gmail.com"
                            autofocus="true"/>
@@ -108,7 +107,7 @@
             </div>
             <div class="row form-group">
                 <div class="col-md-12">
-                    <label for="username">Тема</label>
+                    <label>Тема</label>
                     <input name="theme" type="text" class="form-control"
                            placeholder="Проблема с регистрацией"
                            autofocus="true"/>
@@ -117,7 +116,7 @@
             <div class="row form-group">
                 <div class="col-md-12">
                     <label>Описание</label>
-                    <textarea rows = "3"></textarea>
+                    <textarea rows="3"></textarea>
                 </div>
             </div>
             <div class="row form-group">
@@ -127,14 +126,17 @@
                 </div>
             </div>
         </div>
-        </div>
+    </div>
     <div class="col-xs-5 col-xs-push-1">
         <p class="col-xs-10 col-xs-1 text-center">Наши контакты</p>
-        <div class="contact col-xs-10 col-xs-push-2"><span><i class="fa fa-map-marker" aria-hidden="true"></i><span>Улица Пушкина, дом Колотушкина</span></span></div>
-        <div class="contact col-xs-10 col-xs-push-2"><i class="fa fa-phone" aria-hidden="true"></i><a>+7-999-560-39-68</a></div>
-        <div class="contact col-xs-10 col-xs-push-2"><i class="fa fa-envelope" aria-hidden="true"></i><a>deal.agentservice@gmail.com</a></div>
+        <div class="contact col-xs-10 col-xs-push-2"><span><i class="fa fa-map-marker" aria-hidden="true"></i><span>Улица Пушкина, дом Колотушкина</span></span>
+        </div>
+        <div class="contact col-xs-10 col-xs-push-2"><i class="fa fa-phone" aria-hidden="true"></i><a href="#">+7-999-560-39-68</a>
+        </div>
+        <div class="contact col-xs-10 col-xs-push-2"><i class="fa fa-envelope" aria-hidden="true"></i><a href="#">deal.agentservice@gmail.com</a>
+        </div>
     </div>
-    </div>
+</div>
 <footer>
     <div id="footer" class="fh5co-border-line">
         <div class="container">
@@ -169,8 +171,5 @@
 
 <!--Semantic UI-->
 <script src="${pageContext.request.contextPath}/resources/Semantic-UI-CSS-master/semantic.min.js"></script>
-
-
-
 </body>
 </html>
