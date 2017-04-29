@@ -800,8 +800,10 @@
 
 <!-- Waypoints -->
 <script src="${pageContext.request.contextPath}/resources/js/jquery.waypoints.min.js"></script>
+
 <!-- Owl carousel -->
 <script src="${pageContext.request.contextPath}/resources/js/owl.carousel.min.js"></script>
+
 <!-- Stellar -->
 <script src="${pageContext.request.contextPath}/resources/js/jquery.stellar.min.js"></script>
 

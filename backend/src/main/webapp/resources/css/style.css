@@ -17,6 +17,7 @@ a {
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
+  cursor: pointer;
 }
 a:hover {
   text-decoration: none;
@@ -424,9 +425,7 @@ embed {
 .gtco-cover a {
   color: #f54c53;
 }
-/*.gtco-cover a:hover {
-  color: white;
-}*/
+
 .gtco-cover .overlay {
   z-index: 1;
   position: absolute;
