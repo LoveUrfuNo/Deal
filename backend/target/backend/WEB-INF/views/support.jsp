@@ -52,13 +52,13 @@
     <![endif]-->
 </head>
 <body>
-
-
+<div id="full">
+<div id="page">
 <nav class="gtco-nav" role="navigation">
     <div class="gtco-container">
         <div class="row">
             <div class="col-sm-4 col-xs-12">
-                <div id="gtco-logo"><a href="#">Deal <em></em></a></div>
+                <div id="gtco-logo"><a href="${pageContext.request.contextPath}/main">Deal <em></em></a></div>
             </div>
             <div class="col-xs-8 text-right menu-1">
                 <ul>
@@ -86,7 +86,7 @@
     </div>
 </header>
 <div class="row vertical-centering">
-    <div class="col-xs-5 col-xs-push-1">
+    <div class="col-xs-11 col-xs-push-1 col-sm-5 col-sm-push-1">
         <p class="col-xs-12 text-center">Напишите нам</p>
         <div class="form-group ${error != null ? 'has-error' : ''}">
             <div class="row form-group">
@@ -127,7 +127,7 @@
             </div>
         </div>
     </div>
-    <div class="col-xs-5 col-xs-push-1">
+    <div class="xs-margin-top col-xs-12 col-sm-5 col-sm-push-1">
         <p class="col-xs-10 col-xs-1 text-center">Наши контакты</p>
         <div class="contact col-xs-10 col-xs-push-2"><span><i class="fa fa-map-marker" aria-hidden="true"></i><span>Улица Пушкина, дом Колотушкина</span></span>
         </div>
@@ -160,16 +160,28 @@
         </div>
     </div>
 </footer>
+</div>
+</div>
 <!-- jQuery -->
 <script src="${pageContext.request.contextPath}/resources/js/jquery.min.js"></script>
-
 <!-- jQuery Easing -->
 <script src="${pageContext.request.contextPath}/resources/js/jquery.easing.1.3.js"></script>
-
 <!-- Bootstrap -->
 <script src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js"></script>
 
 <!--Semantic UI-->
 <script src="${pageContext.request.contextPath}/resources/Semantic-UI-CSS-master/semantic.min.js"></script>
+
+<!-- Waypoints -->
+<script src="${pageContext.request.contextPath}/resources/js/jquery.waypoints.min.js"></script>
+
+<!-- Owl carousel -->
+<script src="${pageContext.request.contextPath}/resources/js/owl.carousel.min.js"></script>
+
+<!-- Stellar -->
+<script src="${pageContext.request.contextPath}/resources/js/jquery.stellar.min.js"></script>
+
+<!-- Main JS (Do not remove) -->
+<script src="${pageContext.request.contextPath}/resources/js/main.js"></script>
 </body>
 </html>

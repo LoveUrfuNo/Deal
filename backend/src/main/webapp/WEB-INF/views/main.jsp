@@ -63,14 +63,14 @@
             <div class="gtco-container">
                 <div class="row">
                     <div class="col-sm-4 col-xs-12">
-                        <div id="gtco-logo"><a href="#">Deal <em></em></a></div>
+                        <div id="gtco-logo"><a href="${pageContext.request.contextPath}/main">Deal <em></em></a></div>
                     </div>
                     <div class="col-xs-8 text-right menu-1">
                         <ul>
                             <li><a href="#">Профиль</a></li>
                             <li><a href="#">Найти услугу</a></li>
                             <li><a href="#">Предложить услугу</a></li>
-                            <li><a href="#">Поддержка</a></li>
+                            <li><a href="${pageContext.request.contextPath}/support">Поддержка</a></li>
                             <li class="btn-cta"><a href="#"><span>Начать</span></a></li>
                         </ul>
                     </div>

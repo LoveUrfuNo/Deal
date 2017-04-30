@@ -103,24 +103,6 @@
         });
     };
 
-    var formTab = function () {
-
-        $('.tab-menu a').on('click', function (event) {
-            var $this = $(this),
-                data = $this.data('tab');
-
-            $('.tab-menu li').removeClass('active');
-            $this.closest('li').addClass('active')
-
-            $('.tab .tab-content-inner').removeClass('active');
-            $this.closest('.tab').find('.tab-content-inner[data-content="' + data + '"]').addClass('active');
-
-            event.preventDefault();
-
-        });
-
-    };
-
     var offcanvasMenu = function() {
 
         $('#full').prepend('<div id="gtco-offcanvas" />');
@@ -181,27 +163,6 @@
             event.preventDefault();
 
         });
-    };
-
-    var dropdown = function () {
-
-        $('.has-dropdown').mouseenter(function () {
-
-            var $this = $(this);
-            $this
-                .find('.dropdown')
-                .css('display', 'block')
-                .addClass('animated-fast fadeInUpMenu');
-
-        }).mouseleave(function () {
-            var $this = $(this);
-
-            $this
-                .find('.dropdown')
-                .css('display', 'none')
-                .removeClass('animated-fast fadeInUpMenu');
-        });
-
     };
 
     var formTab = function () {
