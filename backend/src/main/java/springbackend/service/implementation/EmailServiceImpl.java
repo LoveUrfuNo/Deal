@@ -7,6 +7,7 @@ import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.mail.javamail.MimeMessagePreparator;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.velocity.VelocityEngineUtils;
+import springbackend.service.EmailService;
 
 import javax.mail.internet.MimeMessage;
 import java.util.Date;
@@ -14,9 +15,12 @@ import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
-@Service
-public class EmailServiceImpl {
+/**
+ * Implementation of {@link EmailService} interface.
+ */
 
+@Service
+public class EmailServiceImpl implements EmailService{
     private static final String FROM = "from";
 
     private static final String TO = "to";
@@ -58,11 +62,11 @@ public class EmailServiceImpl {
         return res;
     }
 
-    public static String getNameFromEmailAddress(String email) {
+    public String getNameFromEmailAddress(String email) {
         return email.substring(0, email.indexOf('@'));
     }
 
-    public static String generateString(int length) {
+    public String generateString(int length) {
         String characters = "qwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOASDFGHJKLZXCVBNM";
         Random random = new Random();
         char[] text = new char[length];

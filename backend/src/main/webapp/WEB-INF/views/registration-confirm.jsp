@@ -12,8 +12,6 @@
     <title>Подтверждение регистрации</title>
 </head>
 <body>
-<%--<form method="POST" action="${pageContext.request.contextPath}/registration-confirm">--%>
     <h1>Аккаунт подтвержден!</h1>
-<%--</form>--%>
 </body>
 </html>

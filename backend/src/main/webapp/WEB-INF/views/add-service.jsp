@@ -29,7 +29,7 @@
     </spring:bind>
     <spring:bind path="category">
         <div class="field ${status.error ? 'has-error' : ''}">
-            <form:select path="category" class="ui fluid search dropdown" name="">
+            <form:select path="category" class="ui fluid search dropdown" name="category">
                 <option value="">Категория</option>
                 <option value="1category">1 категория</option>
                 <option value="2category">2 категория</option>
@@ -50,21 +50,25 @@
             <label>Стоимость услуги</label>
             <div class="ui right labeled input">
                 <form:input path="serviceCost" type="text" name="cost" placeholder="100" maxlength="10"/>
-                <div class="ui dropdown label">
-                    <div class="text">₽</div>
-                    <i class="dropdown icon"></i>
-                    <div class="menu">
-                        <div class="item">₽</div>
-                        <div class="item">$</div>
-                        <div class="item">£</div>
+                <spring:bind path="currency">
+                    <div class="ui dropdown label ${status.error ? 'has-error' : ''}">
+                        <div class="text">₽</div>
+                        <input type="hidden" name="currency">
+                        <i class="dropdown icon"></i>
+                        <div class="menu  ">
+                            <div data-value="ruble" class="item">₽</div>
+                            <div data-value="dollar" class="item">$</div>
+                            <div data-value="euro" class="item">€</div>
+                            <div data-value="GBP" class="item">£</div>
+                        </div>
                     </div>
-                </div>
+                </spring:bind>
                 <form:errors path="serviceCost"/>
             </div>
         </div>
     </spring:bind>
     <spring:bind path="country">
-        <div class="field">
+        <div class="field  ${status.error ? 'has-error' : ''}">
             <div class="ui fluid search selection dropdown">
                 <input type="hidden" name="country">
                 <i class="dropdown icon"></i>
@@ -316,7 +320,6 @@
             </div>
         </div>
     </spring:bind>
-
     <spring:bind path="typeOfService">
         <div class="field ${status.error ? 'has-error' : ''}">
             <div class="ui selection dropdown">

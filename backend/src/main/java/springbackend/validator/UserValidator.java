@@ -15,7 +15,6 @@ import springbackend.service.UserService;
 
 @Component
 public class UserValidator implements Validator {
-
     @Autowired
     private UserService userService;
 

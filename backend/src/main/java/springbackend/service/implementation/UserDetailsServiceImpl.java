@@ -24,7 +24,6 @@ import java.util.Set;
 
 
 public class UserDetailsServiceImpl extends JdbcDaoImpl {
-
     private static final Long ROLE_NOT_ACTIVATED_USER = 3L;
 
     @Autowired

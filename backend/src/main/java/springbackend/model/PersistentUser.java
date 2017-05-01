@@ -11,7 +11,6 @@ import java.util.Date;
 @Entity
 @Table(name = "persistent_logins")
 public class PersistentUser {
-
     @Column(name = "username")
     private String username;
 

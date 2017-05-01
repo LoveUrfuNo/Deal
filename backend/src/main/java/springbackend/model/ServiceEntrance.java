@@ -5,7 +5,6 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class ServiceEntrance {
-
     private String enteredPassword;
 
     private final String correctPassword = "deal";
