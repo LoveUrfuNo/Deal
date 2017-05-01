@@ -8,8 +8,10 @@
                 <table style="width: 450px;">
                     <tbody>
                     <tr>
-                        <td style="font-size: 12px; font-family: arial, sans-serif; color: #000000; text-align: left;">
-                            <h1><a href="http://localhost:8087/confirm-acc/$key_for_registration_confirm_url/$id">Активировать аккаунт</a></h1>
+                        <h1>Имя: "$name"</h1>
+                        <h1>Мыло: $to</h1>
+                        <h1>Тема: $subject</h1>
+                        <h1>Сообщение: $message</h1>
                     </tr>
                     </tbody>
                 </table>

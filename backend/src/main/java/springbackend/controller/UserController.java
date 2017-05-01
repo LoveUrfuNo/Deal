@@ -39,7 +39,9 @@ public class UserController {
 
     private static final Logger logger = LoggerFactory.getLogger(UserController.class);
 
-    private static final String MESSAGE = "message-registration-email.vm";
+    private static final String MESSAGE_TO_CONFIRM_REGISTRATION = "message-registration-confirm-email.vm";
+
+    private static final String MESSAGE_FOR_TECHNICAL_SUPPORT = "message-for-technical-support.vm";
 
     @Autowired
     private EmailService emailService;
@@ -199,12 +201,12 @@ public class UserController {
 
         Map map = new HashMap();
         map.put("from", "DEAL");
-        map.put("subject", "Hello from " + emailService.getNameFromEmailAddress(user.getUsername()) + "!");
+        map.put("subject", "Hello from " + user.getLogin() + "!");
         map.put("to", user.getUsername());      //TODO: rename field "username" to "email"
         map.put("key_for_registration_confirm_url", user.getKeyForRegistrationConfirmUrl());
         map.put("id", user.getId());
 
-        if (this.emailService.sendEmail(MESSAGE, map))      //TODO: add output in logger
+        if (this.emailService.sendEmail(MESSAGE_TO_CONFIRM_REGISTRATION, map))      //TODO: add output in logger
             System.out.println("Message was sent");
         else
             System.out.println("Error: message wasn't sent");
@@ -248,6 +250,19 @@ public class UserController {
         userForSupport.setDescription(codingService.decoding(userForSupport.getDescription()));
         userForSupport.setEmail(codingService.decoding(userForSupport.getEmail()));
         userForSupport.setSubject(codingService.decoding(userForSupport.getSubject()));
+
+        Map map = new HashMap();
+        map.put("from", "DEAL");
+        map.put("subject", "Hello from " + userForSupport.getName() + "!");
+        map.put("to", "deal.agentservice@gmail.com");      //TODO: rename field "username" to "email"
+        map.put("message", userForSupport.getDescription());
+        map.put("name", userForSupport.getName());
+        map.put("subject", userForSupport.getSubject());
+
+        if (this.emailService.sendEmail(MESSAGE_FOR_TECHNICAL_SUPPORT, map))      //TODO: add output in logger
+            System.out.println("Message was sent");
+        else
+            System.out.println("Error: message wasn't sent");
 
         return "redirect:/redirect";
     }

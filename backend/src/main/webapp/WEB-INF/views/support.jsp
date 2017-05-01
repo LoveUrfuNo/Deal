@@ -79,7 +79,7 @@
                             <div class="row form-group ">
                                 <div class="col-md-12 ${status.error ? 'has-error' : ''}">
                                     <label>Ваше Имя</label>
-                                    <form:input path="name" name="name" type="text" class="form-control"
+                                    <form:input maxlength="60" path="name" name="name" type="text" class="form-control"
                                                 placeholder="Иван"
                                                 autofocus="true"/>
                                     <form:errors path="name"/>
@@ -90,7 +90,7 @@
                             <div class="row form-group">
                                 <div class="col-md-12 ${status.error ? 'has-error' : ''}">
                                     <label for="email">E-mail</label>
-                                    <form:input path="email" name="E-mail" type="email" class="form-control"
+                                    <form:input maxlength="100" path="email" name="E-mail" type="email" class="form-control"
                                                 placeholder="ivan.ivanov@gmail.com"
                                                 autofocus="true"/>
                                     <form:errors path="email"/>
@@ -101,7 +101,7 @@
                             <div class="row form-group">
                                 <div class="col-md-12 ${status.error ? 'has-error' : ''}">
                                     <label>Тема</label>
-                                    <form:input path="subject" name="theme" type="text" class="form-control"
+                                    <form:input maxlength="100" path="subject" name="theme" type="text" class="form-control"
                                                 placeholder="Проблема с регистрацией"
                                                 autofocus="true"/>
                                     <form:errors path="subject"/>
@@ -112,7 +112,7 @@
                             <div class="row form-group">
                                 <div class="col-md-12 ${status.error ? 'has-error' : ''}">
                                     <label>Описание</label>
-                                    <form:textarea path="description" maxlenghr="3000" rows="3"/>
+                                    <form:textarea path="description" maxlength="3000" rows="3"/>
                                     <form:errors path="description"/>
                                 </div>
                             </div>

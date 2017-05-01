@@ -23,7 +23,7 @@
     <spring:bind path="nameOfService">
         <div class="field ${status.error ? 'has-error' : ''}">
             <label>Название услуги</label>
-            <form:input path="nameOfService" type="text" name="first-name" placeholder="Сигна"/>
+            <form:input maxlength="60" path="nameOfService" type="text" name="first-name" placeholder="Сигна"/>
             <form:errors path="nameOfService"/>
         </div>
     </spring:bind>
