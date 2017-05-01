@@ -53,7 +53,7 @@ public class UserOptionsValidator implements Validator {
 
                 Integer day = Integer.parseInt(user.getDateOfBirth().substring(8, 10));
                 if (day > 31 || day < 1) {
-                    errors.rejectValue("dateOfBirth", "Size.userForm.month.dateOfBirth");
+                    errors.rejectValue("dateOfBirth", "Size.userForm.day.dateOfBirth");
                 }
             }
         }

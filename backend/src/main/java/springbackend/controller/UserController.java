@@ -19,6 +19,7 @@ import springbackend.service.implementation.EmailServiceImpl;
 import springbackend.model.User;
 import springbackend.service.SecurityService;
 import springbackend.service.UserService;
+import springbackend.validator.UserFormForTechnicalSupportValidator;
 import springbackend.validator.UserOptionsValidator;
 import springbackend.validator.UserValidator;
 
@@ -57,6 +58,9 @@ public class UserController {
 
     @Autowired
     private UserOptionsValidator optionsValidator;
+
+    @Autowired
+    private UserFormForTechnicalSupportValidator userForSupportValidator;
 
     @Autowired
     private CodingService codingService;
@@ -246,6 +250,10 @@ public class UserController {
     public String support(@ModelAttribute("userFormForTechnicalSupport") UserFormForTechnicalSupport userForSupport,
                           BindingResult bindingResult,
                           Model model) throws UnsupportedEncodingException {
+        this.userForSupportValidator.validate(userForSupport, bindingResult);
+        if (bindingResult.hasErrors())
+            return "support";
+
         userForSupport.setName(codingService.decoding(userForSupport.getName()));
         userForSupport.setDescription(codingService.decoding(userForSupport.getDescription()));
         userForSupport.setEmail(codingService.decoding(userForSupport.getEmail()));

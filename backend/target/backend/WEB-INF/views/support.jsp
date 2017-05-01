@@ -3,6 +3,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Deal | Support</title>
     <!-- Facebook and Twitter integration -->
     <meta property="og:title" content=""/>
@@ -51,8 +53,7 @@
                             <li><a href="#">Профиль</a></li>
                             <li><a href="#">Найти услугу</a></li>
                             <li><a href="#">Предложить услугу</a></li>
-                            <li><a href="#">Поддержка</a></li>
-                            <%--make this button cloudy--%>
+                            <li><a href="#">Поддержка</a></li>        <%--make support button cloudy--%>
                             <li class="btn-cta"><a href="#"><span>Начать</span></a></li>
                         </ul>
                     </div>
@@ -79,7 +80,8 @@
                             <div class="row form-group ">
                                 <div class="col-md-12 ${status.error ? 'has-error' : ''}">
                                     <label>Ваше Имя</label>
-                                    <form:input maxlength="60" path="name" name="name" type="text" class="form-control"
+                                    <form:input minlenght="2" maxlength="60" path="name" name="name" type="text"
+                                                class="form-control"
                                                 placeholder="Иван"
                                                 autofocus="true"/>
                                     <form:errors path="name"/>
@@ -90,7 +92,8 @@
                             <div class="row form-group">
                                 <div class="col-md-12 ${status.error ? 'has-error' : ''}">
                                     <label for="email">E-mail</label>
-                                    <form:input maxlength="100" path="email" name="E-mail" type="email" class="form-control"
+                                    <form:input maxlength="100" path="email" name="E-mail" type="email"
+                                                class="form-control"
                                                 placeholder="ivan.ivanov@gmail.com"
                                                 autofocus="true"/>
                                     <form:errors path="email"/>
@@ -101,7 +104,8 @@
                             <div class="row form-group">
                                 <div class="col-md-12 ${status.error ? 'has-error' : ''}">
                                     <label>Тема</label>
-                                    <form:input maxlength="100" path="subject" name="theme" type="text" class="form-control"
+                                    <form:input maxlength="100" path="subject" name="theme" type="text"
+                                                class="form-control"
                                                 placeholder="Проблема с регистрацией"
                                                 autofocus="true"/>
                                     <form:errors path="subject"/>
