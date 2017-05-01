@@ -1,7 +1,5 @@
 package springbackend.model;
 
-import org.springframework.web.bind.annotation.CrossOrigin;
-
 import javax.persistence.*;
 import java.util.Date;
 import java.util.Set;
@@ -38,11 +36,6 @@ public class User {
     @Transient
     private String confirmPassword;
 
-    @ManyToMany
-    @JoinTable(name = "user_roles", joinColumns = @JoinColumn(name = "user_id"),
-            inverseJoinColumns = @JoinColumn(name = "role_id"))
-    private Set<Role> roles;
-
     @Column(name = "first_name")
     private String firstName;
 
@@ -50,14 +43,22 @@ public class User {
     private String gender;
 
     @Column(name = "date_of_birth")
-    private Date dateOfBirth;
+    private String dateOfBirth;
 
     @Column(name = "country")
     private String country;
 
     @Column(name = "avatar")
-    private byte[] avatar;
+    private String avatar;
 
+    @ManyToMany
+    @JoinTable(name = "user_roles", joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "role_id"))
+    private Set<Role> roles;
+
+    /*@OneToMany(mappedBy = "user", fetch = FetchType.LAZY, orphanRemoval = true)
+    private Set<Service> services;
+*/
     public Long getId() {
         return id;
     }
@@ -122,14 +123,6 @@ public class User {
         this.confirmPassword = confirmPassword;
     }
 
-    public Set<Role> getRoles() {
-        return roles;
-    }
-
-    public void setRoles(Set<Role> roles) {
-        this.roles = roles;
-    }
-
     public String getFirstName() {
         return firstName;
     }
@@ -146,11 +139,11 @@ public class User {
         this.gender = gender;
     }
 
-    public Date getDateOfBirth() {
+    public String getDateOfBirth() {
         return dateOfBirth;
     }
 
-    public void setDateOfBirth(Date dateOfBirth) {
+    public void setDateOfBirth(String dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
 
@@ -162,15 +155,23 @@ public class User {
         this.country = country;
     }
 
-    public byte[] getAvatar() {
+    public String getAvatar() {
         return avatar;
     }
 
-    public void setAvatar(byte[] avatar) {
+    public void setAvatar(String avatar) {
         this.avatar = avatar;
     }
 
-    /*public String toString() {
+    public Set<Role> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(Set<Role> roles) {
+        this.roles = roles;
+    }
+
+/*public String toString() {
         return "User{" +
                 "id=" + id +
                 ", username='" + username + '\'' +

@@ -1,6 +1,10 @@
+<%@ page import="org.springframework.security.core.Authentication" %>
+<%@ page import="org.springframework.security.core.context.SecurityContextHolder" %>
+<%@ page import="java.io.OutputStream" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%@ taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <c:set var="contextPath" value="${pageContext.request.contextPath}"/>
@@ -65,11 +69,18 @@
                     <div class="col-sm-4 col-xs-12">
                         <div id="gtco-logo"><a href="${pageContext.request.contextPath}/main">Deal <em></em></a></div>
                     </div>
+                    <form method="post" action="${pageContext.request.contextPath}/search_services">
+                        <p>
+                            <input type="search" name="q"
+                                   placeholder="Поиск услуг"> <%--ВОТ ОН ЕБАНЫЙ ПОИСК!!!!!!!!!!!!!!!!!!!!!--%>
+                            <input type="submit" value="Найти">
+                        </p>
+                    </form>
                     <div class="col-xs-8 text-right menu-1">
                         <ul>
                             <li><a href="#">Профиль</a></li>
                             <li><a href="#">Найти услугу</a></li>
-                            <li><a href="#">Предложить услугу</a></li>
+                            <li><a href="${pageContext.request.contextPath}/add_service">Предложить услугу</a></li>
                             <li><a href="${pageContext.request.contextPath}/support">Поддержка</a></li>
                             <li class="btn-cta"><a href="#"><span>Начать</span></a></li>
                         </ul>
@@ -89,9 +100,7 @@
                                 <span class="intro-text-small">Добро пожаловать в Deal</span>
                                 <h1>Покупай и продавай вместе с нами</h1>
                             </div>
-
                             <div class="col-md-5 animate-box" data-animate-effect="fadeInRight">
-
                                 <!-- До регистрации -->
                                 <div class="form-wrap">
                                     <div class="tab">
@@ -102,7 +111,6 @@
                                         </ul>
                                         <div class="tab-content">
                                             <div class="tab-content-inner active" data-content="signup">
-
                                                 <form:form method="POST" modelAttribute="userForm"
                                                            action="/registration"
                                                            class="form-signin">
@@ -121,9 +129,9 @@
                                                     </div>
                                                     <div class="row form-group">
                                                         <div class="col-md-12">
-                                                            <spring:bind path="username">
+                                                            <spring:bind path="login">
                                                                 <div class="form-group ${status.error ? 'has-error' : ''}">
-                                                                    <label for="username">Логин</label>
+                                                                    <label for="login">Логин</label>
                                                                     <form:input type="text" path="login"
                                                                                 class="form-control"
                                                                                 placeholder="PussySlayer"/>
@@ -171,7 +179,6 @@
 
                                             <div class="tab-content-inner" data-content="login">
                                                 <form method="POST" action="${contextPath}/login" class="form-signin">
-
                                                     <div class="form-group ${error != null ? 'has-error' : ''}">
                                                         <div class="row form-group">
                                                             <div class="col-md-12">
@@ -232,7 +239,7 @@
                                                         </div>
                                                         <div class="col-md-6">
                                                             <img class="profile-icon"
-                                                                 src="http://ic.pics.livejournal.com/v_kosmetikovna/64617808/63542/63542_900.jpg">
+                                                                 src="${pageContext.request.contextPath}/resources/images/unknownAvatar.png">
                                                         </div>
                                                         <div class="col-md-3 vertical-centering">
                                                             <div class="navigation">
@@ -308,13 +315,20 @@
                                                                         class="mail circular icon"></i></a>
                                                             </div>
                                                         </div>
+
                                                         <div class="col-md-6">
-                                                            <img class="profile-icon"
-                                                                 src="http://ic.pics.livejournal.com/v_kosmetikovna/64617808/63542/63542_900.jpg">
+                                                            <c:if test="${currentUser.avatar != null}">
+                                                                <img class="profile-icon"
+                                                                     src="${currentUser.avatar}">
+                                                            </c:if>
+                                                            <c:if test="${currentUser.avatar == null}">
+                                                                <img class="profile-icon"
+                                                                     src="${pageContext.request.contextPath}/resources/images/unknownAvatar.png">
+                                                            </c:if>
                                                         </div>
-                                                        <div class="col-md-3 vertical-centering">
+                                                        <div class=" col-md-3 vertical-centering">
                                                             <div class="navigation">
-                                                                <a class="col-md-12" href="#"><i
+                                                                <a class="col-md-12" href="${pageContext.request.contextPath}/show_your_services"><i
                                                                         class="shop circular icon"></i></a>
                                                                 <a class="col-md-12" href="#"><i
                                                                         class="mail circular icon"></i></a>
@@ -322,9 +336,8 @@
                                                                         class="mail circular icon"></i></a>
                                                             </div>
                                                         </div>
-
                                                         <form:form method="POST"
-                                                                   action="uploadFile?${_csrf.parameterName}=${_csrf.token}"
+                                                                   action="uploadFile/loadAvatar?${_csrf.parameterName}=${_csrf.token}"
                                                                    enctype="multipart/form-data">
                                                             <div class="col-md-12 text-center">
                                                                 <input id="upload" class="hide" type="file" name="file">
@@ -338,7 +351,6 @@
                                                             <input type="hidden" name="${_csrf.parameterName}"
                                                                    value="${_csrf.token}"/>
                                                         </form:form>
-
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-md-12">
@@ -405,18 +417,18 @@
     <div class="item">
         <div class="item">
             <img src="http://great-usa.ru/wp-content/uploads/2016/12/piano-1406526_1920.jpg" alt="image">
-            <a href="#" class="pop-up-overlay text-center">
+            <a href="${pageContext.request.contextPath}/show_all_services/1category" class="pop-up-overlay text-center">
                 <div class="desc">
-                    <h3>Перевозки</h3>
+                    <h3>Категория 1</h3>
                     <span>Переезд</span>
                 </div>
             </a>
         </div>
         <div class="item">
             <img src="http://great-usa.ru/wp-content/uploads/2016/12/piano-1406526_1920.jpg" alt="image">
-            <a href="#" class="pop-up-overlay text-center">
+            <a href="${pageContext.request.contextPath}/show_all_services/2category" class="pop-up-overlay text-center">
                 <div class="desc">
-                    <h3>Перевозки</h3>
+                    <h3>Категория 2</h3>
                     <span>Переезд</span>
                 </div>
             </a>
@@ -425,9 +437,9 @@
     <div class="item">
         <div class="item">
             <img src="http://great-usa.ru/wp-content/uploads/2016/12/piano-1406526_1920.jpg" alt="image">
-            <a href="#" class="pop-up-overlay text-center">
+            <a href="${pageContext.request.contextPath}/show_all_services/3category" class="pop-up-overlay text-center">
                 <div class="desc">
-                    <h3>Перевозки</h3>
+                    <h3>Категория 3</h3>
                     <span>Переезд</span>
                 </div>
             </a>
@@ -748,6 +760,7 @@
         </div>
     </div>
 </div><!-- end: fh5co-blog-section -->
+
 <div class="fh5co-parallax"
      style="background-image: url(https://cdn2.professor-falken.com/wp-content/uploads/2017/01/hombre-cuello-camisa-corbata-barba-mano-Fondos-de-Pantalla-HD-professor-falken.com_.jpg);"
      data-stellar-background-ratio="0.5">
@@ -763,6 +776,7 @@
         </div>
     </div>
 </div><!-- end: fh5co-parallax -->
+
 <footer>
     <div id="footer" class="fh5co-border-line">
         <div class="container">

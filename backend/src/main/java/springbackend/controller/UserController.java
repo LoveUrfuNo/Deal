@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.multipart.MultipartFile;
 import springbackend.service.implementation.EmailServiceImpl;
 import springbackend.model.User;
 import springbackend.service.SecurityService;
@@ -21,8 +20,6 @@ import springbackend.validator.UserOptionsValidator;
 import springbackend.validator.UserValidator;
 
 import java.io.*;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.*;
 
 /**
@@ -31,7 +28,7 @@ import java.util.*;
 
 @Controller
 public class UserController {
-    public static final Integer SIZE_OF_GENERATED_STRING = 32;
+    private static final Integer SIZE_OF_GENERATED_STRING = 32;
 
     private static final Long ROLE_USER = 1L;
 
@@ -56,9 +53,9 @@ public class UserController {
     @Autowired
     private UserOptionsValidator optionsValidator;
 
-    @RequestMapping(value = "/accessDenied", method = RequestMethod.GET)
+    @RequestMapping(value = "/redirect", method = RequestMethod.GET)
     public String redirect() {
-        return "access-denied";
+        return "redirect";
     }
 
     @RequestMapping(value = "/main", method = RequestMethod.GET)
@@ -74,14 +71,16 @@ public class UserController {
     @RequestMapping(value = "/profile", method = RequestMethod.GET)
     public String profile(Model model) {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        User user = userService.findByUsername(auth.getName());
+        User user = this.userService.findByUsername(auth.getName());
         if (user.getFirstName() != null)
             model.addAttribute("name", user.getFirstName());
         else
             model.addAttribute("name", user.getLogin());
 
+        model.addAttribute("username", user.getUsername());
         model.addAttribute("userForm", new User());
         model.addAttribute("status", "login");
+        model.addAttribute("currentUser", user);
 
         return "main";
     }
@@ -89,7 +88,7 @@ public class UserController {
     @RequestMapping(value = "/profile/{status}", method = RequestMethod.GET)
     public String profile(@PathVariable("status") String status, Model model) {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        User user = userService.findByUsername(auth.getName());
+        User user = this.userService.findByUsername(auth.getName());
 
         model.addAttribute("name", user.getLogin());
         model.addAttribute("userForm", new User());
@@ -108,6 +107,9 @@ public class UserController {
                 break;
             case "icloud.com":
                 resultEmailService = "icloud.com";
+                break;
+            case "yandex.ru":
+                resultEmailService = "yandex.ru";
                 break;
             case "mail.com":
                 resultEmailService = "mail.com";
@@ -151,14 +153,14 @@ public class UserController {
 
     @RequestMapping(value = "/options", method = RequestMethod.POST)
     public String options(@ModelAttribute("userOptionForm") User user, BindingResult bindingResult) throws UnsupportedEncodingException {
-        optionsValidator.validate(user, bindingResult);
+        this.optionsValidator.validate(user, bindingResult);
         if (bindingResult.hasErrors())
             return "advanced-options";
 
         User resultUser;
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         if (auth.getAuthorities().stream().findFirst().orElse(null).getAuthority().equals("ROLE_USER")) {
-            resultUser = userService.findByUsername(auth.getName());
+            resultUser = this.userService.findByUsername(auth.getName());
         } else if (auth.getAuthorities().stream().findFirst().orElse(null).getAuthority().equals("ROLE_NOT_ACTIVATED_USER")) {
             return "redirect:/profile/registration";
         } else if (auth.getAuthorities().stream().findFirst().orElse(null).getAuthority().equals("ROLE_ANONYMOUS")) {
@@ -167,25 +169,18 @@ public class UserController {
             return "service-entrance";
         }
 
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.US);
-        try {
-            resultUser.setDateOfBirth(simpleDateFormat.parse("1997-03-12"));
-            resultUser.setFirstName(new String(new String(user.getFirstName().getBytes("ISO-8859-1"), "Cp1251")
-                    .getBytes("windows-1251"), "UTF-8"));
-            resultUser.setGender(user.getGender());
-            resultUser.setCountry(user.getCountry());
+        resultUser.setDateOfBirth(user.getDateOfBirth());
+        resultUser.setFirstName(new String(user.getFirstName().getBytes("ISO8859-1"), "UTF-8"));
+        resultUser.setGender(user.getGender());
+        resultUser.setCountry(user.getCountry());
 
-            userService.saveAndFlush(resultUser, ROLE_USER);
-        } catch (ParseException e) {
-            logger.debug(String.format("Error set dateOfBirth for %s", resultUser.getUsername()));
-            e.printStackTrace();
-        }
+        this.userService.saveAndFlush(resultUser, ROLE_USER);
         return "redirect:/profile";
     }
 
     @RequestMapping(value = "/registration", method = RequestMethod.POST)
     public String registration(@ModelAttribute("userForm") User user, BindingResult bindingResult, Model model) {
-        userValidator.validate(user, bindingResult);
+        this.userValidator.validate(user, bindingResult);
         if (bindingResult.hasErrors())
             return "main";
 
@@ -193,8 +188,8 @@ public class UserController {
 
         user.setKeyForRegistrationConfirmUrl(EmailServiceImpl.generateString(SIZE_OF_GENERATED_STRING));
         user.setRegistrationConfirmed(false);    //user didn't confirm acc by email message yet
-        userService.save(user, ROLE_NOT_ACTIVATED_USER);
-        securityService.autoLogin(user.getUsername(), user.getConfirmPassword());
+        this.userService.save(user, ROLE_NOT_ACTIVATED_USER);
+        this.securityService.autoLogin(user.getUsername(), user.getConfirmPassword());
 
         Map map = new HashMap();
         map.put("from", "DEAL");
@@ -203,7 +198,7 @@ public class UserController {
         map.put("key_for_registration_confirm_url", user.getKeyForRegistrationConfirmUrl());
         map.put("id", user.getId());
 
-        if (emailServiceImpl.sendEmail(MESSAGE, map))      //TODO: add output in logger
+        if (this.emailServiceImpl.sendEmail(MESSAGE, map))      //TODO: add output in logger
             System.out.println("Message was sent");
         else
             System.out.println("Error: message wasn't sent");
@@ -211,60 +206,29 @@ public class UserController {
         return "redirect:/profile/registration";
     }
 
-    @RequestMapping(value = {"/authentication"}, method = RequestMethod.GET)
+    @RequestMapping(value = "/authentication", method = RequestMethod.GET)
     public String authentication(Model model) {
         model.addAttribute("userForm", new User());
 
         return "redirect:/profile";
     }
 
-    @RequestMapping(value = {"/confirm-acc/{token}/{id}"}, method = RequestMethod.GET)
-    public String confirmAcc(@PathVariable("token") String token, @PathVariable("id") Long id, Model model) {
-        User user = userService.findBuId(id);
-        if (!user.getKeyForRegistrationConfirmUrl().equals(token))
+    @RequestMapping(value = "/confirm-acc/{key}/{id}", method = RequestMethod.GET)
+    public String confirmAcc(@PathVariable("key") String key, @PathVariable("id") Long id, Model model) {
+        User user = this.userService.findBuId(id);
+        if (!user.getKeyForRegistrationConfirmUrl().equals(key))
             return "redirect:/main?error";
 
         user.setRegistrationConfirmed(true);
         user.setKeyForRegistrationConfirmUrl(null);
 
-        userService.saveAndFlush(user, ROLE_USER);        //TODO: add output in logger
+        this.userService.saveAndFlush(user, ROLE_USER);        //TODO: add output in logger
 
         return "registration-confirm";
     }
 
-
-    @RequestMapping(value = "/login", method = RequestMethod.GET)
-    public String login(Model model, String error, String logout) {
-        if (error != null) {
-            model.addAttribute("error", "Username or password is incorrect.");
-        }
-
-        if (logout != null) {
-            model.addAttribute("message", "Logged out successfully.");
-        }
-
-        return "redirect:/profile";
-    }
-
-    @RequestMapping(value = {"/welcome"}, method = RequestMethod.GET)
-    public String welcome() {
-        return "welcome";
-    }
-
-    // Добавлено быдлом
-    @RequestMapping(value = {"/service"}, method = RequestMethod.GET)
-    public String service() {
-        return "add-service";
-    }
-
-    // Добавлено быдлом
     @RequestMapping(value = {"/support"}, method = RequestMethod.GET)
     public String support() {
         return "support";
-    }
-
-    @RequestMapping(value = "/admin", method = RequestMethod.GET)
-    public String admin() {
-        return "admin";
     }
 }

@@ -14,9 +14,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
-/**
- * Created for JavaStudy.ru on 28.02.2016.
- */
 @Service
 public class EmailServiceImpl {
 
