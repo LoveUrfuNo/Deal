@@ -3,7 +3,7 @@ package springbackend.service;
 import java.io.UnsupportedEncodingException;
 
 /**
- * Created by kosty on 01.05.2017.
+ * Service for decoding string from jsp.
  */
 public interface CodingService {
     String decoding(String sourceString) throws UnsupportedEncodingException;
