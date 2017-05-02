@@ -411,7 +411,7 @@
             <div class="row">
                 <div class="col-md-12 text-center">
                     <h2>Мы упрощаем сделки</h2>
-                    <p>Попробуй сам <a href="#">предложить услугу</a></p>
+                    <p>Попробуй сам <a href="${pageContext.request.contextPath}/add_service">предложить услугу</a></p>
                 </div>
             </div>
         </div>

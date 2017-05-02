@@ -55,4 +55,14 @@ public class PersistentUser {
     public void setLastUsed(Date lastUsed) {
         this.lastUsed = lastUsed;
     }
+
+    @Override
+    public String toString() {
+        return "PersistentUser{" +
+                "username='" + username + '\'' +
+                ", series='" + series + '\'' +
+                ", token='" + token + '\'' +
+                ", lastUsed=" + lastUsed +
+                '}';
+    }
 }

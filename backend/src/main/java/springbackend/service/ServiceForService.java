@@ -1,6 +1,7 @@
 package springbackend.service;
 
 import springbackend.model.Service;
+import springbackend.model.User;
 
 import java.util.ArrayList;
 import java.util.List;

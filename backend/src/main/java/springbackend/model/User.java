@@ -2,6 +2,7 @@ package springbackend.model;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -57,8 +58,8 @@ public class User {
     private Set<Role> roles;
 
     /*@OneToMany(mappedBy = "user", fetch = FetchType.LAZY, orphanRemoval = true)
-    private Set<Service> services;
-*/
+    private List<Service> services;*/
+
     public Long getId() {
         return id;
     }
@@ -171,13 +172,22 @@ public class User {
         this.roles = roles;
     }
 
-/*public String toString() {
+    /*public List<Service> getServices() {
+        return services;
+    }
+
+    public void setServices(List<Service> services) {
+        this.services = services;
+    }*/
+
+    /*@Override
+    public String toString() {
         return "User{" +
                 "id=" + id +
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
                 ", isRegistrationConfirmed=" + isRegistrationConfirmed +
-                ", keyForRegistrationConfirmUrl='" + keyForRegistrationConfirmUrl + '\'' +
+                ", keyForRegistrationConfirmUrl='" + keyForRegistrationConfirmUrl + '\'' +            //TODO: update toString()
                 ", confirmPassword='" + confirmPassword + '\'' +
                 ", roles=" + roles +
                 '}';

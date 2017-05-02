@@ -1,9 +1,5 @@
 package springbackend.model;
 
-
-import org.springframework.stereotype.Component;
-
-@Component
 public class ServiceEntrance {
     private String enteredPassword;
 
@@ -19,5 +15,13 @@ public class ServiceEntrance {
 
     public void setEnteredPassword(String enteredPassword) {
         this.enteredPassword = enteredPassword;
+    }
+
+    @Override
+    public String toString() {
+        return "ServiceEntrance{" +
+                "enteredPassword='" + enteredPassword + '\'' +
+                ", correctPassword='" + correctPassword + '\'' +
+                '}';
     }
 }

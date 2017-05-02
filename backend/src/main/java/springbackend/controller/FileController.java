@@ -3,7 +3,7 @@ package springbackend.controller;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cache.annotation.Cacheable;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -21,7 +21,6 @@ import java.io.IOException;
  * Controller for operations with download files
  */
 
-@Cacheable
 @Controller
 public class FileController {
     @Autowired
@@ -34,8 +33,11 @@ public class FileController {
     private static final Logger logger = LoggerFactory.getLogger(FileController.class);
 
     @RequestMapping(value = "/uploadFile/{operation}", method = RequestMethod.POST)
-    public String uploadFile(@RequestParam("file") MultipartFile file, @PathVariable("operation") String operation, Model model) throws IOException {// имена параметров (тут - "file") - из формы JSP.
-        User currentUser = userService.findByUsername(SecurityContextHolder.getContext().getAuthentication().getName());
+    public String uploadFile(@RequestParam("file") MultipartFile file,
+                             @PathVariable("operation") String operation,
+                             Model model) throws IOException {
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        User currentUser = userService.findByUsername(auth.getName());
 
         File uploadedFile = null;
         String name = null;

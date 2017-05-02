@@ -44,4 +44,14 @@ public class UserFormForTechnicalSupport {
     public void setDescription(String description) {
         this.description = description;
     }
+
+    @Override
+    public String toString() {
+        return "UserFormForTechnicalSupport{" +
+                "name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", subject='" + subject + '\'' +
+                ", description='" + description + '\'' +
+                '}';
+    }
 }
