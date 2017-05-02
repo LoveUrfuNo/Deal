@@ -44,7 +44,16 @@
             <form:textarea path="description" maxlength="3000" rows="4"/>
             <form:errors path="description"/>
         </div>
+
     </spring:bind>
+    <div class="field">
+        <label>Загрузите фото</label>
+        <input id="uploadImgage" type="file" accept="image/*" name="file">
+    </div>
+    <div class="field">
+        <label>Загрузите видео</label>
+        <input id="uploadVideo" type="file" accept="video/*" name="file">
+    </div>
     <spring:bind path="serviceCost">
         <div class="field ${status.error ? 'has-error' : ''}">
             <label>Стоимость услуги</label>
@@ -65,10 +74,12 @@
     </spring:bind>
     <spring:bind path="country">
         <div class="field">
+            <label>Страна</label>
             <div class="ui fluid search selection dropdown">
                 <input type="hidden" name="country">
                 <i class="dropdown icon"></i>
                 <div class="default text">Выберите страну</div>
+
                 <div class="menu">
                     <div class="item" data-value="af"><i class="af flag"></i>Afghanistan</div>
                     <div class="item" data-value="ax"><i class="ax flag"></i>Aland Islands</div>
@@ -315,6 +326,19 @@
                 </div>
             </div>
         </div>
+        <div class="field">
+            <label>Город</label>
+            <select class="ui fluid search dropdown" multiple="">
+                <option value="">Город</option>
+
+                <option value="1">Москва</option>
+                <option value="2">Екатеринбург</option>
+
+                <option value="3">Париж</option>
+                <option value="4">Перпиньян</option>
+                <option value="5">Милан</option>
+            </select>
+        </div>
     </spring:bind>
 
     <spring:bind path="typeOfService">
@@ -350,6 +374,8 @@
 <script src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js"></script>
 <!--Semantic UI-->
 <script src="${pageContext.request.contextPath}/resources/Semantic-UI-CSS-master/semantic.min.js"></script>
+<!-- Utilities -->
+<script src="${pageContext.request.contextPath}/resources/js/utilities.js"></script>
 <!--Main-->
 <script src="${pageContext.request.contextPath}/resources/js/add-service.js"></script>
 </body>

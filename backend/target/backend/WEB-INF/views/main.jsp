@@ -340,12 +340,12 @@
                                                                    action="uploadFile/loadAvatar?${_csrf.parameterName}=${_csrf.token}"
                                                                    enctype="multipart/form-data">
                                                             <div class="col-md-12 text-center">
-                                                                <input id="upload" class="hide" type="file" name="file">
-                                                                <label class="btn btn-info"
+                                                                <input id="upload" type="file" accept="image/*" name="file">
+                                                                <label id="upload1" class="btn btn-info"
                                                                        for="upload">Загрузить</label>
                                                             </div>
                                                             <div class="col-md-12 text-center">
-                                                                <input class="btn btn-warning" type="submit"
+                                                                <input class="btn btn-warning" name="upload" type="submit"
                                                                        value="Upload">
                                                             </div>
                                                             <input type="hidden" name="${_csrf.parameterName}"
@@ -820,6 +820,9 @@
 
 <!-- Stellar -->
 <script src="${pageContext.request.contextPath}/resources/js/jquery.stellar.min.js"></script>
+
+<!-- Utilities -->
+<script src="${pageContext.request.contextPath}/resources/js/utilities.js"></script>
 
 <!-- Main JS (Do not remove) -->
 <script src="${pageContext.request.contextPath}/resources/js/main.js"></script>
