@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/Semantic-UI-CSS-master/semantic.min.css">
     <!-- Main  -->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/add-service.css">
-
 </head>
 <body>
 
@@ -78,7 +77,6 @@
                 <input type="hidden" name="country">
                 <i class="dropdown icon"></i>
                 <div class="default text">Выберите страну</div>
-
                 <div class="menu">
                     <div class="item" data-value="af"><i class="af flag"></i>Afghanistan</div>
                     <div class="item" data-value="ax"><i class="ax flag"></i>Aland Islands</div>
@@ -329,10 +327,8 @@
             <label>Город</label>
             <select class="ui fluid search dropdown" multiple="">
                 <option value="">Город</option>
-
                 <option value="1">Москва</option>
                 <option value="2">Екатеринбург</option>
-
                 <option value="3">Париж</option>
                 <option value="4">Перпиньян</option>
                 <option value="5">Милан</option>

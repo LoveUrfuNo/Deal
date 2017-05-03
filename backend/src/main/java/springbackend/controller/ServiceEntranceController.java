@@ -19,7 +19,6 @@ public class ServiceEntranceController {
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String serviceEntrance(Model model) {
         model.addAttribute("userForm", new ServiceEntrance());
-
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         if (auth.getAuthorities().stream().findFirst().orElse(null).getAuthority().equals("ROLE_USER"))
             return "redirect";
@@ -30,10 +29,9 @@ public class ServiceEntranceController {
     @RequestMapping(value = "/main", method = RequestMethod.POST)
     public String main(@ModelAttribute("userForm") ServiceEntrance userForm, Model model) {
         model.addAttribute("userForm", new User());
-        if (userForm.getEnteredPassword().equals(userForm.getCorrectPassword())) {
+        if (userForm.getEnteredPassword().equals(userForm.getCorrectPassword()))
             return "main";
-        } else {
+        else
             return "forgot-service-password";
-        }
     }
 }
