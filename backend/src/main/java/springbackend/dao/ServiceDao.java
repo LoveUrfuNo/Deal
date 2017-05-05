@@ -10,7 +10,7 @@ import java.util.List;
 public interface ServiceDao extends JpaRepository<Service, Long> {
     void delete(Service service);
 
-    //List<Service> findAllByUser(User user);
+    Service findById(Long id);
 
     List<Service> findAllByUserId(Long userId);
 

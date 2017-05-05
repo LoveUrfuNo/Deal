@@ -13,22 +13,22 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/Semantic-UI-CSS-master/semantic.min.css">
     <!-- Main  -->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/add-service.css">
-
 </head>
 <body>
-
 <form:form method="POST" modelAttribute="serviceForm"
            action="/add_service"
            class="ui form">
     <spring:bind path="nameOfService">
         <div class="field ${status.error ? 'has-error' : ''}">
             <label>Название услуги</label>
-            <form:input maxlength="60" path="nameOfService" type="text" name="first-name" placeholder="Сигна"/>
+            <form:input minlength="2" maxlength="60" path="nameOfService" type="text" name="first-name"
+                        placeholder="Сигна"/>
             <form:errors path="nameOfService"/>
         </div>
     </spring:bind>
     <spring:bind path="category">
         <div class="field ${status.error ? 'has-error' : ''}">
+            <label>Категория</label>
             <form:select path="category" class="ui fluid search dropdown" name="category">
                 <option value="">Категория</option>
                 <option value="1category">1 категория</option>
@@ -41,15 +41,23 @@
     <spring:bind path="description">
         <div class="field ${status.error ? 'has-error' : ''}">
             <label>Описание услуги</label>
-            <form:textarea path="description" maxlength="3000" rows="4"/>
+            <form:textarea path="description" minlength="10" maxlength="3000" rows="4"/>
             <form:errors path="description"/>
         </div>
     </spring:bind>
+    <div class="field">
+        <label>Загрузите фото</label>
+        <input id="uploadImgage" type="file" accept="image/*" name="file">
+    </div>
+    <div class="field">
+        <label>Загрузите видео</label>
+        <input id="uploadVideo" type="file" accept="video/*" name="file">
+    </div>
     <spring:bind path="serviceCost">
         <div class="field ${status.error ? 'has-error' : ''}">
             <label>Стоимость услуги</label>
             <div class="ui right labeled input">
-                <form:input path="serviceCost" type="text" name="cost" placeholder="100" maxlength="10"/>
+                <form:input path="serviceCost" type="number" name="cost" placeholder="100" min="0" max="9999999999"/>
                 <spring:bind path="currency">
                     <div class="ui dropdown label ${status.error ? 'has-error' : ''}">
                         <div class="text">₽</div>
@@ -69,6 +77,7 @@
     </spring:bind>
     <spring:bind path="country">
         <div class="field  ${status.error ? 'has-error' : ''}">
+            <label>Страна</label>
             <div class="ui fluid search selection dropdown">
                 <input type="hidden" name="country">
                 <i class="dropdown icon"></i>
@@ -320,8 +329,22 @@
             </div>
         </div>
     </spring:bind>
+    <spring:bind path="city">
+        <div class="field ${status.error ? 'has-error' : ''}">
+            <label>Город</label>
+            <form:select path="city" class="ui fluid search dropdown" name="city">
+                <option value="">Город</option>
+                <option value="milan">Милан</option>
+                <option value="krasnoyralsk">Красноуральск</option>
+                <option value="moskva">Москва</option>
+                <option value="stockton">Стоктон209</option>
+            </form:select>
+            <form:errors path="category"/>
+        </div>
+    </spring:bind>
     <spring:bind path="typeOfService">
         <div class="field ${status.error ? 'has-error' : ''}">
+            <label>Тип услуги</label>
             <div class="ui selection dropdown">
                 <form:input path="typeOfService" type="hidden" name=""/>
                 <i class="dropdown icon"></i>
@@ -343,7 +366,7 @@
     <button class="ui button" type="submit">Добавить</button>
 </form:form>
 
-<a href="${pageContext.request.contextPath}/redirect" class="col-sm-12 btn btn-primary">Кнопка назад</a>
+<a href="${pageContext.request.contextPath}/redirect" class="col-sm-12 btn btn-primary">Назад</a>
 
 <!-- jQuery -->
 <script src="${pageContext.request.contextPath}/resources/js/jquery.min.js"></script>

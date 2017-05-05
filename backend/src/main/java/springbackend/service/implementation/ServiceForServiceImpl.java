@@ -42,6 +42,11 @@ public class ServiceForServiceImpl implements ServiceForService {
     }
 
     @Override
+    public Service findById(Long id) {
+        return this.serviceDao.findById(id);
+    }
+
+    @Override
     public List<Service> findAllByCategory(String category) {
         return this.serviceDao.findAllByCategory(category);
     }

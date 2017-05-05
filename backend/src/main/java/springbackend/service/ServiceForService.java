@@ -19,6 +19,8 @@ public interface ServiceForService {
 
     Service findByUserId(Long userId);
 
+    Service findById(Long id);
+
     List<Service> findAllByCategory(String category);
 
     List<Service> findAllByUserId(Long userId);

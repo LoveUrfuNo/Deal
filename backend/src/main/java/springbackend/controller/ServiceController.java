@@ -54,7 +54,6 @@ public class ServiceController {
 
         service.setNameOfService(codingService.decoding(service.getNameOfService()));
         service.setDescription(codingService.decoding(service.getDescription()));
-        service.setCity(user.getLogin() + "'s" + " city");
 
         this.serviceForService.save(service);
 
@@ -88,12 +87,9 @@ public class ServiceController {
         return "searching-results";
     }
 
-    @RequestMapping(value = "/delete", method = RequestMethod.GET)
-    public String deleteService() {
-        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        User user = this.userService.findByUsername(auth.getName());
-
-        Service service = this.serviceForService.findByUserId(user.getId());
+    @RequestMapping(value = "/delete/{id}", method = RequestMethod.GET)
+    public String deleteService(@PathVariable(value = "id") Long id) {
+        Service service = this.serviceForService.findById(id);
         this.serviceForService.delete(service);
 
         return "redirect:/show_your_services";
