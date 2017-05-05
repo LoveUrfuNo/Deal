@@ -10,6 +10,6 @@
         <h4>${service.nameOfService}</h4><a href="/delete/${service.id}">Удалить</a>
     </c:forEach>
     <br><br>
-    <a href="${pageContext.request.contextPath}/redirect" class="col-sm-12 btn btn-primary">Кнопка назад</a>
+    <a href="${pageContext.request.contextPath}/redirect" class="col-sm-12 btn btn-primary">Назад</a>
 </body>
 </html>

@@ -44,10 +44,10 @@ public class Service {
 
     @Column(name = "currency")
     private String currency;
-/*
+
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id", nullable = true)
-    private User user;*/
+    @JoinColumn(name = "user_id", nullable = false)
+    private User user;
 
     public Long getId() {
         return id;
@@ -137,13 +137,13 @@ public class Service {
         this.currency = currency;
     }
 
-    /*public User getUser() {
+    public User getUser() {
         return user;
     }
 
     public void setUser(User user) {
         this.user = user;
-    }*/
+    }
 
     /*@Override
     public String toString() {

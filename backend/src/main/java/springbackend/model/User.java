@@ -57,8 +57,8 @@ public class User {
             inverseJoinColumns = @JoinColumn(name = "role_id"))
     private Set<Role> roles;
 
-    /*@OneToMany(mappedBy = "user", fetch = FetchType.LAZY, orphanRemoval = true)
-    private List<Service> services;*/
+    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY, orphanRemoval = true)
+    private List<Service> services;
 
     public Long getId() {
         return id;
@@ -172,13 +172,13 @@ public class User {
         this.roles = roles;
     }
 
-    /*public List<Service> getServices() {
+    public List<Service> getServices() {
         return services;
     }
 
     public void setServices(List<Service> services) {
         this.services = services;
-    }*/
+    }
 
     /*@Override
     public String toString() {
