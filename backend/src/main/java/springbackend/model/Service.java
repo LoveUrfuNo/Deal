@@ -15,6 +15,18 @@ public class Service {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    /*@OneToOne
+    @JoinColumn(name = "user_id")
+    private Long user_id;
+
+    public Long getUser_id() {
+        return user_id;
+    }
+
+    public void setUser_id(Long user_id) {
+        this.user_id = user_id;
+    }*/
+
     @Column(name = "userid")
     private Long userId;
 
@@ -22,7 +34,7 @@ public class Service {
     private String nameOfService;
 
     @Column(name = "username")
-    private String usernameOfSeller;
+    private String usernameOfSeller;           //TODO: delete this
 
     @Column(name = "cost")
     private Integer serviceCost;
@@ -45,8 +57,8 @@ public class Service {
     @Column(name = "currency")
     private String currency;
 
-    /*@ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id", nullable = false)
+   /* @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id")
     private User user;*/
 
     public Long getId() {

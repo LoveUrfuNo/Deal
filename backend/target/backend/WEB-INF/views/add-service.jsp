@@ -46,15 +46,10 @@
         </div>
     </spring:bind>
 
-    <form action="#uploader">
-        <label>Загрузите фото</label>
-        <input class="form-uploader__input js-uploader-input" type="file"
-               accept="image/gif,image/png,image/jpeg,image/pjpeg"
-               name="image" multiple="multiple" formaction="/uploadFile/loadServicePhoto" formmethod="post">
-        <input type="hidden" name="${_csrf.parameterName}"
-               value="${_csrf.token}"/>
-    </form>
-    <iframe name="uploader" id="uploader" src="${pageContext.request.contextPath}/uploadFile/loadServicePhoto?${_csrf.parameterName}=${_csrf.token}"></iframe>
+    <%-- <label>Загрузите фото</label>
+     <input class="form-uploader__input js-uploader-input" type="file"
+            accept="image/gif,image/png,image/jpeg,image/pjpeg"
+            name="image" multiple="multiple" formaction="/uploadFile/loadServicePhoto" formmethod="post">--%>
 
     <div class="field">
         <label>Загрузите видео</label>
@@ -68,7 +63,7 @@
                 <spring:bind path="currency">
                     <div class="ui dropdown label ${status.error ? 'has-error' : ''}">
                         <div class="text">₽</div>
-                        <input type="hidden" name="currency">
+                        <form:input path="currency" type="hidden" name="currency"/>
                         <i class="dropdown icon"></i>
                         <div class="menu">
                             <div data-value="ruble" class="item">₽</div>
@@ -76,6 +71,7 @@
                             <div data-value="euro" class="item">€</div>
                             <div data-value="GBP" class="item">£</div>
                         </div>
+                        <form:errors path="currency"/>
                     </div>
                 </spring:bind>
                 <form:errors path="serviceCost"/>
@@ -86,7 +82,7 @@
         <div class="field  ${status.error ? 'has-error' : ''}">
             <label>Страна</label>
             <div class="ui fluid search selection dropdown">
-                <input type="hidden" name="country">
+                <form:input path="country" type="hidden" name="country"/>
                 <i class="dropdown icon"></i>
                 <div class="default text">Выберите страну</div>
                 <div class="menu">
@@ -333,6 +329,7 @@
                     <div class="item" data-value="zm"><i class="zm flag"></i>Zambia</div>
                     <div class="item" data-value="zw"><i class="zw flag"></i>Zimbabwe</div>
                 </div>
+                <form:errors path="country"/>
             </div>
         </div>
     </spring:bind>

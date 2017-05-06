@@ -5,6 +5,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,6 +15,7 @@ import springbackend.model.User;
 import springbackend.service.CodingService;
 import springbackend.service.ServiceForService;
 import springbackend.service.UserService;
+import springbackend.validator.ServiceValidator;
 
 import java.io.UnsupportedEncodingException;
 import java.util.List;
@@ -33,6 +35,9 @@ public class ServiceController {
     @Autowired
     private UserService userService;
 
+    @Autowired
+    private ServiceValidator serviceValidator;
+
     @RequestMapping(value = "/add_service", method = RequestMethod.GET)
     public String addService(Model model) {
         model.addAttribute("serviceForm", new Service());
@@ -41,7 +46,11 @@ public class ServiceController {
     }
 
     @RequestMapping(value = "/add_service", method = RequestMethod.POST)
-    public String addService(@ModelAttribute(value = "serviceForm") Service service, Model model) throws UnsupportedEncodingException {
+    public String addService(@ModelAttribute(value = "serviceForm") Service service, BindingResult bindingResult) throws UnsupportedEncodingException {
+        this.serviceValidator.validate(service, bindingResult);
+        if (bindingResult.hasErrors())
+            return "add-service";
+
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         User user = this.userService.findByUsername(auth.getName());
 
@@ -74,6 +83,8 @@ public class ServiceController {
     public String showUsersServices(Model model) {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         User user = this.userService.findByUsername(auth.getName());
+
+        //Service service = this.serviceForService.findByUserId(319L);
 
         List<Service> services = this.serviceForService.findAllByUserId(user.getId());
         model.addAttribute("usersServices", services);

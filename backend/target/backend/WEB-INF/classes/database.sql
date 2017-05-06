@@ -77,3 +77,11 @@ CREATE TABLE `deal_users`.`user's_files` (
 )
   ENGINE = InnoDB
   DEFAULT CHARACTER SET = utf8;
+
+ALTER TABLE `deal_users`.`services`
+  ADD CONSTRAINT `user_id`
+FOREIGN KEY (`id`)
+REFERENCES `deal_users`.`users` (`id`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
+

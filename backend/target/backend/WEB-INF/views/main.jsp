@@ -358,7 +358,6 @@
                                                                     <input type="hidden" name="${_csrf.parameterName}"
                                                                            value="${_csrf.token}"/>
                                                                 </form:form>
-                                                                <iframe name="uploader" id="uploadFile/loadAvatar" style="display: none;"></iframe>
                                                             </c:if>
                                                         </div>
                                                         <div class="row">
