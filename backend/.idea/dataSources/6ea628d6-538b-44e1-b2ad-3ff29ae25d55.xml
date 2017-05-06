@@ -70,50 +70,50 @@
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="24" parent="11" name="userid">
-      <Position>2</Position>
-      <DataType>int(11)|0</DataType>
-    </column>
-    <column id="25" parent="11" name="service_name">
-      <Position>3</Position>
-      <DataType>varchar(65)|0</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="26" parent="11" name="username">
+    <column id="24" parent="11" name="username">
       <Position>4</Position>
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;name&apos;</DefaultExpression>
     </column>
-    <column id="27" parent="11" name="cost">
+    <column id="25" parent="11" name="cost">
       <Position>5</Position>
       <DataType>int(10)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="28" parent="11" name="category">
+    <column id="26" parent="11" name="category">
       <Position>6</Position>
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="29" parent="11" name="description">
+    <column id="27" parent="11" name="description">
       <Position>7</Position>
       <DataType>varchar(3001)|0</DataType>
     </column>
-    <column id="30" parent="11" name="country">
+    <column id="28" parent="11" name="country">
       <Position>8</Position>
       <DataType>varchar(65)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="31" parent="11" name="city">
+    <column id="29" parent="11" name="city">
       <Position>9</Position>
       <DataType>varchar(65)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="32" parent="11" name="type_of_service">
+    <column id="30" parent="11" name="type_of_service">
       <Position>10</Position>
       <DataType>enum(&apos;vip&apos;, &apos;notvip&apos;)|0</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;notvip&apos;</DefaultExpression>
+    </column>
+    <column id="31" parent="11" name="service_name">
+      <Position>3</Position>
+      <DataType>varchar(65)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="32" parent="11" name="userid">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
     </column>
     <column id="33" parent="11" name="upload_date">
       <Position>11</Position>

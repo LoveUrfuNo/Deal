@@ -22,9 +22,7 @@ import java.util.Set;
  * Implementation of {@link UserDetailsService} interface.
  */
 
-
 public class UserDetailsServiceImpl extends JdbcDaoImpl {
-
     private static final Long ROLE_NOT_ACTIVATED_USER = 3L;
 
     @Autowired
@@ -33,13 +31,14 @@ public class UserDetailsServiceImpl extends JdbcDaoImpl {
     @Override
     @Transactional(readOnly = true)
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        User user = userService.findByUsername(username);
+        User user = this.userService.findByUsername(username);
         if (user == null)
-            user = userService.findByLogin(username);
+            user = this.userService.findByLogin(username);
 
         if (!user.getRegistrationConfirmed() && !user.getRoles().stream()
-                .findFirst().orElse(null).getId().equals(ROLE_NOT_ACTIVATED_USER))
+                .findFirst().orElse(null).getId().equals(ROLE_NOT_ACTIVATED_USER)) {
             return null;
+        }
 
         Set<GrantedAuthority> grantedAuthorities = new HashSet<>();
         for (Role role : user.getRoles()) {

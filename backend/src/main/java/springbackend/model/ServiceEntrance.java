@@ -1,24 +1,27 @@
 package springbackend.model;
 
-
-import org.springframework.stereotype.Component;
-
-@Component
 public class ServiceEntrance {
-
     private String enteredPassword;
 
     private final String correctPassword = "deal";
 
     public String getCorrectPassword() {
-        return correctPassword;
+        return this.correctPassword;
     }
 
     public String getEnteredPassword() {
-        return enteredPassword;
+        return this.enteredPassword;
     }
 
     public void setEnteredPassword(String enteredPassword) {
         this.enteredPassword = enteredPassword;
+    }
+
+    @Override
+    public String toString() {
+        return "ServiceEntrance{" +
+                "enteredPassword='" + enteredPassword + '\'' +
+                ", correctPassword='" + correctPassword + '\'' +
+                '}';
     }
 }

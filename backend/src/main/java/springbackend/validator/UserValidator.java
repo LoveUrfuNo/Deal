@@ -15,7 +15,6 @@ import springbackend.service.UserService;
 
 @Component
 public class UserValidator implements Validator {
-
     @Autowired
     private UserService userService;
 
@@ -34,7 +33,7 @@ public class UserValidator implements Validator {
                 errors.rejectValue("username", "Size.userForm.username");
             }
 
-            if (userService.findByUsername(user.getUsername()) != null) {
+            if (this.userService.findByUsername(user.getUsername()) != null) {
                 errors.rejectValue("username", "Duplicate.userForm.username");
             }
         }
@@ -45,7 +44,7 @@ public class UserValidator implements Validator {
                 errors.rejectValue("login", "Size.userForm.login");
             }
 
-            if (userService.findByLogin(user.getLogin()) != null) {
+            if (this.userService.findByLogin(user.getLogin()) != null) {
                 errors.rejectValue("login", "Duplicate.userForm.login");
             }
         }

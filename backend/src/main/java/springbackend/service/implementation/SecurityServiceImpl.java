@@ -12,12 +12,11 @@ import org.springframework.stereotype.Service;
 import springbackend.service.SecurityService;
 
 /**
- * Implementation of {@link SecurityService} interface.
+ * Implementation of {@link springbackend.service.SecurityService} interface.
  */
 
 @Service
 public class SecurityServiceImpl implements SecurityService {
-
     private static final Logger logger = LoggerFactory.getLogger(SecurityServiceImpl.class);
 
     @Autowired
@@ -38,11 +37,11 @@ public class SecurityServiceImpl implements SecurityService {
 
     @Override
     public void autoLogin(String username, String password) {
-        UserDetails userDetails = userDetailsService.loadUserByUsername(username);
+        UserDetails userDetails = this.userDetailsService.loadUserByUsername(username);
         UsernamePasswordAuthenticationToken authenticationToken =
                 new UsernamePasswordAuthenticationToken(userDetails, password, userDetails.getAuthorities());
 
-        authenticationManager.authenticate(authenticationToken);
+        this.authenticationManager.authenticate(authenticationToken);
 
         if (authenticationToken.isAuthenticated()) {
             SecurityContextHolder.getContext().setAuthentication(authenticationToken);

@@ -45,9 +45,8 @@ public class Service {
     @Column(name = "currency")
     private String currency;
 
-   /* @ManyToOne(fetch = FetchType.LAZY)
-//    @JoinTable(name = "service", joinColumns = @JoinColumn(name = "userid"), inverseJoinColumns = @JoinColumn(name = "id"))
-    @JoinColumn(name = "user_id")
+    /*@ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id", nullable = false)
     private User user;*/
 
     public Long getId() {
@@ -137,4 +136,22 @@ public class Service {
     public void setCurrency(String currency) {
         this.currency = currency;
     }
+
+    /*@Override
+    public String toString() {
+        return "Service{" +
+                "id=" + id +
+                ", userId=" + userId +
+                ", nameOfService='" + nameOfService + '\'' +
+                ", usernameOfSeller='" + usernameOfSeller + '\'' +
+                ", serviceCost=" + serviceCost +
+                ", category='" + category + '\'' +
+                ", description='" + description + '\'' +
+                ", country='" + country + '\'' +
+                ", city='" + city + '\'' +
+                ", typeOfService='" + typeOfService + '\'' +
+                ", currency='" + currency + '\'' +
+                ", user=" + user +
+                '}';
+    }*/
 }

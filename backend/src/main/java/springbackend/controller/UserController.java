@@ -12,10 +12,14 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import springbackend.model.UserFormForTechnicalSupport;
+import springbackend.service.CodingService;
+import springbackend.service.EmailService;
 import springbackend.service.implementation.EmailServiceImpl;
 import springbackend.model.User;
 import springbackend.service.SecurityService;
 import springbackend.service.UserService;
+import springbackend.validator.UserFormForTechnicalSupportValidator;
 import springbackend.validator.UserOptionsValidator;
 import springbackend.validator.UserValidator;
 
@@ -36,10 +40,12 @@ public class UserController {
 
     private static final Logger logger = LoggerFactory.getLogger(UserController.class);
 
-    private static final String MESSAGE = "message-registration-email.vm";
+    private static final String MESSAGE_TO_CONFIRM_REGISTRATION = "message-registration-confirm-email.vm";
+
+    private static final String MESSAGE_FOR_TECHNICAL_SUPPORT = "message-for-technical-support.vm";
 
     @Autowired
-    private EmailServiceImpl emailServiceImpl;
+    private EmailService emailService;
 
     @Autowired
     private UserService userService;
@@ -52,6 +58,12 @@ public class UserController {
 
     @Autowired
     private UserOptionsValidator optionsValidator;
+
+    @Autowired
+    private UserFormForTechnicalSupportValidator userForSupportValidator;
+
+    @Autowired
+    private CodingService codingService;
 
     @RequestMapping(value = "/redirect", method = RequestMethod.GET)
     public String redirect() {
@@ -170,12 +182,12 @@ public class UserController {
         }
 
         resultUser.setDateOfBirth(user.getDateOfBirth());
-        resultUser.setFirstName(new String(user.getFirstName().getBytes("ISO8859-1"), "UTF-8"));
+        resultUser.setFirstName(this.codingService.decoding(user.getFirstName()));
         resultUser.setGender(user.getGender());
         resultUser.setCountry(user.getCountry());
 
         this.userService.saveAndFlush(resultUser, ROLE_USER);
-        return "redirect:/profile";
+        return "redirect:/redirect";
     }
 
     @RequestMapping(value = "/registration", method = RequestMethod.POST)
@@ -186,19 +198,19 @@ public class UserController {
 
         model.addAttribute("status", "registration");
 
-        user.setKeyForRegistrationConfirmUrl(EmailServiceImpl.generateString(SIZE_OF_GENERATED_STRING));
+        user.setKeyForRegistrationConfirmUrl(this.emailService.generateString(SIZE_OF_GENERATED_STRING));
         user.setRegistrationConfirmed(false);    //user didn't confirm acc by email message yet
         this.userService.save(user, ROLE_NOT_ACTIVATED_USER);
         this.securityService.autoLogin(user.getUsername(), user.getConfirmPassword());
 
         Map map = new HashMap();
         map.put("from", "DEAL");
-        map.put("subject", "Hello from " + EmailServiceImpl.getNameFromEmailAddress(user.getUsername()) + "!");
+        map.put("subject", "Hello from " + user.getLogin() + "!");
         map.put("to", user.getUsername());      //TODO: rename field "username" to "email"
         map.put("key_for_registration_confirm_url", user.getKeyForRegistrationConfirmUrl());
         map.put("id", user.getId());
 
-        if (this.emailServiceImpl.sendEmail(MESSAGE, map))      //TODO: add output in logger
+        if (this.emailService.sendEmail(MESSAGE_TO_CONFIRM_REGISTRATION, map))      //TODO: add output in logger
             System.out.println("Message was sent");
         else
             System.out.println("Error: message wasn't sent");
@@ -228,7 +240,43 @@ public class UserController {
     }
 
     @RequestMapping(value = {"/support"}, method = RequestMethod.GET)
-    public String support() {
+    public String support(Model model) {
+        model.addAttribute("userFormForTechnicalSupport", new UserFormForTechnicalSupport());
+
         return "support";
+    }
+
+    @RequestMapping(value = "/support", method = RequestMethod.POST)
+    public String support(@ModelAttribute("userFormForTechnicalSupport") UserFormForTechnicalSupport userForSupport,
+                          BindingResult bindingResult,
+                          Model model) throws UnsupportedEncodingException {
+        this.userForSupportValidator.validate(userForSupport, bindingResult);
+        if (bindingResult.hasErrors())
+            return "support";
+
+        userForSupport.setName(this.codingService.decoding(userForSupport.getName()));
+        userForSupport.setDescription(this.codingService.decoding(userForSupport.getDescription()));
+        userForSupport.setEmail(this.codingService.decoding(userForSupport.getEmail()));
+        userForSupport.setSubject(this.codingService.decoding(userForSupport.getSubject()));
+
+        Map map = new HashMap();
+        map.put("from", "DEAL");
+        map.put("subject", "Hello from " + userForSupport.getName() + "!");
+        map.put("to", "deal.agentservice@gmail.com");      //TODO: rename field "username" to "email"
+        map.put("message", userForSupport.getDescription());
+        map.put("name", userForSupport.getName());
+        map.put("subject", userForSupport.getSubject());
+
+        if (this.emailService.sendEmail(MESSAGE_FOR_TECHNICAL_SUPPORT, map))      //TODO: add output in logger
+            System.out.println("Message was sent");
+        else
+            System.out.println("Error: message wasn't sent");
+
+        return "redirect:/redirect";
+    }
+
+    @RequestMapping(value = {"/admin"}, method = RequestMethod.GET)
+    public String admin() {
+        return "admin";
     }
 }

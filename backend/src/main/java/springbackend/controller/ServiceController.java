@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import springbackend.model.Service;
 import springbackend.model.User;
+import springbackend.service.CodingService;
 import springbackend.service.ServiceForService;
 import springbackend.service.UserService;
 
@@ -23,6 +24,9 @@ import java.util.List;
 
 @Controller
 public class ServiceController {
+    @Autowired
+    private CodingService codingService;
+
     @Autowired
     private ServiceForService serviceForService;
 
@@ -48,13 +52,12 @@ public class ServiceController {
         else
             service.setUsernameOfSeller(user.getFirstName());
 
-        service.setNameOfService(new String(service.getNameOfService().getBytes("ISO8859-1"), "UTF-8"));
-        service.setDescription(new String(service.getDescription().getBytes("ISO8859-1"), "UTF-8"));
-        service.setCity(user.getLogin() + "'s" + " city");
+        service.setNameOfService(codingService.decoding(service.getNameOfService()));
+        service.setDescription(codingService.decoding(service.getDescription()));
 
         this.serviceForService.save(service);
 
-        return "redirect:/profile";
+        return "redirect:/redirect";
     }
 
     @RequestMapping(value = "/show_all_services/{category}", method = RequestMethod.GET)
@@ -79,18 +82,14 @@ public class ServiceController {
     }
 
     @RequestMapping(value = "/search_services", method = RequestMethod.POST)
-    public String searchServices(Model model) {
-        model.addAttribute("results", null);
+    public String searchServices(@ModelAttribute(value = "stringForSearch") String searchLine, Model model) {
 
         return "searching-results";
     }
 
-    @RequestMapping(value = "/delete", method = RequestMethod.GET)
-    public String deleteService() {
-        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        User user = this.userService.findByUsername(auth.getName());
-
-        Service service = this.serviceForService.findByUserId(user.getId());
+    @RequestMapping(value = "/delete/{id}", method = RequestMethod.GET)
+    public String deleteService(@PathVariable(value = "id") Long id) {
+        Service service = this.serviceForService.findById(id);
         this.serviceForService.delete(service);
 
         return "redirect:/show_your_services";

@@ -2,6 +2,7 @@ package springbackend.model;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -48,7 +49,7 @@ public class User {
     @Column(name = "country")
     private String country;
 
-    @Column(name = "avatar")
+    @Column(name = "path_to_avatar")
     private String avatar;
 
     @ManyToMany
@@ -56,9 +57,9 @@ public class User {
             inverseJoinColumns = @JoinColumn(name = "role_id"))
     private Set<Role> roles;
 
-    /*@OneToMany(mappedBy = "user", fetch = FetchType.LAZY, orphanRemoval = true)
-    private Set<Service> services;
-*/
+   /* @OneToMany(mappedBy = "user", fetch = FetchType.LAZY, orphanRemoval = true)
+    private List<Service> services;*/
+
     public Long getId() {
         return id;
     }
@@ -171,13 +172,14 @@ public class User {
         this.roles = roles;
     }
 
-/*public String toString() {
+    /*@Override
+    public String toString() {
         return "User{" +
                 "id=" + id +
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
                 ", isRegistrationConfirmed=" + isRegistrationConfirmed +
-                ", keyForRegistrationConfirmUrl='" + keyForRegistrationConfirmUrl + '\'' +
+                ", keyForRegistrationConfirmUrl='" + keyForRegistrationConfirmUrl + '\'' +            //TODO: update toString()
                 ", confirmPassword='" + confirmPassword + '\'' +
                 ", roles=" + roles +
                 '}';
