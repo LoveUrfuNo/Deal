@@ -45,10 +45,17 @@
             <form:errors path="description"/>
         </div>
     </spring:bind>
-    <div class="field">
+
+    <form action="#uploader">
         <label>Загрузите фото</label>
-        <input id="uploadImgage" type="file" accept="image/*" name="file">
-    </div>
+        <input class="form-uploader__input js-uploader-input" type="file"
+               accept="image/gif,image/png,image/jpeg,image/pjpeg"
+               name="image" multiple="multiple" formaction="/uploadFile/loadServicePhoto" formmethod="post">
+        <input type="hidden" name="${_csrf.parameterName}"
+               value="${_csrf.token}"/>
+    </form>
+    <iframe name="uploader" id="uploader" src="${pageContext.request.contextPath}/uploadFile/loadServicePhoto?${_csrf.parameterName}=${_csrf.token}"></iframe>
+
     <div class="field">
         <label>Загрузите видео</label>
         <input id="uploadVideo" type="file" accept="video/*" name="file">
@@ -63,7 +70,7 @@
                         <div class="text">₽</div>
                         <input type="hidden" name="currency">
                         <i class="dropdown icon"></i>
-                        <div class="menu  ">
+                        <div class="menu">
                             <div data-value="ruble" class="item">₽</div>
                             <div data-value="dollar" class="item">$</div>
                             <div data-value="euro" class="item">€</div>

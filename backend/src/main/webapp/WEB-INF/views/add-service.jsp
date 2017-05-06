@@ -45,10 +45,12 @@
             <form:errors path="description"/>
         </div>
     </spring:bind>
-    <div class="field">
-        <label>Загрузите фото</label>
-        <input id="uploadImgage" type="file" accept="image/*" name="file">
-    </div>
+
+   <%-- <label>Загрузите фото</label>
+    <input class="form-uploader__input js-uploader-input" type="file"
+           accept="image/gif,image/png,image/jpeg,image/pjpeg"
+           name="image" multiple="multiple" formaction="/uploadFile/loadServicePhoto" formmethod="post">--%>
+
     <div class="field">
         <label>Загрузите видео</label>
         <input id="uploadVideo" type="file" accept="video/*" name="file">
@@ -63,7 +65,7 @@
                         <div class="text">₽</div>
                         <input type="hidden" name="currency">
                         <i class="dropdown icon"></i>
-                        <div class="menu  ">
+                        <div class="menu">
                             <div data-value="ruble" class="item">₽</div>
                             <div data-value="dollar" class="item">$</div>
                             <div data-value="euro" class="item">€</div>

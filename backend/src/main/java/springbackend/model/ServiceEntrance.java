@@ -6,11 +6,11 @@ public class ServiceEntrance {
     private final String correctPassword = "deal";
 
     public String getCorrectPassword() {
-        return correctPassword;
+        return this.correctPassword;
     }
 
     public String getEnteredPassword() {
-        return enteredPassword;
+        return this.enteredPassword;
     }
 
     public void setEnteredPassword(String enteredPassword) {

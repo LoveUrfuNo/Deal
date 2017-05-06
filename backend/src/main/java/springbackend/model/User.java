@@ -49,7 +49,7 @@ public class User {
     @Column(name = "country")
     private String country;
 
-    @Column(name = "avatar")
+    @Column(name = "path_to_avatar")
     private String avatar;
 
     @ManyToMany
@@ -57,8 +57,8 @@ public class User {
             inverseJoinColumns = @JoinColumn(name = "role_id"))
     private Set<Role> roles;
 
-    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY, orphanRemoval = true)
-    private List<Service> services;
+   /* @OneToMany(mappedBy = "user", fetch = FetchType.LAZY, orphanRemoval = true)
+    private List<Service> services;*/
 
     public Long getId() {
         return id;
@@ -170,14 +170,6 @@ public class User {
 
     public void setRoles(Set<Role> roles) {
         this.roles = roles;
-    }
-
-    public List<Service> getServices() {
-        return services;
-    }
-
-    public void setServices(List<Service> services) {
-        this.services = services;
     }
 
     /*@Override

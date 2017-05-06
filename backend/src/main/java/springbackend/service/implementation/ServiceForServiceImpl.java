@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * Implementation of {@link ServiceForService} interface.
+ * Implementation of {@link springbackend.service.ServiceForService} interface.
  */
 
 @org.springframework.stereotype.Service

@@ -45,9 +45,9 @@ public class Service {
     @Column(name = "currency")
     private String currency;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    /*@ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id", nullable = false)
-    private User user;
+    private User user;*/
 
     public Long getId() {
         return id;
@@ -135,14 +135,6 @@ public class Service {
 
     public void setCurrency(String currency) {
         this.currency = currency;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
     }
 
     /*@Override

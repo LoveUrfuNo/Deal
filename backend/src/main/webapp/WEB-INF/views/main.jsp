@@ -340,22 +340,25 @@
                                                                             class="mail circular icon"></i></a>
                                                                 </div>
                                                             </div>
-                                                            <form:form method="POST"
-                                                                       action="uploadFile/loadAvatar?${_csrf.parameterName}=${_csrf.token}"
-                                                                       enctype="multipart/form-data">
-                                                                <div class="col-md-12 text-center">
-                                                                    <input id="upload" class="hide" type="file"
-                                                                           name="file">
-                                                                    <label class="btn btn-info"
-                                                                           for="upload">Загрузить</label>
-                                                                </div>
-                                                                <div class="col-md-12 text-center">
-                                                                    <input class="btn btn-warning" type="submit"
-                                                                           value="Upload">
-                                                                </div>
-                                                                <input type="hidden" name="${_csrf.parameterName}"
-                                                                       value="${_csrf.token}"/>
-                                                            </form:form>
+                                                            <c:if test="${currentUser.avatar == null}">
+                                                                <form:form method="POST"
+                                                                           action="uploadFile/loadAvatar?${_csrf.parameterName}=${_csrf.token}"
+                                                                           enctype="multipart/form-data">
+                                                                    <div class="col-md-12 text-center">
+                                                                        <input id="upload" accept="image/*" class="hide"
+                                                                               type="file"
+                                                                               name="file">
+                                                                        <label class="btn btn-info"
+                                                                               for="upload">Загрузить</label>
+                                                                    </div>
+                                                                    <div class="col-md-12 text-center">
+                                                                        <input class="btn btn-warning" type="submit"
+                                                                               value="Upload">
+                                                                    </div>
+                                                                    <input type="hidden" name="${_csrf.parameterName}"
+                                                                           value="${_csrf.token}"/>
+                                                                </form:form>
+                                                            </c:if>
                                                         </div>
                                                         <div class="row">
                                                             <div class="col-md-12">
