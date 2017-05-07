@@ -11,5 +11,6 @@
     <title>Результаты</title>
 </head>
 
+<body>
 </body>
 </html>

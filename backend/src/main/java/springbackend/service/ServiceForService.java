@@ -1,6 +1,7 @@
 package springbackend.service;
 
 import springbackend.model.Service;
+import springbackend.model.User;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,6 +18,8 @@ public interface ServiceForService {
     void saveAndFlush(Service service);
 
     Service findByUserId(Long userId);
+
+    Service findById(Long id);
 
     List<Service> findAllByCategory(String category);
 
