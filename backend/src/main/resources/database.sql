@@ -60,7 +60,28 @@ ALTER TABLE `deal_users`.`users`
   AFTER `date_of_birth`,
   ADD COLUMN `date_of_registration` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
   AFTER `login`,
-  ADD COLUMN `avatar` VARCHAR(255) NULL DEFAULT NULL
+  ADD COLUMN `path_to_vatar` VARCHAR(255) NULL DEFAULT NULL
   AFTER `country`;
 
+
+CREATE TABLE `deal_users`.`user's_files` (
+  `id`           INT                     NOT NULL AUTO_INCREMENT,
+  `type`         ENUM ('photo', 'video') NULL     DEFAULT NULL,
+  `path_to_file` VARCHAR(45)             NULL     DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  CONSTRAINT `service_id`
+  FOREIGN KEY (`id`)
+  REFERENCES `deal_users`.`services` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION
+)
+  ENGINE = InnoDB
+  DEFAULT CHARACTER SET = utf8;
+
+ALTER TABLE `deal_users`.`services`
+  ADD CONSTRAINT `user_id`
+FOREIGN KEY (`id`)
+REFERENCES `deal_users`.`users` (`id`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
 

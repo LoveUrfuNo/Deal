@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * Implementation of {@link ServiceForService} interface.
+ * Implementation of {@link springbackend.service.ServiceForService} interface.
  */
 
 @org.springframework.stereotype.Service
@@ -39,6 +39,11 @@ public class ServiceForServiceImpl implements ServiceForService {
     public Service findByUserId(Long userId) {
         return this.serviceDao.findAll().stream()
                 .filter(temp -> temp.getUserId().equals(userId)).findFirst().orElse(null);
+    }
+
+    @Override
+    public Service findById(Long id) {
+        return this.serviceDao.findById(id);
     }
 
     @Override

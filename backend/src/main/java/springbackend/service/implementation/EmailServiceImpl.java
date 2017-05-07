@@ -16,7 +16,7 @@ import java.util.Map;
 import java.util.Random;
 
 /**
- * Implementation of {@link EmailService} interface.
+ * Implementation of {@link springbackend.service.EmailService} interface.
  */
 
 @Service
@@ -49,11 +49,11 @@ public class EmailServiceImpl implements EmailService{
                 message.setSentDate(new Date());
 
                 String text = VelocityEngineUtils.mergeTemplateIntoString(
-                        velocityEngine, templateName, "UTF-8", model);
+                        this.velocityEngine, templateName, "UTF-8", model);
 
                 message.setText(text, true);
             };
-            mailSender.send(preparator);
+            this.mailSender.send(preparator);
             res = true;
 
         } catch (Exception e) {

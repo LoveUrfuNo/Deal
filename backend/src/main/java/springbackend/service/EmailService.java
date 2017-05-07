@@ -7,9 +7,9 @@ import java.util.Map;
  */
 
 public interface EmailService {
-    public boolean sendEmail(final String templateName, final Map<String, Object> model);
+    boolean sendEmail(final String templateName, final Map<String, Object> model);
 
-    public String getNameFromEmailAddress(String email);
+    String getNameFromEmailAddress(String email);
 
-    public String generateString(int length);
+    String generateString(int length);
 }

@@ -32,10 +32,9 @@ public class ServiceEntranceController {
         model.addAttribute("stringForSearch", "");
 
         model.addAttribute("userForm", new User());
-        if (userForm.getEnteredPassword().equals(userForm.getCorrectPassword())) {
+        if (userForm.getEnteredPassword().equals(userForm.getCorrectPassword()))
             return "main";
-        } else {
+        else
             return "forgot-service-password";
-        }
     }
 }

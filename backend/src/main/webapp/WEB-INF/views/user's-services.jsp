@@ -5,11 +5,20 @@
     <title>Title</title>
 </head>
 <body>
-    <a href="${pageContext.request.contextPath}/add_service">Добавить</a>
-    <c:forEach var="service" items="${usersServices}">
-        <h4>${service.nameOfService}</h4><a href="${pageContext.request.contextPath}/delete">Удалить</a>
-    </c:forEach>
-    <br><br>
-    <a href="${pageContext.request.contextPath}/redirect" class="col-sm-12 btn btn-primary">Кнопка назад</a>
+<h2>
+    Овсянка,
+    <c:if test="${user.firstName != null}">
+        ${user.firstName}
+    </c:if>
+    <c:if test="${user.firstName == null}">
+        ${user.login}
+    </c:if>
+</h2>
+<a href="${pageContext.request.contextPath}/add_service">Добавить</a>
+<c:forEach var="service" items="${user.services}">
+    <h4>${service.nameOfService}</h4><a href="/delete/${service.id}">Удалить</a>
+</c:forEach>
+<br><br>
+<a href="${pageContext.request.contextPath}/redirect" class="col-sm-12 btn btn-primary">Назад</a>
 </body>
 </html>

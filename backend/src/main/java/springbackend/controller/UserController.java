@@ -182,7 +182,7 @@ public class UserController {
         }
 
         resultUser.setDateOfBirth(user.getDateOfBirth());
-        resultUser.setFirstName(codingService.decoding(user.getFirstName()));
+        resultUser.setFirstName(this.codingService.decoding(user.getFirstName()));
         resultUser.setGender(user.getGender());
         resultUser.setCountry(user.getCountry());
 
@@ -198,7 +198,7 @@ public class UserController {
 
         model.addAttribute("status", "registration");
 
-        user.setKeyForRegistrationConfirmUrl(emailService.generateString(SIZE_OF_GENERATED_STRING));
+        user.setKeyForRegistrationConfirmUrl(this.emailService.generateString(SIZE_OF_GENERATED_STRING));
         user.setRegistrationConfirmed(false);    //user didn't confirm acc by email message yet
         this.userService.save(user, ROLE_NOT_ACTIVATED_USER);
         this.securityService.autoLogin(user.getUsername(), user.getConfirmPassword());
@@ -254,10 +254,10 @@ public class UserController {
         if (bindingResult.hasErrors())
             return "support";
 
-        userForSupport.setName(codingService.decoding(userForSupport.getName()));
-        userForSupport.setDescription(codingService.decoding(userForSupport.getDescription()));
-        userForSupport.setEmail(codingService.decoding(userForSupport.getEmail()));
-        userForSupport.setSubject(codingService.decoding(userForSupport.getSubject()));
+        userForSupport.setName(this.codingService.decoding(userForSupport.getName()));
+        userForSupport.setDescription(this.codingService.decoding(userForSupport.getDescription()));
+        userForSupport.setEmail(this.codingService.decoding(userForSupport.getEmail()));
+        userForSupport.setSubject(this.codingService.decoding(userForSupport.getSubject()));
 
         Map map = new HashMap();
         map.put("from", "DEAL");

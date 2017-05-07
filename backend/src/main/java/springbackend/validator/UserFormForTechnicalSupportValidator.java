@@ -34,14 +34,14 @@ public class UserFormForTechnicalSupportValidator implements Validator {
 
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "subject", "Required");
         if (!errors.getAllErrors().contains(errors.getFieldError("subject"))) {
-            if (userForSupport.getName().length() <= 3) {
+            if (userForSupport.getSubject().length() <= 3) {
                 errors.rejectValue("subject", "Size.userFormForTechnicalSupport.subject");
             }
         }
 
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "description", "Required");
         if (!errors.getAllErrors().contains(errors.getFieldError("description"))) {
-            if (userForSupport.getName().length() <= 20) {
+            if (userForSupport.getDescription().length() <= 20) {
                 errors.rejectValue("description", "Size.userFormForTechnicalSupport.description");
             }
         }

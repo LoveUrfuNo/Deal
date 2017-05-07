@@ -6,11 +6,14 @@ import springbackend.model.User;
 
 import java.util.List;
 
+/**
+ * Dao for class {@link springbackend.model.Service}.
+ */
 
 public interface ServiceDao extends JpaRepository<Service, Long> {
     void delete(Service service);
 
-    //List<Service> findAllByUser(User user);
+    Service findById(Long id);
 
     List<Service> findAllByUserId(Long userId);
 

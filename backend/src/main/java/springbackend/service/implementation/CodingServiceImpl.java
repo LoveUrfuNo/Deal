@@ -6,7 +6,7 @@ import springbackend.service.CodingService;
 import java.io.UnsupportedEncodingException;
 
 /**
- * Implementation of {@link CodingService} interface.
+ * Implementation of {@link springbackend.service.CodingService} interface.
  */
 
 @Service

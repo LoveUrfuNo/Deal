@@ -14,7 +14,7 @@ import springbackend.service.UserService;
 import java.util.*;
 
 /**
- * Implementation of {@link UserService} interface.
+ * Implementation of {@link springbackend.service.UserService} interface.
  */
 
 @Service
@@ -31,43 +31,43 @@ public class UserServiceImpl implements UserService {
     @Override
 //    @CacheEvict(value="user", allEntries=true)
     public void save(User user, Long roleId) {
-        user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
+        user.setPassword(this.bCryptPasswordEncoder.encode(user.getPassword()));
         Set<Role> roles = new HashSet<>();
-        roles.add(roleDao.getOne(roleId));
+        roles.add(this.roleDao.getOne(roleId));
         user.setRoles(roles);
-        userDao.save(user);
+        this.userDao.save(user);
     }
 
     @Override
 //    @CacheEvict(value="user", allEntries=true)
     public void saveAndFlush(User user, Long roleId) {
         Set<Role> roles = new HashSet<>();
-        roles.add(roleDao.getOne(roleId));
+        roles.add(this.roleDao.getOne(roleId));
         user.setRoles(roles);
-        userDao.saveAndFlush(user);
+        this.userDao.saveAndFlush(user);
     }
 
     @Override
     public void delete(User user) {
-        userDao.delete(user);
+        this.userDao.delete(user);
     }
 
     @Override
 //    @Cacheable(value="user")
     public User findByUsername(String username) {
-        return userDao.findByUsername(username);
+        return this.userDao.findByUsername(username);
     }
 
     @Override
 //    @Cacheable(value="user")
     public User findByLogin(String login) {
-        return userDao.findAll().stream()
+        return this.userDao.findAll().stream()
                 .filter(temp -> login.equals(temp.getLogin())).findAny().orElse(null);
     }
 
     @Override
 //    @Cacheable(value="user")
     public User findBuId(Long id) {
-        return userDao.findById(id);
+        return this.userDao.findById(id);
     }
 }
