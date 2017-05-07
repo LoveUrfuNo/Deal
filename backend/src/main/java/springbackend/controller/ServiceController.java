@@ -54,7 +54,8 @@ public class ServiceController {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         User user = this.userService.findByUsername(auth.getName());
 
-        service.setUserId(user.getId());
+        service.setUser(user);
+        service.setUserId(service.getUser().getId());
         service.setNameOfService(codingService.decoding(service.getNameOfService()));
         service.setDescription(codingService.decoding(service.getDescription()));
 
@@ -65,14 +66,7 @@ public class ServiceController {
 
     @RequestMapping(value = "/show_all_services/{category}", method = RequestMethod.GET)
     public String showAllServicesInGivenCategory(@PathVariable(value = "category") String category, Model model) {
-        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        User user = this.userService.findByUsername(auth.getName());
-
         List<Service> services = this.serviceForService.findAllByCategory(category);
-
-        for(Service s : services) {
-            s.setUser(this.userService.findBuId(s.getUserId()));
-        }
 
         model.addAttribute("services", services);
         model.addAttribute("category", category);
@@ -85,9 +79,7 @@ public class ServiceController {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         User user = this.userService.findByUsername(auth.getName());
 
-        user.setServices(this.serviceForService.findAllByUserId(user.getId()));
         model.addAttribute("user", user);
-//      model.addAttribute("usersServices", services);
 
         return "user's-services";
     }

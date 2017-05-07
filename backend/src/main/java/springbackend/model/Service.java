@@ -45,7 +45,7 @@ public class Service {
     @Column(name = "currency")
     private String currency;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "userid", referencedColumnName = "id")
     private User user;
 
