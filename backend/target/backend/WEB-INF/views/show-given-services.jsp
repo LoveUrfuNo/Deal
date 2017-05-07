@@ -21,7 +21,11 @@
 </c:choose>--%>
 <h1>${category}</h1>
 <c:forEach var="service" items="${services}">
-    <h3>${service.nameOfService} -> ${service.usernameOfSeller}</h3>
+    <h3>
+            ${service.nameOfService} -> <c:if test="${service.user.firstName != null}">${service.user.firstName}</c:if>
+                <c:if test="${service.user.firstName == null}">${service.user.firstName}</c:if>
+    </h3>
+
 </c:forEach>
 <a href="${pageContext.request.contextPath}/redirect" class="col-sm-12 btn btn-primary">Назад</a>
 </body>

@@ -55,12 +55,6 @@ public class ServiceController {
         User user = this.userService.findByUsername(auth.getName());
 
         service.setUserId(user.getId());
-
-        if (user.getFirstName() == null)
-            service.setUsernameOfSeller(user.getLogin());
-        else
-            service.setUsernameOfSeller(user.getFirstName());
-
         service.setNameOfService(codingService.decoding(service.getNameOfService()));
         service.setDescription(codingService.decoding(service.getDescription()));
 
@@ -71,7 +65,14 @@ public class ServiceController {
 
     @RequestMapping(value = "/show_all_services/{category}", method = RequestMethod.GET)
     public String showAllServicesInGivenCategory(@PathVariable(value = "category") String category, Model model) {
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        User user = this.userService.findByUsername(auth.getName());
+
         List<Service> services = this.serviceForService.findAllByCategory(category);
+
+        for(Service s : services) {
+            s.setUser(this.userService.findBuId(s.getUserId()));
+        }
 
         model.addAttribute("services", services);
         model.addAttribute("category", category);
@@ -84,10 +85,9 @@ public class ServiceController {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         User user = this.userService.findByUsername(auth.getName());
 
-        //Service service = this.serviceForService.findByUserId(319L);
-
-        List<Service> services = this.serviceForService.findAllByUserId(user.getId());
-        model.addAttribute("usersServices", services);
+        user.setServices(this.serviceForService.findAllByUserId(user.getId()));
+        model.addAttribute("user", user);
+//      model.addAttribute("usersServices", services);
 
         return "user's-services";
     }
@@ -100,8 +100,14 @@ public class ServiceController {
 
     @RequestMapping(value = "/delete/{id}", method = RequestMethod.GET)
     public String deleteService(@PathVariable(value = "id") Long id) {
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        User user = this.userService.findByUsername(auth.getName());
+
         Service service = this.serviceForService.findById(id);
-        this.serviceForService.delete(service);
+        if (service.getUserId().equals(user.getId()))
+            this.serviceForService.delete(service);
+        else
+            return "error-page";
 
         return "redirect:/show_your_services";
     }

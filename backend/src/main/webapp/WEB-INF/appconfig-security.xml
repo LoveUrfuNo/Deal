@@ -14,6 +14,8 @@
         <intercept-url pattern="/profile" access="hasAnyRole('ROLE_USER', 'ROLE_ADMIN')"/>
         <intercept-url pattern="/profile/registration" access="hasAnyRole('ROLE_NOT_ACTIVATED_USER', 'ROLE_ADMIN')"/>
         <intercept-url pattern="/add_service" access="hasAnyRole('ROLE_ADMIN', 'ROLE_USER')"/>
+        <intercept-url pattern="/show_your_services" access="hasAnyRole('ROLE_ADMIN', 'ROLE_USER')"/>
+        <intercept-url pattern="/delete" access="hasAnyRole('ROLE_ADMIN', 'ROLE_USER')"/>
         <intercept-url pattern="/admin" access="hasRole('ROLE_ADMIN')"/>
 
         <form-login login-page="/main" default-target-url="/profile" authentication-failure-url="/main?error"

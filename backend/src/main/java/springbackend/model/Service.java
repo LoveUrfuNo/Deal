@@ -5,7 +5,7 @@ import javax.persistence.*;
 import javax.persistence.Entity;
 
 /**
- * Simple JavaBean domain object that represents a user Services.
+ * Simple JavaBean domain object that represents a user's Service.
  */
 
 @Entity
@@ -15,26 +15,14 @@ public class Service {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    /*@OneToOne
-    @JoinColumn(name = "user_id")
-    private Long user_id;
-
-    public Long getUser_id() {
-        return user_id;
-    }
-
-    public void setUser_id(Long user_id) {
-        this.user_id = user_id;
-    }*/
-
-    @Column(name = "userid")
+    @Column(name = "userid", insertable = false, updatable = false)
     private Long userId;
 
     @Column(name = "service_name")
     private String nameOfService;
 
-    @Column(name = "username")
-    private String usernameOfSeller;           //TODO: delete this
+    /*@Column(name = "username")
+    private String usernameOfSeller;*/           //TODO: delete this
 
     @Column(name = "cost")
     private Integer serviceCost;
@@ -57,9 +45,9 @@ public class Service {
     @Column(name = "currency")
     private String currency;
 
-   /* @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id")
-    private User user;*/
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "userid", referencedColumnName = "id")
+    private User user;
 
     public Long getId() {
         return id;
@@ -83,14 +71,6 @@ public class Service {
 
     public void setNameOfService(String nameOfService) {
         this.nameOfService = nameOfService;
-    }
-
-    public String getUsernameOfSeller() {
-        return usernameOfSeller;
-    }
-
-    public void setUsernameOfSeller(String usernameOfSeller) {
-        this.usernameOfSeller = usernameOfSeller;
     }
 
     public Integer getServiceCost() {
@@ -147,6 +127,14 @@ public class Service {
 
     public void setCurrency(String currency) {
         this.currency = currency;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 
     /*@Override
