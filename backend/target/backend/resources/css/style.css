@@ -195,6 +195,11 @@ embed {
   padding-right: 15px;
 }
 
+.gtco-container .dropdown {
+  height: 60px!important;
+  padding: 0!important;
+}
+
 .gtco-nav {
   position: absolute;
   top: 0;

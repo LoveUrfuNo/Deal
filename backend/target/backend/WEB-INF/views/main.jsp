@@ -71,11 +71,7 @@
                         </div>
                         <form:form method="post" modelAttribute="stringForSearch"
                                    action="${pageContext.request.contextPath}/search_services">
-                            <p>
-                                <input type="search" name="search"
-                                       placeholder="Поиск услуг">
-                                <input type="submit" value="Найти">
-                            </p>
+
                         </form:form>
                         <div class="col-xs-8 text-right menu-1">
                             <ul>
@@ -98,6 +94,13 @@
                         <div class="col-md-12 col-md-offset-0 text-left">
                             <div class="row row-mt-15em">
                                 <div class="col-md-7 mt-text animate-box" data-animate-effect="fadeInUp">
+                                    <p>
+                                    <div class="ui action input">
+                                        <input type="search" placeholder="Поиск услуг">
+                                        <div type="submit" class="ui green button">Найти</div>
+                                    </div>
+
+                                    </p>
                                     <span class="intro-text-small">Добро пожаловать в Deal</span>
                                     <h1>Покупай и продавай вместе с нами</h1>
                                 </div>
@@ -334,8 +337,8 @@
                                                                     <a class="col-md-12"
                                                                        href="${pageContext.request.contextPath}/show_your_services"><i
                                                                             class="shop circular icon"></i></a>
-                                                                    <a class="col-md-12" href="#"><i
-                                                                            class="mail circular icon"></i></a>
+                                                                    <a class="col-md-12" href="${pageContext.request.contextPath}/add_service"><i
+                                                                            class="add circular icon"></i></a>
                                                                     <a class="col-md-12" href="#"><i
                                                                             class="mail circular icon"></i></a>
                                                                 </div>
@@ -832,6 +835,9 @@
 
 <!-- Stellar -->
 <script src="${pageContext.request.contextPath}/resources/js/jquery.stellar.min.js"></script>
+
+<!-- Utilities -->
+<script src="${pageContext.request.contextPath}/resources/js/utilities.js"></script>
 
 <!-- Main JS (Do not remove) -->
 <script src="${pageContext.request.contextPath}/resources/js/main.js"></script>

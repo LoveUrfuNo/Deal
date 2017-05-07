@@ -46,11 +46,14 @@
         </div>
     </spring:bind>
 
-    <%-- <label>Загрузите фото</label>
-     <input class="form-uploader__input js-uploader-input" type="file"
-            accept="image/gif,image/png,image/jpeg,image/pjpeg"
-            name="image" multiple="multiple" formaction="/uploadFile/loadServicePhoto" formmethod="post">--%>
-
+    <div class="field">
+     <label>Загрузите фото</label>
+     <input id = "photo" type="file" multiple="multiple">
+        <div class="field">
+            <ul id="preview-photo">
+            </ul>
+        </div>
+    </div>
     <div class="field">
         <label>Загрузите видео</label>
         <input id="uploadVideo" type="file" accept="video/*" name="file">
@@ -380,6 +383,8 @@
 <script src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js"></script>
 <!--Semantic UI-->
 <script src="${pageContext.request.contextPath}/resources/Semantic-UI-CSS-master/semantic.min.js"></script>
+<!--Utilities-->
+<script src="${pageContext.request.contextPath}/resources/js/utilities.js"></script>
 <!--Main-->
 <script src="${pageContext.request.contextPath}/resources/js/add-service.js"></script>
 </body>
