@@ -61,3 +61,22 @@ h1, h2, h3, h4, h5, h6 {
     color: #fcfcfc;
     background: #f56f8d;
 }
+
+canvas {
+    max-width: 150px;
+    max-height: 150px;
+    margin-top: 20px;
+}
+
+#preview-photo {
+    list-style: none;
+}
+
+#preview-photo .delete {
+    margin-right: 20px;
+}
+
+#preview-photo li {
+    display: inline;
+
+}

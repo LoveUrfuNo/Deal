@@ -31,7 +31,7 @@ public class FileController {
     @Autowired
     private UserService userService;
 
-    private static final String rootPath = "C:\\Users\\kosty\\IntellijProjects\\Deal\\backend\\src\\main\\webapp\\resources\\user's\\images\\";
+    private static final String rootPath = "F:\\Programming\\Projects\\Deal\\backend\\src\\main\\webapp\\resources\\user's\\images\\";
 
     private static final Long ROLE_USER = 1L;
 
