@@ -5,6 +5,7 @@ import springbackend.model.User;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Service for users services
@@ -21,7 +22,9 @@ public interface ServiceForService {
 
     Service findById(Long id);
 
-    List<Service> findAllByCategory(String category);
+    Set<Service> findAll();
 
-    List<Service> findAllByUserId(Long userId);
+    Set<Service> findAllByCategory(String category);
+
+    Set<Service> findAllByUserId(Long userId);
 }

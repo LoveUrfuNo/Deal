@@ -21,9 +21,6 @@ public class Service {
     @Column(name = "service_name")
     private String nameOfService;
 
-    /*@Column(name = "username")
-    private String usernameOfSeller;*/           //TODO: delete this
-
     @Column(name = "cost")
     private Integer serviceCost;
 

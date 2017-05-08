@@ -10,15 +10,21 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import springbackend.model.SearchRequest;
 import springbackend.model.Service;
 import springbackend.model.User;
+import springbackend.model.UserFile;
 import springbackend.service.CodingService;
 import springbackend.service.ServiceForService;
 import springbackend.service.UserService;
+import springbackend.validator.SearchValidator;
 import springbackend.validator.ServiceValidator;
 
 import java.io.UnsupportedEncodingException;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 /**
  * Controller for {@link springbackend.model.Service}'s pages.
@@ -38,10 +44,13 @@ public class ServiceController {
     @Autowired
     private ServiceValidator serviceValidator;
 
+    @Autowired
+    private SearchValidator searchValidator;
+
     @RequestMapping(value = "/add_service", method = RequestMethod.GET)
     public String addService(Model model) {
         model.addAttribute("serviceForm", new Service());
-
+        model.addAttribute("photoForm", new UserFile());
         return "add-service";
     }
 
@@ -61,12 +70,12 @@ public class ServiceController {
 
         this.serviceForService.save(service);
 
-        return "redirect:/redirect";
+        return "redirect";
     }
 
     @RequestMapping(value = "/show_all_services/{category}", method = RequestMethod.GET)
     public String showAllServicesInGivenCategory(@PathVariable(value = "category") String category, Model model) {
-        List<Service> services = this.serviceForService.findAllByCategory(category);
+        Set<Service> services = this.serviceForService.findAllByCategory(category);
 
         model.addAttribute("services", services);
         model.addAttribute("category", category);
@@ -85,7 +94,20 @@ public class ServiceController {
     }
 
     @RequestMapping(value = "/search_services", method = RequestMethod.POST)
-    public String searchServices(@ModelAttribute(value = "stringForSearch") String searchLine, Model model) {
+    public String searchServices(@ModelAttribute(value = "searchRequest") SearchRequest searchRequest,
+                                 Model model, BindingResult bindingResult) {
+        searchValidator.validate(searchRequest, bindingResult);
+        if (bindingResult.hasErrors()) {
+            model.addAttribute("userForm", new User());
+            return "redirect";
+        }
+
+        Set<Service> allSet = this.serviceForService.findAll();
+        Set<Service> resultsSet = allSet.stream().filter(
+                temp -> temp.getNameOfService().contains(searchRequest.getSearchLine())
+                        || temp.getDescription().contains(searchRequest.getSearchLine())).collect(Collectors.toSet());    //TODO: add correct search by substring
+
+        model.addAttribute("resultsSet", resultsSet);
 
         return "searching-results";
     }

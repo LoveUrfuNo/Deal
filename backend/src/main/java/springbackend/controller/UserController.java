@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import springbackend.model.SearchRequest;
 import springbackend.model.UserFormForTechnicalSupport;
 import springbackend.service.CodingService;
 import springbackend.service.EmailService;
@@ -72,10 +73,10 @@ public class UserController {
 
     @RequestMapping(value = "/main", method = RequestMethod.GET)
     public String main(Model model, String error) {
+        model.addAttribute("searchRequest", new SearchRequest());
         model.addAttribute("userForm", new User());
-        if (error != null) {
+        if (error != null)
             model.addAttribute("error", "Username or password is incorrect.");
-        }
 
         return "main";
     }
@@ -89,6 +90,7 @@ public class UserController {
         else
             model.addAttribute("name", user.getLogin());
 
+        model.addAttribute("searchRequest", new SearchRequest());
         model.addAttribute("username", user.getUsername());
         model.addAttribute("userForm", new User());
         model.addAttribute("status", "login");
@@ -102,6 +104,7 @@ public class UserController {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         User user = this.userService.findByUsername(auth.getName());
 
+        model.addAttribute("searchRequest", new SearchRequest());
         model.addAttribute("name", user.getLogin());
         model.addAttribute("userForm", new User());
         model.addAttribute("status", status);

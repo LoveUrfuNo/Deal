@@ -14,6 +14,7 @@ import springbackend.model.UserFile;
 import springbackend.service.UserFileService;
 import springbackend.service.UserService;
 
+import javax.validation.constraints.Null;
 import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
@@ -31,7 +32,7 @@ public class FileController {
     @Autowired
     private UserService userService;
 
-    private static final String rootPath = "F:\\Programming\\Projects\\Deal\\backend\\src\\main\\webapp\\resources\\user's\\images\\";
+    private static final String rootPath = "C:\\Users\\kosty\\IntellijProjects\\Deal\\backend\\src\\main\\webapp\\resources\\user's\\images\\";
 
     private static final Long ROLE_USER = 1L;
 
@@ -50,12 +51,15 @@ public class FileController {
             try {
                 byte[] bytes = file.getBytes();
 
-                if (operation.equals("loadAvatar"))
+                File dir = null;
+                if (operation.equals("loadAvatar")) {
                     name = currentUser.getLogin() + "'s_avatar_" + file.getOriginalFilename();
-                else if (operation.equals("loadServicePhoto"))
+                    dir = new File(rootPath + "/avatars" + File.separator);
+                } else if (operation.equals("loadServicePhoto")) {
                     name = currentUser.getLogin() + "'s_service_photo_" + file.getOriginalFilename();
+                    dir = new File(rootPath + "/for_services" + File.separator);
+                }
 
-                File dir = new File(rootPath + File.separator);
                 if (!dir.exists()) {
                     dir.mkdirs();
                 }
@@ -86,7 +90,7 @@ public class FileController {
             UserFile userFile = new UserFile();
             userFile.setTypeOfFile("photo");
             userFile.setPathToFile(path);
-            this.userFileService.save(userFile);
+            //this.userFileService.save(userFile);
         }
 
         return "redirect";

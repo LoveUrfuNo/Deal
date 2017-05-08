@@ -7,8 +7,7 @@ import springbackend.model.Service;
 import springbackend.model.User;
 import springbackend.service.ServiceForService;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 /**
@@ -47,12 +46,17 @@ public class ServiceForServiceImpl implements ServiceForService {
     }
 
     @Override
-    public List<Service> findAllByCategory(String category) {
-        return this.serviceDao.findAllByCategory(category);
+    public Set<Service> findAll() {
+        return new HashSet<>(this.serviceDao.findAll());
     }
 
     @Override
-    public List<Service> findAllByUserId(Long userId) {
-        return this.serviceDao.findAllByUserId(userId);
+    public Set<Service> findAllByCategory(String category) {
+        return new HashSet<>(this.serviceDao.findAllByCategory(category));
+    }
+
+    @Override
+    public Set<Service> findAllByUserId(Long userId) {
+        return new HashSet<>(this.serviceDao.findAllByUserId(userId));
     }
 }

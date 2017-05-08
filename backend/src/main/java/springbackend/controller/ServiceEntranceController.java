@@ -7,6 +7,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import springbackend.model.SearchRequest;
 import springbackend.model.ServiceEntrance;
 import springbackend.model.User;
 
@@ -28,7 +29,7 @@ public class ServiceEntranceController {
 
     @RequestMapping(value = "/main", method = RequestMethod.POST)
     public String main(@ModelAttribute("userForm") ServiceEntrance userForm, Model model) {
-        model.addAttribute("stringForSearch", "");
+        model.addAttribute("searchRequest", new SearchRequest());
 
         model.addAttribute("userForm", new User());
         if (userForm.getEnteredPassword().equals(userForm.getCorrectPassword()))

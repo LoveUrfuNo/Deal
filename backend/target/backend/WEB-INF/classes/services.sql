@@ -2,7 +2,6 @@ CREATE TABLE `deal_users`.`services` (
   `id`              INT(11)                NOT NULL AUTO_INCREMENT,
   `userid`          INT(11)                NULL,
   `service_name`    VARCHAR(65)            NOT NULL,
-  `username`        VARCHAR(45)            NOT NULL DEFAULT 'name',
   `cost`            INT(10)                NOT NULL,
   `category`        VARCHAR(45)            NOT NULL,
   `description`     VARCHAR(3001)          NULL,
@@ -15,3 +14,13 @@ CREATE TABLE `deal_users`.`services` (
 )
   ENGINE = InnoDB
   DEFAULT CHARACTER SET = utf8;
+
+ALTER TABLE `deal_users`.`services`
+  ADD INDEX `user_id_idx` (`userid` ASC);
+ALTER TABLE `deal_users`.`services`
+  ADD CONSTRAINT `user_id`
+FOREIGN KEY (`userid`)
+REFERENCES `deal_users`.`users` (`id`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
+

@@ -58,7 +58,7 @@ public class User {
     private Set<Role> roles;
 
     @OneToMany(mappedBy = "user", /*cascade = CascadeType.ALL, */fetch = FetchType.EAGER/*, orphanRemoval = true*/)
-    private List<Service> services;
+    private Set<Service> services;
 
     public Long getId() {
         return id;
@@ -172,11 +172,11 @@ public class User {
         this.roles = roles;
     }
 
-    public List<Service> getServices() {
+    public Set<Service> getServices() {
         return services;
     }
 
-    public void setServices(List<Service> services) {
+    public void setServices(Set<Service> services) {
         this.services = services;
     }
 

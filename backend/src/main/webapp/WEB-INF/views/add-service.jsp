@@ -15,7 +15,12 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/add-service.css">
 </head>
 <body>
-<form:form method="POST" modelAttribute="serviceForm"
+<%--<form:form enctype="multipart/form-data" id="uploadPhotos"
+           action="/uploadFile/loadServicePhoto?${_csrf.parameterName}=${_csrf.token}" method="POST">
+    <input type="hidden" name="${_csrf.parameterName}"
+           value="${_csrf.token}"/>
+</form:form>--%>
+<form:form onsubmit="return confirm('Готов разбогатеть?')" method="POST" modelAttribute="serviceForm"
            action="/add_service"
            class="ui form">
     <spring:bind path="nameOfService">
@@ -45,15 +50,14 @@
             <form:errors path="description"/>
         </div>
     </spring:bind>
-
-    <div class="field">
-     <label>Загрузите фото</label>
-     <input id = "photo" type="file" multiple="multiple">
+    <%--<div class="field">
+        <label>Загрузите фото</label>
+        <input id="photo" type="file" name="file" multiple="multiple" accept="image/*">
         <div class="field">
             <ul id="preview-photo">
             </ul>
         </div>
-    </div>
+    </div>--%>
     <div class="field">
         <label>Загрузите видео</label>
         <input id="uploadVideo" type="file" accept="video/*" name="file">
@@ -372,9 +376,7 @@
     </spring:bind>
     <button class="ui button" type="submit">Добавить</button>
 </form:form>
-
 <a href="${pageContext.request.contextPath}/redirect" class="col-sm-12 btn btn-primary">Назад</a>
-
 <!-- jQuery -->
 <script src="${pageContext.request.contextPath}/resources/js/jquery.min.js"></script>
 <!-- jQuery Easing -->
