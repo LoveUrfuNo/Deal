@@ -1,0 +1,27 @@
+package springbackend.service;
+
+import springbackend.model.Service;
+import springbackend.model.User;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * Service for users services
+ */
+
+public interface ServiceForService {
+    void delete(Service service);
+
+    void save(Service service);
+
+    void saveAndFlush(Service service);
+
+    Service findByUserId(Long userId);
+
+    Service findById(Long id);
+
+    List<Service> findAllByCategory(String category);
+
+    List<Service> findAllByUserId(Long userId);
+}

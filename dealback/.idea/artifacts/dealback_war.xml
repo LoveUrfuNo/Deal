@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="dealback:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="backend.war">
+      <element id="artifact" artifact-name="dealback:war exploded" />
+    </root>
+  </artifact>
+</component>
