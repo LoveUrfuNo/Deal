@@ -6,10 +6,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 import springbackend.model.SearchRequest;
 import springbackend.model.Service;
 import springbackend.model.User;
@@ -21,6 +18,7 @@ import springbackend.validator.SearchValidator;
 import springbackend.validator.ServiceValidator;
 
 import java.io.UnsupportedEncodingException;
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -55,7 +53,7 @@ public class ServiceController {
     }
 
     @RequestMapping(value = "/add_service", method = RequestMethod.POST)
-    public String addService(@ModelAttribute(value = "serviceForm") Service service, BindingResult bindingResult) throws UnsupportedEncodingException {
+    public String addService(@ModelAttribute(value = "serviceForm") Service service, BindingResult bindingResult) {
         this.serviceValidator.validate(service, bindingResult);
         if (bindingResult.hasErrors())
             return "add-service";
@@ -65,10 +63,15 @@ public class ServiceController {
 
         service.setUser(user);
         service.setUserId(service.getUser().getId());
-        service.setNameOfService(codingService.decoding(service.getNameOfService()));
-        service.setDescription(codingService.decoding(service.getDescription()));
+        try {
+            service.setNameOfService(codingService.decoding(service.getNameOfService()));
+            service.setDescription(codingService.decoding(service.getDescription()));
 
-        this.serviceForService.save(service);
+            this.serviceForService.save(service);
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+            return "error-page";
+        }
 
         return "redirect";
     }
@@ -103,9 +106,13 @@ public class ServiceController {
         }
 
         Set<Service> allSet = this.serviceForService.findAll();
-        Set<Service> resultsSet = allSet.stream().filter(
-                temp -> temp.getNameOfService().contains(searchRequest.getSearchLine())
-                        || temp.getDescription().contains(searchRequest.getSearchLine())).collect(Collectors.toSet());    //TODO: add correct search by substring
+        Set<Service> resultsSet = allSet.stream()
+                .filter(temp ->
+                        Arrays.stream(temp.getNameOfService().split(" "))
+                                .anyMatch(searchRequest.getSearchLine()::equals)
+                                ||
+                                Arrays.stream(temp.getDescription().split(" "))
+                                        .anyMatch(searchRequest.getSearchLine()::equalsIgnoreCase)).collect(Collectors.toSet());
 
         model.addAttribute("resultsSet", resultsSet);
 

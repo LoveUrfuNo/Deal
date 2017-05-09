@@ -141,28 +141,6 @@ public class UserController {
     public String options(Model model) {
         model.addAttribute("userOptionForm", new User());
 
-        List<String> months = new ArrayList<>();
-        months.add("Январь");
-        months.add("Февраль");
-        months.add("Март");
-        months.add("Апрель");
-        months.add("Май");
-        months.add("Июнь");
-        months.add("Июль");
-        months.add("Август");
-        months.add("Сентябрь");
-        months.add("Октябрь");
-        months.add("Ноябрь");
-        months.add("Декабрь");
-
-        model.addAttribute("months", months);
-
-        List<String> numbers = new ArrayList<>();    // TODO: make with streams
-        for (Integer i = 1; i <= 31; i++)
-            numbers.add(Integer.toString(i));
-
-        model.addAttribute("numbers", numbers);
-
         return "advanced-options";
     }
 

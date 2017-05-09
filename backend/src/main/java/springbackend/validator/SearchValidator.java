@@ -24,7 +24,7 @@ public class SearchValidator implements Validator{
 
         ValidationUtils.rejectIfEmptyOrWhitespace(errors,"searchLine", "Required");
         if (!errors.getAllErrors().contains(errors.getFieldError("searchLine"))) {
-            if (searchRequest.getSearchLine().length() >= 150) {
+            if (searchRequest.getSearchLine().length() >= 150 || searchRequest.getSearchLine().length() <= 1) {
                 errors.rejectValue("searchLine", "Size.searchLine.size");
             }
         }

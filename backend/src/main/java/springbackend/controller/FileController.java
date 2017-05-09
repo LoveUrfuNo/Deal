@@ -1,5 +1,6 @@
 package springbackend.controller;
 
+import com.google.common.io.Closer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,8 +14,8 @@ import springbackend.model.User;
 import springbackend.model.UserFile;
 import springbackend.service.UserFileService;
 import springbackend.service.UserService;
+import sun.util.resources.OpenListResourceBundle;
 
-import javax.validation.constraints.Null;
 import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
@@ -40,8 +41,7 @@ public class FileController {
 
     @RequestMapping(value = "/uploadFile/{operation}", method = RequestMethod.POST)
     public String uploadFile(@RequestParam("file") MultipartFile file,
-                             @PathVariable("operation") String operation,
-                             Model model) throws IOException {
+                             @PathVariable("operation") String operation) throws IOException {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         User currentUser = this.userService.findByUsername(auth.getName());
 
@@ -65,16 +65,14 @@ public class FileController {
                 }
 
                 uploadedFile = new File(dir.getAbsolutePath() + File.separator + name);
-
-                BufferedOutputStream stream = new BufferedOutputStream(new FileOutputStream(uploadedFile));
-                stream.write(bytes);
-                stream.flush();
-                stream.close();
+                try (BufferedOutputStream stream = new BufferedOutputStream(new FileOutputStream(uploadedFile))) {
+                    stream.write(bytes);
+                    stream.flush();
+                }
 
                 logger.info("uploaded: " + uploadedFile.getAbsolutePath());
                 logger.info("You successfully uploaded file=" + name);
-
-            } catch (Exception e) {
+            } catch (Throwable e) {
                 logger.info("You failed to upload " + name + " => " + e.getMessage());
             }
         } else {
@@ -90,7 +88,7 @@ public class FileController {
             UserFile userFile = new UserFile();
             userFile.setTypeOfFile("photo");
             userFile.setPathToFile(path);
-            //this.userFileService.save(userFile);
+            //this.userFileService.save(userFile);                     //TODO:!!!!!!!!!
         }
 
         return "redirect";
