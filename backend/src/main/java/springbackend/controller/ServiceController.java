@@ -1,5 +1,7 @@
 package springbackend.controller;
 
+import javafx.collections.ObservableList;
+import javafx.collections.transformation.SortedList;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -18,10 +20,7 @@ import springbackend.validator.SearchValidator;
 import springbackend.validator.ServiceValidator;
 
 import java.io.UnsupportedEncodingException;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 
 /**
@@ -107,13 +106,12 @@ public class ServiceController {
 
         Set<Service> allSet = this.serviceForService.findAll();
         Set<Service> resultsSet = allSet.stream()
-                .filter(temp ->
+                        .filter(temp ->
                         Arrays.stream(temp.getNameOfService().split(" "))
-                                .anyMatch(searchRequest.getSearchLine()::equals)
+                                .anyMatch(searchRequest.getSearchLine()::equalsIgnoreCase)
                                 ||
                                 Arrays.stream(temp.getDescription().split(" "))
                                         .anyMatch(searchRequest.getSearchLine()::equalsIgnoreCase)).collect(Collectors.toSet());
-
         model.addAttribute("resultsSet", resultsSet);
 
         return "searching-results";

@@ -52,11 +52,11 @@ public class ServiceForServiceImpl implements ServiceForService {
 
     @Override
     public Set<Service> findAllByCategory(String category) {
-        return new HashSet<>(this.serviceDao.findAllByCategory(category));
+        return this.serviceDao.findAllByCategory(category);
     }
 
     @Override
     public Set<Service> findAllByUserId(Long userId) {
-        return new HashSet<>(this.serviceDao.findAllByUserId(userId));
+        return this.serviceDao.findAllByUserId(userId);
     }
 }

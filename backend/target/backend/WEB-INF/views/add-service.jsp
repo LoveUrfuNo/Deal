@@ -1,5 +1,3 @@
-<%@ page import="org.springframework.security.core.Authentication" %>
-<%@ page import="org.springframework.security.core.context.SecurityContextHolder" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
@@ -20,7 +18,7 @@
     <input type="hidden" name="${_csrf.parameterName}"
            value="${_csrf.token}"/>
 </form:form>--%>
-<form:form onsubmit="return confirm('Готов разбогатеть?')" method="POST" modelAttribute="serviceForm"
+<form:form method="POST" modelAttribute="serviceForm"
            action="/add_service"
            class="ui form">
     <spring:bind path="nameOfService">
@@ -377,6 +375,7 @@
     <button class="ui button" type="submit">Добавить</button>
 </form:form>
 <a href="${pageContext.request.contextPath}/redirect" class="col-sm-12 btn btn-primary">Назад</a>
+
 <!-- jQuery -->
 <script src="${pageContext.request.contextPath}/resources/js/jquery.min.js"></script>
 <!-- jQuery Easing -->

@@ -822,31 +822,23 @@
         </div>
     </footer>
 </div>
-
 <!-- jQuery -->
-<script src="${pageContext.request.contextPath}/resources/js/jquery.min.js"></script>
+<script  src="${pageContext.request.contextPath}/resources/js/jquery.min.js"></script>
 <!-- jQuery Easing -->
 <script src="${pageContext.request.contextPath}/resources/js/jquery.easing.1.3.js"></script>
 <!-- Bootstrap -->
 <script src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js"></script>
-
 <!--Semantic UI-->
 <script src="${pageContext.request.contextPath}/resources/Semantic-UI-CSS-master/semantic.min.js"></script>
-
 <!-- Waypoints -->
 <script src="${pageContext.request.contextPath}/resources/js/jquery.waypoints.min.js"></script>
-
 <!-- Owl carousel -->
 <script src="${pageContext.request.contextPath}/resources/js/owl.carousel.min.js"></script>
-
 <!-- Stellar -->
 <script src="${pageContext.request.contextPath}/resources/js/jquery.stellar.min.js"></script>
-
 <!-- Utilities -->
 <script src="${pageContext.request.contextPath}/resources/js/utilities.js"></script>
-
 <!-- Main JS (Do not remove) -->
 <script src="${pageContext.request.contextPath}/resources/js/main.js"></script>
-
 </body>
 </html>

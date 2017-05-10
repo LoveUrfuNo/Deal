@@ -16,7 +16,6 @@ import springbackend.model.SearchRequest;
 import springbackend.model.UserFormForTechnicalSupport;
 import springbackend.service.CodingService;
 import springbackend.service.EmailService;
-import springbackend.service.implementation.EmailServiceImpl;
 import springbackend.model.User;
 import springbackend.service.SecurityService;
 import springbackend.service.UserService;

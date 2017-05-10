@@ -1,5 +1,5 @@
 /**
- * Created by Никита on 02.05.2017.
+ * sdelay normal commentariy               //TODO:oooooooooooooooooooooooooooooooooooooooooooooo
  */
 
 var autoUpload = function () {
@@ -41,7 +41,6 @@ var autoUpload = function () {
             // Добавляем файл в объект selectedFiles
             selectedFiles[file.name] = file;
             queue.push(file);
-
         }
 
         $(this).val('');
@@ -133,7 +132,6 @@ var autoUpload = function () {
         $(this).parents('li').remove(); // Удаляем превью
         $('input[name^=photo][data-id="' + fileId + '"]').remove(); // Удаляем поле с содержимым файла
     });
-
 
 autoUpload();
 preview();

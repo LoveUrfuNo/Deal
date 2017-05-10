@@ -5,6 +5,8 @@ import springbackend.model.Service;
 import springbackend.model.User;
 
 import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
 
 /**
  * Dao for class {@link springbackend.model.Service}.
@@ -15,7 +17,7 @@ public interface ServiceDao extends JpaRepository<Service, Long> {
 
     Service findById(Long id);
 
-    List<Service> findAllByUserId(Long userId);
+    Set<Service> findAllByUserId(Long userId);
 
-    List<Service> findAllByCategory(String category);
+    Set<Service> findAllByCategory(String category);
 }
