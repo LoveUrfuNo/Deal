@@ -7,17 +7,18 @@
 </head>
 <body>
 <h2>
-    Овсянка,
-    <c:if test="${user.firstName != null}">
-        ${user.firstName}
-    </c:if>
-    <c:if test="${user.firstName == null}">
-        ${user.login}
-    </c:if>
+    Это твоё, ${user.firstName != null ? user.firstName : user.login}
 </h2>
 <a href="${pageContext.request.contextPath}/add_service">Добавить</a>
 <c:forEach var="service" items="${user.services}">
     <h4>${service.nameOfService}</h4>
+    <c:if test="${files.get(service.nameOfService) != null}">
+        <img src="${files.get(service.nameOfService).pathToFile}" alt="sorayn">
+    </c:if>
+    <c:if test="${files.get(service.nameOfService) == null}">
+        <img class="profile-icon"
+             src="${pageContext.request.contextPath}/resources/images/unknown_photo_service.png">
+    </c:if>
     <a href="/delete/${service.id}" onclick="return confirmDelete();">Удалить</a>
 </c:forEach>
 <br><br>

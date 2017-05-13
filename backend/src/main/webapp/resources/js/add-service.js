@@ -19,14 +19,14 @@ $(function () {
     exitConfirm();
 });
 
-var uploadServicesPhotos = function (str) {
+var uploadServicesPhotos = function (_csrf) {
     var uploadPhotoForm = document.forms[0]
         , serviceInformationForm = document.forms[1];                //TODO: add validation
     var formData = new FormData(uploadPhotoForm);
     var xhr = new XMLHttpRequest();
 
-    serviceInformationForm.submit();
-    // serviceInformationForm.body.getAttribute()
-    xhr.open("POST", "/uploadFile/loadServicePhoto?" + str, true);
+    xhr.open("POST", "/uploadFile/loadServicePhoto+" + document.getElementById('nameOfService').value + "?" + _csrf, true);
     xhr.send(formData);
+
+    serviceInformationForm.submit();
 };

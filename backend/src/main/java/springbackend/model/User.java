@@ -58,7 +58,7 @@ public class User {
     private Set<Role> roles;
 
     @OneToMany(mappedBy = "user", fetch = FetchType.EAGER)
-    private Set<Service> services;
+    private List<Service> services;
 
     public Long getId() {
         return id;
@@ -172,11 +172,11 @@ public class User {
         this.roles = roles;
     }
 
-    public Set<Service> getServices() {
+    public List<Service> getServices() {
         return services;
     }
 
-    public void setServices(Set<Service> services) {
+    public void setServices(List<Service> services) {
         this.services = services;
     }
 

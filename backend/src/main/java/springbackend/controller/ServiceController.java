@@ -17,6 +17,7 @@ import springbackend.service.UserFileService;
 import springbackend.service.UserService;
 import springbackend.validator.SearchValidator;
 import springbackend.validator.ServiceValidator;
+import sun.reflect.generics.tree.Tree;
 
 import java.io.UnsupportedEncodingException;
 import java.util.*;
@@ -49,7 +50,6 @@ public class ServiceController {
     @RequestMapping(value = "/add_service", method = RequestMethod.GET)
     public String addService(Model model) {
         model.addAttribute("serviceForm", new Service());
-        model.addAttribute("photoForm", new UserFile());
 
         return "add-service";
     }
@@ -95,8 +95,13 @@ public class ServiceController {
     public String showUsersServices(Model model) {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         User user = this.userService.findByUsername(auth.getName());
+        user.getServices().sort(
+                (o1, o2) -> o1.getNameOfService().compareToIgnoreCase(o2.getNameOfService()));
 
-        model.addAttribute("files", this.userFileService.findAll());
+        Map<String, UserFile> fileMap = new HashMap<>();
+        this.userFileService.findAllByUserId(user.getId()).forEach(t -> fileMap.put(t.getServiceName(), t));
+
+        model.addAttribute("files", fileMap);
         model.addAttribute("user", user);
 
         return "user's-services";
@@ -135,6 +140,7 @@ public class ServiceController {
         Service service = this.serviceForService.findById(id);
         if (service.getUserId().equals(user.getId())) {
             this.serviceForService.delete(service);
+
             this.userFileService.findAllByUserId(user.getId()).stream()
                     .filter(t -> t.getServiceName().equals(service.getNameOfService()))
                     .forEach(temp -> this.userFileService.delete(temp));

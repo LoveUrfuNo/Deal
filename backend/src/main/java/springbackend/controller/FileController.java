@@ -57,7 +57,7 @@ public class FileController {
                 if (operation.equals("loadAvatar")) {
                     name = currentUser.getLogin() + "'s_avatar_" + file.getOriginalFilename();
                     dir = new File(rootPath + "/avatars" + File.separator);
-                } else if (operation.equals("loadServicePhoto")) {
+                } else if (operation.contains("loadServicePhoto")) {
                     name = currentUser.getLogin() + "'s_service_photo_" + file.getOriginalFilename();
                     dir = new File(rootPath + "/for_services" + File.separator);
                 }
@@ -87,11 +87,11 @@ public class FileController {
             currentUser.setAvatar(this.stringService.makePathForFile(path));
 
             this.userService.saveAndFlush(currentUser, ROLE_USER);
-        } else if (operation.equals("loadServicePhoto")) {
+        } else if (operation.contains("loadServicePhoto")) {
             UserFile userFile = new UserFile();
             userFile.setTypeOfFile("photo");
             userFile.setPathToFile(this.stringService.makePathForFile(path));
-            userFile.setServiceName("add");
+            userFile.setServiceName(operation.substring(operation.indexOf('+') + 1));
             userFile.setUserId(currentUser.getId());
 
             this.userFileService.save(userFile);
