@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import springbackend.model.SearchRequest;
 import springbackend.model.UserFormForTechnicalSupport;
-import springbackend.service.CodingService;
+import springbackend.service.StringService;
 import springbackend.service.EmailService;
 import springbackend.model.User;
 import springbackend.service.SecurityService;
@@ -63,7 +63,7 @@ public class UserController {
     private UserFormForTechnicalSupportValidator userForSupportValidator;
 
     @Autowired
-    private CodingService codingService;
+    private StringService stringService;
 
     @RequestMapping(value = "/redirect", method = RequestMethod.GET)
     public String redirect() {
@@ -73,9 +73,11 @@ public class UserController {
     @RequestMapping(value = "/main", method = RequestMethod.GET)
     public String main(Model model, String error) {
         model.addAttribute("searchRequest", new SearchRequest());
+
         model.addAttribute("userForm", new User());
-        if (error != null)
+        if (error != null) {
             model.addAttribute("error", "Username or password is incorrect.");
+        }
 
         return "main";
     }
@@ -84,10 +86,11 @@ public class UserController {
     public String profile(Model model) {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         User user = this.userService.findByUsername(auth.getName());
-        if (user.getFirstName() != null)
+        if (user.getFirstName() != null) {
             model.addAttribute("name", user.getFirstName());
-        else
+        } else {
             model.addAttribute("name", user.getLogin());
+        }
 
         model.addAttribute("searchRequest", new SearchRequest());
         model.addAttribute("username", user.getUsername());
@@ -144,10 +147,12 @@ public class UserController {
     }
 
     @RequestMapping(value = "/options", method = RequestMethod.POST)
-    public String options(@ModelAttribute("userOptionForm") User user, BindingResult bindingResult) throws UnsupportedEncodingException {
+    public String options(@ModelAttribute("userOptionForm") User user,
+                          BindingResult bindingResult) throws UnsupportedEncodingException {
         this.optionsValidator.validate(user, bindingResult);
-        if (bindingResult.hasErrors())
+        if (bindingResult.hasErrors()) {
             return "advanced-options";
+        }
 
         User resultUser;
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
@@ -162,19 +167,23 @@ public class UserController {
         }
 
         resultUser.setDateOfBirth(user.getDateOfBirth());
-        resultUser.setFirstName(this.codingService.decoding(user.getFirstName()));
+        resultUser.setFirstName(this.stringService.decoding(user.getFirstName()));
         resultUser.setGender(user.getGender());
         resultUser.setCountry(user.getCountry());
 
         this.userService.saveAndFlush(resultUser, ROLE_USER);
+
         return "redirect:/redirect";
     }
 
     @RequestMapping(value = "/registration", method = RequestMethod.POST)
-    public String registration(@ModelAttribute("userForm") User user, BindingResult bindingResult, Model model) {
+    public String registration(@ModelAttribute("userForm") User user,
+                               BindingResult bindingResult,
+                               Model model) {
         this.userValidator.validate(user, bindingResult);
-        if (bindingResult.hasErrors())
+        if (bindingResult.hasErrors()) {
             return "main";
+        }
 
         model.addAttribute("status", "registration");
 
@@ -190,10 +199,11 @@ public class UserController {
         map.put("key_for_registration_confirm_url", user.getKeyForRegistrationConfirmUrl());
         map.put("id", user.getId());
 
-        if (this.emailService.sendEmail(MESSAGE_TO_CONFIRM_REGISTRATION, map))      //TODO: add output in logger
+        if (this.emailService.sendEmail(MESSAGE_TO_CONFIRM_REGISTRATION, map)) {      //TODO: add output in logger
             System.out.println("Message was sent");
-        else
+        } else {
             System.out.println("Error: message wasn't sent");
+        }
 
         return "redirect:/profile/registration";
     }
@@ -206,10 +216,12 @@ public class UserController {
     }
 
     @RequestMapping(value = "/confirm-acc/{key}/{id}", method = RequestMethod.GET)
-    public String confirmAcc(@PathVariable("key") String key, @PathVariable("id") Long id, Model model) {
+    public String confirmAcc(@PathVariable("key") String key,
+                             @PathVariable("id") Long id) {
         User user = this.userService.findBuId(id);
-        if (!user.getKeyForRegistrationConfirmUrl().equals(key))
-            return "redirect:/main?error";
+        if (!user.getKeyForRegistrationConfirmUrl().equals(key)) {
+            return "error-page";
+        }
 
         user.setRegistrationConfirmed(true);
         user.setKeyForRegistrationConfirmUrl(null);
@@ -228,16 +240,16 @@ public class UserController {
 
     @RequestMapping(value = "/support", method = RequestMethod.POST)
     public String support(@ModelAttribute("userFormForTechnicalSupport") UserFormForTechnicalSupport userForSupport,
-                          BindingResult bindingResult,
-                          Model model) throws UnsupportedEncodingException {
+                          BindingResult bindingResult) throws UnsupportedEncodingException {
         this.userForSupportValidator.validate(userForSupport, bindingResult);
-        if (bindingResult.hasErrors())
+        if (bindingResult.hasErrors()) {
             return "support";
+        }
 
-        userForSupport.setName(this.codingService.decoding(userForSupport.getName()));
-        userForSupport.setDescription(this.codingService.decoding(userForSupport.getDescription()));
-        userForSupport.setEmail(this.codingService.decoding(userForSupport.getEmail()));
-        userForSupport.setSubject(this.codingService.decoding(userForSupport.getSubject()));
+        userForSupport.setName(this.stringService.decoding(userForSupport.getName()));
+        userForSupport.setDescription(this.stringService.decoding(userForSupport.getDescription()));
+        userForSupport.setEmail(this.stringService.decoding(userForSupport.getEmail()));
+        userForSupport.setSubject(this.stringService.decoding(userForSupport.getSubject()));
 
         Map map = new HashMap();
         map.put("from", "DEAL");
@@ -247,10 +259,11 @@ public class UserController {
         map.put("name", userForSupport.getName());
         map.put("subject", userForSupport.getSubject());
 
-        if (this.emailService.sendEmail(MESSAGE_FOR_TECHNICAL_SUPPORT, map))      //TODO: add output in logger
+        if (this.emailService.sendEmail(MESSAGE_FOR_TECHNICAL_SUPPORT, map)) {      //TODO: add output in logger
             System.out.println("Message was sent");
-        else
+        } else {
             System.out.println("Error: message wasn't sent");
+        }
 
         return "redirect:/redirect";
     }

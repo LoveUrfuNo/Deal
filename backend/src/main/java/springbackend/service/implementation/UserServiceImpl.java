@@ -34,6 +34,7 @@ public class UserServiceImpl implements UserService {
         Set<Role> roles = new HashSet<>();
         roles.add(this.roleDao.getOne(roleId));
         user.setRoles(roles);
+
         this.userDao.save(user);
     }
 
@@ -42,6 +43,7 @@ public class UserServiceImpl implements UserService {
         Set<Role> roles = new HashSet<>();
         roles.add(this.roleDao.getOne(roleId));
         user.setRoles(roles);
+
         this.userDao.saveAndFlush(user);
     }
 

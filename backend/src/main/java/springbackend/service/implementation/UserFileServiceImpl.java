@@ -6,6 +6,10 @@ import springbackend.dao.UserFileDao;
 import springbackend.model.UserFile;
 import springbackend.service.UserFileService;
 
+import java.util.HashSet;
+import java.util.Set;
+import java.util.stream.Collectors;
+
 /**
  * Implementation of {@link springbackend.service.UserFileService} interface.
  */
@@ -18,5 +22,25 @@ public class UserFileServiceImpl implements UserFileService {
     @Override
     public void save(UserFile file) {
         this.userFileDao.save(file);
+    }
+
+    @Override
+    public void saveAndFlush(UserFile file) {
+        this.userFileDao.saveAndFlush(file);
+    }
+
+    @Override
+    public void delete(UserFile file) {
+        this.userFileDao.delete(file);
+    }
+
+    @Override
+    public Set<UserFile> findAll() {
+        return new HashSet<>(this.userFileDao.findAll());
+    }
+
+    @Override
+    public Set<UserFile> findAllByUserId(Long id) {
+        return this.userFileDao.findAllByUserId(id);
     }
 }

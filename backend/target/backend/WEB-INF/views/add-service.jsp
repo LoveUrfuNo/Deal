@@ -1,3 +1,5 @@
+<%@ page import="org.springframework.security.core.Authentication" %>
+<%@ page import="org.springframework.security.core.context.SecurityContextHolder" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
@@ -13,18 +15,20 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/add-service.css">
 </head>
 <body>
-<%--<form:form enctype="multipart/form-data" id="uploadPhotos"
-           action="/uploadFile/loadServicePhoto?${_csrf.parameterName}=${_csrf.token}" method="POST">
+<form:form name="file" enctype="multipart/form-data" id="asd"
+           action="/uploadFile/loadServicePhoto?${_csrf.parameterName}=${_csrf.token}"
+           method="POST">
     <input type="hidden" name="${_csrf.parameterName}"
-           value="${_csrf.token}"/>
-</form:form>--%>
+           value="${_csrf.token}">
+</form:form>
 <form:form method="POST" modelAttribute="serviceForm"
            action="/add_service"
            class="ui form">
     <spring:bind path="nameOfService">
         <div class="field ${status.error ? 'has-error' : ''}">
             <label>Название услуги</label>
-            <form:input minlength="2" maxlength="60" path="nameOfService" type="text" name="first-name"
+            <form:input minlength="2" maxlength="60" path="nameOfService"
+                        type="text" name="first-name"
                         placeholder="Сигна"/>
             <form:errors path="nameOfService"/>
         </div>
@@ -48,14 +52,15 @@
             <form:errors path="description"/>
         </div>
     </spring:bind>
-    <%--<div class="field">
+    <div class="field">
         <label>Загрузите фото</label>
-        <input id="photo" type="file" name="file" multiple="multiple" accept="image/*">
+        <input id="Photo" type="file" name="file"
+               multiple accept="image/*" form="asd">
         <div class="field">
             <ul id="preview-photo">
             </ul>
         </div>
-    </div>--%>
+    </div>
     <div class="field">
         <label>Загрузите видео</label>
         <input id="uploadVideo" type="file" accept="video/*" name="file">
@@ -372,7 +377,7 @@
             </div>
         </div>
     </spring:bind>
-    <button class="ui button" type="submit">Добавить</button>
+    <button onclick="uploadServicesPhotos('${_csrf.parameterName}=${_csrf.token}')" class="ui button" type="button">Добавить</button>
 </form:form>
 <a href="${pageContext.request.contextPath}/redirect" class="col-sm-12 btn btn-primary">Назад</a>
 

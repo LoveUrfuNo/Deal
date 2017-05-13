@@ -1,20 +1,18 @@
 package springbackend.controller;
 
-import com.google.common.io.Closer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import springbackend.model.User;
 import springbackend.model.UserFile;
+import springbackend.service.StringService;
 import springbackend.service.UserFileService;
 import springbackend.service.UserService;
-import sun.util.resources.OpenListResourceBundle;
 
 import java.io.BufferedOutputStream;
 import java.io.File;
@@ -33,6 +31,9 @@ public class FileController {
     @Autowired
     private UserService userService;
 
+    @Autowired
+    private StringService stringService;
+
     private static final String rootPath = "C:\\Users\\kosty\\IntellijProjects\\Deal\\backend\\src\\main\\webapp\\resources\\user's\\images\\";
 
     private static final Long ROLE_USER = 1L;
@@ -47,6 +48,7 @@ public class FileController {
 
         File uploadedFile = null;
         String name = null;
+
         if (!file.isEmpty()) {
             try {
                 byte[] bytes = file.getBytes();
@@ -82,13 +84,17 @@ public class FileController {
         assert uploadedFile != null;
         String path = uploadedFile.getAbsolutePath();
         if (operation.equals("loadAvatar")) {
-            currentUser.setAvatar(path.substring(path.indexOf("resources") - 1, path.length()));
+            currentUser.setAvatar(this.stringService.makePathForFile(path));
+
             this.userService.saveAndFlush(currentUser, ROLE_USER);
         } else if (operation.equals("loadServicePhoto")) {
             UserFile userFile = new UserFile();
             userFile.setTypeOfFile("photo");
-            userFile.setPathToFile(path);
-            //this.userFileService.save(userFile);                     //TODO:!!!!!!!!!
+            userFile.setPathToFile(this.stringService.makePathForFile(path));
+            userFile.setServiceName("add");
+            userFile.setUserId(currentUser.getId());
+
+            this.userFileService.save(userFile);
         }
 
         return "redirect";

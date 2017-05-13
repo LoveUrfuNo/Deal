@@ -21,10 +21,11 @@ public class ServiceEntranceController {
     public String serviceEntrance(Model model) {
         model.addAttribute("userForm", new ServiceEntrance());
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        if (auth.getAuthorities().stream().findFirst().orElse(null).getAuthority().equals("ROLE_USER"))
+        if (auth.getAuthorities().stream().findFirst().orElse(null).getAuthority().equals("ROLE_USER")) {
             return "redirect";
-        else
+        } else {
             return "service-entrance";
+        }
     }
 
     @RequestMapping(value = "/main", method = RequestMethod.POST)
@@ -32,9 +33,10 @@ public class ServiceEntranceController {
         model.addAttribute("searchRequest", new SearchRequest());
 
         model.addAttribute("userForm", new User());
-        if (userForm.getEnteredPassword().equals(userForm.getCorrectPassword()))
+        if (userForm.getEnteredPassword().equals(userForm.getCorrectPassword())) {
             return "main";
-        else
+        } else {
             return "forgot-service-password";
+        }
     }
 }

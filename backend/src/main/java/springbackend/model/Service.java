@@ -134,13 +134,12 @@ public class Service {
         this.user = user;
     }
 
-    /*@Override
+    @Override
     public String toString() {
         return "Service{" +
                 "id=" + id +
                 ", userId=" + userId +
                 ", nameOfService='" + nameOfService + '\'' +
-                ", usernameOfSeller='" + usernameOfSeller + '\'' +
                 ", serviceCost=" + serviceCost +
                 ", category='" + category + '\'' +
                 ", description='" + description + '\'' +
@@ -150,5 +149,5 @@ public class Service {
                 ", currency='" + currency + '\'' +
                 ", user=" + user +
                 '}';
-    }*/
+    }
 }

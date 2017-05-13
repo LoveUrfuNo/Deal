@@ -1,7 +1,5 @@
 package springbackend.controller;
 
-import javafx.collections.ObservableList;
-import javafx.collections.transformation.SortedList;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -13,8 +11,9 @@ import springbackend.model.SearchRequest;
 import springbackend.model.Service;
 import springbackend.model.User;
 import springbackend.model.UserFile;
-import springbackend.service.CodingService;
+import springbackend.service.StringService;
 import springbackend.service.ServiceForService;
+import springbackend.service.UserFileService;
 import springbackend.service.UserService;
 import springbackend.validator.SearchValidator;
 import springbackend.validator.ServiceValidator;
@@ -30,7 +29,7 @@ import java.util.stream.Collectors;
 @Controller
 public class ServiceController {
     @Autowired
-    private CodingService codingService;
+    private StringService stringService;
 
     @Autowired
     private ServiceForService serviceForService;
@@ -44,18 +43,24 @@ public class ServiceController {
     @Autowired
     private SearchValidator searchValidator;
 
+    @Autowired
+    private UserFileService userFileService;
+
     @RequestMapping(value = "/add_service", method = RequestMethod.GET)
     public String addService(Model model) {
         model.addAttribute("serviceForm", new Service());
         model.addAttribute("photoForm", new UserFile());
+
         return "add-service";
     }
 
     @RequestMapping(value = "/add_service", method = RequestMethod.POST)
-    public String addService(@ModelAttribute(value = "serviceForm") Service service, BindingResult bindingResult) {
+    public String addService(@ModelAttribute(value = "serviceForm") Service service,
+                             BindingResult bindingResult) {
         this.serviceValidator.validate(service, bindingResult);
-        if (bindingResult.hasErrors())
+        if (bindingResult.hasErrors()) {
             return "add-service";
+        }
 
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         User user = this.userService.findByUsername(auth.getName());
@@ -63,8 +68,8 @@ public class ServiceController {
         service.setUser(user);
         service.setUserId(service.getUser().getId());
         try {
-            service.setNameOfService(codingService.decoding(service.getNameOfService()));
-            service.setDescription(codingService.decoding(service.getDescription()));
+            service.setNameOfService(stringService.decoding(service.getNameOfService()));
+            service.setDescription(stringService.decoding(service.getDescription()));
 
             this.serviceForService.save(service);
         } catch (UnsupportedEncodingException e) {
@@ -76,7 +81,8 @@ public class ServiceController {
     }
 
     @RequestMapping(value = "/show_all_services/{category}", method = RequestMethod.GET)
-    public String showAllServicesInGivenCategory(@PathVariable(value = "category") String category, Model model) {
+    public String showAllServicesInGivenCategory(@PathVariable(value = "category") String category,
+                                                 Model model) {
         Set<Service> services = this.serviceForService.findAllByCategory(category);
 
         model.addAttribute("services", services);
@@ -90,6 +96,7 @@ public class ServiceController {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         User user = this.userService.findByUsername(auth.getName());
 
+        model.addAttribute("files", this.userFileService.findAll());
         model.addAttribute("user", user);
 
         return "user's-services";
@@ -97,16 +104,19 @@ public class ServiceController {
 
     @RequestMapping(value = "/search_services", method = RequestMethod.POST)
     public String searchServices(@ModelAttribute(value = "searchRequest") SearchRequest searchRequest,
-                                 Model model, BindingResult bindingResult) {
+                                 Model model,
+                                 BindingResult bindingResult) {
         searchValidator.validate(searchRequest, bindingResult);
         if (bindingResult.hasErrors()) {
             model.addAttribute("userForm", new User());
             return "redirect";
         }
 
-        Set<Service> allSet = this.serviceForService.findAll();
+        TreeSet<Service> allSet = new TreeSet<>(
+                (o1, o2) -> o1.getNameOfService().compareToIgnoreCase(o2.getNameOfService()));
+        allSet.addAll(this.serviceForService.findAll());
         Set<Service> resultsSet = allSet.stream()
-                        .filter(temp ->
+                .filter(temp ->
                         Arrays.stream(temp.getNameOfService().split(" "))
                                 .anyMatch(searchRequest.getSearchLine()::equalsIgnoreCase)
                                 ||
@@ -123,10 +133,14 @@ public class ServiceController {
         User user = this.userService.findByUsername(auth.getName());
 
         Service service = this.serviceForService.findById(id);
-        if (service.getUserId().equals(user.getId()))
+        if (service.getUserId().equals(user.getId())) {
             this.serviceForService.delete(service);
-        else
+            this.userFileService.findAllByUserId(user.getId()).stream()
+                    .filter(t -> t.getServiceName().equals(service.getNameOfService()))
+                    .forEach(temp -> this.userFileService.delete(temp));
+        } else {
             return "error-page";
+        }
 
         return "redirect:/show_your_services";
     }
