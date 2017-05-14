@@ -375,7 +375,8 @@
             </div>
         </div>
     </spring:bind>
-    <button onclick="uploadServicesPhotos('${_csrf.parameterName}=${_csrf.token}')" class="ui button" type="button">
+    <button onclick="uploadServicesPhotos('${_csrf.parameterName}=${_csrf.token}')"
+            class="ui button" type="button">
         Добавить
     </button>
 </form:form>

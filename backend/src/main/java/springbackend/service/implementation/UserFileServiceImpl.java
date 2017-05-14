@@ -43,4 +43,9 @@ public class UserFileServiceImpl implements UserFileService {
     public Set<UserFile> findAllByUserId(Long id) {
         return this.userFileDao.findAllByUserId(id);
     }
+
+    @Override
+    public Set<UserFile> findAllByServiceName(String name) {
+        return this.userFileDao.findAllByServiceName(name);
+    }
 }

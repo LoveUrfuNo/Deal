@@ -18,4 +18,6 @@ public interface UserFileService {
     Set<UserFile> findAll();
 
     Set<UserFile> findAllByUserId(Long id);
+
+    Set<UserFile> findAllByServiceName(String name);
 }

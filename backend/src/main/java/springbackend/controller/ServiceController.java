@@ -98,8 +98,10 @@ public class ServiceController {
         user.getServices().sort(
                 (o1, o2) -> o1.getNameOfService().compareToIgnoreCase(o2.getNameOfService()));
 
-        Map<String, UserFile> fileMap = new HashMap<>();
-        this.userFileService.findAllByUserId(user.getId()).forEach(t -> fileMap.put(t.getServiceName(), t));
+        Set<UserFile> allSet = this.userFileService.findAllByUserId(user.getId());
+        Map<String, Set<UserFile>> fileMap = new HashMap<>();
+        allSet.forEach(t -> fileMap.put(t.getServiceName(),
+                new HashSet<>(this.userFileService.findAllByServiceName(t.getServiceName()))));
 
         model.addAttribute("files", fileMap);
         model.addAttribute("user", user);

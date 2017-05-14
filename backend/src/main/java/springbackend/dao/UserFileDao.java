@@ -13,4 +13,6 @@ public interface UserFileDao extends JpaRepository<UserFile, Long> {
     void delete(UserFile file);
 
     Set<UserFile> findAllByUserId(Long id);
+
+    Set<UserFile> findAllByServiceName(String name);
 }
