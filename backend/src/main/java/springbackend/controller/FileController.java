@@ -40,25 +40,25 @@ public class FileController {
 
     private static final Logger logger = LoggerFactory.getLogger(FileController.class);
 
-    @RequestMapping(value = "/uploadFile/{operation}", method = RequestMethod.POST)
+    @RequestMapping(value = "/uploadFile/{dataAboutRequest}", method = RequestMethod.POST)
     public String uploadFile(@RequestParam("file") MultipartFile file,
-                             @PathVariable("operation") String operation) throws IOException {
+                             @PathVariable("dataAboutRequest") String operation) throws IOException {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         User currentUser = this.userService.findByUsername(auth.getName());
 
         File uploadedFile = null;
         String name = null;
-
         if (!file.isEmpty()) {
             try {
                 byte[] bytes = file.getBytes();
 
                 File dir = null;
-                if (operation.equals("loadAvatar")) {
+                if (operation.contains("loadAvatar")) {
                     name = currentUser.getLogin() + "'s_avatar_" + file.getOriginalFilename();
                     dir = new File(rootPath + "/avatars" + File.separator);
                 } else if (operation.contains("loadServicePhoto")) {
-                    name = currentUser.getLogin() + "'s_service_photo_" + file.getOriginalFilename();
+                    name = currentUser.getLogin() + "'s_service_photo_"
+                            + operation.substring(operation.indexOf('+') + 1) + "_" + file.getOriginalFilename();
                     dir = new File(rootPath + "/for_services" + File.separator);
                 }
 
@@ -83,7 +83,7 @@ public class FileController {
 
         assert uploadedFile != null;
         String path = uploadedFile.getAbsolutePath();
-        if (operation.equals("loadAvatar")) {
+        if (operation.contains("loadAvatar")) {
             currentUser.setAvatar(this.stringService.makePathForFile(path));
 
             this.userService.saveAndFlush(currentUser, ROLE_USER);

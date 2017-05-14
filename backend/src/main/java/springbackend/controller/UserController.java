@@ -182,6 +182,7 @@ public class UserController {
                                Model model) {
         this.userValidator.validate(user, bindingResult);
         if (bindingResult.hasErrors()) {
+            model.addAttribute("searchRequest", new SearchRequest());
             return "main";
         }
 

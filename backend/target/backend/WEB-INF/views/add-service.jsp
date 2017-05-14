@@ -1,5 +1,3 @@
-<%@ page import="org.springframework.security.core.Authentication" %>
-<%@ page import="org.springframework.security.core.context.SecurityContextHolder" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
@@ -15,7 +13,7 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/add-service.css">
 </head>
 <body>
-<form:form name="file" enctype="multipart/form-data" id="asd"
+<form:form name="file" enctype="multipart/form-data" id="uploadPhoto"
            action="/uploadFile/loadServicePhoto?${_csrf.parameterName}=${_csrf.token}"
            method="POST">
     <input type="hidden" name="${_csrf.parameterName}"
@@ -52,10 +50,10 @@
             <form:errors path="description"/>
         </div>
     </spring:bind>
-    <div class="field">
+    <div class="field" id="photosForService">
         <label>Загрузите фото</label>
         <input id="Photo" type="file" name="file"
-               multiple accept="image/*" form="asd">
+               multiple="multiple" accept="image/*" form="uploadPhoto">
         <div class="field">
             <ul id="preview-photo">
             </ul>
@@ -377,7 +375,9 @@
             </div>
         </div>
     </spring:bind>
-    <button onclick="uploadServicesPhotos('${_csrf.parameterName}=${_csrf.token}')" class="ui button" type="button">Добавить</button>
+    <button onclick="uploadServicesPhotos('${_csrf.parameterName}=${_csrf.token}')" class="ui button" type="button">
+        Добавить
+    </button>
 </form:form>
 <a href="${pageContext.request.contextPath}/redirect" class="col-sm-12 btn btn-primary">Назад</a>
 
