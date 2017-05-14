@@ -19,7 +19,7 @@
     <input type="hidden" name="${_csrf.parameterName}"
            value="${_csrf.token}">
 </form:form>
-<form:form method="POST" modelAttribute="serviceForm"
+<form:form onsubmit="return serviceValidate()" method="POST" modelAttribute="serviceForm"
            action="/add_service"
            class="ui form">
     <spring:bind path="nameOfService">
@@ -67,7 +67,9 @@
         <div class="field ${status.error ? 'has-error' : ''}">
             <label>Стоимость услуги</label>
             <div class="ui right labeled input">
-                <form:input path="serviceCost" type="number" name="cost" placeholder="100" min="0" max="9999999999"/>
+                <form:input path="serviceCost" type="number" name="cost"
+                            placeholder="300" min="0"
+                            max="9999999999" step="10"/>
                 <spring:bind path="currency">
                     <div class="ui dropdown label ${status.error ? 'has-error' : ''}">
                         <div class="text">₽</div>
@@ -376,9 +378,7 @@
         </div>
     </spring:bind>
     <button onclick="uploadServicesPhotos('${_csrf.parameterName}=${_csrf.token}')"
-            class="ui button" type="button">
-        Добавить
-    </button>
+            class="ui button" type="button">Добавить</button>
 </form:form>
 <a href="${pageContext.request.contextPath}/redirect" class="col-sm-12 btn btn-primary">Назад</a>
 

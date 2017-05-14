@@ -14,7 +14,7 @@
     <h4>${service.nameOfService}</h4>
     <c:if test="${files.get(service.nameOfService) != null}">
         <c:forEach var="file" items="${files.get(service.nameOfService)}">
-            <img src="${file.pathToFile}" alt="sorayn"><br>
+            <img src="${file.pathToFile}" alt="sorayn">
         </c:forEach>
     </c:if>
     <c:if test="${files.get(service.nameOfService) == null}">

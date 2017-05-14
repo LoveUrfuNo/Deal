@@ -26,12 +26,23 @@ var uploadServicesPhotos = function (_csrf) {
     var xhr = new XMLHttpRequest();
 
     var photos = document.getElementById('Photo').files;
-    for (var i = 0; i < photos.length; i++) {
-        formData.set('file', photos[i]);
-        xhr.open("POST", "/uploadFile/loadServicePhoto+"
-            + document.getElementById('nameOfService').value + "?" + _csrf, true);
-        xhr.send(formData);
-    }
 
-    serviceInformationForm.submit();
+    if (!(photos.length > 5)) {
+        for (var i = 0; i < photos.length; i++) {
+            formData.set('file', photos[i]);
+            xhr.open("POST", "/uploadFile/loadServicePhoto+"
+                + document.getElementById('nameOfService').value + "?" + _csrf, true);
+            xhr.send(formData);
+        }
+
+        serviceInformationForm.submit();
+    }
+};
+
+var serviceValidate = function () {
+    return false;
+};
+
+var imageUpload = function () {
+
 };

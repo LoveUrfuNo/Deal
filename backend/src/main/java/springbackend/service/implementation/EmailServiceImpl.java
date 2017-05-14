@@ -34,7 +34,7 @@ public class EmailServiceImpl implements EmailService{
     private VelocityEngine velocityEngine;
 
     public boolean sendEmail(final String templateName, final Map<String, Object> model) {
-        boolean res = false;
+        boolean result = false;
         try {
             MimeMessagePreparator preparator = (mimeMessage) -> {
 
@@ -53,17 +53,15 @@ public class EmailServiceImpl implements EmailService{
 
                 message.setText(text, true);
             };
+
             this.mailSender.send(preparator);
-            res = true;
+            result = true;
 
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return res;
-    }
 
-    public String getNameFromEmailAddress(String email) {
-        return email.substring(0, email.indexOf('@'));
+        return result;
     }
 
     public String generateString(int length) {

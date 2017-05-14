@@ -34,7 +34,7 @@ public class FileController {
     @Autowired
     private StringService stringService;
 
-    private static final String rootPath = "C:\\Users\\kosty\\IntellijProjects\\Deal\\backend\\src\\main\\webapp\\resources\\user's\\images\\";
+    private static final String rootPath = "C:\\Users\\kosty\\IntellijProjects\\Deal\\backend\\src\\main\\webapp\\resources\\user's\\";
 
     private static final Long ROLE_USER = 1L;
 
@@ -55,11 +55,11 @@ public class FileController {
                 File dir = null;
                 if (operation.contains("loadAvatar")) {
                     name = currentUser.getLogin() + "'s_avatar_" + file.getOriginalFilename();
-                    dir = new File(rootPath + "/avatars" + File.separator);
+                    dir = new File(rootPath + "/images/avatars" + File.separator);
                 } else if (operation.contains("loadServicePhoto")) {
                     name = currentUser.getLogin() + "'s_service_photo_"
                             + operation.substring(operation.indexOf('+') + 1) + "_" + file.getOriginalFilename();
-                    dir = new File(rootPath + "/for_services" + File.separator);
+                    dir = new File(rootPath + "/images/for_services" + File.separator);
                 }
 
                 if (!dir.exists()) {
