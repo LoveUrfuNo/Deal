@@ -1,5 +1,6 @@
 package springbackend.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
@@ -10,16 +11,18 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import springbackend.model.SearchRequest;
 import springbackend.model.ServiceEntrance;
 import springbackend.model.User;
+import springbackend.service.SearchService;
+import springbackend.spizheno.yesterday.DamerauLevensteinMetric;
 
 /**
  * Controller for {@link springbackend.model.ServiceEntrance}'s pages.
  */
-
 @Controller
 public class ServiceEntranceController {
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String serviceEntrance(Model model) {
         model.addAttribute("userForm", new ServiceEntrance());
+
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         if (auth.getAuthorities().stream().findFirst().orElse(null).getAuthority().equals("ROLE_USER")) {
             return "redirect";

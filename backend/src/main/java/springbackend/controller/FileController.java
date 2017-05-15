@@ -22,7 +22,6 @@ import java.io.IOException;
 /**
  * Controller for operations with download files
  */
-
 @Controller
 public class FileController {
     @Autowired

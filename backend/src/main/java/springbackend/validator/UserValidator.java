@@ -12,7 +12,6 @@ import springbackend.service.UserService;
  * Validator for {@link springbackend.model.User} class,
  * implements {@link Validator} interface.
  */
-
 @Component
 public class UserValidator implements Validator {
     @Autowired

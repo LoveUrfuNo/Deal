@@ -11,10 +11,7 @@ import springbackend.model.SearchRequest;
 import springbackend.model.Service;
 import springbackend.model.User;
 import springbackend.model.UserFile;
-import springbackend.service.StringService;
-import springbackend.service.ServiceForService;
-import springbackend.service.UserFileService;
-import springbackend.service.UserService;
+import springbackend.service.*;
 import springbackend.validator.SearchValidator;
 import springbackend.validator.ServiceValidator;
 import sun.reflect.generics.tree.Tree;
@@ -26,7 +23,6 @@ import java.util.stream.Collectors;
 /**
  * Controller for {@link springbackend.model.Service}'s pages.
  */
-
 @Controller
 public class ServiceController {
     @Autowired
@@ -46,6 +42,9 @@ public class ServiceController {
 
     @Autowired
     private UserFileService userFileService;
+
+    @Autowired
+    private SearchService searchService;
 
     @RequestMapping(value = "/add_service", method = RequestMethod.GET)
     public String addService(Model model) {
@@ -98,8 +97,9 @@ public class ServiceController {
         user.getServices().sort(
                 (o1, o2) -> o1.getNameOfService().compareToIgnoreCase(o2.getNameOfService()));
 
-        Set<UserFile> allSet = this.userFileService.findAllByUserId(user.getId());
         Map<String, Set<UserFile>> fileMap = new HashMap<>();
+
+        Set<UserFile> allSet = this.userFileService.findAllByUserId(user.getId());
         allSet.forEach(t -> fileMap.put(t.getServiceName(),
                 new HashSet<>(this.userFileService.findAllByServiceName(t.getServiceName()))));
 
@@ -119,17 +119,9 @@ public class ServiceController {
             return "redirect";
         }
 
-        TreeSet<Service> allSet = new TreeSet<>(
-                (o1, o2) -> o1.getNameOfService().compareToIgnoreCase(o2.getNameOfService()));
-        allSet.addAll(this.serviceForService.findAll());
-        Set<Service> resultsSet = allSet.stream()
-                .filter(temp ->
-                        Arrays.stream(temp.getNameOfService().split(" "))
-                                .anyMatch(searchRequest.getSearchLine()::equalsIgnoreCase)
-                                ||
-                                Arrays.stream(temp.getDescription().split(" "))
-                                        .anyMatch(searchRequest.getSearchLine()::equalsIgnoreCase)).collect(Collectors.toSet());
-        model.addAttribute("resultsSet", resultsSet);
+        searchRequest.setSearchLine(searchRequest.getSearchLine().replaceAll("[\\s]{2,}", " "));
+
+        model.addAttribute("resultsSet", this.searchService.searchOccurrences(searchRequest));
 
         return "searching-results";
     }

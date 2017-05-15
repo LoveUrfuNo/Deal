@@ -14,7 +14,6 @@ import java.util.Set;
  * Validator for {@link springbackend.model.Service} class,
  * implements {@link Validator} interface.
  */
-
 @Component
 public class ServiceValidator implements Validator {
     @Override

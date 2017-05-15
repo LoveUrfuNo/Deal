@@ -16,7 +16,6 @@ import java.util.*;
 /**
  * Implementation of {@link springbackend.service.UserService} interface.
  */
-
 @Service
 public class UserServiceImpl implements UserService {
     @Autowired

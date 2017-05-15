@@ -7,7 +7,6 @@ import javax.persistence.Entity;
 /**
  * Simple JavaBean domain object that represents a user's Service.
  */
-
 @Entity
 @Table(name = "services")
 public class Service {

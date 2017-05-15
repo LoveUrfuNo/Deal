@@ -5,7 +5,6 @@ import javax.persistence.Entity;
 /**
  * Simple JavaBean object that represent user's request for search by services.
  */
-
 public class SearchRequest {
     private String searchLine;
 

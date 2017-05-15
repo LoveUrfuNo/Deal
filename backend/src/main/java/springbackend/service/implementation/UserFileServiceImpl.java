@@ -13,7 +13,6 @@ import java.util.stream.Collectors;
 /**
  * Implementation of {@link springbackend.service.UserFileService} interface.
  */
-
 @Service
 public class UserFileServiceImpl implements UserFileService {
     @Autowired

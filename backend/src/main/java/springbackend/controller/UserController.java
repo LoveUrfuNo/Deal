@@ -29,7 +29,6 @@ import java.util.*;
 /**
  * Controller for {@link springbackend.model.User}'s pages.
  */
-
 @Controller
 public class UserController {
     private static final Integer SIZE_OF_GENERATED_STRING = 32;

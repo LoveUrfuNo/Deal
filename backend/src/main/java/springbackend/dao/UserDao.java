@@ -6,7 +6,6 @@ import springbackend.model.User;
 /**
  * Dao for class {@link springbackend.model.User}.
  */
-
 public interface UserDao extends JpaRepository<User, Long> {
     User findByUsername(String username);
 

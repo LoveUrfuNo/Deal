@@ -21,7 +21,6 @@ import java.util.Set;
 /**
  * Implementation of {@link UserDetailsService} interface.
  */
-
 public class UserDetailsServiceImpl extends JdbcDaoImpl {
     private static final Long ROLE_NOT_ACTIVATED_USER = 3L;
 

@@ -7,7 +7,6 @@ import java.util.Date;
 /**
  * Simple JavaBean domain object that represents a user who click on "remember me".
  */
-
 @Entity
 @Table(name = "persistent_logins")
 public class PersistentUser {

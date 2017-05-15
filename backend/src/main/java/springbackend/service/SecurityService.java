@@ -3,7 +3,6 @@ package springbackend.service;
 /**
  * Service for Security.
  */
-
 public interface SecurityService {
     /**
      * @return null.

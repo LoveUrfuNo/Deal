@@ -8,7 +8,6 @@ import java.util.Set;
 /**
  * Dao for class {@link springbackend.model.UserFile}.
  */
-
 public interface UserFileDao extends JpaRepository<UserFile, Long> {
     void delete(UserFile file);
 

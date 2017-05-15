@@ -10,7 +10,6 @@ import java.util.Set;
 /**
  * Service for users services
  */
-
 public interface ServiceForService {
     /**
      * Deletes service.
@@ -52,7 +51,7 @@ public interface ServiceForService {
     /**
      * Finds all services.
      *
-     * @return set of services.
+     * @return found set of services.
      */
     Set<Service> findAll();
 
@@ -60,7 +59,7 @@ public interface ServiceForService {
      * Finds all services by service category.
      *
      * @param category - category, direction or subject of service
-     * @return found set of service.s
+     * @return found set of services.
      */
     Set<Service> findAllByCategory(String category);
 

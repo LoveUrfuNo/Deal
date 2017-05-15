@@ -6,7 +6,6 @@ import springbackend.model.Role;
 /**
  * Dao for class {@link springbackend.model.Role}.
  */
-
 public interface RoleDao extends JpaRepository<Role, Long> {
     Role findById(Long id);
 }

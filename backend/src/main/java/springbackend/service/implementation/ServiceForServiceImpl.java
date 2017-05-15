@@ -13,7 +13,6 @@ import java.util.stream.Collectors;
 /**
  * Implementation of {@link springbackend.service.ServiceForService} interface.
  */
-
 @org.springframework.stereotype.Service
 public class ServiceForServiceImpl implements ServiceForService {
     @Autowired

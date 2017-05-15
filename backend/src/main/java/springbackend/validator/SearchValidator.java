@@ -10,7 +10,6 @@ import springbackend.model.SearchRequest;
  * Validator for {@link springbackend.model.SearchRequest} class,
  * implements {@link Validator} interface.
  */
-
 @Component
 public class SearchValidator implements Validator{
     @Override

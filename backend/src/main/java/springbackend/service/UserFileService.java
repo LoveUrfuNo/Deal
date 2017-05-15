@@ -7,7 +7,6 @@ import java.util.Set;
 /**
  * Service class for {@link springbackend.model.UserFile}
  */
-
 public interface UserFileService {
     /**
      * Saves file for the first time.

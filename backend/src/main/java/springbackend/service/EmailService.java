@@ -5,7 +5,6 @@ import java.util.Map;
 /**
  * Service for send email message
  */
-
 public interface EmailService {
     /**
      * Sends email message.

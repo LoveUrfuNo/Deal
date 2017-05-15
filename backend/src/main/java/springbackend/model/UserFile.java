@@ -6,7 +6,6 @@ import java.util.Set;
 /**
  * Simple JavaBean domain object that represents user's file for his service description (photo or video).
  */
-
 @Entity
 @Table(name = "user_files")
 public class UserFile {

@@ -8,7 +8,6 @@ import java.io.UnsupportedEncodingException;
 /**
  * Implementation of {@link StringService} interface.
  */
-
 @Service
 public class StringServiceImpl implements StringService {
     @Override

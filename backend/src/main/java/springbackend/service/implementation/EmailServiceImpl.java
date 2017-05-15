@@ -18,7 +18,6 @@ import java.util.Random;
 /**
  * Implementation of {@link springbackend.service.EmailService} interface.
  */
-
 @Service
 public class EmailServiceImpl implements EmailService{
     private static final String FROM = "from";

@@ -10,7 +10,6 @@ import springbackend.model.UserFormForTechnicalSupport;
  * Validator for {@link springbackend.model.User} class,
  * implements {@link Validator} interface.
  */
-
 @Component
 public class UserFormForTechnicalSupportValidator implements Validator {
 

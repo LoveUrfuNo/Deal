@@ -14,7 +14,6 @@ import springbackend.service.SecurityService;
 /**
  * Implementation of {@link springbackend.service.SecurityService} interface.
  */
-
 @Service
 public class SecurityServiceImpl implements SecurityService {
     private static final Logger logger = LoggerFactory.getLogger(SecurityServiceImpl.class);
