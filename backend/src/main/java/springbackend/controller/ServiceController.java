@@ -1,5 +1,6 @@
 package springbackend.controller;
 
+import javafx.util.Pair;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -119,9 +120,18 @@ public class ServiceController {
             return "redirect";
         }
 
-        searchRequest.setSearchLine(searchRequest.getSearchLine().replaceAll("[\\s]{2,}", " "));
+        try {
+            searchRequest.setSearchLine(new String(searchRequest.getSearchLine().replaceAll("[\\s]{2,}", " ").getBytes("ISO-8859-1"), "UTF-8").toLowerCase()); //TODO: make more adequate
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        Map<String, HashMap<String, Integer>> wordsWithDistance
+                = this.searchService.getWordsWithMinimumDistance(searchRequest);
 
-        model.addAttribute("resultsSet", this.searchService.searchOccurrences(searchRequest));
+        model.addAttribute("vosmozno",
+                this.searchService.getAlternativeSearchLine(wordsWithDistance, searchRequest));
+        model.addAttribute("resultsSet",
+                this.searchService.getExactOccurrences(searchRequest));
 
         return "searching-results";
     }
