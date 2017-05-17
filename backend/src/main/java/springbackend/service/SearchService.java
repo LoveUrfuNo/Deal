@@ -1,6 +1,5 @@
 package springbackend.service;
 
-import javafx.util.Pair;
 import springbackend.model.SearchRequest;
 import springbackend.model.Service;
 
@@ -15,7 +14,7 @@ public interface SearchService {
      *
      * @param
      */
-    Set<Service> getExactOccurrences(SearchRequest searchRequest);
+    TreeSet<Service> getExactOccurrences(SearchRequest searchRequest);
 
     /**
      *

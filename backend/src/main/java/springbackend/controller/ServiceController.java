@@ -121,20 +121,22 @@ public class ServiceController {
         }
 
         try {
-            String sourceSearchLine = searchRequest.getSearchLine().replaceAll("[\\s]{2,}", " ");
-            String decodedSearchLine = new String(sourceSearchLine.getBytes("ISO-8859-1"), "UTF-8");
+            String sourceSearchLineWithoutMultipleSpaces = searchRequest.getSearchLine().replaceAll("[\\s]{2,}", " ");
+            String decodedSearchLine = new String(
+                    sourceSearchLineWithoutMultipleSpaces.getBytes("ISO-8859-1"), "UTF-8");
 
             searchRequest.setSearchLine(decodedSearchLine.toLowerCase());
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
+            model.addAttribute("error_in_site_search", "vvedite drugoe plz");
             return "redirect";
         }
         Map<String, HashMap<String, Integer>> wordsWithDistance
                 = this.searchService.getWordsWithMinimumDistance(searchRequest);
 
-        model.addAttribute("didYouMeanIt",
+        model.addAttribute("did_you_meant_it",
                 this.searchService.getAlternativeSearchLine(wordsWithDistance, searchRequest));
-        model.addAttribute("resultsSet",
+        model.addAttribute("search_results",
                 this.searchService.getExactOccurrences(searchRequest));
 
         return "searching-results";

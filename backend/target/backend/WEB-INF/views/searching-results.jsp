@@ -5,8 +5,8 @@
     <title>Результаты</title>
 </head>
 <body>
-<p>Возможно, вы имели в виду: <i><a href="#">${didYouMeanIt}</a></i></p><br>
-<c:forEach var="service" items="${resultsSet}">
+<p>Возможно, вы имели в виду: <i><a href="#">${did_you_meant_it}</a></i></p><br>
+<c:forEach var="service" items="${search_results}">
     <h2>${service.user.firstName != null ? service.user.firstName : service.user.login}
         -> ${service.nameOfService} всего за ${service.serviceCost}${service.currency}</h2>
 </c:forEach>

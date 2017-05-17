@@ -70,7 +70,6 @@
                             </div>
                         </div>
 
-
                         <div class="col-xs-8 text-right menu-1">
                             <ul>
                                 <li><a href="#">Профиль</a></li>
@@ -92,7 +91,7 @@
                         <div class="col-md-12 col-md-offset-0 text-left">
                             <div class="row row-mt-15em">
                                 <div class="col-md-7 mt-text animate-box" data-animate-effect="fadeInUp">
-                                    <div class="ui action input">
+                                    <div class="ui action input ">
                                         <form:form method="POST" modelAttribute="searchRequest"
                                                    action="${pageContext.request.contextPath}/search_services">
                                             <spring:bind path="searchLine">
@@ -186,7 +185,6 @@
                                                         </div>
                                                     </form:form>
                                                 </div>
-
                                                 <div class="tab-content-inner" data-content="login">
                                                     <form method="POST" action="${contextPath}/login"
                                                           class="form-signin">

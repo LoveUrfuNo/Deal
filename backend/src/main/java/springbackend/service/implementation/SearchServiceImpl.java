@@ -1,18 +1,16 @@
 package springbackend.service.implementation;
 
+import javafx.collections.transformation.SortedList;
 import org.springframework.beans.factory.annotation.Autowired;
 import springbackend.model.SearchRequest;
 import springbackend.model.Service;
 import springbackend.service.SearchService;
 import springbackend.service.ServiceForService;
 
-import java.awt.*;
-import java.io.UnsupportedEncodingException;
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 /**
  * Implementation of {@link springbackend.service.SearchService} interface.
@@ -26,6 +24,20 @@ public class SearchServiceImpl implements SearchService {
         int getDistance(CharSequence word1, CharSequence word2);
     }
 
+    /**
+     *
+     */
+    interface Array {
+        ArrayList<String> getArrayFromTexts(String string1, String string2);
+    }
+
+    /**
+     *
+     */
+    interface Stream {
+        Boolean getBool(String string);            //TODO: fixed
+    }
+
     @Autowired
     private ServiceForService serviceForService;
 
@@ -33,22 +45,52 @@ public class SearchServiceImpl implements SearchService {
     private SearchService searchService;
 
     @Override
-    public Set<springbackend.model.Service> getExactOccurrences(SearchRequest searchRequest) {
-        TreeSet<Service> allServiceSet = new TreeSet<>(
-                (o1, o2) -> o1.getNameOfService().compareToIgnoreCase(o2.getNameOfService()));
+    public TreeSet<Service> getExactOccurrences(SearchRequest searchRequest) {
+        TreeSet<Service> searchResults = new TreeSet<>(Comparator.comparing(Service::getServiceCost));
+        Set<Service> allServiceSet = this.serviceForService.findAll();
 
-        String searchLine = searchRequest.getSearchLine();
-        allServiceSet.addAll(this.serviceForService.findAll());
-        Set<Service> resultsSet = allServiceSet.stream()
-                .filter(temp ->
-                        Arrays.stream(temp.getNameOfService().split(" "))
-                                .anyMatch(searchLine::equalsIgnoreCase)             //TODO: add search by many words (not by one as now)
+        String searchLine = searchRequest.getSearchLine().replaceAll("[^а-я\\w\\s-]", "");
+
+        Array arrayList = (string1, string2) -> {
+            ArrayList<String> result = new ArrayList<>();
+
+            result.addAll(Arrays.stream(string1.split(" "))
+                    .map(t -> t.replaceAll("[^а-я\\w\\s-]", ""))
+                    .collect(Collectors.toList()));
+            result.addAll(Arrays.stream(string2.split(" "))
+                    .map(t -> t.replaceAll("[^а-я\\w\\s-]", ""))
+                    .collect(Collectors.toList()));
+
+            return result;
+        };
+
+        searchResults.addAll(allServiceSet.stream()
+                .filter(service ->
+                        service.getNameOfService().intern() == searchLine.intern()
                                 ||
-                                Arrays.stream(temp.getDescription().split(" "))
-                                        .anyMatch(searchLine::equalsIgnoreCase))
-                .collect(Collectors.toSet());
+                                service.getDescription().intern() == searchLine.intern())               //TODO: deal with toLowerCase()
+                .collect(Collectors.toSet()));
 
-        return resultsSet;
+        String[] searchLineWords = searchLine.split(" ");
+        Stream bool = (string) -> Arrays.stream(searchLineWords)
+                .allMatch(searchWord -> arrayList.getArrayFromTexts(string, "")
+                        .contains(searchWord));
+        searchResults.addAll(allServiceSet.stream()
+                .filter(service ->
+                        bool.getBool(service.getNameOfService())
+                                ||
+                                bool.getBool(service.getDescription()))          //TODO: rename bool
+                .collect(Collectors.toSet()));
+
+        searchResults.addAll(allServiceSet.stream()
+                .filter(service ->
+                        arrayList.getArrayFromTexts(service.getNameOfService(), service.getDescription())
+                                .stream().anyMatch(word ->
+                                Arrays.stream(searchLineWords)
+                                        .collect(Collectors.toList()).contains(word.toLowerCase())))
+                .collect(Collectors.toSet()));
+
+        return searchResults;
     }
 
     @Override
