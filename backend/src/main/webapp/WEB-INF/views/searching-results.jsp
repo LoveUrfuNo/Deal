@@ -5,6 +5,7 @@
     <title>Результаты</title>
 </head>
 <body>
+<p>Возможно, вы имели в виду: <i><a href="#">${didYouMeanIt}</a></i></p><br>
 <c:forEach var="service" items="${resultsSet}">
     <h2>${service.user.firstName != null ? service.user.firstName : service.user.login}
         -> ${service.nameOfService} всего за ${service.serviceCost}${service.currency}</h2>

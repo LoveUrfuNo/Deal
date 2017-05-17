@@ -6,11 +6,13 @@ import springbackend.model.Service;
 import springbackend.service.SearchService;
 import springbackend.service.ServiceForService;
 
+import java.awt.*;
 import java.io.UnsupportedEncodingException;
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * Implementation of {@link springbackend.service.SearchService} interface.
@@ -36,12 +38,11 @@ public class SearchServiceImpl implements SearchService {
                 (o1, o2) -> o1.getNameOfService().compareToIgnoreCase(o2.getNameOfService()));
 
         String searchLine = searchRequest.getSearchLine();
-
         allServiceSet.addAll(this.serviceForService.findAll());
         Set<Service> resultsSet = allServiceSet.stream()
                 .filter(temp ->
                         Arrays.stream(temp.getNameOfService().split(" "))
-                                .anyMatch(searchLine::equalsIgnoreCase)             //TODO: add search by many words (not by one as now) и убрать несколько вызовов гетсёерчлайн
+                                .anyMatch(searchLine::equalsIgnoreCase)             //TODO: add search by many words (not by one as now)
                                 ||
                                 Arrays.stream(temp.getDescription().split(" "))
                                         .anyMatch(searchLine::equalsIgnoreCase))
@@ -61,8 +62,16 @@ public class SearchServiceImpl implements SearchService {
         Arrays.stream(wordsFromRequest).forEach(userWord
                 -> minDistanceMap.put(userWord, wordsWithDistance.get(userWord)
                 .values().stream().min(Comparator.naturalOrder()).orElse(-1)));
-        
-        return null;
+
+        Arrays.stream(wordsFromRequest).forEach(userWord -> {
+            result.append(wordsWithDistance.get(userWord)
+                    .entrySet().stream().filter(pair ->
+                            pair.getValue().equals(minDistanceMap.get(userWord)))
+                    .findAny().get().getKey());
+            result.append(" ");
+        });
+
+        return result.toString();
     }
 
     @Override

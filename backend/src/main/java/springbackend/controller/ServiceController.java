@@ -121,14 +121,18 @@ public class ServiceController {
         }
 
         try {
-            searchRequest.setSearchLine(new String(searchRequest.getSearchLine().replaceAll("[\\s]{2,}", " ").getBytes("ISO-8859-1"), "UTF-8").toLowerCase()); //TODO: make more adequate
+            String sourceSearchLine = searchRequest.getSearchLine().replaceAll("[\\s]{2,}", " ");
+            String decodedSearchLine = new String(sourceSearchLine.getBytes("ISO-8859-1"), "UTF-8");
+
+            searchRequest.setSearchLine(decodedSearchLine.toLowerCase());
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
+            return "redirect";
         }
         Map<String, HashMap<String, Integer>> wordsWithDistance
                 = this.searchService.getWordsWithMinimumDistance(searchRequest);
 
-        model.addAttribute("vosmozno",
+        model.addAttribute("didYouMeanIt",
                 this.searchService.getAlternativeSearchLine(wordsWithDistance, searchRequest));
         model.addAttribute("resultsSet",
                 this.searchService.getExactOccurrences(searchRequest));
