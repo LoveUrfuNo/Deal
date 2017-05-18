@@ -1,7 +1,5 @@
 package springbackend.model;
 
-import javax.persistence.Entity;
-
 /**
  * Simple JavaBean object that represent user's request for search by services.
  */

@@ -14,7 +14,7 @@ public interface SearchService {
      *
      * @param
      */
-    TreeSet<Service> getExactOccurrences(SearchRequest searchRequest);
+    TreeSet<Service> getResultServiceSet(SearchRequest searchRequest);
 
     /**
      *
@@ -22,11 +22,16 @@ public interface SearchService {
      */
     String getAlternativeSearchLine(Map<String, HashMap<String, Integer>> wordsWithDistance,
                                     SearchRequest searchRequest);
-
     /**
      *
      */
     Map<String, HashMap<String, Integer>> getWordsWithMinimumDistance(SearchRequest searchRequest);
+
+    /**
+     *
+     * @return
+     */
+    String getStringByOppositeLayout(String sourceString);
 
     /**
      * @return

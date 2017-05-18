@@ -22,7 +22,6 @@ public class ServiceEntranceController {
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String serviceEntrance(Model model) {
         model.addAttribute("userForm", new ServiceEntrance());
-
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         if (auth.getAuthorities().stream().findFirst().orElse(null).getAuthority().equals("ROLE_USER")) {
             return "redirect";

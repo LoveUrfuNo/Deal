@@ -1,6 +1,5 @@
 package springbackend.controller;
 
-import javafx.util.Pair;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -15,11 +14,9 @@ import springbackend.model.UserFile;
 import springbackend.service.*;
 import springbackend.validator.SearchValidator;
 import springbackend.validator.ServiceValidator;
-import sun.reflect.generics.tree.Tree;
 
 import java.io.UnsupportedEncodingException;
 import java.util.*;
-import java.util.stream.Collectors;
 
 /**
  * Controller for {@link springbackend.model.Service}'s pages.
@@ -120,6 +117,8 @@ public class ServiceController {
             return "redirect";
         }
 
+        TreeSet<String> dictionary = this.searchService.crateDictionary();   //TODO: make static and mutual (maybe volatile)
+
         try {
             String sourceSearchLineWithoutMultipleSpaces = searchRequest.getSearchLine().replaceAll("[\\s]{2,}", " ");
             String decodedSearchLine = new String(
@@ -128,16 +127,35 @@ public class ServiceController {
             searchRequest.setSearchLine(decodedSearchLine.toLowerCase());
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
-            model.addAttribute("error_in_site_search", "vvedite drugoe plz");
+            model.addAttribute("error_in_site_search", "vvedite drugoe plz");  //TODO: add in jsp
             return "redirect";
         }
-        Map<String, HashMap<String, Integer>> wordsWithDistance
-                = this.searchService.getWordsWithMinimumDistance(searchRequest);
 
-        model.addAttribute("did_you_meant_it",
-                this.searchService.getAlternativeSearchLine(wordsWithDistance, searchRequest));
-        model.addAttribute("search_results",
-                this.searchService.getExactOccurrences(searchRequest));
+        TreeSet<Service> searchResults = this.searchService.getResultServiceSet(searchRequest);
+        if (searchResults.size() != 0 /*|| dictionary.contains(searchRequest.getSearchLine())*/) {
+            Map<String, HashMap<String, Integer>> wordsWithDistance
+                    = this.searchService.getWordsWithMinimumDistance(searchRequest);
+
+            model.addAttribute("search_results", searchResults);
+            model.addAttribute("did_you_meant_it",
+                    this.searchService.getAlternativeSearchLine(wordsWithDistance, searchRequest));
+        } else {               //TODO: rebuild all!!!
+            SearchRequest editedRequest = new SearchRequest();
+
+            /*  Changed searchLine on the opposite keyboard layout. */
+            editedRequest.setSearchLine(this.searchService.getStringByOppositeLayout(searchRequest.getSearchLine()));
+            TreeSet<Service> newSearchResults = this.searchService.getResultServiceSet(editedRequest); //search results from opposite search line
+            if (!newSearchResults.isEmpty()) {
+                searchResults = newSearchResults;
+            }
+
+            Map<String, HashMap<String, Integer>> wordsWithDistance
+                    = this.searchService.getWordsWithMinimumDistance(editedRequest);
+
+            model.addAttribute("search_results", searchResults);
+            model.addAttribute("did_you_meant_it",
+                    this.searchService.getAlternativeSearchLine(wordsWithDistance, editedRequest));
+        }
 
         return "searching-results";
     }
