@@ -10,6 +10,13 @@ import java.util.*;
  */
 public interface SearchService {
     /**
+     *
+     *
+     *
+     */
+    SearchRequest getEditedSearchRequest(SearchRequest sourceSearchRequest);
+
+    /**
      * Search for exact occurrences.
      *
      * @param
@@ -17,21 +24,20 @@ public interface SearchService {
     TreeSet<Service> getResultServiceSet(SearchRequest searchRequest);
 
     /**
-     *
      * @return
      */
     String getAlternativeSearchLine(Map<String, HashMap<String, Integer>> wordsWithDistance,
                                     SearchRequest searchRequest);
+
     /**
      *
      */
     Map<String, HashMap<String, Integer>> getWordsWithMinimumDistance(SearchRequest searchRequest);
 
     /**
-     *
      * @return
      */
-    String getStringByOppositeLayout(String sourceString);
+    String getStringByOppositeKeybordLayout(String sourceString);
 
     /**
      * @return
@@ -39,13 +45,15 @@ public interface SearchService {
     TreeSet<String> crateDictionary();
 
     /**
+     * 
+     *
      * @param testString
      * @return
      */
-    boolean testDictString(String testString);
+    boolean isStringSuitableForDictionary(String testString);
 
     /**
-     * Calculating a metric by Levenshtein's formula:
+     * Calculatings a metric by Levenshtein's formula:
      * D(i,j) = {
      * 0, if {i = 0, j = 0}
      * i, if {j = 0, i > 0}
@@ -53,30 +61,29 @@ public interface SearchService {
      * min {
      * D(i, j - 1) + 1,
      * D(i - 1, j) + 1,
-     * D(i - 1, j - 1) + m(Str1[i],Str2[j] (m = 0 if {a = b}, otherwise m = 1)
+     * D(i - 1, j - 1) + m(Str1[i], Str2[j] (m = 0 if {a = b}, otherwise m = 1)
      * } if {j > 0, i > 0}
      * }
      *
-     * @param first  - s
-     * @param second - sa
-     * @return
+     * @param userString - first comparison line
+     * @param dictString - second comparison line
+     * @return value of metric.
      */
-    int getPrefixDistance(CharSequence first, CharSequence second, int maxDistance);
+    int getPrefixDistance(CharSequence userString, CharSequence dictString, int maxDistance);
 
     /**
-     * @param i
-     * @param j
-     * @param first
-     * @param second
-     * @return
+     * Gets Levenshtein's distance for d(S1, S2) - one cell of a matrix.
+     *
+     * @param i - index (arr[i][j])
+     * @param j - index (arr[i][j])
+     * @param userString - first comparison line
+     * @param dictString - second comparison line
+     * @return distance for one cell of a matrix.
      */
-    int D(int i, int j, CharSequence first, CharSequence second);
+    int D(int i, int j, CharSequence userString, CharSequence dictString);
 
     /**
-     * @param first
-     * @param second
-     * @param third
-     * @return
+     * Gets minimum from three integer number.
      */
     int getMinimum(int first, int second, int third);
 }

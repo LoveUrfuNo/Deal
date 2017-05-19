@@ -34,15 +34,22 @@ public class SearchServiceImpl implements SearchService {
     /**
      *
      */
-    interface ExactOccerences {
-        Boolean isWordIncludingInText(String text);            //TODO: fixed
+    interface ExactOccerencesInText {
+        Boolean isWordIncludingInText(String text);            //TODO: rename
+    }
+
+    /**
+     *
+     */
+    interface ExactOccerencesInTree {
+        Boolean isWordIncludingInTree(TreeSet<String> tree, String word);
     }
 
     /**
      *
      */
     interface OppositeWord {
-        String getOppositeWord(String sourceWord);
+        String getWordFromOppositeKeybordLayout(String sourceWord);
     }
 
     @Autowired
@@ -54,6 +61,40 @@ public class SearchServiceImpl implements SearchService {
     private static final String regexForSplit = "[[\\p{P}][\\t\\n\\r\\s]+=№]";
 
     private static final String regexForReplace = "[^а-я\\w-][\\s]{2,}";
+
+    @Override
+    public SearchRequest getEditedSearchRequest(SearchRequest sourceSearchRequest) {
+        /* Set with words form all services in the base. */
+        TreeSet<String> dictionary = searchService.crateDictionary();   //TODO: make the only one for the whole class
+
+        SearchRequest result = new SearchRequest();
+        StringBuilder newSearchLine = new StringBuilder();
+        String[] wordsFromRequest = sourceSearchRequest.getSearchLine()
+                .replaceAll(regexForReplace, "")
+                .split(regexForSplit);
+
+        ExactOccerencesInTree occerences = TreeSet::contains;
+        Arrays.stream(wordsFromRequest).forEach(requestWord -> {
+            if (occerences.isWordIncludingInTree(dictionary, requestWord)) {
+                newSearchLine.append(requestWord);
+            } else {
+                String oppositeWord
+                        = this.searchService.getStringByOppositeKeybordLayout(requestWord);
+                if (occerences.isWordIncludingInTree(dictionary, oppositeWord)) {
+                    newSearchLine.append(oppositeWord);
+                } else {
+                    newSearchLine.append(requestWord);
+                }
+            }
+
+            newSearchLine.append(' ');
+        });
+
+        newSearchLine.deleteCharAt(newSearchLine.length() - 1);  //delete last space
+        result.setSearchLine(newSearchLine.toString());
+
+        return result;
+    }
 
     @Override
     public TreeSet<Service> getResultServiceSet(SearchRequest searchRequest) {
@@ -78,7 +119,7 @@ public class SearchServiceImpl implements SearchService {
         };
 
         String[] searchLineWords = searchLine.split(regexForSplit);
-        ExactOccerences bool = (string) -> Arrays.stream(searchLineWords)
+        ExactOccerencesInText bool = (string) -> Arrays.stream(searchLineWords)
                 .allMatch(searchWord -> arrayList.getArrayFromTexts(string, "")
                         .contains(searchWord));
 
@@ -89,7 +130,7 @@ public class SearchServiceImpl implements SearchService {
                                 bool.isWordIncludingInText(service.getDescription()))          //TODO: rename bool
                 .collect(Collectors.toSet()));
 
-        //if      //TODO: add in "did_you_meant_it" too
+        //if()      //TODO: add if() in "did_you_meant_it" too so that dont show it if searchResultsSet is sufficiently filled
 
         searchResults.addAll(allServiceSet.stream()
                 .filter(service ->
@@ -108,53 +149,61 @@ public class SearchServiceImpl implements SearchService {
         StringBuilder result = new StringBuilder();
         String[] wordsFromRequest = searchRequest.getSearchLine().split(regexForSplit);
 
-        Map<String, Integer> minDistanceMap = new HashMap<>(); //string - userword, Integer - mindestance
+        Map<String, Integer> minDistanceMap = new HashMap<>(); //string - requestWord , Integer - mindestance
 
-        Arrays.stream(wordsFromRequest).forEach(userWord
-                -> minDistanceMap.put(userWord, wordsWithDistance.get(userWord)
-                .values().stream().min(Comparator.naturalOrder()).orElse(-1)));
+        Arrays.stream(wordsFromRequest).forEach(requestWord
+                -> minDistanceMap.put(
+                requestWord,
+                wordsWithDistance.get(requestWord).values()
+                        .stream().min(Comparator.naturalOrder())
+                        .orElse(-1)));
 
-        Arrays.stream(wordsFromRequest).forEach(userWord -> {
-            result.append(wordsWithDistance.get(userWord)
+        Arrays.stream(wordsFromRequest).forEach(requestWord -> {
+            result.append(wordsWithDistance.get(requestWord)
                     .entrySet().stream().filter(pair ->
-                            pair.getValue().equals(minDistanceMap.get(userWord)))
+                            !pair.getKey().equalsIgnoreCase(requestWord)
+                                    &&
+                                    pair.getValue().equals(minDistanceMap.get(requestWord)))
                     .findAny().get().getKey());
-            result.append(" ");
+            result.append(" ");     //TODO: check "hasnext" and delete space if hasnt
         });
 
         return result.toString();
     }
 
     @Override
-    public Map<String, HashMap<String, Integer>> getWordsWithMinimumDistance(SearchRequest searchRequest) {
+    public Map<String, HashMap<String, Integer>> getWordsWithMinimumDistance(
+            SearchRequest searchRequest) {
         String searchLine = searchRequest.getSearchLine();
+
+        /* Set with words form all services in the base. */
+        TreeSet<String> dictionary = searchService.crateDictionary();   //TODO: make the only one for the whole class
 
         /* Map with words from request and with pair consisting distance & word from dictionary. */
         Map<String, HashMap<String, Integer>> resultMap = new TreeMap<>(Comparator.naturalOrder());
-
-        /* Set with words form all services in the base. */
-        TreeSet<String> dictionary = this.searchService.crateDictionary();
 
         Distance distance = (word1, word2) -> this.searchService.getPrefixDistance(word1, word2, 4);
 
         String[] wordsFromSearchQuery = searchLine.split(regexForSplit);
         Arrays.stream(wordsFromSearchQuery)
-                .forEach(userWord -> {
-                    HashMap<String, Integer> map = new HashMap<>();
+                .forEach(requestWord -> {
+                    HashMap<String, Integer> wordsWithDistance = new HashMap<>();
                     dictionary.forEach(dictWord ->
-                            map.put(dictWord, distance.getDistance(userWord, dictWord)));
+                            wordsWithDistance.put(
+                                    dictWord,
+                                    distance.getDistance(requestWord, dictWord))
+                    );
 
-                    resultMap.put(userWord, map);
+                    resultMap.put(requestWord, wordsWithDistance);
                 });
 
         return resultMap;
     }
 
     @Override
-    public String getStringByOppositeLayout(String sourceString) {
+    public String getStringByOppositeKeybordLayout(String sourceString) {
         String cyrillicLayout = "йцукенгшщзхъфывапролджэячсмитьбюЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ";
         String latinLayout = "qwertyuiop[]asdfghjkl;'zxcvbnm,./QWERTYUIOP[]ASDFGHJKL;'ZXCVBNM,./";
-
 
         OppositeWord oppositeWord = (sourceWord -> {
             int i = 0;
@@ -171,8 +220,14 @@ public class SearchServiceImpl implements SearchService {
         });
 
         StringBuilder newSearchLine = new StringBuilder();
-        String[] arr = sourceString.replaceAll(regexForReplace, "").split(regexForSplit);
-        Arrays.stream(arr).forEach(word -> newSearchLine.append(oppositeWord.getOppositeWord(word)).append(" "));
+        String[] arr = sourceString
+                .replaceAll(regexForReplace, "")
+                .split(regexForSplit);
+        Arrays.stream(arr).forEach(word -> newSearchLine
+                .append(oppositeWord.getWordFromOppositeKeybordLayout(word))
+                .append(" "));
+
+        newSearchLine.deleteCharAt(newSearchLine.length() - 1);  //delete last space
 
         return newSearchLine.toString();
     }
@@ -181,18 +236,22 @@ public class SearchServiceImpl implements SearchService {
     public TreeSet<String> crateDictionary() {
         TreeSet<String> result = new TreeSet<>(String::compareToIgnoreCase);
 
-        Set<springbackend.model.Service> allServiceSet = this.serviceForService.findAll();
+        Set<springbackend.model.Service> allServiceSet = this.serviceForService.findAll();   //TODO: add save and load dictionary
         allServiceSet.forEach(service -> {
-            String[] texts = new String[]{service.getNameOfService(), service.getDescription()};
-            Arrays.stream(texts).forEach(text -> result.addAll(Arrays.stream(text.toLowerCase().split(regexForSplit))
-                    .filter(word -> this.searchService.testDictString(word)).collect(Collectors.toSet())));
+            String[] texts = new String[]{
+                    service.getNameOfService(), service.getDescription()};
+            Arrays.stream(texts).forEach(text ->
+                    result.addAll(Arrays.stream(text.toLowerCase().split(regexForSplit))
+                            .filter(word ->
+                                    this.searchService.isStringSuitableForDictionary(word))
+                            .collect(Collectors.toSet())));
         });
 
         return result;
     }
 
     @Override
-    public boolean testDictString(String testString) {
+    public boolean isStringSuitableForDictionary(String testString) {
         Pattern p = Pattern.compile("^[а-яa-z]+$");
         Matcher m = p.matcher(testString);
         return m.matches();

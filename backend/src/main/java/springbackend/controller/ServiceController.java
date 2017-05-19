@@ -44,6 +44,8 @@ public class ServiceController {
     @Autowired
     private SearchService searchService;
 
+    private static final String regexForReplace = "[^а-я\\w-][\\s]{2,}";   //TODO: try to extern from SearchServiceImpl
+
     @RequestMapping(value = "/add_service", method = RequestMethod.GET)
     public String addService(Model model) {
         model.addAttribute("serviceForm", new Service());
@@ -117,10 +119,8 @@ public class ServiceController {
             return "redirect";
         }
 
-        TreeSet<String> dictionary = this.searchService.crateDictionary();   //TODO: make static and mutual (maybe volatile)
-
         try {
-            String sourceSearchLineWithoutMultipleSpaces = searchRequest.getSearchLine().replaceAll("[\\s]{2,}", " ");
+            String sourceSearchLineWithoutMultipleSpaces = searchRequest.getSearchLine().replaceAll(regexForReplace, " ");
             String decodedSearchLine = new String(
                     sourceSearchLineWithoutMultipleSpaces.getBytes("ISO-8859-1"), "UTF-8");
 
@@ -131,31 +131,24 @@ public class ServiceController {
             return "redirect";
         }
 
-        TreeSet<Service> searchResults = this.searchService.getResultServiceSet(searchRequest);
-        if (searchResults.size() != 0 /*|| dictionary.contains(searchRequest.getSearchLine())*/) {
+        SearchRequest editedSearchRequest
+                = this.searchService.getEditedSearchRequest(searchRequest);
+        TreeSet<Service> finalSearchResults
+                = this.searchService.getResultServiceSet(editedSearchRequest);
+
+        if (searchRequest.getSearchLine().equals(editedSearchRequest.getSearchLine())) {
             Map<String, HashMap<String, Integer>> wordsWithDistance
-                    = this.searchService.getWordsWithMinimumDistance(searchRequest);
+                    = this.searchService.getWordsWithMinimumDistance(editedSearchRequest);
 
-            model.addAttribute("search_results", searchResults);
-            model.addAttribute("did_you_meant_it",
-                    this.searchService.getAlternativeSearchLine(wordsWithDistance, searchRequest));
-        } else {               //TODO: rebuild all!!!
-            SearchRequest editedRequest = new SearchRequest();
-
-            /*  Changed searchLine on the opposite keyboard layout. */
-            editedRequest.setSearchLine(this.searchService.getStringByOppositeLayout(searchRequest.getSearchLine()));
-            TreeSet<Service> newSearchResults = this.searchService.getResultServiceSet(editedRequest); //search results from opposite search line
-            if (!newSearchResults.isEmpty()) {
-                searchResults = newSearchResults;
-            }
-
-            Map<String, HashMap<String, Integer>> wordsWithDistance
-                    = this.searchService.getWordsWithMinimumDistance(editedRequest);
-
-            model.addAttribute("search_results", searchResults);
-            model.addAttribute("did_you_meant_it",
-                    this.searchService.getAlternativeSearchLine(wordsWithDistance, editedRequest));
+            String stringWithAmendments = this.searchService.getAlternativeSearchLine(
+                    wordsWithDistance, editedSearchRequest);
+            model.addAttribute("did_you_meant_it", stringWithAmendments);
+        } else {
+            model.addAttribute("results_of_the_request_are_shown", editedSearchRequest.getSearchLine());
+            model.addAttribute("search_instead_this", searchRequest.getSearchLine());
         }
+
+        model.addAttribute("search_results", finalSearchResults);
 
         return "searching-results";
     }
