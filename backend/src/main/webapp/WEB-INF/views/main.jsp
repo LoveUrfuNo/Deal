@@ -44,6 +44,9 @@
     <!-- Owl Carousel -->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/owl.carousel.min.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/owl.theme.default.min.css">
+    <!-- Jquery UI -->
+    <link rel="stylesheet"
+          href="${pageContext.request.contextPath}/resources/jquery-ui-1.12.1.custom/jquery-ui.min.cssF">
     <!-- Semantic UI -->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/Semantic-UI-CSS-master/semantic.min.css">
     <!-- Main styles-->
@@ -83,47 +86,39 @@
                 </div>
             </nav>
 
-            <header id="gtco-header" class="gtco-cover" role="banner"
-                    style="">
+            <header id="gtco-header" class="gtco-cover" role="banner" style="">
                 <div class="overlay"></div>
                 <div class="gtco-container">
                     <div class="row">
                         <div class="col-md-12 col-md-offset-0 text-left">
                             <div class="row row-mt-15em">
                                 <div class="col-md-7 mt-text animate-box" data-animate-effect="fadeInUp">
-                                    <div class="ui action input ">
-                                        <form:form method="POST" modelAttribute="searchRequest"
+                                    <div class="ui action input">
+                                        <form:form name="search" method="POST" modelAttribute="searchRequest"
                                                    action="${pageContext.request.contextPath}/search_services">
                                             <spring:bind path="searchLine">
                                                 <div class="form-group ${status.error ? 'has-error' : ''}">
-                                                    <form:input id="searchLine"
-                                                                path="searchLine"
-                                                                type="search"
+                                                    <form:input id="tags" path="searchLine"
+                                                                type="text"
                                                                 placeholder="Поиск услуг"/>
+                                                    <script>
+                                                        <%--&lt;%&ndash;var data = JSON.parse('${json2.toString()}');&ndash;%&gt;
+                                                        &lt;%&ndash;alert(data.language1);&ndash;%&gt;
+                                                        var searchFormData = document.forms.search;
+                                                        var result;
+                                                        var xhr = new XMLHttpRequest();
 
-                                                        <%--<ul class="sbsb_b" role="listbox">
-                                                            <li role="presentation" class="sbsb_c gsfs" dir="ltr"
-                                                                style="text-align: left;">
-                                                                <div class="sbpqs_d" role="option" id="sbse5">
-                                                                    <div>
-                                                                        <div class="fr sbpqs_b">
-                                                                            <a href="#ps" class="sbsb_i">Удалить</a>
-                                                                        </div>
-                                                                        <span class="sbpqs_a">ф
-                                                                        <b>ункция минимальное число из 3 java</b>
-                                                                    </span>
-                                                                    </div>
-                                                                </div>
-                                                            </li>
-                                                        </ul>--%>
-
-                                                        <%--<script>
-                                                            var input = document.getElementById('searchLine').valueOf();
-
-                                                            input.oninput = function () {
-                                                                ;
-                                                            };
-                                                        </script>--%>
+                                                        var input = document.getElementById('tags').valueOf();
+                                                        input.oninput = function () {
+                                                            xhr.open('GET', '/asd/' + input.value, true);
+                                                            xhr.send();
+                                                            xhr.onreadystatechange = function() {
+//                                                                alert(this.responseText);
+                                                                result = JSON.parse(this.responseText);
+                                                                alert(result);
+                                                            }
+                                                        };--%>
+                                                    </script>
                                                     <form:errors path="searchLine"/>
                                                 </div>
                                             </spring:bind>
@@ -859,6 +854,8 @@
 <script src="${pageContext.request.contextPath}/resources/js/owl.carousel.min.js"></script>
 <!-- Stellar -->
 <script src="${pageContext.request.contextPath}/resources/js/jquery.stellar.min.js"></script>
+<!-- JQuery UI -->
+<script src="${pageContext.request.contextPath}/resources/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
 <!-- Utilities -->
 <script src="${pageContext.request.contextPath}/resources/js/utilities.js"></script>
 <!-- Main JS (Do not remove) -->

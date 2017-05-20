@@ -103,7 +103,7 @@
         });
     };
 
-    var offcanvasMenu = function() {
+    var offcanvasMenu = function () {
 
         $('#full').prepend('<div id="gtco-offcanvas" />');
         $('#full').prepend('<a href="#" class="js-gtco-nav-toggle gtco-nav-toggle gtco-nav-white"><i></i></a>');
@@ -118,14 +118,14 @@
             .removeClass('has-dropdown');
 
         // Hover dropdown menu on mobile
-        $('.offcanvas-has-dropdown').mouseenter(function(){
+        $('.offcanvas-has-dropdown').mouseenter(function () {
             var $this = $(this);
 
             $this
                 .addClass('active')
                 .find('ul')
                 .slideDown(500, 'easeOutExpo');
-        }).mouseleave(function(){
+        }).mouseleave(function () {
 
             var $this = $(this);
             $this
@@ -135,9 +135,9 @@
         });
 
 
-        $(window).resize(function(){
+        $(window).resize(function () {
 
-            if ( $('body').hasClass('offcanvas') ) {
+            if ($('body').hasClass('offcanvas')) {
 
                 $('body').removeClass('offcanvas');
                 $('.js-gtco-nav-toggle').removeClass('active');
@@ -211,11 +211,41 @@
             activateButton.removeClass("btn-info").addClass("btn-warning");
             setTimeout(function () {
                 activateButton.removeClass("btn-warning").addClass("btn-info");
-            },2000)
-        },4000);
+            }, 2000)
+        }, 4000);
     };
 
 
+    var autoCompelte = function () {
+        // var data = JSON.parse('${json2.toString()}');
+        // alert(data.language1);
+        //var searchFormData = document.forms.search;
+        var result;
+        var xhr = new XMLHttpRequest();
+
+        var input = document.getElementById('tags').valueOf();
+        input.oninput = function () {
+            xhr.open('GET', '/asd/' + input.value, true);
+            xhr.send();
+            xhr.onreadystatechange = function () {
+                // alert(this.responseText);
+                result = JSON.parse(this.responseText);
+                //alert(result.num1);
+                var availableTags = [
+                    result.num1.toString(),
+                    result.num2.toString(),
+                    result.num3.toString(),
+                    result.num4.toString(),
+                    result.num5.toString()
+                ];
+                $("#tags").autocomplete({
+                    source: availableTags
+                });
+            };
+        };
+
+
+    };
 
     // Document on load.
     $(function () {
@@ -229,6 +259,6 @@
         parallax();
         profileLoader();
         activateString();
-        checkInput();
+        autoCompelte();
     });
 }());

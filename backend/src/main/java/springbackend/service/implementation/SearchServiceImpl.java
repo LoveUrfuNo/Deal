@@ -1,6 +1,5 @@
 package springbackend.service.implementation;
 
-import javafx.collections.transformation.SortedList;
 import org.springframework.beans.factory.annotation.Autowired;
 import springbackend.model.SearchRequest;
 import springbackend.model.Service;
@@ -257,7 +256,7 @@ public class SearchServiceImpl implements SearchService {
         return m.matches();
     }
 
-    @Override
+    @Override //TODO: add max distance by userString length
     public int getPrefixDistance(CharSequence userString, CharSequence dictString, int maxDistance) {
         int userStringLength = userString.length();
         int dictStringLength = dictString.length();
