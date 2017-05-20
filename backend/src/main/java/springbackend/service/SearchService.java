@@ -72,13 +72,13 @@ public interface SearchService {
     int getPrefixDistance(CharSequence userString, CharSequence dictString, int maxDistance);
 
     /**
-     * Gets Levenshtein's distance for d(S1, S2) - one cell of a matrix.
+     * Gets Levenshtein's distance for d(S1, S2) - one cell of the matrix.
      *
      * @param i - index (arr[i][j])
      * @param j - index (arr[i][j])
      * @param userString - first comparison line
      * @param dictString - second comparison line
-     * @return distance for one cell of a matrix.
+     * @return distance for one cell of the matrix.
      */
     int D(int i, int j, CharSequence userString, CharSequence dictString);
 

@@ -96,16 +96,41 @@
                                                    action="${pageContext.request.contextPath}/search_services">
                                             <spring:bind path="searchLine">
                                                 <div class="form-group ${status.error ? 'has-error' : ''}">
-                                                    <form:input path="searchLine"
+                                                    <form:input id="searchLine"
+                                                                path="searchLine"
                                                                 type="search"
                                                                 placeholder="Поиск услуг"/>
+
+                                                        <%--<ul class="sbsb_b" role="listbox">
+                                                            <li role="presentation" class="sbsb_c gsfs" dir="ltr"
+                                                                style="text-align: left;">
+                                                                <div class="sbpqs_d" role="option" id="sbse5">
+                                                                    <div>
+                                                                        <div class="fr sbpqs_b">
+                                                                            <a href="#ps" class="sbsb_i">Удалить</a>
+                                                                        </div>
+                                                                        <span class="sbpqs_a">ф
+                                                                        <b>ункция минимальное число из 3 java</b>
+                                                                    </span>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                        </ul>--%>
+
+                                                        <%--<script>
+                                                            var input = document.getElementById('searchLine').valueOf();
+
+                                                            input.oninput = function () {
+                                                                ;
+                                                            };
+                                                        </script>--%>
                                                     <form:errors path="searchLine"/>
                                                 </div>
                                             </spring:bind>
                                             <input type="submit" class="ui green button" value="Найти">
                                         </form:form>
                                     </div>
-                                    <span class="intro-text-small">Добро пожаловать в Deal</span>
+                                    <span class="intro-text-small">Добро пожаловать на "НАЗВАНИЕ"</span>
                                     <h1>Покупай и продавай вместе с нами</h1>
                                 </div>
                                 <div class="col-md-5 animate-box" data-animate-effect="fadeInRight">
@@ -821,7 +846,7 @@
     </footer>
 </div>
 <!-- jQuery -->
-<script  src="${pageContext.request.contextPath}/resources/js/jquery.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/jquery.min.js"></script>
 <!-- jQuery Easing -->
 <script src="${pageContext.request.contextPath}/resources/js/jquery.easing.1.3.js"></script>
 <!-- Bootstrap -->

@@ -161,12 +161,12 @@ public class SearchServiceImpl implements SearchService {
         Arrays.stream(wordsFromRequest).forEach(requestWord -> {
             result.append(wordsWithDistance.get(requestWord)
                     .entrySet().stream().filter(pair ->
-                            !pair.getKey().equalsIgnoreCase(requestWord)
-                                    &&
-                                    pair.getValue().equals(minDistanceMap.get(requestWord)))
+                            pair.getValue().equals(minDistanceMap.get(requestWord)))
                     .findAny().get().getKey());
             result.append(" ");     //TODO: check "hasnext" and delete space if hasnt
         });
+
+        result.deleteCharAt(result.length() - 1);  //delete last space
 
         return result.toString();
     }

@@ -136,13 +136,18 @@ public class ServiceController {
         TreeSet<Service> finalSearchResults
                 = this.searchService.getResultServiceSet(editedSearchRequest);
 
-        if (searchRequest.getSearchLine().equals(editedSearchRequest.getSearchLine())) {
+        boolean isNewSearchRequestEqualOriginal = searchRequest.getSearchLine().equals(editedSearchRequest.getSearchLine());
+        if (isNewSearchRequestEqualOriginal) {
             Map<String, HashMap<String, Integer>> wordsWithDistance
                     = this.searchService.getWordsWithMinimumDistance(editedSearchRequest);
 
             String stringWithAmendments = this.searchService.getAlternativeSearchLine(
                     wordsWithDistance, editedSearchRequest);
-            model.addAttribute("did_you_meant_it", stringWithAmendments);
+            if (stringWithAmendments.equalsIgnoreCase(editedSearchRequest.getSearchLine())) {
+                model.addAttribute("did_you_meant_it", null);
+            } else {
+                model.addAttribute("did_you_meant_it", stringWithAmendments);
+            }
         } else {
             model.addAttribute("results_of_the_request_are_shown", editedSearchRequest.getSearchLine());
             model.addAttribute("search_instead_this", searchRequest.getSearchLine());

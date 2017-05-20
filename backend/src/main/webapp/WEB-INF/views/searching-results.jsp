@@ -7,9 +7,11 @@
 <body>
 <c:if test="${did_you_meant_it != null}">
     <span>Возможно, вы имели в виду: </span>
-    <i>
-        <a href="#">${did_you_meant_it}</a>
-    </i>
+    <b>
+        <i>
+            <a href="#">${did_you_meant_it}</a>
+        </i>
+    </b>
     <br>
 </c:if>
 <c:if test="${results_of_the_request_are_shown != null}">
