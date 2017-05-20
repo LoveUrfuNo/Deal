@@ -44,6 +44,8 @@
     <!-- Owl Carousel -->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/owl.carousel.min.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/owl.theme.default.min.css">
+    <!-- Jquery UI -->
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/jquery-ui-1.12.1.custom/jquery-ui.min.cssF">
     <!-- Semantic UI -->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/Semantic-UI-CSS-master/semantic.min.css">
     <!-- Main styles-->
@@ -91,13 +93,13 @@
                         <div class="col-md-12 col-md-offset-0 text-left">
                             <div class="row row-mt-15em">
                                 <div class="col-md-7 mt-text animate-box" data-animate-effect="fadeInUp">
-                                    <div class="ui action input ">
+                                    <div class="ui action input">
                                         <form:form method="POST" modelAttribute="searchRequest"
                                                    action="${pageContext.request.contextPath}/search_services">
                                             <spring:bind path="searchLine">
                                                 <div class="form-group ${status.error ? 'has-error' : ''}">
-                                                    <form:input path="searchLine"
-                                                                type="search"
+                                                    <form:input id="tags" path="searchLine"
+                                                                type="text"
                                                                 placeholder="Поиск услуг"/>
                                                     <form:errors path="searchLine"/>
                                                 </div>
@@ -834,6 +836,8 @@
 <script src="${pageContext.request.contextPath}/resources/js/owl.carousel.min.js"></script>
 <!-- Stellar -->
 <script src="${pageContext.request.contextPath}/resources/js/jquery.stellar.min.js"></script>
+<!-- JQuery UI -->
+<script src="${pageContext.request.contextPath}/resources/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
 <!-- Utilities -->
 <script src="${pageContext.request.contextPath}/resources/js/utilities.js"></script>
 <!-- Main JS (Do not remove) -->
