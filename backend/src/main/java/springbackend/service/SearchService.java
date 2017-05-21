@@ -1,5 +1,6 @@
 package springbackend.service;
 
+import com.google.gson.JsonObject;
 import springbackend.model.SearchRequest;
 import springbackend.model.Service;
 
@@ -11,8 +12,6 @@ import java.util.*;
 public interface SearchService {
     /**
      *
-     *
-     *
      */
     SearchRequest getEditedSearchRequest(SearchRequest sourceSearchRequest);
 
@@ -22,6 +21,11 @@ public interface SearchService {
      * @param
      */
     TreeSet<Service> getResultServiceSet(SearchRequest searchRequest);
+
+    /**
+     *
+     */
+    ArrayList<String> getAllVariantsOfAlternativeSearchLines(SearchRequest searchRequest);
 
     /**
      * @return
@@ -37,7 +41,7 @@ public interface SearchService {
     /**
      * @return
      */
-    String getStringByOppositeKeybordLayout(String sourceString);
+    String getStringByOppositeKeyboardLayout(String sourceString);
 
     /**
      * @return

@@ -217,34 +217,27 @@
 
 
     var autoCompelte = function () {
-        // var data = JSON.parse('${json2.toString()}');
-        // alert(data.language1);
-        //var searchFormData = document.forms.search;
-        var result;
         var xhr = new XMLHttpRequest();
 
         var input = document.getElementById('tags').valueOf();
         input.oninput = function () {
-            xhr.open('GET', '/asd/' + input.value, true);
+            xhr.open('GET', '/auto_complete/' + input.value, true);
             xhr.send();
             xhr.onreadystatechange = function () {
-                // alert(this.responseText);
-                result = JSON.parse(this.responseText);
-                //alert(result.num1);
+                var data = this.responseText.replace(/["|[|\]]/g, '').split(',');
                 var availableTags = [
-                    result.num1.toString(),
-                    result.num2.toString(),
-                    result.num3.toString(),
-                    result.num4.toString(),
-                    result.num5.toString()
+                    data[0],
+                    data[1],
+                    data[2],
+                    data[3],
+                    data[4]
                 ];
+
                 $("#tags").autocomplete({
                     source: availableTags
                 });
             };
         };
-
-
     };
 
     // Document on load.

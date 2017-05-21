@@ -16,9 +16,9 @@
 <!--[if gt IE 8]><!-->
 <html class="no-js"> <!--<![endif]-->
 <head>
+    <title>Deal</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Deal</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Facebook and Twitter integration -->
     <meta property="og:title" content=""/>
@@ -32,7 +32,6 @@
     <meta name="twitter:card" content=""/>
     <link rel="shortcut icon" href="${pageContext.request.contextPath}/resources/images/small_logo.icon"
           type="image/x-icon">
-
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <link rel="shortcut icon" href="${pageContext.request.contextPath}/resources/favicon.ico">
     <!-- Animate.css -->
@@ -85,7 +84,6 @@
                     </div>
                 </div>
             </nav>
-
             <header id="gtco-header" class="gtco-cover" role="banner" style="">
                 <div class="overlay"></div>
                 <div class="gtco-container">
@@ -101,24 +99,6 @@
                                                     <form:input id="tags" path="searchLine"
                                                                 type="text"
                                                                 placeholder="Поиск услуг"/>
-                                                    <script>
-                                                        <%--&lt;%&ndash;var data = JSON.parse('${json2.toString()}');&ndash;%&gt;
-                                                        &lt;%&ndash;alert(data.language1);&ndash;%&gt;
-                                                        var searchFormData = document.forms.search;
-                                                        var result;
-                                                        var xhr = new XMLHttpRequest();
-
-                                                        var input = document.getElementById('tags').valueOf();
-                                                        input.oninput = function () {
-                                                            xhr.open('GET', '/asd/' + input.value, true);
-                                                            xhr.send();
-                                                            xhr.onreadystatechange = function() {
-//                                                                alert(this.responseText);
-                                                                result = JSON.parse(this.responseText);
-                                                                alert(result);
-                                                            }
-                                                        };--%>
-                                                    </script>
                                                     <form:errors path="searchLine"/>
                                                 </div>
                                             </spring:bind>
@@ -859,6 +839,6 @@
 <!-- Utilities -->
 <script src="${pageContext.request.contextPath}/resources/js/utilities.js"></script>
 <!-- Main JS (Do not remove) -->
-<script src="${pageContext.request.contextPath}/resources/js/main.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/main.js" charset="utf-8"></script>
 </body>
 </html>

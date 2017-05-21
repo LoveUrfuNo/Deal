@@ -27,7 +27,7 @@ import java.io.*;
 import java.util.*;
 
 /**
- * Controller for {@link springbackend.model.User}'s pages.
+ * Controller for {@link springbackend.model.User}.
  */
 @Controller
 public class UserController {
