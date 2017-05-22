@@ -215,7 +215,6 @@
         }, 4000);
     };
 
-
     var autoCompelte = function () {
         var xhr = new XMLHttpRequest();
 
@@ -225,6 +224,7 @@
             xhr.send();
             xhr.onreadystatechange = function () {
                 var data = this.responseText.replace(/["|[|\]]/g, '').split(',');
+                //alert(data[0]);
                 var availableTags = [
                     data[0],
                     data[1],

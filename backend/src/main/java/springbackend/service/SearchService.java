@@ -1,6 +1,10 @@
+/*
+ * Copyright (C) 2010 The Android Open Source Project
+ * //TODO: add
+ */
+
 package springbackend.service;
 
-import com.google.gson.JsonObject;
 import springbackend.model.SearchRequest;
 import springbackend.model.Service;
 
@@ -25,7 +29,7 @@ public interface SearchService {
     /**
      *
      */
-    ArrayList<String> getAllVariantsOfAlternativeSearchLines(SearchRequest searchRequest);
+    ArrayList<String> getStringsForAutoComplete(SearchRequest searchRequest);
 
     /**
      * @return
@@ -55,39 +59,4 @@ public interface SearchService {
      * @return
      */
     boolean isStringSuitableForDictionary(String testString);
-
-    /**
-     * Calculatings a metric by Levenshtein's formula:
-     * D(i,j) = {
-     * 0, if {i = 0, j = 0}
-     * i, if {j = 0, i > 0}
-     * j, if {i = 0, j > 0}
-     * min {
-     * D(i, j - 1) + 1,
-     * D(i - 1, j) + 1,
-     * D(i - 1, j - 1) + m(Str1[i], Str2[j] (m = 0 if {a = b}, otherwise m = 1)
-     * } if {j > 0, i > 0}
-     * }
-     *
-     * @param userString - first comparison line
-     * @param dictString - second comparison line
-     * @return value of metric.
-     */
-    int getPrefixDistance(CharSequence userString, CharSequence dictString, int maxDistance);
-
-    /**
-     * Gets Levenshtein's distance for d(S1, S2) - one cell of the matrix.
-     *
-     * @param i - index (arr[i][j])
-     * @param j - index (arr[i][j])
-     * @param userString - first comparison line
-     * @param dictString - second comparison line
-     * @return distance for one cell of the matrix.
-     */
-    int D(int i, int j, CharSequence userString, CharSequence dictString);
-
-    /**
-     * Gets minimum from three integer number.
-     */
-    int getMinimum(int first, int second, int third);
 }

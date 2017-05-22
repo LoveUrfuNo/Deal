@@ -1,11 +1,16 @@
+/*
+ * Copyright (C) 2010 The Android Open Source Project
+ * //TODO: add
+ */
+
 package springbackend.controller;
 
-import com.google.gson.JsonObject;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+
 import springbackend.model.SearchRequest;
 import springbackend.model.ServiceEntrance;
 import springbackend.model.User;

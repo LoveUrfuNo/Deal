@@ -1,3 +1,8 @@
+/*
+ * Copyright (C) 2010 The Android Open Source Project
+ * //TODO: add
+ */
+
 package springbackend.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,12 +12,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-import springbackend.model.SearchRequest;
+
 import springbackend.model.Service;
 import springbackend.model.User;
 import springbackend.model.UserFile;
 import springbackend.service.*;
-import springbackend.validator.SearchValidator;
 import springbackend.validator.ServiceValidator;
 
 import java.io.UnsupportedEncodingException;

@@ -1,12 +1,10 @@
 package springbackend.dao;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import springbackend.model.Service;
-import springbackend.model.User;
 
-import java.util.List;
+import springbackend.model.Service;
+
 import java.util.Set;
-import java.util.TreeSet;
 
 /**
  * Dao for class {@link springbackend.model.Service}.

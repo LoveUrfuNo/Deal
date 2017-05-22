@@ -1,9 +1,15 @@
+/*
+ * Copyright (C) 2010 The Android Open Source Project
+ * //TODO: add
+ */
+
 package springbackend.service.implementation;
 
-import com.google.gson.JsonObject;
 import org.springframework.beans.factory.annotation.Autowired;
+
 import springbackend.model.SearchRequest;
 import springbackend.model.Service;
+import springbackend.service.MetricService;
 import springbackend.service.SearchService;
 import springbackend.service.ServiceForService;
 
@@ -58,9 +64,16 @@ public class SearchServiceImpl implements SearchService {
     @Autowired
     private SearchService searchService;
 
-    private static final String regexForSplit = "[[\\p{P}][\\t\\n\\r\\s]+=№]";
+    @Autowired
+    private MetricService metricService;   //TODO: try with stream
 
-    private static final String regexForReplace = "[^а-я\\w-][\\s]{2,}";
+    private static final String REGEX_FOR_SPLIT = "[[\\p{P}][\\t\\n\\r\\s]+=№]";
+
+    private static final String REGEX_FOR_REPLACE = "[^а-я\\w-][\\s]{2,}";
+
+    private static final String CYRILLIC_LAYOUT = "йцукенгшщзхъфывапролджэячсмитьбюЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ";
+
+    private static final String LATIN_LAYOUT = "qwertyuiop[]asdfghjkl;'zxcvbnm,./QWERTYUIOP[]ASDFGHJKL;'ZXCVBNM,./";
 
     @Override
     public SearchRequest getEditedSearchRequest(SearchRequest sourceSearchRequest) {
@@ -70,8 +83,8 @@ public class SearchServiceImpl implements SearchService {
         SearchRequest result = new SearchRequest();
         StringBuilder newSearchLine = new StringBuilder();
         String[] wordsFromRequest = sourceSearchRequest.getSearchLine()
-                .replaceAll(regexForReplace, "")
-                .split(regexForSplit);
+                .replaceAll(REGEX_FOR_REPLACE, "")
+                .split(REGEX_FOR_SPLIT);
 
         ExactOccerencesInTree occerences = TreeSet::contains;
         Arrays.stream(wordsFromRequest).forEach(requestWord -> {
@@ -101,33 +114,33 @@ public class SearchServiceImpl implements SearchService {
         TreeSet<Service> searchResults = new TreeSet<>(Comparator.comparing(Service::getServiceCost));
         Set<Service> allServiceSet = this.serviceForService.findAll();
 
-        String searchLine = searchRequest.getSearchLine().replaceAll(regexForReplace, "");
+        String searchLine = searchRequest.getSearchLine().replaceAll(REGEX_FOR_REPLACE, "");
 
         Array arrayList = (string1, string2) -> {
             ArrayList<String> result = new ArrayList<>();
 
-            result.addAll(Arrays.stream(string1.split(regexForSplit))
-                    .map(t -> t.replaceAll(regexForReplace, ""))
+            result.addAll(Arrays.stream(string1.split(REGEX_FOR_SPLIT))
+                    .map(t -> t.replaceAll(REGEX_FOR_REPLACE, ""))
                     .filter(word -> !word.isEmpty()).distinct()
                     .collect(Collectors.toList()));
-            result.addAll(Arrays.stream(string2.split(regexForSplit))
-                    .map(t -> t.replaceAll(regexForReplace, ""))
+            result.addAll(Arrays.stream(string2.split(REGEX_FOR_SPLIT))
+                    .map(t -> t.replaceAll(REGEX_FOR_REPLACE, ""))
                     .filter(word -> !word.isEmpty()).distinct()
                     .collect(Collectors.toList()));
 
             return result;
         };
 
-        String[] searchLineWords = searchLine.split(regexForSplit);
-        ExactOccerencesInText bool = (string) -> Arrays.stream(searchLineWords)
+        String[] searchLineWords = searchLine.split(REGEX_FOR_SPLIT);
+        ExactOccerencesInText checking = (string) -> Arrays.stream(searchLineWords)
                 .allMatch(searchWord -> arrayList.getArrayFromTexts(string, "")
                         .contains(searchWord));
 
         searchResults.addAll(allServiceSet.stream()
                 .filter(service ->
-                        bool.isWordIncludingInText(service.getNameOfService())
+                        checking.isWordIncludingInText(service.getNameOfService())
                                 ||
-                                bool.isWordIncludingInText(service.getDescription()))          //TODO: rename bool
+                                checking.isWordIncludingInText(service.getDescription()))
                 .collect(Collectors.toSet()));
 
         //if()      //TODO: add if() in "did_you_meant_it" too so that dont show it if searchResultsSet is sufficiently filled
@@ -144,23 +157,24 @@ public class SearchServiceImpl implements SearchService {
     }
 
     @Override
-    public ArrayList<String> getAllVariantsOfAlternativeSearchLines(SearchRequest searchRequest) {
+    public ArrayList<String> getStringsForAutoComplete(SearchRequest searchRequest) {
         ArrayList<String> result = new ArrayList<>();
 
         Map<String, HashMap<String, Integer>> wordsWithDistance
                 = this.searchService.getWordsWithMinimumDistance(searchRequest);
 
         for (int i = 0; i < 5; i++) {
-            String alternativeSearchLine = this.searchService.getAlternativeSearchLine(
+            String alternativeSearchLine = this.searchService.getAlternativeSearchLine(        //TODO: add check language of alternativeSearchLine and searchLine
                     wordsWithDistance,
                     searchRequest);
+
             result.add(alternativeSearchLine);
 
             /* Delete words from "wordsWithDistance.value" which are equal to some word from alternativeSearchLine */
             Arrays.stream(alternativeSearchLine.split(" ")).forEach(alternativeWord -> {
-               String wordsFromRequest[] = searchRequest.getSearchLine()
-                       .replaceAll(regexForReplace, " ")
-                       .split(regexForSplit);
+                String wordsFromRequest[] = searchRequest.getSearchLine()
+                        .replaceAll(REGEX_FOR_REPLACE, " ")
+                        .split(REGEX_FOR_SPLIT);
 
                 Arrays.stream(wordsFromRequest).forEach(requestWord ->
                         wordsWithDistance.get(requestWord)
@@ -175,9 +189,9 @@ public class SearchServiceImpl implements SearchService {
     public String getAlternativeSearchLine(Map<String, HashMap<String, Integer>> wordsWithDistance,
                                            SearchRequest searchRequest) {
         StringBuilder result = new StringBuilder();
-        String[] wordsFromRequest = searchRequest.getSearchLine().split(regexForSplit);
+        String[] wordsFromRequest = searchRequest.getSearchLine().split(REGEX_FOR_SPLIT);
 
-        Map<String, Integer> minDistanceMap = new HashMap<>(); //string - requestWord , Integer - mindistance
+        Map<String, Integer> minDistanceMap = new HashMap<>();    //string - requestWord , Integer - distance
 
         Arrays.stream(wordsFromRequest).forEach(requestWord ->
                 minDistanceMap.put(
@@ -187,23 +201,23 @@ public class SearchServiceImpl implements SearchService {
                                 .orElse(-1)));
 
         Arrays.stream(wordsFromRequest).forEach(requestWord -> {
-            result.append(wordsWithDistance.get(requestWord)
-                    .entrySet().stream().filter(pair ->
-                            pair.getValue()
-                                    .equals(minDistanceMap.get(requestWord)))
-                    .findAny().get().getKey());
+            result.append(
+                    wordsWithDistance.get(requestWord).entrySet().stream()
+                            .filter(pair ->
+                                    pair.getValue()
+                                            .equals(minDistanceMap.get(requestWord)))
+                            .findAny().get().getKey());
 
             result.append(" ");     //TODO: check "hasnext" and delete space if hasnt
         });
 
-        result.deleteCharAt(result.length() - 1);  //delete last separating space
+        result.deleteCharAt(result.length() - 1);    //delete last separating space
 
         return result.toString();
     }
 
     @Override
-    public Map<String, HashMap<String, Integer>> getWordsWithMinimumDistance(
-            SearchRequest searchRequest) {
+    public Map<String, HashMap<String, Integer>> getWordsWithMinimumDistance(SearchRequest searchRequest) {
         String searchLine = searchRequest.getSearchLine();
 
         /* Set with words form all services in the base. */
@@ -212,23 +226,17 @@ public class SearchServiceImpl implements SearchService {
         /* Map with words from request and with pair consisting distance & word from dictionary. */
         Map<String, HashMap<String, Integer>> resultMap = new TreeMap<>(Comparator.naturalOrder());
 
-        Distance distance = (word1, word2) -> {
-            int word1Length = word1.length();
-            int maxDistance = word1Length <= 6 ? 6 : word1Length;
-            return this.searchService.getPrefixDistance(
-                    word1,
-                    word2,
-                    maxDistance);
-        };
+        Distance distance = (dictString, userString) ->
+                this.metricService.getPrefixDistance(dictString, userString, 8);
 
-        String[] wordsFromSearchQuery = searchLine.split(regexForSplit);
+        String[] wordsFromSearchQuery = searchLine.split(REGEX_FOR_SPLIT);
         Arrays.stream(wordsFromSearchQuery)
                 .forEach(requestWord -> {
                     HashMap<String, Integer> wordsWithDistance = new HashMap<>();
                     dictionary.forEach(dictWord ->
                             wordsWithDistance.put(
                                     dictWord,
-                                    distance.getDistance(requestWord, dictWord))
+                                    distance.getDistance(dictWord, requestWord))
                     );
 
                     resultMap.put(requestWord, wordsWithDistance);
@@ -239,17 +247,14 @@ public class SearchServiceImpl implements SearchService {
 
     @Override
     public String getStringByOppositeKeyboardLayout(String sourceString) {
-        String cyrillicLayout = "йцукенгшщзхъфывапролджэячсмитьбюЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ";
-        String latinLayout = "qwertyuiop[]asdfghjkl;'zxcvbnm,./QWERTYUIOP[]ASDFGHJKL;'ZXCVBNM,./";
-
         OppositeWord oppositeWord = (sourceWord -> {
             int i = 0;
             StringBuilder newWord = new StringBuilder();
             for (char c : sourceWord.toCharArray()) {
-                if (cyrillicLayout.indexOf(sourceWord.charAt(i++)) == -1) {
-                    newWord.append(cyrillicLayout.charAt(latinLayout.indexOf(c)));
+                if (CYRILLIC_LAYOUT.indexOf(sourceWord.charAt(i++)) == -1) {
+                    newWord.append(CYRILLIC_LAYOUT.charAt(LATIN_LAYOUT.indexOf(c)));
                 } else {
-                    newWord.append(latinLayout.charAt(cyrillicLayout.indexOf(c)));
+                    newWord.append(LATIN_LAYOUT.charAt(CYRILLIC_LAYOUT.indexOf(c)));
                 }
             }
 
@@ -258,8 +263,8 @@ public class SearchServiceImpl implements SearchService {
 
         StringBuilder newSearchLine = new StringBuilder();
         String[] arr = sourceString
-                .replaceAll(regexForReplace, "")
-                .split(regexForSplit);
+                .replaceAll(REGEX_FOR_REPLACE, "")
+                .split(REGEX_FOR_SPLIT);
         Arrays.stream(arr).forEach(word -> newSearchLine
                 .append(oppositeWord.getWordFromOppositeKeybordLayout(word))
                 .append(" "));
@@ -273,96 +278,24 @@ public class SearchServiceImpl implements SearchService {
     public TreeSet<String> crateDictionary() {
         TreeSet<String> result = new TreeSet<>(String::compareToIgnoreCase);
 
-        Set<springbackend.model.Service> allServiceSet = this.serviceForService.findAll();
+        Set<Service> allServiceSet = this.serviceForService.findAll();
         allServiceSet.forEach(service -> {
             String[] texts = new String[]{
                     service.getNameOfService(), service.getDescription()};
             Arrays.stream(texts).forEach(text ->
-                    result.addAll(Arrays.stream(text.toLowerCase().split(regexForSplit))
+                    result.addAll(Arrays.stream(text.toLowerCase().split(REGEX_FOR_SPLIT))
                             .filter(word ->
                                     this.searchService.isStringSuitableForDictionary(word))
                             .collect(Collectors.toSet())));
         });
 
         return result;
-    }                  //TODO: add save and load dictionary
+    }                  //TODO: add save and load dictionary and fixed multiple creation with autocomplete (maybe make 2 dictionaries)
 
     @Override
     public boolean isStringSuitableForDictionary(String testString) {
         Pattern p = Pattern.compile("^[а-яa-z]{3,}+$");
         Matcher m = p.matcher(testString);
         return m.matches();
-    }
-
-    @Override
-    public int getPrefixDistance(CharSequence userString, CharSequence dictString, int maxDistance) {
-        int userStringLength = userString.length();
-        int dictStringLength = dictString.length();
-
-        if (userStringLength >= 20)
-            return -1;
-
-        if (maxDistance < 0)
-            maxDistance = dictStringLength;
-
-        if (dictStringLength == 0) {
-            return 0;
-        } else if (userStringLength == 0) {
-            return dictStringLength;
-        } else if (userStringLength < dictStringLength - maxDistance) {
-            return maxDistance + 1;
-        } else if (dictStringLength >= userStringLength
-                && userString.equals(dictString.subSequence(0, userStringLength))) {
-            return 0;
-        }
-
-        int[][] arr = new int[userStringLength + 1][dictStringLength + 1];
-        for (int i = 0; i <= userStringLength; i++) {
-            arr[i][0] = i;
-        }
-        for (int j = 0; j <= dictStringLength; j++) {
-            arr[0][j] = j;
-        }
-
-        for (int i = 1; i <= userStringLength; i++) {
-            for (int j = 1; j <= dictStringLength; j++) {
-                if (Math.abs(i - j) < 2 * (maxDistance + 1))
-                    arr[i][j] = D(i - 1, j - 1, userString, dictString);     //TODO: try with stream
-
-                if (i == j && arr[i][j] > maxDistance)
-                    return arr[i][j];
-            }
-        }
-
-        return arr[userStringLength][dictStringLength];
-    } //TODO: add max distance by userString length
-
-    @Override
-    public int D(int i, int j, CharSequence userString, CharSequence dictString) {
-        if (i == 0 && j == 0)
-            return 0;
-        else if (j == 0 && i > 0)
-            return i;
-        else if (i == 0 && j > 0)
-            return j;
-        else {
-            return getMinimum(D(i, j - 1, userString, dictString) + 1,
-                    D(i - 1, j, userString, dictString) + 1,
-                    D(i - 1, j - 1, userString, dictString)
-                            + (userString.charAt(i) == dictString.charAt(j) ? 0 : 1)
-            );
-        }
-    }
-
-    @Override
-    public int getMinimum(int first, int second, int third) {
-        if (first == second && first == third)
-            return first;
-        else if (first <= second && first <= third)
-            return first;
-        else if (second <= first && second <= third)
-            return second;
-        else
-            return third;
     }
 }

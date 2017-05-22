@@ -2,34 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="924102dd-8a01-418e-b781-33e17d5b2f61" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_8_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_8_7.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_8_7.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_3_1.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/backend/WEB-INF/lib/android-json-0.0.20131108.vaadin1.jar" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/springbackend/service/MetricService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/springbackend/service/implementation/MetricServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/controller/FileController.class" afterPath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/controller/FileController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/controller/SearchController.class" afterPath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/controller/SearchController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/controller/ServiceController.class" afterPath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/controller/ServiceController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/controller/ServiceEntranceController.class" afterPath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/controller/ServiceEntranceController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/service/SearchService.class" afterPath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/service/SearchService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/service/implementation/SearchServiceImpl.class" afterPath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/service/implementation/SearchServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/springbackend/controller/FileController.class" afterPath="$PROJECT_DIR$/target/classes/springbackend/controller/FileController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/springbackend/controller/SearchController.class" afterPath="$PROJECT_DIR$/target/classes/springbackend/controller/SearchController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/springbackend/controller/ServiceController.class" afterPath="$PROJECT_DIR$/target/classes/springbackend/controller/ServiceController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/springbackend/controller/ServiceEntranceController.class" afterPath="$PROJECT_DIR$/target/classes/springbackend/controller/ServiceEntranceController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/springbackend/service/SearchService.class" afterPath="$PROJECT_DIR$/target/classes/springbackend/service/SearchService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/springbackend/service/implementation/SearchServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/springbackend/service/implementation/SearchServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/backend_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/backend_war_exploded.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend.iml" afterPath="$PROJECT_DIR$/backend.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/springbackend/controller/FileController.java" afterPath="$PROJECT_DIR$/src/main/java/springbackend/controller/FileController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/springbackend/controller/SearchController.java" afterPath="$PROJECT_DIR$/src/main/java/springbackend/controller/SearchController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/springbackend/controller/ServiceController.java" afterPath="$PROJECT_DIR$/src/main/java/springbackend/controller/ServiceController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/springbackend/controller/ServiceEntranceController.java" afterPath="$PROJECT_DIR$/src/main/java/springbackend/controller/ServiceEntranceController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/springbackend/controller/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/springbackend/controller/UserController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/springbackend/dao/PersistentUserDao.java" afterPath="$PROJECT_DIR$/src/main/java/springbackend/dao/PersistentUserDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/springbackend/dao/RoleDao.java" afterPath="$PROJECT_DIR$/src/main/java/springbackend/dao/RoleDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/springbackend/dao/ServiceDao.java" afterPath="$PROJECT_DIR$/src/main/java/springbackend/dao/ServiceDao.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/springbackend/service/SearchService.java" afterPath="$PROJECT_DIR$/src/main/java/springbackend/service/SearchService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/springbackend/service/implementation/SearchServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/springbackend/service/implementation/SearchServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/appconfig-mvc.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/appconfig-mvc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/main.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/main.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/main.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/backend/WEB-INF/appconfig-mvc.xml" afterPath="$PROJECT_DIR$/target/backend/WEB-INF/appconfig-mvc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/backend/WEB-INF/views/main.jsp" afterPath="$PROJECT_DIR$/target/backend/WEB-INF/views/main.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/backend/resources/js/main.js" afterPath="$PROJECT_DIR$/target/backend/resources/js/main.js" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -49,11 +43,11 @@
       <file leaf-file-name="SearchController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/springbackend/controller/SearchController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="40" column="30" lean-forward="true" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
+            <state relative-caret-position="374">
+              <caret line="46" column="30" lean-forward="true" selection-start-line="46" selection-start-column="30" selection-end-line="46" selection-end-column="30" />
               <folding>
+                <element signature="e#0#4393#0" expanded="true" />
                 <element signature="imports" expanded="true" />
-                <element signature="method#searchServices#0;class#SearchController#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -62,9 +56,10 @@
       <file leaf-file-name="SearchServiceImpl.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/springbackend/service/implementation/SearchServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="349">
-              <caret line="157" column="0" lean-forward="true" selection-start-line="157" selection-start-column="0" selection-end-line="157" selection-end-column="0" />
+            <state relative-caret-position="352">
+              <caret line="219" column="106" lean-forward="false" selection-start-line="219" selection-start-column="106" selection-end-line="219" selection-end-column="106" />
               <folding>
+                <element signature="e#0#11917#0" expanded="true" />
                 <element signature="imports" expanded="true" />
                 <element signature="docComment;class#Distance#0;class#SearchServiceImpl#0" expanded="false" />
                 <element signature="class#Distance#0;class#SearchServiceImpl#0" expanded="false" />
@@ -78,98 +73,26 @@
                 <element signature="class#OppositeWord#0;class#SearchServiceImpl#0" expanded="false" />
                 <element signature="method#getEditedSearchRequest#0;class#SearchServiceImpl#0" expanded="false" />
                 <element signature="method#getResultServiceSet#0;class#SearchServiceImpl#0" expanded="false" />
-                <element signature="e#3375#3997#0" expanded="false" />
+                <element signature="method#getStringsForAutoComplete#0;class#SearchServiceImpl#0" expanded="false" />
                 <element signature="method#getAlternativeSearchLine#0;class#SearchServiceImpl#0" expanded="false" />
                 <element signature="method#getWordsWithMinimumDistance#0;class#SearchServiceImpl#0" expanded="false" />
                 <element signature="method#getStringByOppositeKeyboardLayout#0;class#SearchServiceImpl#0" expanded="false" />
-                <element signature="e#9680#10178#0" expanded="false" />
                 <element signature="method#crateDictionary#0;class#SearchServiceImpl#0" expanded="false" />
-                <element signature="method#getPrefixDistance#0;class#SearchServiceImpl#0" expanded="false" />
-                <element signature="method#D#0;class#SearchServiceImpl#0" expanded="false" />
-                <element signature="method#getMinimum#0;class#SearchServiceImpl#0" expanded="false" />
+                <element signature="method#isStringSuitableForDictionary#0;class#SearchServiceImpl#0" expanded="false" />
+                <marker date="1495472499399" expanded="true" signature="6017:6953" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ServiceController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/springbackend/controller/ServiceController.java">
+      <file leaf-file-name="SearchService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/springbackend/service/SearchService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="38" column="44" lean-forward="false" selection-start-line="38" selection-start-column="44" selection-end-line="38" selection-end-column="44" />
+            <state relative-caret-position="216">
+              <caret line="42" column="42" lean-forward="false" selection-start-line="42" selection-start-column="42" selection-end-line="42" selection-end-column="42" />
               <folding>
-                <element signature="method#addService#0;class#ServiceController#0" expanded="false" />
-                <element signature="method#addService#1;class#ServiceController#0" expanded="false" />
-                <element signature="method#showAllServicesInGivenCategory#0;class#ServiceController#0" expanded="false" />
-                <element signature="method#showUsersServices#0;class#ServiceController#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/main.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="100" column="91" lean-forward="false" selection-start-line="100" selection-start-column="91" selection-end-line="100" selection-end-column="91" />
-              <folding>
-                <element signature="n#form:form#1;n#jsp:root#0;n#!!top" expanded="false" />
-                <element signature="n#c:when#0;n#c:choose#0;n#jsp:root#0;n#!!top" expanded="false" />
-                <element signature="n#c:when#1;n#c:choose#0;n#jsp:root#0;n#!!top" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="431">
-              <caret line="233" column="18" lean-forward="true" selection-start-line="233" selection-start-column="18" selection-end-line="233" selection-end-column="18" />
-              <folding>
-                <element signature="e#94#160#0" expanded="false" />
-                <element signature="e#194#344#0" expanded="false" />
-                <element signature="e#380#570#0" expanded="false" />
-                <element signature="e#483#561#0" expanded="false" />
-                <element signature="e#637#1675#0" expanded="false" />
-                <element signature="e#702#1095#0" expanded="false" />
-                <element signature="e#936#1085#0" expanded="false" />
-                <element signature="e#1139#1668#0" expanded="false" />
-                <element signature="e#1260#1486#0" expanded="false" />
-                <element signature="e#1281#1329#0" expanded="false" />
-                <element signature="e#1352#1400#0" expanded="false" />
-                <element signature="e#1424#1472#0" expanded="false" />
-                <element signature="e#1509#1658#0" expanded="false" />
-                <element signature="e#1733#2720#0" expanded="false" />
-                <element signature="e#1811#2695#0" expanded="false" />
-                <element signature="e#1893#2684#0" expanded="false" />
-                <element signature="e#2015#2662#0" expanded="false" />
-                <element signature="e#2092#2641#0" expanded="false" />
-                <element signature="e#2183#2591#0" expanded="false" />
-                <element signature="e#2306#2401#0" expanded="false" />
-                <element signature="e#2407#2504#0" expanded="false" />
-                <element signature="e#2754#2911#0" expanded="false" />
-                <element signature="e#2782#2903#0" expanded="false" />
-                <element signature="e#2950#4209#0" expanded="false" />
-                <element signature="e#3588#3763#0" expanded="false" />
-                <element signature="e#3788#3964#0" expanded="false" />
-                <element signature="e#4006#4201#0" expanded="false" />
-                <element signature="e#4058#4191#0" expanded="false" />
-                <element signature="e#4245#4773#0" expanded="false" />
-                <element signature="e#4318#4765#0" expanded="false" />
-                <element signature="e#4413#4545#0" expanded="false" />
-                <element signature="e#4551#4677#0" expanded="false" />
-                <element signature="e#4806#5272#0" expanded="false" />
-                <element signature="e#4863#5264#0" expanded="false" />
-                <element signature="e#5314#5967#0" expanded="false" />
-                <element signature="e#5674#5952#0" expanded="false" />
-                <element signature="e#5720#5852#0" expanded="false" />
-                <element signature="e#5898#5942#0" expanded="false" />
-                <element signature="e#6006#6397#0" expanded="false" />
-                <element signature="e#6327#6391#0" expanded="false" />
-                <element signature="e#6437#6762#0" expanded="false" />
-                <element signature="e#6523#6748#0" expanded="false" />
-                <element signature="e#6636#6731#0" expanded="false" />
+                <element signature="e#0#1246#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -181,16 +104,17 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>todo</find>
-      <find>getPrefixDistance</find>
       <find>try</find>
       <find>getAlternativeSearchLine</find>
       <find>getpr</find>
+      <find>getPrefixDistance</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -205,16 +129,23 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/add-service.js" />
-        <option value="$PROJECT_DIR$/src/main/java/springbackend/controller/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/appconfig-data.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/appconfig-mvc.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/springbackend/controller/ServiceEntranceController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/main.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/springbackend/service/SearchService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/springbackend/controller/SearchController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/springbackend/service/implementation/DamerauLevensteinMetric.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/main.js" />
+        <option value="$PROJECT_DIR$/src/main/java/springbackend/controller/FileController.java" />
         <option value="$PROJECT_DIR$/src/main/java/springbackend/controller/ServiceController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/springbackend/controller/ServiceEntranceController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/springbackend/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/springbackend/service/SearchService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/springbackend/service/implementation/MetricServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/springbackend/service/MetricService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/springbackend/dao/PersistentUserDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/springbackend/dao/RoleDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/springbackend/dao/ServiceDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/springbackend/controller/SearchController.java" />
         <option value="$PROJECT_DIR$/src/main/java/springbackend/service/implementation/SearchServiceImpl.java" />
       </list>
     </option>
@@ -459,14 +390,78 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="implementation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="backend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="backend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="springbackend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="backend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="backend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="springbackend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="controller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -982,12 +977,13 @@
       <workItem from="1495284967835" duration="19715000" />
       <workItem from="1495347267528" duration="18605000" />
       <workItem from="1495370367179" duration="1698000" />
-      <workItem from="1495377485755" duration="5782000" />
+      <workItem from="1495377485755" duration="10229000" />
+      <workItem from="1495453869417" duration="11248000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50943000" />
+    <option name="totallyTimeSpent" value="66638000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1004,7 +1000,7 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3779264" sideWeight="0.34594882" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38175675" sideWeight="0.3512035" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1014,7 +1010,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3779264" sideWeight="0.6540512" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22853957" sideWeight="0.6487965" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.4978678" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32441473" sideWeight="0.4914712" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1025,10 +1021,9 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.49573562" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19936034" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15245202" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1036,6 +1031,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1074,13 +1070,13 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/redirect.jsp</url>
-          <line>12</line>
+          <url>file://$PROJECT_DIR$/src/main/java/springbackend/controller/SearchController.java</url>
+          <line>55</line>
           <properties />
-          <option name="timeStamp" value="36" />
+          <option name="timeStamp" value="79" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="42" />
+      <option name="time" value="82" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1089,75 +1085,11 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/springbackend/controller/ServiceEntranceController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="37" column="54" lean-forward="false" selection-start-line="37" selection-start-column="54" selection-end-line="37" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/springbackend/controller/SearchController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="41" column="59" lean-forward="false" selection-start-line="41" selection-start-column="59" selection-end-line="41" selection-end-column="59" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#searchServices#0;class#SearchController#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/springbackend/service/implementation/SearchServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1054">
-          <caret line="157" column="45" lean-forward="false" selection-start-line="157" selection-start-column="45" selection-end-line="157" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;class#Distance#0;class#SearchServiceImpl#0" expanded="false" />
-            <element signature="class#Distance#0;class#SearchServiceImpl#0" expanded="false" />
-            <element signature="docComment;class#Array#0;class#SearchServiceImpl#0" expanded="false" />
-            <element signature="class#Array#0;class#SearchServiceImpl#0" expanded="false" />
-            <element signature="docComment;class#ExactOccerencesInText#0;class#SearchServiceImpl#0" expanded="false" />
-            <element signature="class#ExactOccerencesInText#0;class#SearchServiceImpl#0" expanded="false" />
-            <element signature="docComment;class#ExactOccerencesInTree#0;class#SearchServiceImpl#0" expanded="false" />
-            <element signature="class#ExactOccerencesInTree#0;class#SearchServiceImpl#0" expanded="false" />
-            <element signature="docComment;class#OppositeWord#0;class#SearchServiceImpl#0" expanded="false" />
-            <element signature="class#OppositeWord#0;class#SearchServiceImpl#0" expanded="false" />
-            <element signature="method#getEditedSearchRequest#0;class#SearchServiceImpl#0" expanded="false" />
-            <element signature="method#getResultServiceSet#0;class#SearchServiceImpl#0" expanded="false" />
-            <element signature="e#3375#3997#0" expanded="false" />
-            <element signature="method#getAlternativeSearchLine#0;class#SearchServiceImpl#0" expanded="false" />
-            <element signature="method#getWordsWithMinimumDistance#0;class#SearchServiceImpl#0" expanded="false" />
-            <element signature="method#getStringByOppositeKeyboardLayout#0;class#SearchServiceImpl#0" expanded="false" />
-            <element signature="e#9680#10178#0" expanded="false" />
-            <element signature="method#crateDictionary#0;class#SearchServiceImpl#0" expanded="false" />
-            <element signature="method#getPrefixDistance#0;class#SearchServiceImpl#0" expanded="false" />
-            <element signature="method#D#0;class#SearchServiceImpl#0" expanded="false" />
-            <element signature="method#getMinimum#0;class#SearchServiceImpl#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/springbackend/service/SearchService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/main.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1751">
           <caret line="103" column="61" lean-forward="false" selection-start-line="103" selection-start-column="61" selection-end-line="103" selection-end-column="61" />
-          <folding>
-            <element signature="n#form:form#1;n#jsp:root#0;n#!!top" expanded="false" />
-            <element signature="n#c:when#0;n#c:choose#0;n#jsp:root#0;n#!!top" expanded="false" />
-            <element signature="n#c:when#1;n#c:choose#0;n#jsp:root#0;n#!!top" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1236,8 +1168,8 @@
         <state relative-caret-position="799">
           <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
           <folding>
+            <element signature="e#0#4393#0" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="method#searchServices#0;class#SearchController#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1247,6 +1179,7 @@
         <state relative-caret-position="136">
           <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding>
+            <element signature="e#0#11917#0" expanded="true" />
             <element signature="imports" expanded="true" />
             <element signature="docComment;class#Distance#0;class#SearchServiceImpl#0" expanded="false" />
             <element signature="class#Distance#0;class#SearchServiceImpl#0" expanded="false" />
@@ -1260,15 +1193,13 @@
             <element signature="class#OppositeWord#0;class#SearchServiceImpl#0" expanded="false" />
             <element signature="method#getEditedSearchRequest#0;class#SearchServiceImpl#0" expanded="false" />
             <element signature="method#getResultServiceSet#0;class#SearchServiceImpl#0" expanded="false" />
-            <element signature="e#3375#3997#0" expanded="false" />
+            <element signature="method#getStringsForAutoComplete#0;class#SearchServiceImpl#0" expanded="false" />
             <element signature="method#getAlternativeSearchLine#0;class#SearchServiceImpl#0" expanded="false" />
             <element signature="method#getWordsWithMinimumDistance#0;class#SearchServiceImpl#0" expanded="false" />
             <element signature="method#getStringByOppositeKeyboardLayout#0;class#SearchServiceImpl#0" expanded="false" />
-            <element signature="e#9680#10178#0" expanded="false" />
             <element signature="method#crateDictionary#0;class#SearchServiceImpl#0" expanded="false" />
-            <element signature="method#getPrefixDistance#0;class#SearchServiceImpl#0" expanded="false" />
-            <element signature="method#D#0;class#SearchServiceImpl#0" expanded="false" />
-            <element signature="method#getMinimum#0;class#SearchServiceImpl#0" expanded="false" />
+            <element signature="method#isStringSuitableForDictionary#0;class#SearchServiceImpl#0" expanded="false" />
+            <marker date="1495472499399" expanded="true" signature="6017:6953" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1277,7 +1208,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
           <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1285,11 +1218,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1751">
           <caret line="103" column="61" lean-forward="true" selection-start-line="103" selection-start-column="61" selection-end-line="103" selection-end-column="61" />
-          <folding>
-            <element signature="n#form:form#1;n#jsp:root#0;n#!!top" expanded="false" />
-            <element signature="n#c:when#0;n#c:choose#0;n#jsp:root#0;n#!!top" expanded="false" />
-            <element signature="n#c:when#1;n#c:choose#0;n#jsp:root#0;n#!!top" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1359,11 +1288,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1870">
           <caret line="110" column="82" lean-forward="false" selection-start-line="110" selection-start-column="82" selection-end-line="110" selection-end-column="82" />
-          <folding>
-            <element signature="n#form:form#1;n#jsp:root#0;n#!!top" expanded="false" />
-            <element signature="n#c:when#0;n#c:choose#0;n#jsp:root#0;n#!!top" expanded="false" />
-            <element signature="n#c:when#1;n#c:choose#0;n#jsp:root#0;n#!!top" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1424,6 +1349,7 @@
         <state relative-caret-position="34">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding>
+            <element signature="e#0#11917#0" expanded="true" />
             <element signature="imports" expanded="true" />
             <element signature="docComment;class#Distance#0;class#SearchServiceImpl#0" expanded="false" />
             <element signature="class#Distance#0;class#SearchServiceImpl#0" expanded="false" />
@@ -1437,15 +1363,13 @@
             <element signature="class#OppositeWord#0;class#SearchServiceImpl#0" expanded="false" />
             <element signature="method#getEditedSearchRequest#0;class#SearchServiceImpl#0" expanded="false" />
             <element signature="method#getResultServiceSet#0;class#SearchServiceImpl#0" expanded="false" />
-            <element signature="e#3375#3997#0" expanded="false" />
+            <element signature="method#getStringsForAutoComplete#0;class#SearchServiceImpl#0" expanded="false" />
             <element signature="method#getAlternativeSearchLine#0;class#SearchServiceImpl#0" expanded="false" />
             <element signature="method#getWordsWithMinimumDistance#0;class#SearchServiceImpl#0" expanded="false" />
             <element signature="method#getStringByOppositeKeyboardLayout#0;class#SearchServiceImpl#0" expanded="false" />
-            <element signature="e#9680#10178#0" expanded="false" />
             <element signature="method#crateDictionary#0;class#SearchServiceImpl#0" expanded="false" />
-            <element signature="method#getPrefixDistance#0;class#SearchServiceImpl#0" expanded="false" />
-            <element signature="method#D#0;class#SearchServiceImpl#0" expanded="false" />
-            <element signature="method#getMinimum#0;class#SearchServiceImpl#0" expanded="false" />
+            <element signature="method#isStringSuitableForDictionary#0;class#SearchServiceImpl#0" expanded="false" />
+            <marker date="1495472499399" expanded="true" signature="6017:6953" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1454,11 +1378,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1615">
           <caret line="95" column="79" lean-forward="false" selection-start-line="95" selection-start-column="65" selection-end-line="95" selection-end-column="79" />
-          <folding>
-            <element signature="n#form:form#1;n#jsp:root#0;n#!!top" expanded="false" />
-            <element signature="n#c:when#0;n#c:choose#0;n#jsp:root#0;n#!!top" expanded="false" />
-            <element signature="n#c:when#1;n#c:choose#0;n#jsp:root#0;n#!!top" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1548,7 +1468,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="42" lean-forward="false" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1581,20 +1500,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/springbackend/controller/FileController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="42" column="59" lean-forward="false" selection-start-line="42" selection-start-column="59" selection-end-line="42" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/springbackend/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="29" column="50" lean-forward="false" selection-start-line="29" selection-start-column="50" selection-end-line="29" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/appconfig-data.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="731">
@@ -1623,34 +1528,53 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="136" column="0" lean-forward="false" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/redirect.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/springbackend/service/SearchService.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/util/Set.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="177">
-          <caret line="27" column="21" lean-forward="false" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <caret line="248" column="12" lean-forward="false" selection-start-line="248" selection-start-column="12" selection-end-line="248" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/springbackend/controller/ServiceEntranceController.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/util/AbstractCollection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="30" column="91" lean-forward="false" selection-start-line="30" selection-start-column="91" selection-end-line="30" selection-end-column="91" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="1265">
+          <caret line="296" column="9" lean-forward="true" selection-start-line="296" selection-start-column="9" selection-end-line="296" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/util/TreeSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2475">
+          <caret line="91" column="13" lean-forward="false" selection-start-line="91" selection-start-column="13" selection-end-line="91" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/main.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="100" column="91" lean-forward="false" selection-start-line="100" selection-start-column="91" selection-end-line="100" selection-end-column="91" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="233" column="18" lean-forward="true" selection-start-line="233" selection-start-column="18" selection-end-line="233" selection-end-column="18" />
+        <state relative-caret-position="221">
+          <caret line="226" column="18" lean-forward="false" selection-start-line="226" selection-start-column="18" selection-end-line="226" selection-end-column="18" />
           <folding>
             <element signature="e#94#160#0" expanded="false" />
             <element signature="e#194#344#0" expanded="false" />
@@ -1699,55 +1623,134 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/main.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/springbackend/controller/FileController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="100" column="91" lean-forward="false" selection-start-line="100" selection-start-column="91" selection-end-line="100" selection-end-column="91" />
+        <state relative-caret-position="51">
+          <caret line="3" column="3" lean-forward="false" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
           <folding>
-            <element signature="n#form:form#1;n#jsp:root#0;n#!!top" expanded="false" />
-            <element signature="n#c:when#0;n#c:choose#0;n#jsp:root#0;n#!!top" expanded="false" />
-            <element signature="n#c:when#1;n#c:choose#0;n#jsp:root#0;n#!!top" expanded="false" />
+            <element signature="e#0#4143#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/redirect.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/springbackend/controller/ServiceEntranceController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="3" lean-forward="false" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#1567#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/springbackend/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="3" lean-forward="false" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#10929#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/springbackend/service/implementation/MetricServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="3" lean-forward="false" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#3227#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#355#356#0" expanded="true" />
+            <element signature="e#391#392#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/springbackend/service/MetricService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="3" lean-forward="false" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#438#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/springbackend/dao/PersistentUserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#415#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/springbackend/dao/RoleDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/springbackend/controller/SearchController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/springbackend/dao/ServiceDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="40" column="30" lean-forward="true" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#searchServices#0;class#SearchController#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="34">
+          <caret line="2" column="7" lean-forward="false" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/springbackend/controller/ServiceController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="38" column="44" lean-forward="false" selection-start-line="38" selection-start-column="44" selection-end-line="38" selection-end-column="44" />
+        <state relative-caret-position="505">
+          <caret line="108" column="69" lean-forward="false" selection-start-line="108" selection-start-column="69" selection-end-line="108" selection-end-column="69" />
           <folding>
+            <element signature="e#0#4531#0" expanded="true" />
+            <element signature="imports" expanded="true" />
             <element signature="method#addService#0;class#ServiceController#0" expanded="false" />
             <element signature="method#addService#1;class#ServiceController#0" expanded="false" />
             <element signature="method#showAllServicesInGivenCategory#0;class#ServiceController#0" expanded="false" />
             <element signature="method#showUsersServices#0;class#ServiceController#0" expanded="false" />
+            <element signature="method#deleteService#0;class#ServiceController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/springbackend/controller/SearchController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="46" column="30" lean-forward="true" selection-start-line="46" selection-start-column="30" selection-end-line="46" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#4393#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/springbackend/service/SearchService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="42" column="42" lean-forward="false" selection-start-line="42" selection-start-column="42" selection-end-line="42" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#1246#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/springbackend/service/implementation/SearchServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="157" column="0" lean-forward="true" selection-start-line="157" selection-start-column="0" selection-end-line="157" selection-end-column="0" />
+        <state relative-caret-position="352">
+          <caret line="219" column="106" lean-forward="false" selection-start-line="219" selection-start-column="106" selection-end-line="219" selection-end-column="106" />
           <folding>
+            <element signature="e#0#11917#0" expanded="true" />
             <element signature="imports" expanded="true" />
             <element signature="docComment;class#Distance#0;class#SearchServiceImpl#0" expanded="false" />
             <element signature="class#Distance#0;class#SearchServiceImpl#0" expanded="false" />
@@ -1761,15 +1764,13 @@
             <element signature="class#OppositeWord#0;class#SearchServiceImpl#0" expanded="false" />
             <element signature="method#getEditedSearchRequest#0;class#SearchServiceImpl#0" expanded="false" />
             <element signature="method#getResultServiceSet#0;class#SearchServiceImpl#0" expanded="false" />
-            <element signature="e#3375#3997#0" expanded="false" />
+            <element signature="method#getStringsForAutoComplete#0;class#SearchServiceImpl#0" expanded="false" />
             <element signature="method#getAlternativeSearchLine#0;class#SearchServiceImpl#0" expanded="false" />
             <element signature="method#getWordsWithMinimumDistance#0;class#SearchServiceImpl#0" expanded="false" />
             <element signature="method#getStringByOppositeKeyboardLayout#0;class#SearchServiceImpl#0" expanded="false" />
-            <element signature="e#9680#10178#0" expanded="false" />
             <element signature="method#crateDictionary#0;class#SearchServiceImpl#0" expanded="false" />
-            <element signature="method#getPrefixDistance#0;class#SearchServiceImpl#0" expanded="false" />
-            <element signature="method#D#0;class#SearchServiceImpl#0" expanded="false" />
-            <element signature="method#getMinimum#0;class#SearchServiceImpl#0" expanded="false" />
+            <element signature="method#isStringSuitableForDictionary#0;class#SearchServiceImpl#0" expanded="false" />
+            <marker date="1495472499399" expanded="true" signature="6017:6953" ph="{...}" />
           </folding>
         </state>
       </provider>
