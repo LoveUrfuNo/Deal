@@ -1,8 +1,314 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="924102dd-8a01-418e-b781-33e17d5b2f61" name="Default" comment="" />
-    <ignored path="$PROJECT_DIR$/target/" />
+    <list default="true" id="924102dd-8a01-418e-b781-33e17d5b2f61" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/images/unknown_photo_service.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/jquery-ui-1.12.1.custom/images/ui-icons_444444_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/jquery-ui-1.12.1.custom/images/ui-icons_555555_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/jquery-ui-1.12.1.custom/images/ui-icons_777620_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/jquery-ui-1.12.1.custom/images/ui-icons_777777_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/jquery-ui-1.12.1.custom/images/ui-icons_cc0000_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/jquery-ui-1.12.1.custom/images/ui-icons_ffffff_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/user's/images/avatars/TESTTESTapsfniaosngfioansgion's_avatar_sdfsdgsdgsdg.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/user's/images/avatars/andrey123's_avatar_ojasnfijanasdasd.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/user's/images/avatars/asglsdnjognasfsdjgnisjdng's_avatar_ojasnfijanasdasd.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/user's/images/avatars/dsgsdlgiosdngouisdbguibsdigu's_avatar_0_7578_ca85c18_S.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/user's/images/avatars/jpsjgisdignsdignsoidgn's_avatar_0_7578_ca85c18_S.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/user's/images/avatars/saadgasfaalsfmsdplgmspdomg's_avatar_0_7578_ca85c18_S.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/user's/images/avatars/sdgsgjs0dghsd09gh9@'s_avatar_sdfsdgsdgsdg.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/user's/images/avatars/testlogin's_avatar_ojasnfijanasdasd.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/user's/images/for_services/andrey123's_service_photo_asfasfasf_sdfsdfsdfsdfsdaERWQE.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/user's/images/for_services/andrey123's_service_photo_c 4vz_5494492.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/user's/images/for_services/andrey123's_service_photo_c 4vz_d93c7b2ee72ee1614f392e30a87600b7.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/user's/images/for_services/andrey123's_service_photo_c 4vz_sdfsdfsdfsdfsdaERWQE.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/user's/images/for_services/andrey123's_service_photo_c 4vz_sdfsdgsdgsdg.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/user's/images/for_services/andrey123's_service_photo_Новый путь к картинкам_sdfsdgsdgsdg.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/user's/images/for_services/andrey123's_service_photo_не понял_5494492.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/user's/images/for_services/andrey123's_service_photo_не понял_sdfsdfsdfsdfsdaERWQE.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/user's/images/for_services/andrey123's_service_photo_с 3мя фотками_5494492.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/user's/images/for_services/andrey123's_service_photo_с 3мя фотками_d93c7b2ee72ee1614f392e30a87600b7.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/user's/images/for_services/andrey123's_service_photo_с 3мя фотками_sdfsdfsdfsdfsdaERWQE.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/user's/images/for_services/andrey123's_service_photo_форопа_ojasnfijanasdasd.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/user's/images/sdgbousdbgosdbgosbguibTEST's_avatar_ojasnfijanasdasd.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/user's/images/sdgmsdpgnspignsingi's_avatar_0_7578_ca85c18_S.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/controller/SearchController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/model/SearchRequest.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/service/MetricService.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/service/SearchService.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/service/StringService.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/service/implementation/MetricServiceImpl.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/service/implementation/SearchServiceImpl$Array.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/service/implementation/SearchServiceImpl$Distance.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/service/implementation/SearchServiceImpl$ExactOccerencesInText.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/service/implementation/SearchServiceImpl$ExactOccerencesInTree.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/service/implementation/SearchServiceImpl$OppositeWord.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/service/implementation/SearchServiceImpl.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/service/implementation/StringServiceImpl.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/validator/SearchValidator.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/backend/WEB-INF/lib/gson-2.3.1.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/backend/WEB-INF/lib/guava-21.0.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/backend/WEB-INF/lib/jackson-annotations-2.8.0.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/backend/WEB-INF/lib/jackson-core-2.8.7.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/backend/WEB-INF/lib/jackson-core-asl-1.9.13.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/backend/WEB-INF/lib/jackson-databind-2.8.7.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/backend/WEB-INF/lib/jackson-mapper-asl-1.9.13.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/backend/resources/images/unknown_photo_service.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/backend/resources/jquery-ui-1.12.1.custom/images/ui-icons_444444_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/backend/resources/jquery-ui-1.12.1.custom/images/ui-icons_555555_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/backend/resources/jquery-ui-1.12.1.custom/images/ui-icons_777620_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/backend/resources/jquery-ui-1.12.1.custom/images/ui-icons_777777_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/backend/resources/jquery-ui-1.12.1.custom/images/ui-icons_cc0000_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/backend/resources/jquery-ui-1.12.1.custom/images/ui-icons_ffffff_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/backend/resources/user's/images/avatars/TESTTESTapsfniaosngfioansgion's_avatar_sdfsdgsdgsdg.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/backend/resources/user's/images/avatars/andrey123's_avatar_ojasnfijanasdasd.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/backend/resources/user's/images/avatars/asglsdnjognasfsdjgnisjdng's_avatar_ojasnfijanasdasd.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/backend/resources/user's/images/avatars/dsgsdlgiosdngouisdbguibsdigu's_avatar_0_7578_ca85c18_S.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/backend/resources/user's/images/avatars/jpsjgisdignsdignsoidgn's_avatar_0_7578_ca85c18_S.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/backend/resources/user's/images/avatars/saadgasfaalsfmsdplgmspdomg's_avatar_0_7578_ca85c18_S.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/backend/resources/user's/images/avatars/sdgsgjs0dghsd09gh9@'s_avatar_sdfsdgsdgsdg.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/backend/resources/user's/images/avatars/testlogin's_avatar_ojasnfijanasdasd.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/backend/resources/user's/images/for_services/andrey123's_service_photo_asfasfasf_sdfsdfsdfsdfsdaERWQE.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/backend/resources/user's/images/for_services/andrey123's_service_photo_c 4vz_5494492.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/backend/resources/user's/images/for_services/andrey123's_service_photo_c 4vz_d93c7b2ee72ee1614f392e30a87600b7.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/backend/resources/user's/images/for_services/andrey123's_service_photo_c 4vz_sdfsdfsdfsdfsdaERWQE.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/backend/resources/user's/images/for_services/andrey123's_service_photo_c 4vz_sdfsdgsdgsdg.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/backend/resources/user's/images/for_services/andrey123's_service_photo_Новый путь к картинкам_sdfsdgsdgsdg.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/backend/resources/user's/images/for_services/andrey123's_service_photo_не понял_5494492.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/backend/resources/user's/images/for_services/andrey123's_service_photo_не понял_sdfsdfsdfsdfsdaERWQE.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/backend/resources/user's/images/for_services/andrey123's_service_photo_с 3мя фотками_5494492.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/backend/resources/user's/images/for_services/andrey123's_service_photo_с 3мя фотками_d93c7b2ee72ee1614f392e30a87600b7.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/backend/resources/user's/images/for_services/andrey123's_service_photo_с 3мя фотками_sdfsdfsdfsdfsdaERWQE.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/backend/resources/user's/images/for_services/andrey123's_service_photo_форопа_ojasnfijanasdasd.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/backend/resources/user's/images/sdgbousdbgosdbgosbguibTEST's_avatar_ojasnfijanasdasd.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/backend/resources/user's/images/sdgmsdpgnspignsingi's_avatar_0_7578_ca85c18_S.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/springbackend/controller/SearchController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/springbackend/model/SearchRequest.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/springbackend/service/MetricService.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/springbackend/service/SearchService.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/springbackend/service/StringService.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/springbackend/service/implementation/MetricServiceImpl.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/springbackend/service/implementation/SearchServiceImpl$Array.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/springbackend/service/implementation/SearchServiceImpl$Distance.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/springbackend/service/implementation/SearchServiceImpl$ExactOccerencesInText.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/springbackend/service/implementation/SearchServiceImpl$ExactOccerencesInTree.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/springbackend/service/implementation/SearchServiceImpl$OppositeWord.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/springbackend/service/implementation/SearchServiceImpl.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/springbackend/service/implementation/StringServiceImpl.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/springbackend/validator/SearchValidator.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/kosty.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_8_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_8_7.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_8_7.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_3_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_21_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_core_asl_1_9_13.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_mapper_asl_1_9_13.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/springbackend/controller/SearchController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/springbackend/model/SearchRequest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/springbackend/service/MetricService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/springbackend/service/SearchService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/springbackend/service/StringService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/springbackend/service/implementation/MetricServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/springbackend/service/implementation/SearchServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/springbackend/validator/SearchValidator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/jquery-ui-1.12.1.custom/AUTHORS.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/jquery-ui-1.12.1.custom/LICENSE.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/jquery-ui-1.12.1.custom/external/jquery/jquery.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/jquery-ui-1.12.1.custom/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/jquery-ui-1.12.1.custom/jquery-ui.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/jquery-ui-1.12.1.custom/jquery-ui.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/jquery-ui-1.12.1.custom/jquery-ui.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/jquery-ui-1.12.1.custom/jquery-ui.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/jquery-ui-1.12.1.custom/jquery-ui.structure.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/jquery-ui-1.12.1.custom/jquery-ui.structure.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/jquery-ui-1.12.1.custom/jquery-ui.theme.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/jquery-ui-1.12.1.custom/jquery-ui.theme.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/jquery-ui-1.12.1.custom/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/user's-services.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/backend/resources/jquery-ui-1.12.1.custom/AUTHORS.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/backend/resources/jquery-ui-1.12.1.custom/LICENSE.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/backend/resources/jquery-ui-1.12.1.custom/external/jquery/jquery.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/backend/resources/jquery-ui-1.12.1.custom/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/backend/resources/jquery-ui-1.12.1.custom/jquery-ui.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/backend/resources/jquery-ui-1.12.1.custom/jquery-ui.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/backend/resources/jquery-ui-1.12.1.custom/jquery-ui.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/backend/resources/jquery-ui-1.12.1.custom/jquery-ui.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/backend/resources/jquery-ui-1.12.1.custom/jquery-ui.structure.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/backend/resources/jquery-ui-1.12.1.custom/jquery-ui.structure.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/backend/resources/jquery-ui-1.12.1.custom/jquery-ui.theme.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/backend/resources/jquery-ui-1.12.1.custom/jquery-ui.theme.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/backend/resources/jquery-ui-1.12.1.custom/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/backend/resources/js/user's-services.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/springbackend/service/CodingService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/vegas/overlays/01.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/vegas/overlays/02.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/vegas/overlays/03.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/vegas/overlays/04.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/vegas/overlays/05.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/vegas/overlays/06.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/vegas/overlays/07.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/vegas/overlays/08.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/vegas/overlays/09.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/vegas/vegas.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/vegas/vegas.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/vegas/vegas.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/vegas/vegas.min.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/vegas/vegas.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/vegas/vegas.min.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/service/CodingService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/service/implementation/CodingServiceImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/backend/resources/vegas/overlays/01.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/backend/resources/vegas/overlays/02.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/backend/resources/vegas/overlays/03.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/backend/resources/vegas/overlays/04.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/backend/resources/vegas/overlays/05.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/backend/resources/vegas/overlays/06.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/backend/resources/vegas/overlays/07.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/backend/resources/vegas/overlays/08.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/backend/resources/vegas/overlays/09.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/backend/resources/vegas/vegas.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/backend/resources/vegas/vegas.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/backend/resources/vegas/vegas.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/backend/resources/vegas/vegas.min.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/backend/resources/vegas/vegas.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/backend/resources/vegas/vegas.min.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/springbackend/service/CodingService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/springbackend/service/implementation/CodingServiceImpl.class" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/dataSources/6ea628d6-538b-44e1-b2ad-3ff29ae25d55.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/0f553c39-5e1f-4a50-9f4b-52dbf29392c1.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/springbackend/service/implementation/CodingServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/springbackend/service/implementation/StringServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/controller/FileController.class" afterPath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/controller/FileController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/controller/ServiceController.class" afterPath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/controller/ServiceController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/controller/ServiceEntranceController.class" afterPath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/controller/ServiceEntranceController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/controller/UserController.class" afterPath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/controller/UserController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/dao/ServiceDao.class" afterPath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/dao/ServiceDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/dao/UserFileDao.class" afterPath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/dao/UserFileDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/model/PersistentUser.class" afterPath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/model/PersistentUser.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/model/Role.class" afterPath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/model/Role.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/model/Service.class" afterPath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/model/Service.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/model/ServiceEntrance.class" afterPath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/model/ServiceEntrance.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/model/TypeOfService.class" afterPath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/model/TypeOfService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/model/User.class" afterPath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/model/User.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/model/UserFile.class" afterPath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/model/UserFile.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/model/UserFormForTechnicalSupport.class" afterPath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/model/UserFormForTechnicalSupport.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/service/EmailService.class" afterPath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/service/EmailService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/service/ServiceForService.class" afterPath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/service/ServiceForService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/service/UserFileService.class" afterPath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/service/UserFileService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/service/implementation/EmailServiceImpl.class" afterPath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/service/implementation/EmailServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/service/implementation/SecurityServiceImpl.class" afterPath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/service/implementation/SecurityServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/service/implementation/ServiceForServiceImpl.class" afterPath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/service/implementation/ServiceForServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/service/implementation/UserDetailsServiceImpl.class" afterPath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/service/implementation/UserDetailsServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/service/implementation/UserFileServiceImpl.class" afterPath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/service/implementation/UserFileServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/service/implementation/UserServiceImpl.class" afterPath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/service/implementation/UserServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/validator/ServiceValidator.class" afterPath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/validator/ServiceValidator.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/validator/UserFormForTechnicalSupportValidator.class" afterPath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/validator/UserFormForTechnicalSupportValidator.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/validator/UserOptionsValidator.class" afterPath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/validator/UserOptionsValidator.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/validator/UserValidator.class" afterPath="$PROJECT_DIR$/target/backend/WEB-INF/classes/springbackend/validator/UserValidator.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/springbackend/controller/FileController.class" afterPath="$PROJECT_DIR$/target/classes/springbackend/controller/FileController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/springbackend/controller/ServiceController.class" afterPath="$PROJECT_DIR$/target/classes/springbackend/controller/ServiceController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/springbackend/controller/ServiceEntranceController.class" afterPath="$PROJECT_DIR$/target/classes/springbackend/controller/ServiceEntranceController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/springbackend/controller/UserController.class" afterPath="$PROJECT_DIR$/target/classes/springbackend/controller/UserController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/springbackend/dao/ServiceDao.class" afterPath="$PROJECT_DIR$/target/classes/springbackend/dao/ServiceDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/springbackend/dao/UserFileDao.class" afterPath="$PROJECT_DIR$/target/classes/springbackend/dao/UserFileDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/springbackend/model/PersistentUser.class" afterPath="$PROJECT_DIR$/target/classes/springbackend/model/PersistentUser.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/springbackend/model/Role.class" afterPath="$PROJECT_DIR$/target/classes/springbackend/model/Role.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/springbackend/model/Service.class" afterPath="$PROJECT_DIR$/target/classes/springbackend/model/Service.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/springbackend/model/ServiceEntrance.class" afterPath="$PROJECT_DIR$/target/classes/springbackend/model/ServiceEntrance.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/springbackend/model/TypeOfService.class" afterPath="$PROJECT_DIR$/target/classes/springbackend/model/TypeOfService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/springbackend/model/User.class" afterPath="$PROJECT_DIR$/target/classes/springbackend/model/User.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/springbackend/model/UserFile.class" afterPath="$PROJECT_DIR$/target/classes/springbackend/model/UserFile.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/springbackend/model/UserFormForTechnicalSupport.class" afterPath="$PROJECT_DIR$/target/classes/springbackend/model/UserFormForTechnicalSupport.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/springbackend/service/EmailService.class" afterPath="$PROJECT_DIR$/target/classes/springbackend/service/EmailService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/springbackend/service/ServiceForService.class" afterPath="$PROJECT_DIR$/target/classes/springbackend/service/ServiceForService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/springbackend/service/UserFileService.class" afterPath="$PROJECT_DIR$/target/classes/springbackend/service/UserFileService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/springbackend/service/implementation/EmailServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/springbackend/service/implementation/EmailServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/springbackend/service/implementation/SecurityServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/springbackend/service/implementation/SecurityServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/springbackend/service/implementation/ServiceForServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/springbackend/service/implementation/ServiceForServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/springbackend/service/implementation/UserDetailsServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/springbackend/service/implementation/UserDetailsServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/springbackend/service/implementation/UserFileServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/springbackend/service/implementation/UserFileServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/springbackend/service/implementation/UserServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/springbackend/service/implementation/UserServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/springbackend/validator/ServiceValidator.class" afterPath="$PROJECT_DIR$/target/classes/springbackend/validator/ServiceValidator.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/springbackend/validator/UserFormForTechnicalSupportValidator.class" afterPath="$PROJECT_DIR$/target/classes/springbackend/validator/UserFormForTechnicalSupportValidator.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/springbackend/validator/UserOptionsValidator.class" afterPath="$PROJECT_DIR$/target/classes/springbackend/validator/UserOptionsValidator.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/springbackend/validator/UserValidator.class" afterPath="$PROJECT_DIR$/target/classes/springbackend/validator/UserValidator.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/backend_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/backend_war_exploded.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/webContexts.xml" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend.iml" afterPath="$PROJECT_DIR$/backend.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/springbackend/controller/FileController.java" afterPath="$PROJECT_DIR$/src/main/java/springbackend/controller/FileController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/springbackend/controller/ServiceController.java" afterPath="$PROJECT_DIR$/src/main/java/springbackend/controller/ServiceController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/springbackend/controller/ServiceEntranceController.java" afterPath="$PROJECT_DIR$/src/main/java/springbackend/controller/ServiceEntranceController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/springbackend/controller/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/springbackend/controller/UserController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/springbackend/dao/PersistentUserDao.java" afterPath="$PROJECT_DIR$/src/main/java/springbackend/dao/PersistentUserDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/springbackend/dao/RoleDao.java" afterPath="$PROJECT_DIR$/src/main/java/springbackend/dao/RoleDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/springbackend/dao/ServiceDao.java" afterPath="$PROJECT_DIR$/src/main/java/springbackend/dao/ServiceDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/springbackend/dao/UserDao.java" afterPath="$PROJECT_DIR$/src/main/java/springbackend/dao/UserDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/springbackend/dao/UserFileDao.java" afterPath="$PROJECT_DIR$/src/main/java/springbackend/dao/UserFileDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/springbackend/model/PersistentUser.java" afterPath="$PROJECT_DIR$/src/main/java/springbackend/model/PersistentUser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/springbackend/model/Role.java" afterPath="$PROJECT_DIR$/src/main/java/springbackend/model/Role.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/springbackend/model/Service.java" afterPath="$PROJECT_DIR$/src/main/java/springbackend/model/Service.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/springbackend/model/ServiceEntrance.java" afterPath="$PROJECT_DIR$/src/main/java/springbackend/model/ServiceEntrance.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/springbackend/model/TypeOfService.java" afterPath="$PROJECT_DIR$/src/main/java/springbackend/model/TypeOfService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/springbackend/model/User.java" afterPath="$PROJECT_DIR$/src/main/java/springbackend/model/User.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/springbackend/model/UserFile.java" afterPath="$PROJECT_DIR$/src/main/java/springbackend/model/UserFile.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/springbackend/model/UserFormForTechnicalSupport.java" afterPath="$PROJECT_DIR$/src/main/java/springbackend/model/UserFormForTechnicalSupport.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/springbackend/service/EmailService.java" afterPath="$PROJECT_DIR$/src/main/java/springbackend/service/EmailService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/springbackend/service/SecurityService.java" afterPath="$PROJECT_DIR$/src/main/java/springbackend/service/SecurityService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/springbackend/service/ServiceForService.java" afterPath="$PROJECT_DIR$/src/main/java/springbackend/service/ServiceForService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/springbackend/service/UserFileService.java" afterPath="$PROJECT_DIR$/src/main/java/springbackend/service/UserFileService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/springbackend/service/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/springbackend/service/UserService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/springbackend/service/implementation/EmailServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/springbackend/service/implementation/EmailServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/springbackend/service/implementation/SecurityServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/springbackend/service/implementation/SecurityServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/springbackend/service/implementation/ServiceForServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/springbackend/service/implementation/ServiceForServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/springbackend/service/implementation/UserDetailsServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/springbackend/service/implementation/UserDetailsServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/springbackend/service/implementation/UserFileServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/springbackend/service/implementation/UserFileServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/springbackend/service/implementation/UserServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/springbackend/service/implementation/UserServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/springbackend/validator/ServiceValidator.java" afterPath="$PROJECT_DIR$/src/main/java/springbackend/validator/ServiceValidator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/springbackend/validator/UserFormForTechnicalSupportValidator.java" afterPath="$PROJECT_DIR$/src/main/java/springbackend/validator/UserFormForTechnicalSupportValidator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/springbackend/validator/UserOptionsValidator.java" afterPath="$PROJECT_DIR$/src/main/java/springbackend/validator/UserOptionsValidator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/springbackend/validator/UserValidator.java" afterPath="$PROJECT_DIR$/src/main/java/springbackend/validator/UserValidator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/database.sql" afterPath="$PROJECT_DIR$/src/main/resources/database.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/services.sql" afterPath="$PROJECT_DIR$/src/main/resources/services.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/validation.properties" afterPath="$PROJECT_DIR$/src/main/resources/validation.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/appconfig-mvc.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/appconfig-mvc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/appconfig-root.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/appconfig-root.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/add-service.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/add-service.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/advanced-options.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/advanced-options.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/main.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/main.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/registration-confirm.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/registration-confirm.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/searching-results.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/searching-results.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/show-given-services.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/show-given-services.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user's-services.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user's-services.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/add-service.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/add-service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/jquery.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/jquery.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/main.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/utilities.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/utilities.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/backend/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/target/backend/META-INF/MANIFEST.MF" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/backend/WEB-INF/appconfig-mvc.xml" afterPath="$PROJECT_DIR$/target/backend/WEB-INF/appconfig-mvc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/backend/WEB-INF/appconfig-root.xml" afterPath="$PROJECT_DIR$/target/backend/WEB-INF/appconfig-root.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/backend/WEB-INF/classes/database.sql" afterPath="$PROJECT_DIR$/target/backend/WEB-INF/classes/database.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/backend/WEB-INF/classes/services.sql" afterPath="$PROJECT_DIR$/target/backend/WEB-INF/classes/services.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/backend/WEB-INF/classes/validation.properties" afterPath="$PROJECT_DIR$/target/backend/WEB-INF/classes/validation.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/backend/WEB-INF/views/add-service.jsp" afterPath="$PROJECT_DIR$/target/backend/WEB-INF/views/add-service.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/backend/WEB-INF/views/advanced-options.jsp" afterPath="$PROJECT_DIR$/target/backend/WEB-INF/views/advanced-options.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/backend/WEB-INF/views/main.jsp" afterPath="$PROJECT_DIR$/target/backend/WEB-INF/views/main.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/backend/WEB-INF/views/registration-confirm.jsp" afterPath="$PROJECT_DIR$/target/backend/WEB-INF/views/registration-confirm.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/backend/WEB-INF/views/searching-results.jsp" afterPath="$PROJECT_DIR$/target/backend/WEB-INF/views/searching-results.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/backend/WEB-INF/views/show-given-services.jsp" afterPath="$PROJECT_DIR$/target/backend/WEB-INF/views/show-given-services.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/backend/WEB-INF/views/user's-services.jsp" afterPath="$PROJECT_DIR$/target/backend/WEB-INF/views/user's-services.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/backend/resources/js/add-service.js" afterPath="$PROJECT_DIR$/target/backend/resources/js/add-service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/backend/resources/js/jquery.min.js" afterPath="$PROJECT_DIR$/target/backend/resources/js/jquery.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/backend/resources/js/main.js" afterPath="$PROJECT_DIR$/target/backend/resources/js/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/backend/resources/js/utilities.js" afterPath="$PROJECT_DIR$/target/backend/resources/js/utilities.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/database.sql" afterPath="$PROJECT_DIR$/target/classes/database.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/services.sql" afterPath="$PROJECT_DIR$/target/classes/services.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/validation.properties" afterPath="$PROJECT_DIR$/target/classes/validation.properties" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,57 +319,16 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
-  <component name="DatabaseView">
-    <option name="SHOW_INTERMEDIATE" value="true" />
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="false" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_TABLE_DETAILS" value="true" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="deal_users@localhost [2]" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-    </PATH>
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="deal_users@localhost [2]" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="deal_users" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-    </PATH>
-  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
       <projects_view />
-    </option>
-  </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/add-service.jsp" />
-      </list>
     </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
@@ -79,20 +344,12 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -108,6 +365,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -197,10 +456,6 @@
               <option name="myItemId" value="webapp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -217,36 +472,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="backend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="backend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="springbackend" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -273,112 +498,12 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="springbackend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="backend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="backend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="springbackend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="implementation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="backend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="backend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="springbackend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="backend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="backend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="springbackend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -627,7 +752,7 @@
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="Unnamed_backend_18" />
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_backend_20" />
         <option name="HTTP_PORT" value="8087" />
         <option name="JNDI_PORT" value="1097" />
       </server-settings>
@@ -638,7 +763,7 @@
       <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="63549" />
+        <option name="DEBUG_PORT" value="54996" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -707,20 +832,20 @@
       <updated>1490364414549</updated>
       <workItem from="1490364416744" duration="987000" />
       <workItem from="1490442848404" duration="33000" />
-      <workItem from="1494170307439" duration="477000" />
+      <workItem from="1495473718133" duration="189000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1646000" />
+    <option name="totallyTimeSpent" value="1209000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38175675" sideWeight="0.3512035" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -729,57 +854,28 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22853957" sideWeight="0.6487965" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.4978678" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32441473" sideWeight="0.4914712" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.32998884" sideWeight="0.4936034" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.49573562" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15245202" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="19" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13113007" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.10782241" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="19" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="19" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32715008" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18176973" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17110874" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -797,194 +893,11 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/main.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="404" column="38" lean-forward="false" selection-start-line="404" selection-start-column="38" selection-end-line="404" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/database.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="22" lean-forward="false" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/persistent.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="21" lean-forward="false" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/services.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/springbackend/controller/FileController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/springbackend/controller/ServiceController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="27" column="13" lean-forward="false" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/springbackend/controller/ServiceEntranceController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/springbackend/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="33" column="13" lean-forward="false" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/database.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="87" column="0" lean-forward="false" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backend/pom.xml" />
     <entry file="file://$PROJECT_DIR$/dealback/pom.xml" />
     <entry file="file://$PROJECT_DIR$/dealback/dealback.iml" />
     <entry file="file://$PROJECT_DIR$/index.html" />
     <entry file="file://$PROJECT_DIR$/backend/src/main/webapp/resources/css/index.css" />
     <entry file="file://$PROJECT_DIR$/backend/src/main/webapp/WEB-INF/views/main.jsp" />
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-646">
-          <caret line="52" column="50" lean-forward="true" selection-start-line="52" selection-start-column="50" selection-end-line="52" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/add-service.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-17">
-          <caret line="59" column="10" lean-forward="true" selection-start-line="59" selection-start-column="10" selection-end-line="59" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/pom.xml" />
-    <entry file="file://$PROJECT_DIR$/dealback/pom.xml" />
-    <entry file="file://$PROJECT_DIR$/dealback/dealback.iml" />
-    <entry file="file://$PROJECT_DIR$/index.html" />
-    <entry file="file://$PROJECT_DIR$/backend/src/main/webapp/resources/css/index.css" />
-    <entry file="file://$PROJECT_DIR$/backend/src/main/webapp/WEB-INF/views/main.jsp" />
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-646">
-          <caret line="52" column="50" lean-forward="true" selection-start-line="52" selection-start-column="50" selection-end-line="52" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/add-service.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-17">
-          <caret line="59" column="10" lean-forward="true" selection-start-line="59" selection-start-column="10" selection-end-line="59" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/pom.xml" />
-    <entry file="file://$PROJECT_DIR$/dealback/pom.xml" />
-    <entry file="file://$PROJECT_DIR$/dealback/dealback.iml" />
-    <entry file="file://$PROJECT_DIR$/index.html" />
-    <entry file="file://$PROJECT_DIR$/backend/src/main/webapp/resources/css/index.css" />
-    <entry file="file://$PROJECT_DIR$/backend/src/main/webapp/WEB-INF/views/main.jsp" />
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-646">
-          <caret line="52" column="50" lean-forward="true" selection-start-line="52" selection-start-column="50" selection-end-line="52" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/add-service.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-17">
-          <caret line="59" column="10" lean-forward="true" selection-start-line="59" selection-start-column="10" selection-end-line="59" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/pom.xml" />
-    <entry file="file://$PROJECT_DIR$/dealback/pom.xml" />
-    <entry file="file://$PROJECT_DIR$/dealback/dealback.iml" />
-    <entry file="file://$PROJECT_DIR$/index.html" />
-    <entry file="file://$PROJECT_DIR$/backend/src/main/webapp/resources/css/index.css" />
-    <entry file="file://$PROJECT_DIR$/backend/src/main/webapp/WEB-INF/views/main.jsp" />
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-646">
-          <caret line="52" column="50" lean-forward="true" selection-start-line="52" selection-start-column="50" selection-end-line="52" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/add-service.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-17">
-          <caret line="59" column="10" lean-forward="true" selection-start-line="59" selection-start-column="10" selection-end-line="59" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/pom.xml" />
-    <entry file="file://$PROJECT_DIR$/dealback/pom.xml" />
-    <entry file="file://$PROJECT_DIR$/dealback/dealback.iml" />
-    <entry file="file://$PROJECT_DIR$/index.html" />
-    <entry file="file://$PROJECT_DIR$/backend/src/main/webapp/resources/css/index.css" />
-    <entry file="file://$PROJECT_DIR$/backend/src/main/webapp/WEB-INF/views/main.jsp" />
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-646">
-          <caret line="52" column="50" lean-forward="true" selection-start-line="52" selection-start-column="50" selection-end-line="52" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/add-service.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-17">
-          <caret line="59" column="10" lean-forward="true" selection-start-line="59" selection-start-column="10" selection-end-line="59" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
   </component>
 </project>

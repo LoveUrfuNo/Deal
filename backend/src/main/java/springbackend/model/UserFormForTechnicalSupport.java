@@ -3,7 +3,6 @@ package springbackend.model;
 /**
  * Simple JavaBean domain object that represents data for a letter to technical support.
  */
-
 public class UserFormForTechnicalSupport {
     private String name;
 

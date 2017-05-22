@@ -16,9 +16,9 @@
 <!--[if gt IE 8]><!-->
 <html class="no-js"> <!--<![endif]-->
 <head>
+    <title>Deal</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Deal</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Facebook and Twitter integration -->
     <meta property="og:title" content=""/>
@@ -32,7 +32,6 @@
     <meta name="twitter:card" content=""/>
     <link rel="shortcut icon" href="${pageContext.request.contextPath}/resources/images/small_logo.icon"
           type="image/x-icon">
-
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <link rel="shortcut icon" href="${pageContext.request.contextPath}/resources/favicon.ico">
     <!-- Animate.css -->
@@ -44,6 +43,9 @@
     <!-- Owl Carousel -->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/owl.carousel.min.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/owl.theme.default.min.css">
+    <!-- Jquery UI -->
+    <link rel="stylesheet"
+          href="${pageContext.request.contextPath}/resources/jquery-ui-1.12.1.custom/jquery-ui.min.cssF">
     <!-- Semantic UI -->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/Semantic-UI-CSS-master/semantic.min.css">
     <!-- Main styles-->
@@ -69,10 +71,7 @@
                             <div id="gtco-logo"><a href="${pageContext.request.contextPath}/redirect">Deal <em></em></a>
                             </div>
                         </div>
-                        <form:form method="post" modelAttribute="stringForSearch"
-                                   action="${pageContext.request.contextPath}/search_services">
 
-                        </form:form>
                         <div class="col-xs-8 text-right menu-1">
                             <ul>
                                 <li><a href="#">Профиль</a></li>
@@ -85,23 +84,28 @@
                     </div>
                 </div>
             </nav>
-
-            <header id="gtco-header" class="gtco-cover" role="banner"
-                    style="">
+            <header id="gtco-header" class="gtco-cover" role="banner" style="">
                 <div class="overlay"></div>
                 <div class="gtco-container">
                     <div class="row">
                         <div class="col-md-12 col-md-offset-0 text-left">
                             <div class="row row-mt-15em">
                                 <div class="col-md-7 mt-text animate-box" data-animate-effect="fadeInUp">
-                                    <p>
                                     <div class="ui action input">
-                                        <input type="search" placeholder="Поиск услуг">
-                                        <div type="submit" class="ui green button">Найти</div>
+                                        <form:form name="search" method="POST" modelAttribute="searchRequest"
+                                                   action="${pageContext.request.contextPath}/search_services">
+                                            <spring:bind path="searchLine">
+                                                <div class="form-group ${status.error ? 'has-error' : ''}">
+                                                    <form:input id="tags" path="searchLine"
+                                                                type="text"
+                                                                placeholder="Поиск услуг"/>
+                                                    <form:errors path="searchLine"/>
+                                                </div>
+                                            </spring:bind>
+                                            <input type="submit" class="ui green button" value="Найти">
+                                        </form:form>
                                     </div>
-
-                                    </p>
-                                    <span class="intro-text-small">Добро пожаловать в Deal</span>
+                                    <span class="intro-text-small">Добро пожаловать на "НАЗВАНИЕ"</span>
                                     <h1>Покупай и продавай вместе с нами</h1>
                                 </div>
                                 <div class="col-md-5 animate-box" data-animate-effect="fadeInRight">
@@ -181,7 +185,6 @@
                                                         </div>
                                                     </form:form>
                                                 </div>
-
                                                 <div class="tab-content-inner" data-content="login">
                                                     <form method="POST" action="${contextPath}/login"
                                                           class="form-signin">
@@ -337,7 +340,8 @@
                                                                     <a class="col-md-12"
                                                                        href="${pageContext.request.contextPath}/show_your_services"><i
                                                                             class="shop circular icon"></i></a>
-                                                                    <a class="col-md-12" href="${pageContext.request.contextPath}/add_service"><i
+                                                                    <a class="col-md-12"
+                                                                       href="${pageContext.request.contextPath}/add_service"><i
                                                                             class="add circular icon"></i></a>
                                                                     <a class="col-md-12" href="#"><i
                                                                             class="mail circular icon"></i></a>
@@ -816,31 +820,25 @@
         </div>
     </footer>
 </div>
-
 <!-- jQuery -->
 <script src="${pageContext.request.contextPath}/resources/js/jquery.min.js"></script>
 <!-- jQuery Easing -->
 <script src="${pageContext.request.contextPath}/resources/js/jquery.easing.1.3.js"></script>
 <!-- Bootstrap -->
 <script src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js"></script>
-
 <!--Semantic UI-->
 <script src="${pageContext.request.contextPath}/resources/Semantic-UI-CSS-master/semantic.min.js"></script>
-
 <!-- Waypoints -->
 <script src="${pageContext.request.contextPath}/resources/js/jquery.waypoints.min.js"></script>
-
 <!-- Owl carousel -->
 <script src="${pageContext.request.contextPath}/resources/js/owl.carousel.min.js"></script>
-
 <!-- Stellar -->
 <script src="${pageContext.request.contextPath}/resources/js/jquery.stellar.min.js"></script>
-
+<!-- JQuery UI -->
+<script src="${pageContext.request.contextPath}/resources/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
 <!-- Utilities -->
 <script src="${pageContext.request.contextPath}/resources/js/utilities.js"></script>
-
 <!-- Main JS (Do not remove) -->
-<script src="${pageContext.request.contextPath}/resources/js/main.js"></script>
-
+<script src="${pageContext.request.contextPath}/resources/js/main.js" charset="utf-8"></script>
 </body>
 </html>

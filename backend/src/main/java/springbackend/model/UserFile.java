@@ -1,13 +1,13 @@
 package springbackend.model;
 
 import javax.persistence.*;
+import java.util.Set;
 
 /**
  * Simple JavaBean domain object that represents user's file for his service description (photo or video).
  */
-
 @Entity
-@Table(name = "user's_files")
+@Table(name = "user_files")
 public class UserFile {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -19,8 +19,11 @@ public class UserFile {
     @Column(name = "path_to_file")
     private String pathToFile;
 
-    @Column(name = "service_id")
-    private String serviceId;
+    @Column(name = "service_name")
+    private String serviceName;
+
+    @Column(name = "user_id")
+    private Long userId;
 
     public Long getId() {
         return id;
@@ -46,12 +49,20 @@ public class UserFile {
         this.pathToFile = pathToFile;
     }
 
-    public String getServiceId() {
-        return serviceId;
+    public String getServiceName() {
+        return serviceName;
     }
 
-    public void setServiceId(String serviceId) {
-        this.serviceId = serviceId;
+    public void setServiceName(String serviceName) {
+        this.serviceName = serviceName;
+    }
+
+    public Long getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Long userId) {
+        this.userId = userId;
     }
 
     @Override
@@ -60,6 +71,7 @@ public class UserFile {
                 "id=" + id +
                 ", typeOfFile='" + typeOfFile + '\'' +
                 ", pathToFile='" + pathToFile + '\'' +
+                ", serviceName='" + serviceName + '\'' +
                 '}';
     }
 }

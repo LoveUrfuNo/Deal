@@ -16,7 +16,6 @@ import java.util.*;
 /**
  * Implementation of {@link springbackend.service.UserService} interface.
  */
-
 @Service
 public class UserServiceImpl implements UserService {
     @Autowired
@@ -29,21 +28,21 @@ public class UserServiceImpl implements UserService {
     private BCryptPasswordEncoder bCryptPasswordEncoder;
 
     @Override
-//    @CacheEvict(value="user", allEntries=true)
     public void save(User user, Long roleId) {
         user.setPassword(this.bCryptPasswordEncoder.encode(user.getPassword()));
         Set<Role> roles = new HashSet<>();
         roles.add(this.roleDao.getOne(roleId));
         user.setRoles(roles);
+
         this.userDao.save(user);
     }
 
     @Override
-//    @CacheEvict(value="user", allEntries=true)
     public void saveAndFlush(User user, Long roleId) {
         Set<Role> roles = new HashSet<>();
         roles.add(this.roleDao.getOne(roleId));
         user.setRoles(roles);
+
         this.userDao.saveAndFlush(user);
     }
 
@@ -53,20 +52,17 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-//    @Cacheable(value="user")
     public User findByUsername(String username) {
         return this.userDao.findByUsername(username);
     }
 
     @Override
-//    @Cacheable(value="user")
     public User findByLogin(String login) {
         return this.userDao.findAll().stream()
                 .filter(temp -> login.equals(temp.getLogin())).findAny().orElse(null);
     }
 
     @Override
-//    @Cacheable(value="user")
     public User findBuId(Long id) {
         return this.userDao.findById(id);
     }

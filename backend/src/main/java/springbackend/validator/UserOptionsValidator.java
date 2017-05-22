@@ -14,7 +14,6 @@ import java.util.Date;
  * Validator for {@link springbackend.model.User} class,
  * implements {@link Validator} interface.
  */
-
 @Component
 public class UserOptionsValidator implements Validator {
     @Override

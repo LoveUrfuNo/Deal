@@ -1,5 +1,8 @@
 package springbackend.model;
 
+/**
+ * Simple JavaBean Object for service entrance
+ */
 public class ServiceEntrance {
     private String enteredPassword;
 

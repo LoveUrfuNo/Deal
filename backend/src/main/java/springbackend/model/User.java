@@ -8,7 +8,6 @@ import java.util.Set;
 /**
  * Simple JavaBean domain object that represents a User.
  */
-
 @Entity
 @Table(name = "users")
 public class User {
@@ -57,7 +56,7 @@ public class User {
             inverseJoinColumns = @JoinColumn(name = "role_id"))
     private Set<Role> roles;
 
-    @OneToMany(mappedBy = "user", /*cascade = CascadeType.ALL, */fetch = FetchType.EAGER/*, orphanRemoval = true*/)
+    @OneToMany(mappedBy = "user", fetch = FetchType.EAGER)
     private List<Service> services;
 
     public Long getId() {
@@ -180,16 +179,24 @@ public class User {
         this.services = services;
     }
 
-    /*@Override
+    @Override
     public String toString() {
         return "User{" +
                 "id=" + id +
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
                 ", isRegistrationConfirmed=" + isRegistrationConfirmed +
-                ", keyForRegistrationConfirmUrl='" + keyForRegistrationConfirmUrl + '\'' +            //TODO: update toString()
+                ", keyForRegistrationConfirmUrl='" + keyForRegistrationConfirmUrl + '\'' +
+                ", login='" + login + '\'' +
+                ", dateOfRegistration=" + dateOfRegistration +
                 ", confirmPassword='" + confirmPassword + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", gender='" + gender + '\'' +
+                ", dateOfBirth='" + dateOfBirth + '\'' +
+                ", country='" + country + '\'' +
+                ", avatar='" + avatar + '\'' +
                 ", roles=" + roles +
+                ", services=" + services +
                 '}';
-    }*/
+    }
 }

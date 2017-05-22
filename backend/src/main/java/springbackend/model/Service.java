@@ -7,7 +7,6 @@ import javax.persistence.Entity;
 /**
  * Simple JavaBean domain object that represents a user's Service.
  */
-
 @Entity
 @Table(name = "services")
 public class Service {
@@ -20,9 +19,6 @@ public class Service {
 
     @Column(name = "service_name")
     private String nameOfService;
-
-    /*@Column(name = "username")
-    private String usernameOfSeller;*/           //TODO: delete this
 
     @Column(name = "cost")
     private Integer serviceCost;
@@ -137,13 +133,12 @@ public class Service {
         this.user = user;
     }
 
-    /*@Override
+    @Override
     public String toString() {
         return "Service{" +
                 "id=" + id +
                 ", userId=" + userId +
                 ", nameOfService='" + nameOfService + '\'' +
-                ", usernameOfSeller='" + usernameOfSeller + '\'' +
                 ", serviceCost=" + serviceCost +
                 ", category='" + category + '\'' +
                 ", description='" + description + '\'' +
@@ -153,5 +148,5 @@ public class Service {
                 ", currency='" + currency + '\'' +
                 ", user=" + user +
                 '}';
-    }*/
+    }
 }

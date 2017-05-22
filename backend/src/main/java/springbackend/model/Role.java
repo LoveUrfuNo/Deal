@@ -7,7 +7,6 @@ import java.util.Set;
 /**
  * Simple JavaBean object that represents role of {@link User}.
  */
-
 @Entity
 @Table(name = "roles")
 public class Role {
@@ -50,7 +49,7 @@ public class Role {
         return "Role{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", users=" + users +
+                ", users_size=" + users.size() +
                 '}';
     }
 }

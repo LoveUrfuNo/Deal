@@ -18,7 +18,6 @@ import java.util.Random;
 /**
  * Implementation of {@link springbackend.service.EmailService} interface.
  */
-
 @Service
 public class EmailServiceImpl implements EmailService{
     private static final String FROM = "from";
@@ -34,9 +33,9 @@ public class EmailServiceImpl implements EmailService{
     private VelocityEngine velocityEngine;
 
     public boolean sendEmail(final String templateName, final Map<String, Object> model) {
-        boolean res = false;
+        boolean result = false;
         try {
-            MimeMessagePreparator preparator = mimeMessage -> {
+            MimeMessagePreparator preparator = (mimeMessage) -> {
 
                 String from = (String) model.get(FROM);
                 String to = (String) model.get(TO);
@@ -53,17 +52,15 @@ public class EmailServiceImpl implements EmailService{
 
                 message.setText(text, true);
             };
+
             this.mailSender.send(preparator);
-            res = true;
+            result = true;
 
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return res;
-    }
 
-    public String getNameFromEmailAddress(String email) {
-        return email.substring(0, email.indexOf('@'));
+        return result;
     }
 
     public String generateString(int length) {

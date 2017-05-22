@@ -103,7 +103,7 @@
         });
     };
 
-    var offcanvasMenu = function() {
+    var offcanvasMenu = function () {
 
         $('#full').prepend('<div id="gtco-offcanvas" />');
         $('#full').prepend('<a href="#" class="js-gtco-nav-toggle gtco-nav-toggle gtco-nav-white"><i></i></a>');
@@ -118,14 +118,14 @@
             .removeClass('has-dropdown');
 
         // Hover dropdown menu on mobile
-        $('.offcanvas-has-dropdown').mouseenter(function(){
+        $('.offcanvas-has-dropdown').mouseenter(function () {
             var $this = $(this);
 
             $this
                 .addClass('active')
                 .find('ul')
                 .slideDown(500, 'easeOutExpo');
-        }).mouseleave(function(){
+        }).mouseleave(function () {
 
             var $this = $(this);
             $this
@@ -135,9 +135,9 @@
         });
 
 
-        $(window).resize(function(){
+        $(window).resize(function () {
 
-            if ( $('body').hasClass('offcanvas') ) {
+            if ($('body').hasClass('offcanvas')) {
 
                 $('body').removeClass('offcanvas');
                 $('.js-gtco-nav-toggle').removeClass('active');
@@ -211,11 +211,34 @@
             activateButton.removeClass("btn-info").addClass("btn-warning");
             setTimeout(function () {
                 activateButton.removeClass("btn-warning").addClass("btn-info");
-            },2000)
-        },4000);
+            }, 2000)
+        }, 4000);
     };
 
+    var autoCompelte = function () {
+        var xhr = new XMLHttpRequest();
 
+        var input = document.getElementById('tags').valueOf();
+        input.oninput = function () {
+            xhr.open('GET', '/auto_complete/' + input.value, true);
+            xhr.send();
+            xhr.onreadystatechange = function () {
+                var data = this.responseText.replace(/["|[|\]]/g, '').split(',');
+                //alert(data[0]);
+                var availableTags = [
+                    data[0],
+                    data[1],
+                    data[2],
+                    data[3],
+                    data[4]
+                ];
+
+                $("#tags").autocomplete({
+                    source: availableTags
+                });
+            };
+        };
+    };
 
     // Document on load.
     $(function () {
@@ -229,6 +252,6 @@
         parallax();
         profileLoader();
         activateString();
-        checkInput();
+        autoCompelte();
     });
 }());

@@ -7,14 +7,12 @@ import springbackend.model.Service;
 import springbackend.model.User;
 import springbackend.service.ServiceForService;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 /**
  * Implementation of {@link springbackend.service.ServiceForService} interface.
  */
-
 @org.springframework.stereotype.Service
 public class ServiceForServiceImpl implements ServiceForService {
     @Autowired
@@ -47,12 +45,17 @@ public class ServiceForServiceImpl implements ServiceForService {
     }
 
     @Override
-    public List<Service> findAllByCategory(String category) {
+    public Set<Service> findAll() {
+        return new HashSet<>(this.serviceDao.findAll());
+    }
+
+    @Override
+    public Set<Service> findAllByCategory(String category) {
         return this.serviceDao.findAllByCategory(category);
     }
 
     @Override
-    public List<Service> findAllByUserId(Long userId) {
+    public Set<Service> findAllByUserId(Long userId) {
         return this.serviceDao.findAllByUserId(userId);
     }
 }
